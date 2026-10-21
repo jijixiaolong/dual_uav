@@ -464,7 +464,8 @@ CMakeFiles/docking_core_py.dir/src/bindings.cpp.o: /home/ubuntu22/Downloads/dual
   /home/ubuntu22/Downloads/dual_quad_codex_sim/core/include/docking/fsm.hpp \
   /home/ubuntu22/Downloads/dual_quad_codex_sim/core/include/docking/compensator.hpp \
   /home/ubuntu22/Downloads/dual_quad_codex_sim/core/include/docking/safety.hpp \
-  /home/ubuntu22/Downloads/dual_quad_codex_sim/core/include/docking/event_features.hpp
+  /home/ubuntu22/Downloads/dual_quad_codex_sim/core/include/docking/event_features.hpp \
+  /home/ubuntu22/Downloads/dual_quad_codex_sim/core/include/docking/research_compensation.hpp
 
 
 /home/ubuntu22/Downloads/dual_quad_codex_sim/core/include/docking/event_features.hpp:
@@ -1054,6 +1055,8 @@ CMakeFiles/docking_core_py.dir/src/bindings.cpp.o: /home/ubuntu22/Downloads/dual
 /usr/include/c++/11/cerrno:
 
 /usr/include/python3.10/cpython/bytesobject.h:
+
+/home/ubuntu22/Downloads/dual_quad_codex_sim/core/include/docking/research_compensation.hpp:
 
 /usr/include/wchar.h:
 

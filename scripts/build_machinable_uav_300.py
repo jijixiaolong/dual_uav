@@ -1,30 +1,31 @@
 #!/usr/bin/env python3
 """Build the complete authentic machinable 300mm UAV with:
 1. 32mm wide carbon fiber arms (>3mm margin around 16x16 motor holes)
-2. Unified Continuous Stack (30.5 x 30.5 mm M3 Standard Pattern):
-   - 4x M3 Brass Standoffs (H=3mm, D=5mm, Z=3.0 to 6.0mm) propping up PDB
-   - Mateksys FCHUB-12S V2 Power Distribution Board:
-     * 50 x 50 mm body with R4 rounded corners + 5mm top DC-IN lug tab (Total 55mm)
+2. Decoupled Dual-Tier Mounting:
+   - Tier A: PDB (Mateksys FCHUB-12S V2):
+     * 4x M3 Brass Standoffs (H=3mm, D=5mm, at +-15.25, +-15.25mm), Z=3.0 to 6.0mm
+     * 50 x 50 mm body with R4 corners + 5mm top DC-IN lug tab (Total 55mm)
      * Royal blue PCB (T=1.6mm, Z=6.0 to 7.6mm)
+     * Low-profile M3 fastener screws (Z=7.6 to 9.0mm)
+     * NO COPPER STANDOFFS ON TOP OF THE PDB per user requirement
      * High-detail onboard components: 2x power inductors ("100"), 2x shunt resistors,
        JST ribbon connector socket, gold DC-IN pads, annular grounding rings, ESC pads
-   - 4x M3 Brass Standoffs (H=8mm, D=5mm, Z=7.6 to 15.6mm) propping up FC Plate
-   - Flight Controller Base Plate:
-     * 2mm Carbon fiber plate (96 x 54 mm, Z=15.6 to 17.6mm)
-     * 4x 30.5x30.5mm stack holes bolted directly onto the 8mm standoffs
-     * 4x M3 Hex fastening nuts (Z=17.6 to 20.0mm) locking the FC plate down
-     * 4x 72x24mm CUAV standard mounting holes for Pixhawk V6X
-3. CUAV Pixhawk V6X flight controller (85.1 x 45 x 29.2 mm, Z=17.6 to 46.8mm)
-   - 6.2mm safe clearance under top protective rim (Z=53.0mm)
-4. Landing gear legs REMOVED per user request
-5. Lower battery cradle system (Z=-32 to 0mm):
+   - Tier B: Flight Controller (CUAV Pixhawk V6X + Carbon FC Deck Plate):
+     * 4x M3 Brass Standoffs (H=10mm, D=5mm, at +-36.0, +-12.0mm), Z=3.0 to 13.0mm
+       Directly connecting motor chassis plate (电机板子) and flight controller deck!
+     * 2mm Carbon fiber FC plate (96 x 54 mm, Z=13.0 to 15.0mm)
+     * 44 x 44 mm central window clearing PDB wiring and components
+     * CUAV Pixhawk V6X flight controller (85.1 x 45 x 29.2 mm, Z=15.0 to 44.2mm)
+     * 8.8mm safe clearance under top protective rim (Z=53.0mm)
+3. Landing gear legs REMOVED per user request
+4. Lower battery cradle system (Z=-32 to 0mm):
    - 4x M3 Brass standoffs (H=30mm, D=5mm, at +-48, +-26mm)
    - 2mm Carbon fiber battery plate (146 x 56 mm, Z=-32 to -30mm) with strap slots
    - 4S LiPo battery (136 x 43.5 x 29 mm, Z=-29.5 to -0.5mm)
-6. T-Motor F60 PRO V - LV motors (5-spoke bell, copper stator, M5 shaft)
-7. Gemfan 51477 (5.1-inch) 3-blade aerodynamic propellers
-8. Octagonal outer perimeter frame (370 x 370 mm) with hollow top rim & 8 red standoffs
-9. Integrated perimeter docking mechanism
+5. T-Motor F60 PRO V - LV motors (5-spoke bell, copper stator, M5 shaft)
+6. Gemfan 51477 (5.1-inch) 3-blade aerodynamic propellers
+7. Octagonal outer perimeter frame (370 x 370 mm) with hollow top rim & 8 red standoffs
+8. Integrated perimeter docking mechanism
 """
 
 import xmlrpc.client
@@ -36,13 +37,16 @@ import glob
 
 def main():
     proxy = xmlrpc.client.ServerProxy('http://127.0.0.1:9875', allow_none=True)
-    DOC = "Machinable_Docking_UAV_300_Final"
+    DOC = "Machinable_Docking_UAV_300"
     
     docs = proxy.list_documents().get('documents', [])
-    if DOC not in docs:
-        print(f"Creating fresh document {DOC}...")
-        res_doc = proxy.create_document(DOC)
-        DOC = res_doc.get('document_name', DOC)
+    if DOC in docs:
+        print(f"Document {DOC} already exists in FreeCAD, closing it first...")
+        proxy.execute_code(f"# close doc\nimport FreeCAD\nif '{DOC}' in FreeCAD.listDocuments(): FreeCAD.closeDocument('{DOC}')")
+    
+    print(f"Creating fresh document {DOC}...")
+    res_doc = proxy.create_document(DOC)
+    DOC = res_doc.get('document_name', DOC)
     print("Active doc:", DOC)
 
     def run_ops(ops, desc):
@@ -90,7 +94,7 @@ def main():
     # ==========================================================================
     # BODY 1: Bottom Chassis Plate with 32mm Arms & Enlarged Deck (106 x 68 mm)
     # ==========================================================================
-    print("\n=== 1. Building Bottom Chassis Plate (32mm Arms, 30.5x30.5 Stack Holes) ===")
+    print("\n=== 1. Building Bottom Chassis Plate (32mm Arms) ===")
     bottom_geo = []
     for i in range(n):
         bottom_geo.append({'type': 'line', 'from': outer_pts[i], 'to': outer_pts[(i+1)%n]})
@@ -140,9 +144,14 @@ def main():
             for dy in [-8.0, 8.0]:
                 bottom_geo.append({'type': 'circle', 'center': [round(mx + dx, 3), round(my + dy, 3)], 'radius': 1.6})
 
-    # 4 Center stack mounting holes (Universal 30.5x30.5mm pattern for 3mm brass standoffs)
+    # 4 PDB mounting holes (Universal 30.5x30.5mm pattern for 3mm brass standoffs)
     for sx in [-15.25, 15.25]:
         for sy in [-15.25, 15.25]:
+            bottom_geo.append({'type': 'circle', 'center': [round(sx, 3), round(sy, 3)], 'radius': 1.6})
+
+    # 4 FC 5mm standoff mounting holes (72x24mm pattern directly connecting chassis to FC plate)
+    for sx in [-36.0, 36.0]:
+        for sy in [-12.0, 12.0]:
             bottom_geo.append({'type': 'circle', 'center': [round(sx, 3), round(sy, 3)], 'radius': 1.6})
 
     # 4 Battery standoff mounting holes (96x52mm pattern)
@@ -463,81 +472,79 @@ def main():
     run_ops([
         {'action': 'create_object', 'obj_type': 'PartDesign::Body', 'obj_name': 'Body_PDB_Components', 'description': 'Create Body_PDB_Components'},
         {'action': 'sketch', 'obj_name': 'PDB_Components_Sketch', 'obj_properties': {'plane': 'XY', 'offset': 7.6, 'body': 'Body_PDB_Components', 'geometry': components_geo}, 'description': 'Sketch PDB components'},
-        {'action': 'pad', 'obj_name': 'PDB_Components_Sketch', 'obj_properties': {'length': 3.8, 'body': 'Body_PDB_Components'}, 'description': 'Pad components 3.8mm'},
+        {'action': 'pad', 'obj_name': 'PDB_Components_Sketch', 'obj_properties': {'length': 2.0, 'body': 'Body_PDB_Components'}, 'description': 'Pad components 2.0mm'},
         {'action': 'color', 'obj_name': 'Body_PDB_Components', 'obj_properties': {'color': [0.28, 0.30, 0.32]}, 'description': 'Component metallic gray'}
     ], "Body_PDB_Components")
 
     # ==========================================================================
-    # BODY 10: 4x M3 Brass Standoffs (H=8mm, D=5mm, Z=7.6 to 15.6mm) Propping Up FC Plate
+    # BODY 10: 4x M3 Low-Profile Fasteners for PDB (NO COPPER STANDOFFS ON TOP)
     # ==========================================================================
-    print("\n=== 10. Building 4x M3 Brass Standoffs (H=8mm) for Flight Controller ===")
-    standoffs_8mm = []
+    print("\n=== 10. Building 4x M3 PDB Fasteners (No standoffs on PDB) ===")
+    pdb_fasteners_geo = []
     for sx in [-15.25, 15.25]:
         for sy in [-15.25, 15.25]:
-            standoffs_8mm.append({'type': 'circle', 'center': [sx, sy], 'radius': 2.5})
+            pdb_fasteners_geo.append({'type': 'circle', 'center': [sx, sy], 'radius': 2.75})
 
     run_ops([
-        {'action': 'create_object', 'obj_type': 'PartDesign::Body', 'obj_name': 'Body_FC_Standoffs_8mm', 'description': 'Create Body_FC_Standoffs_8mm'},
-        {'action': 'sketch', 'obj_name': 'FC_Standoffs_8mm_Sketch', 'obj_properties': {'plane': 'XY', 'offset': 7.6, 'body': 'Body_FC_Standoffs_8mm', 'geometry': standoffs_8mm}, 'description': 'Sketch 8mm standoffs'},
-        {'action': 'pad', 'obj_name': 'FC_Standoffs_8mm_Sketch', 'obj_properties': {'length': 8.0, 'body': 'Body_FC_Standoffs_8mm'}, 'description': 'Pad 8mm standoffs'},
-        {'action': 'color', 'obj_name': 'Body_FC_Standoffs_8mm', 'obj_properties': {'color': [0.85, 0.68, 0.18]}, 'description': 'Polished brass gold'}
-    ], "Body_FC_Standoffs_8mm")
+        {'action': 'create_object', 'obj_type': 'PartDesign::Body', 'obj_name': 'Body_PDB_Fasteners', 'description': 'Create Body_PDB_Fasteners'},
+        {'action': 'sketch', 'obj_name': 'PDB_Fasteners_Sketch', 'obj_properties': {'plane': 'XY', 'offset': 7.6, 'body': 'Body_PDB_Fasteners', 'geometry': pdb_fasteners_geo}, 'description': 'Sketch PDB fastener nuts'},
+        {'action': 'pad', 'obj_name': 'PDB_Fasteners_Sketch', 'obj_properties': {'length': 1.6, 'body': 'Body_PDB_Fasteners'}, 'description': 'Pad PDB fastener nuts 1.6mm'},
+        {'action': 'color', 'obj_name': 'Body_PDB_Fasteners', 'obj_properties': {'color': [0.75, 0.78, 0.82]}, 'description': 'Stainless steel nickel color'}
+    ], "Body_PDB_Fasteners")
 
     # ==========================================================================
-    # BODY 11: Flight Controller Deck Plate (96 x 54 mm, T=2mm, Z=15.6 to 17.6mm)
-    # Bolted Directly to 8mm Standoffs via 30.5x30.5mm Pattern, Plus CUAV 72x24 Holes
+    # BODY 11: 4x M3 Brass Standoffs (H=10mm, D=5mm, Z=3.0 to 13.0mm)
+    # CONNECTING MOTOR PLATE (电机板子) DIRECTLY TO FLIGHT CONTROLLER (飞控底板)
     # ==========================================================================
-    print("\n=== 11. Building Flight Controller Base Plate (Connected to Standoffs) ===")
-    fc_pts = [
+    print("\n=== 11. Building 4x M3 Brass Standoffs (H=10mm) Connecting Motor Plate to FC ===")
+    standoffs_10mm = []
+    for sx in [-36.0, 36.0]:
+        for sy in [-12.0, 12.0]:
+            standoffs_10mm.append({'type': 'circle', 'center': [sx, sy], 'radius': 2.5})
+
+    run_ops([
+        {'action': 'create_object', 'obj_type': 'PartDesign::Body', 'obj_name': 'Body_FC_Standoffs_10mm', 'description': 'Create Body_FC_Standoffs_10mm'},
+        {'action': 'sketch', 'obj_name': 'FC_Standoffs_10mm_Sketch', 'obj_properties': {'plane': 'XY', 'offset': 3.0, 'body': 'Body_FC_Standoffs_10mm', 'geometry': standoffs_10mm}, 'description': 'Sketch 10mm standoffs'},
+        {'action': 'pad', 'obj_name': 'FC_Standoffs_10mm_Sketch', 'obj_properties': {'length': 10.0, 'body': 'Body_FC_Standoffs_10mm'}, 'description': 'Pad 10mm standoffs'},
+        {'action': 'color', 'obj_name': 'Body_FC_Standoffs_10mm', 'obj_properties': {'color': [0.85, 0.68, 0.18]}, 'description': 'Polished brass gold'}
+    ], "Body_FC_Standoffs_10mm")
+
+    # ==========================================================================
+    # BODY 12: Flight Controller Deck Plate (96 x 54 mm, T=2mm, Z=13.0 to 15.0mm)
+    # Connected Directly to 10mm Standoffs, with 44x44mm Central Window for PDB
+    # ==========================================================================
+    print("\n=== 12. Building Flight Controller Base Plate (Connected via 10mm Standoffs) ===")
+    fc_outer = [
         (44.0, 27.0), (48.0, 23.0),
         (48.0, -23.0), (44.0, -27.0),
         (-44.0, -27.0), (-48.0, -23.0),
         (-48.0, 23.0), (-44.0, 27.0)
     ]
+    # Central clearance window over PDB (44x44mm)
+    fc_window = [
+        (22.0, 22.0), (-22.0, 22.0),
+        (-22.0, -22.0), (22.0, -22.0)
+    ]
     fc_geo = []
-    for i in range(len(fc_pts)):
-        fc_geo.append({'type': 'line', 'from': fc_pts[i], 'to': fc_pts[(i+1)%len(fc_pts)]})
+    for i in range(len(fc_outer)):
+        fc_geo.append({'type': 'line', 'from': fc_outer[i], 'to': fc_outer[(i+1)%len(fc_outer)]})
+    for i in range(len(fc_window)):
+        fc_geo.append({'type': 'line', 'from': fc_window[i], 'to': fc_window[(i+1)%len(fc_window)]})
 
-    # 4 Stack mounting holes (30.5x30.5mm pattern directly mating with 8mm standoffs)
-    for sx in [-15.25, 15.25]:
-        for sy in [-15.25, 15.25]:
+    # 4 Mounting holes mating directly with the 10mm standoffs from the motor plate
+    for sx in [-36.0, 36.0]:
+        for sy in [-12.0, 12.0]:
             fc_geo.append({'type': 'circle', 'center': [sx, sy], 'radius': 1.6})
-
-    # 4 CUAV Pixhawk V6X mounting holes (72x24mm pattern)
-    for fx in [-36.0, 36.0]:
-        for fy in [-12.0, 12.0]:
-            fc_geo.append({'type': 'circle', 'center': [fx, fy], 'radius': 1.4})
-
-    # 2 Cable routing pass-through slots
-    for sx in [-26.0, 26.0]:
-        fc_geo.append({'type': 'circle', 'center': [sx, 0.0], 'radius': 3.0})
 
     run_ops([
         {'action': 'create_object', 'obj_type': 'PartDesign::Body', 'obj_name': 'Body_FC_Plate', 'description': 'Create Body_FC_Plate'},
-        {'action': 'sketch', 'obj_name': 'FC_Plate_Sketch', 'obj_properties': {'plane': 'XY', 'offset': 15.6, 'body': 'Body_FC_Plate', 'geometry': fc_geo}, 'description': 'Sketch FC deck plate'},
+        {'action': 'sketch', 'obj_name': 'FC_Plate_Sketch', 'obj_properties': {'plane': 'XY', 'offset': 13.0, 'body': 'Body_FC_Plate', 'geometry': fc_geo}, 'description': 'Sketch FC deck plate'},
         {'action': 'pad', 'obj_name': 'FC_Plate_Sketch', 'obj_properties': {'length': 2.0, 'body': 'Body_FC_Plate'}, 'description': 'Pad FC deck plate 2mm'},
         {'action': 'color', 'obj_name': 'Body_FC_Plate', 'obj_properties': {'color': [0.15, 0.15, 0.16]}, 'description': 'Carbon black color'}
     ], "Body_FC_Plate")
 
     # ==========================================================================
-    # BODY 12: 4x M3 Fastening Hex Nuts Securing FC Plate to 8mm Standoffs (Z=17.6 to 20.0mm)
-    # ==========================================================================
-    print("\n=== 12. Building 4x M3 Fastening Nuts on FC Plate ===")
-    nuts_stack_geo = []
-    nut_r = 2.75 # 5.5mm hex flats envelope
-    for sx in [-15.25, 15.25]:
-        for sy in [-15.25, 15.25]:
-            nuts_stack_geo.append({'type': 'circle', 'center': [sx, sy], 'radius': nut_r})
-
-    run_ops([
-        {'action': 'create_object', 'obj_type': 'PartDesign::Body', 'obj_name': 'Body_FC_Mount_Nuts', 'description': 'Create Body_FC_Mount_Nuts'},
-        {'action': 'sketch', 'obj_name': 'FC_Nuts_Sketch', 'obj_properties': {'plane': 'XY', 'offset': 17.6, 'body': 'Body_FC_Mount_Nuts', 'geometry': nuts_stack_geo}, 'description': 'Sketch FC locknuts'},
-        {'action': 'pad', 'obj_name': 'FC_Nuts_Sketch', 'obj_properties': {'length': 2.4, 'body': 'Body_FC_Mount_Nuts'}, 'description': 'Pad FC locknuts 2.4mm'},
-        {'action': 'color', 'obj_name': 'Body_FC_Mount_Nuts', 'obj_properties': {'color': [0.75, 0.78, 0.82]}, 'description': 'Stainless steel nickel color'}
-    ], "Body_FC_Mount_Nuts")
-
-    # ==========================================================================
-    # BODY 13: CUAV Pixhawk V6X Flight Controller (Z=17.6 to 46.8mm)
+    # BODY 13: CUAV Pixhawk V6X Flight Controller (Z=15.0 to 44.2mm)
     # ==========================================================================
     print("\n=== 13. Building CUAV Pixhawk V6X Flight Controller ===")
     v6x_lx = 85.1 / 2.0
@@ -559,9 +566,9 @@ def main():
     ]
     run_ops([
         {'action': 'create_object', 'obj_type': 'PartDesign::Body', 'obj_name': 'Body_Pixhawk_V6X', 'description': 'Create Body_Pixhawk_V6X'},
-        {'action': 'sketch', 'obj_name': 'V6X_Baseboard_Sketch', 'obj_properties': {'plane': 'XY', 'offset': 17.6, 'body': 'Body_Pixhawk_V6X', 'geometry': v6x_base_geo}, 'description': 'Sketch V6X base'},
+        {'action': 'sketch', 'obj_name': 'V6X_Baseboard_Sketch', 'obj_properties': {'plane': 'XY', 'offset': 15.0, 'body': 'Body_Pixhawk_V6X', 'geometry': v6x_base_geo}, 'description': 'Sketch V6X base'},
         {'action': 'pad', 'obj_name': 'V6X_Baseboard_Sketch', 'obj_properties': {'length': 12.5, 'body': 'Body_Pixhawk_V6X'}, 'description': 'Pad V6X base 12.5mm'},
-        {'action': 'sketch', 'obj_name': 'V6X_IMU_Core_Sketch', 'obj_properties': {'plane': 'XY', 'offset': 17.6 + 12.5, 'body': 'Body_Pixhawk_V6X', 'geometry': v6x_imu_geo}, 'description': 'Sketch IMU cube'},
+        {'action': 'sketch', 'obj_name': 'V6X_IMU_Core_Sketch', 'obj_properties': {'plane': 'XY', 'offset': 15.0 + 12.5, 'body': 'Body_Pixhawk_V6X', 'geometry': v6x_imu_geo}, 'description': 'Sketch IMU cube'},
         {'action': 'pad', 'obj_name': 'V6X_IMU_Core_Sketch', 'obj_properties': {'length': 16.7, 'body': 'Body_Pixhawk_V6X'}, 'description': 'Pad IMU cube 16.7mm'},
         {'action': 'color', 'obj_name': 'Body_Pixhawk_V6X', 'obj_properties': {'color': [0.20, 0.22, 0.25]}, 'description': 'CUAV Space Gray color'}
     ], "Body_Pixhawk_V6X")

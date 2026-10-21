@@ -466,4 +466,5 @@ CMakeFiles/docking_core_py.dir/src/bindings.cpp.o
  /home/ubuntu22/Downloads/dual_quad_codex_sim/core/include/docking/compensator.hpp
  /home/ubuntu22/Downloads/dual_quad_codex_sim/core/include/docking/safety.hpp
  /home/ubuntu22/Downloads/dual_quad_codex_sim/core/include/docking/event_features.hpp
+ /home/ubuntu22/Downloads/dual_quad_codex_sim/core/include/docking/research_compensation.hpp
 
