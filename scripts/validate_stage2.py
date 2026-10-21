@@ -26,7 +26,7 @@ def run_command(command,path):
 
 def source_hashes():
     files = [ROOT/name for name in ('run_experiments.py','core/CMakeLists.txt','requirements.txt','requirements-validation.lock.txt')]
-    for directory in ('core/src','core/include','mujoco_sim','configs','tests','scripts'):
+    for directory in ('core/src','core/include','core/tests','mujoco_sim','configs','tests','scripts','analysis_tools'):
         files += [p for p in (ROOT/directory).rglob('*') if p.suffix in ('.py','.cpp','.hpp','.xml','.yaml')]
     return {str(p.relative_to(ROOT)):hashlib.sha256(p.read_bytes()).hexdigest() for p in sorted(files)}
 
@@ -99,7 +99,7 @@ def main():
         run_command(['cmake','--build','core/build','-j','4'],output/'build.log')
     run_command(['ctest','--test-dir','core/build','-V','--output-on-failure'],output/'cpp_tests.log')
     cpp_tests = [dict(name=name,status=status) for status,name in
-                 re.findall(r'\[(PASS|FAIL)\]\s+(test_\w+)',(output/'cpp_tests.log').read_text())]
+                 re.findall(r'\[(PASS|FAIL)\]\s+([A-Za-z_]\w*)',(output/'cpp_tests.log').read_text())]
     (output/'cpp_test_status.json').write_text(json.dumps(cpp_tests,indent=2))
     junit = output/'pytest.xml'
     run_command([sys.executable,'-m','pytest','-p','no:anyio','-q','--junitxml',str(junit)],output/'python_tests.log')

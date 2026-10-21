@@ -1,1 +1,0 @@
-/usr/bin/c++ -fPIC -O3 -DNDEBUG -flto -shared  -o docking_core_py.cpython-310-x86_64-linux-gnu.so CMakeFiles/docking_core_py.dir/src/bindings.cpp.o  libdocking_core.a 

@@ -1,0 +1,725 @@
+{
+  "note": "Independent static solver fixture, zero gravity and motors. No integration or state correction at switches.",
+  "phases": [
+    {
+      "phase": "unlocked",
+      "weld": false,
+      "contacts": [
+        {
+          "geom1": "obstacle",
+          "geom2": "q1_conn_funnel",
+          "force_local": [
+            3.0344507494953596,
+            3.0344507494953596,
+            2.597335435363628e-17,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "efc_address": 0
+        },
+        {
+          "geom1": "obstacle",
+          "geom2": "q2_conn_probe",
+          "force_local": [
+            9.74331259582187,
+            -4.056952118959024,
+            -4.8244817581010565e-17,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "efc_address": 3
+        },
+        {
+          "geom1": "q1_conn_funnel",
+          "geom2": "q2_conn_probe",
+          "force_local": [
+            3.0555788053901036,
+            2.444463044312083,
+            2.1319228618047838e-17,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "efc_address": 6
+        },
+        {
+          "geom1": "q1_conn_funnel",
+          "geom2": "q2_conn_probe",
+          "force_local": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "efc_address": 9
+        },
+        {
+          "geom1": "q1_conn_funnel",
+          "geom2": "q2_conn_probe",
+          "force_local": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "efc_address": 12
+        },
+        {
+          "geom1": "q1_conn_funnel",
+          "geom2": "q2_conn_probe",
+          "force_local": [
+            3.0555788053901,
+            2.44446304431208,
+            2.1319228618047823e-17,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "efc_address": 15
+        }
+      ],
+      "snapshot": {
+        "com": [
+          0.0,
+          0.0,
+          2.0
+        ],
+        "com_velocity": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "aggregate_omega_world": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "aggregate_inertia_world": [
+          [
+            0.11311202000000001,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0164,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.12571202
+          ]
+        ],
+        "linear_momentum": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "angular_momentum": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "kinetic_energy_J": 0.0,
+        "potential_energy_J": -0.0,
+        "mechanical_energy_J": 0.0,
+        "qpos": [
+          0.0,
+          -0.2199,
+          2.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.2199,
+          2.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "qvel": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "spring_energy_J": 0.0,
+        "capture_potential_J": 0.0,
+        "latched": false,
+        "capture_engaged": false,
+        "current_contact": true,
+        "last_contact_time_s": -1.0,
+        "capture_reservoir_energy_J": 0.00924,
+        "contact_hold": false,
+        "disengaged": false,
+        "attempt_id": 0,
+        "connector_pair_collision_active": true,
+        "motor_actual_N": [
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0
+        ],
+        "motor_target_N": [
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0
+        ],
+        "fsm_mode": null
+      }
+    },
+    {
+      "phase": "locked",
+      "weld": true,
+      "contacts": [
+        {
+          "geom1": "obstacle",
+          "geom2": "q1_conn_funnel",
+          "force_local": [
+            32.87445598584142,
+            32.87445598584142,
+            -0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "efc_address": 6
+        },
+        {
+          "geom1": "obstacle",
+          "geom2": "q2_conn_probe",
+          "force_local": [
+            30.29463662811796,
+            30.29463662811796,
+            -0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "efc_address": 9
+        }
+      ],
+      "snapshot": {
+        "com": [
+          0.0,
+          0.0,
+          2.0
+        ],
+        "com_velocity": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "aggregate_omega_world": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "aggregate_inertia_world": [
+          [
+            0.11311202000000001,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0164,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.12571202
+          ]
+        ],
+        "linear_momentum": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "angular_momentum": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "kinetic_energy_J": 0.0,
+        "potential_energy_J": -0.0,
+        "mechanical_energy_J": 0.0,
+        "qpos": [
+          0.0,
+          -0.2199,
+          2.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.2199,
+          2.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "qvel": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "spring_energy_J": 0.0,
+        "capture_potential_J": 0.0,
+        "latched": true,
+        "capture_engaged": false,
+        "current_contact": false,
+        "last_contact_time_s": -1.0,
+        "capture_reservoir_energy_J": 0.00924,
+        "contact_hold": false,
+        "disengaged": false,
+        "attempt_id": 0,
+        "connector_pair_collision_active": false,
+        "motor_actual_N": [
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0
+        ],
+        "motor_target_N": [
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0
+        ],
+        "fsm_mode": null
+      }
+    },
+    {
+      "phase": "released",
+      "weld": false,
+      "contacts": [
+        {
+          "geom1": "obstacle",
+          "geom2": "q1_conn_funnel",
+          "force_local": [
+            3.0344507494953596,
+            3.0344507494953596,
+            2.597335435363628e-17,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "efc_address": 0
+        },
+        {
+          "geom1": "obstacle",
+          "geom2": "q2_conn_probe",
+          "force_local": [
+            9.74331259582187,
+            -4.056952118959024,
+            -4.8244817581010565e-17,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "efc_address": 3
+        },
+        {
+          "geom1": "q1_conn_funnel",
+          "geom2": "q2_conn_probe",
+          "force_local": [
+            3.0555788053901036,
+            2.444463044312083,
+            2.1319228618047838e-17,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "efc_address": 6
+        },
+        {
+          "geom1": "q1_conn_funnel",
+          "geom2": "q2_conn_probe",
+          "force_local": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "efc_address": 9
+        },
+        {
+          "geom1": "q1_conn_funnel",
+          "geom2": "q2_conn_probe",
+          "force_local": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "efc_address": 12
+        },
+        {
+          "geom1": "q1_conn_funnel",
+          "geom2": "q2_conn_probe",
+          "force_local": [
+            3.0555788053901,
+            2.44446304431208,
+            2.1319228618047823e-17,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "efc_address": 15
+        }
+      ],
+      "snapshot": {
+        "com": [
+          0.0,
+          0.0,
+          2.0
+        ],
+        "com_velocity": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "aggregate_omega_world": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "aggregate_inertia_world": [
+          [
+            0.11311202000000001,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0164,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.12571202
+          ]
+        ],
+        "linear_momentum": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "angular_momentum": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "kinetic_energy_J": 0.0,
+        "potential_energy_J": -0.0,
+        "mechanical_energy_J": 0.0,
+        "qpos": [
+          0.0,
+          -0.2199,
+          2.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.2199,
+          2.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "qvel": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "spring_energy_J": 0.0,
+        "capture_potential_J": 0.0,
+        "latched": false,
+        "capture_engaged": false,
+        "current_contact": true,
+        "last_contact_time_s": -1.0,
+        "capture_reservoir_energy_J": 0.00924,
+        "contact_hold": false,
+        "disengaged": true,
+        "attempt_id": 0,
+        "connector_pair_collision_active": true,
+        "motor_actual_N": [
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0
+        ],
+        "motor_target_N": [
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0
+        ],
+        "fsm_mode": null
+      }
+    },
+    {
+      "phase": "reset",
+      "weld": false,
+      "contacts": [
+        {
+          "geom1": "obstacle",
+          "geom2": "q1_conn_funnel",
+          "force_local": [
+            3.0344507494953596,
+            3.0344507494953596,
+            2.597335435363628e-17,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "efc_address": 0
+        },
+        {
+          "geom1": "obstacle",
+          "geom2": "q2_conn_probe",
+          "force_local": [
+            9.74331259582187,
+            -4.056952118959024,
+            -4.8244817581010565e-17,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "efc_address": 3
+        },
+        {
+          "geom1": "q1_conn_funnel",
+          "geom2": "q2_conn_probe",
+          "force_local": [
+            3.0555788053901036,
+            2.444463044312083,
+            2.1319228618047838e-17,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "efc_address": 6
+        },
+        {
+          "geom1": "q1_conn_funnel",
+          "geom2": "q2_conn_probe",
+          "force_local": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "efc_address": 9
+        },
+        {
+          "geom1": "q1_conn_funnel",
+          "geom2": "q2_conn_probe",
+          "force_local": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "efc_address": 12
+        },
+        {
+          "geom1": "q1_conn_funnel",
+          "geom2": "q2_conn_probe",
+          "force_local": [
+            3.0555788053901,
+            2.44446304431208,
+            2.1319228618047823e-17,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "efc_address": 15
+        }
+      ],
+      "snapshot": {
+        "com": [
+          0.0,
+          0.0,
+          2.0
+        ],
+        "com_velocity": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "aggregate_omega_world": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "aggregate_inertia_world": [
+          [
+            0.11311202000000001,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0164,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.12571202
+          ]
+        ],
+        "linear_momentum": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "angular_momentum": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "kinetic_energy_J": 0.0,
+        "potential_energy_J": -0.0,
+        "mechanical_energy_J": 0.0,
+        "qpos": [
+          0.0,
+          -0.2199,
+          2.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.2199,
+          2.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "qvel": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "spring_energy_J": 0.0,
+        "capture_potential_J": 0.0,
+        "latched": false,
+        "capture_engaged": false,
+        "current_contact": true,
+        "last_contact_time_s": -1.0,
+        "capture_reservoir_energy_J": 0.00924,
+        "contact_hold": false,
+        "disengaged": false,
+        "attempt_id": 0,
+        "connector_pair_collision_active": true,
+        "motor_actual_N": [
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0
+        ],
+        "motor_target_N": [
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0,
+          -0.0
+        ],
+        "fsm_mode": null
+      }
+    }
+  ]
+}

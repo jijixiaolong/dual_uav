@@ -34,4 +34,4 @@ validation:
       duration: 7.0
       dock_cmd_time: 1.0
       undock_cmd_time: 4.0
-      approach_offset: 0.03
+      approach_offset: 0.06  # Actual no-capture regression; old .03 retained in capture audit boundary trials.

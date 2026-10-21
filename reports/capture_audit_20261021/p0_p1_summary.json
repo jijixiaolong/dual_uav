@@ -1,0 +1,189 @@
+{
+  "stage": "P0_P1",
+  "learning_enabled": false,
+  "cases": {
+    "independent_hover": {
+      "status": "PASS",
+      "gates": {
+        "finite_state": true,
+        "stable_tail": true,
+        "motor_limits": true,
+        "motor_slew": true,
+        "exact_control_count": true,
+        "no_state_teleport": true
+      },
+      "metrics": {
+        "tail_position_error_m": 1.4413404912950617e-15,
+        "tail_speed_mps": 3.249476123111288e-15,
+        "tail_attitude_error_deg": 0.0,
+        "physics_steps": 1500,
+        "control_ticks": 600,
+        "actual_control_rate_hz": 200.00000000000725,
+        "dock_time_s": null,
+        "first_contact_time_s": null,
+        "release_time_s": null,
+        "peak_contact_normal_force_N": 0,
+        "integrated_normal_contact_impulse_est_Ns": 0.0,
+        "peak_actual_motor_slew_Nps": 2.220446049250313e-13,
+        "motor_command_saturation_fraction": 0.0,
+        "event_instantaneous_max_velocity_change": 0.0
+      }
+    },
+    "preconnected_hover": {
+      "status": "PASS",
+      "gates": {
+        "finite_state": true,
+        "stable_tail": true,
+        "motor_limits": true,
+        "motor_slew": true,
+        "exact_control_count": true,
+        "no_state_teleport": true,
+        "connected_throughout": true
+      },
+      "metrics": {
+        "tail_position_error_m": 8.015316750233402e-07,
+        "tail_speed_mps": 3.9789532715998634e-07,
+        "tail_attitude_error_deg": 4.048003679528861e-05,
+        "physics_steps": 5000,
+        "control_ticks": 2000,
+        "actual_control_rate_hz": 199.99999999999983,
+        "dock_time_s": 0.0,
+        "first_contact_time_s": null,
+        "release_time_s": null,
+        "peak_contact_normal_force_N": 0,
+        "integrated_normal_contact_impulse_est_Ns": 0.0,
+        "peak_actual_motor_slew_Nps": 0.0018800956718134643,
+        "motor_command_saturation_fraction": 0.0,
+        "event_instantaneous_max_velocity_change": 0.0
+      }
+    },
+    "connected_tracking": {
+      "status": "PASS",
+      "gates": {
+        "finite_state": true,
+        "stable_tail": true,
+        "motor_limits": true,
+        "motor_slew": true,
+        "exact_control_count": true,
+        "no_state_teleport": true,
+        "connected_throughout": true
+      },
+      "metrics": {
+        "tail_position_error_m": 0.0011466243162835423,
+        "tail_speed_mps": 0.0007415480120934837,
+        "tail_attitude_error_deg": 0.010794071107903543,
+        "physics_steps": 3500,
+        "control_ticks": 1400,
+        "actual_control_rate_hz": 200.0000000000157,
+        "dock_time_s": 0.0,
+        "first_contact_time_s": null,
+        "release_time_s": null,
+        "peak_contact_normal_force_N": 0,
+        "integrated_normal_contact_impulse_est_Ns": 0.0,
+        "peak_actual_motor_slew_Nps": 0.3107794082031212,
+        "motor_command_saturation_fraction": 0.0,
+        "event_instantaneous_max_velocity_change": 0.0
+      }
+    },
+    "contact_capture_release": {
+      "status": "PASS",
+      "gates": {
+        "finite_state": true,
+        "stable_tail": true,
+        "motor_limits": true,
+        "motor_slew": true,
+        "exact_control_count": true,
+        "no_state_teleport": true,
+        "release_transient": true,
+        "no_large_internal_control_preload": true,
+        "capture_and_release": true
+      },
+      "metrics": {
+        "tail_position_error_m": 0.000327372092447662,
+        "tail_speed_mps": 0.0005551444740213014,
+        "tail_attitude_error_deg": 0.002800776046099536,
+        "physics_steps": 6000,
+        "control_ticks": 2400,
+        "actual_control_rate_hz": 199.99999999998872,
+        "dock_time_s": 3.055999999999885,
+        "first_contact_time_s": 2.721999999999922,
+        "release_time_s": 6.109999999999549,
+        "peak_contact_normal_force_N": 31.53635653810903,
+        "integrated_normal_contact_impulse_est_Ns": 0.2739203051294575,
+        "peak_actual_motor_slew_Nps": 4.977750251665913,
+        "motor_command_saturation_fraction": 0.0,
+        "event_instantaneous_max_velocity_change": 0.0,
+        "release_peak_true_attitude_error_deg": 4.171675936219804,
+        "prerelease_max_rotor_torque_Nm": 5.231739716716389e-05,
+        "prerelease_contact_normal_force_N": 0,
+        "prerelease_weld_force_N": 0.09154579654053689
+      }
+    },
+    "preloaded_capture_release": {
+      "status": "PASS",
+      "gates": {
+        "finite_state": true,
+        "stable_tail": true,
+        "motor_limits": true,
+        "motor_slew": true,
+        "exact_control_count": true,
+        "no_state_teleport": true,
+        "release_transient": true,
+        "no_large_internal_control_preload": true,
+        "capture_and_release": true
+      },
+      "metrics": {
+        "tail_position_error_m": 0.0008180383335745067,
+        "tail_speed_mps": 0.0005316915193368193,
+        "tail_attitude_error_deg": 0.002868195351692516,
+        "physics_steps": 6000,
+        "control_ticks": 2400,
+        "actual_control_rate_hz": 199.99999999998872,
+        "dock_time_s": 3.055999999999885,
+        "first_contact_time_s": 2.721999999999922,
+        "release_time_s": 6.109999999999549,
+        "peak_contact_normal_force_N": 31.53635653810903,
+        "integrated_normal_contact_impulse_est_Ns": 0.2739203051294575,
+        "peak_actual_motor_slew_Nps": 4.977750251665913,
+        "motor_command_saturation_fraction": 0.0,
+        "event_instantaneous_max_velocity_change": 0.0,
+        "release_peak_true_attitude_error_deg": 4.100724281157702,
+        "prerelease_max_rotor_torque_Nm": 5.119962992957474e-05,
+        "prerelease_contact_normal_force_N": 0,
+        "prerelease_weld_force_N": 0.5704168395911253
+      }
+    },
+    "missed_capture": {
+      "status": "PASS",
+      "gates": {
+        "finite_state": true,
+        "stable_tail": true,
+        "motor_limits": true,
+        "motor_slew": true,
+        "exact_control_count": true,
+        "no_state_teleport": true,
+        "no_false_capture": true
+      },
+      "metrics": {
+        "tail_position_error_m": 0.0003646736494234089,
+        "tail_speed_mps": 0.0004741431779502909,
+        "tail_attitude_error_deg": 0.0022659120403655114,
+        "physics_steps": 3500,
+        "control_ticks": 1400,
+        "actual_control_rate_hz": 200.0000000000157,
+        "dock_time_s": null,
+        "first_contact_time_s": null,
+        "release_time_s": null,
+        "peak_contact_normal_force_N": 0,
+        "integrated_normal_contact_impulse_est_Ns": 0.0,
+        "peak_actual_motor_slew_Nps": 0.5385472320857954,
+        "motor_command_saturation_fraction": 0.0,
+        "event_instantaneous_max_velocity_change": 0.0
+      }
+    }
+  },
+  "passed": true,
+  "completed": true,
+  "expected_case_count": 6,
+  "completed_case_count": 6
+}

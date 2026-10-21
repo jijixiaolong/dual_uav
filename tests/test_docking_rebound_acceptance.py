@@ -8,7 +8,7 @@ T4: High-speed / misaligned approach fails capture gracefully (no forced weld).
 T5: Weld activation does not jump qpos or qvel (zero state discontinuity).
 T6: Locked aggregate hover stability without motor saturation or abnormal internal forces.
 T7: Clean undock separation and verified restoration of connector collision masks.
-T8: Monte Carlo repeatability (10 runs with 100% lock rate and tight time distribution).
+T8: Deterministic regression (10 initial offsets; not a random Monte Carlo).
 T9: Parameter sensitivity sweep across approach speeds, stiffness, and damping.
 """
 from pathlib import Path
@@ -98,9 +98,11 @@ def test_t3_post_lock_stability_no_oscillations():
 
 def test_t4_high_speed_or_misaligned_fails_gracefully():
     """T4: Non-capture conditions (e.g. large misalignment or offset) must not force a weld."""
-    # 1. Position miss (stops 30 mm short of contact)
+    # 1. A 60 mm target gap stays outside physical capture in this trajectory.
+    # A 30 mm TARGET gap can transiently touch and legally lock; it is retained
+    # separately as a boundary experiment, not mistaken for an actual 30 mm gap.
     runner1 = SimulationRunner()
-    rows1 = runner1.run_scenario(duration=5.0, dock_cmd_time=1.0, approach_offset=0.03, undock_cmd_time=None)
+    rows1 = runner1.run_scenario(duration=5.0, dock_cmd_time=1.0, approach_offset=0.06, undock_cmd_time=None)
     assert runner1.dock_event_time is None, "Weld was erroneously forced under position-offset approach"
     assert all(r["weld_active"] == 0 for r in rows1)
 
@@ -176,19 +178,25 @@ def test_t7_undock_clean_separation_and_collision_restoration():
         elif r["time"] > runner.release_event_time + 0.05:
             assert r["weld_active"] == 0
     
-    # Check collision masks were restored
-    for gid in runner.world.connector_geoms:
-        contype = int(runner.world.model.geom_contype[gid])
-        conaffinity = int(runner.world.model.geom_conaffinity[gid])
-        assert contype == 1 and conaffinity == 1, f"Geom {gid} collision masks not restored: contype={contype}"
-    
+    # Pair filtering reserves dedicated bits. Verify original compatibility,
+    # rather than requiring an implementation-specific integer mask value of 1.
+    filt = runner.latch.collision_filter
+    assert filt.active
+    types,aff = runner.world.model.geom_contype,runner.world.model.geom_conaffinity
+    for a in range(runner.world.model.ngeom):
+        for b in range(a):
+            original = bool((int(filt.original_type[a]) & int(filt.original_affinity[b])) |
+                            (int(filt.original_type[b]) & int(filt.original_affinity[a])))
+            restored = bool((int(types[a]) & int(aff[b])) | (int(types[b]) & int(aff[a])))
+            assert restored == original
+
     # Check final independent hover recovery
     tail = _tail(rows, 1.0)
     assert float(np.max(_xyz(tail, "q1") - [0.0, -0.6, 1.0])) < 0.03
     assert float(np.max(_xyz(tail, "q2") - [0.0, 0.6, 1.0])) < 0.03
 
 
-def test_t8_monte_carlo_repeatability_10_runs():
+def test_t8_deterministic_repeatability_10_runs():
     """T8: Repeat 10 nominal docking runs; verify 100% lock rate and tight time distribution."""
     dock_times = []
     contact_times = []

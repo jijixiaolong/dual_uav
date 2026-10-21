@@ -1,0 +1,720 @@
+{
+  "cases": [
+    {
+      "case_id": "20261021_safe_00",
+      "category": "safe",
+      "seed": 20261021,
+      "rows": 900,
+      "original_csv_sha256": "1fade335678839771d6fc4508785bd2dce0335055f86ba07e45abc9b47912af7",
+      "original_events_sha256": "e8ca98a946eef6dbfb9e042229718b59d04a6ce65dc11ec4db1a9c3a339e4e15",
+      "full_original_csv_path": "/home/ubuntu22/Downloads/dual_uav_capture_fix/results/capture_audit_20261021/validated_study/20261021_safe_00/timeseries.csv"
+    },
+    {
+      "case_id": "20261021_safe_01",
+      "category": "safe",
+      "seed": 20261021,
+      "rows": 900,
+      "original_csv_sha256": "719e8fe3a999751acf56ceb8e479187f41544d9610ba0c28a93cd62437826eb1",
+      "original_events_sha256": "80b516c95abf72b19b7735689450c5d03db7aa65d4c73e9c845f58326c2fc9aa",
+      "full_original_csv_path": "/home/ubuntu22/Downloads/dual_uav_capture_fix/results/capture_audit_20261021/validated_study/20261021_safe_01/timeseries.csv"
+    },
+    {
+      "case_id": "20261021_safe_02",
+      "category": "safe",
+      "seed": 20261021,
+      "rows": 900,
+      "original_csv_sha256": "2ad49cc2dd9e46c51fbfcff0b9c8d4723698307ad50b924a6a2837b1f088f647",
+      "original_events_sha256": "f153d711b59ca58fd9d75582f3cf029c7eac3af1dad5becab69ae2a58c4e95a0",
+      "full_original_csv_path": "/home/ubuntu22/Downloads/dual_uav_capture_fix/results/capture_audit_20261021/validated_study/20261021_safe_02/timeseries.csv"
+    },
+    {
+      "case_id": "20261021_safe_03",
+      "category": "safe",
+      "seed": 20261021,
+      "rows": 900,
+      "original_csv_sha256": "c674e295050c26a0a55c2d71f9fd4d508477e5c9790e9f5bee5e3cbb196646c2",
+      "original_events_sha256": "a4ae48e89e65cf25e30c80a667d3619f23500965b2f83610e7c09d505f3781ce",
+      "full_original_csv_path": "/home/ubuntu22/Downloads/dual_uav_capture_fix/results/capture_audit_20261021/validated_study/20261021_safe_03/timeseries.csv"
+    },
+    {
+      "case_id": "20261021_safe_04",
+      "category": "safe",
+      "seed": 20261021,
+      "rows": 900,
+      "original_csv_sha256": "6f1954bf5e1ae99d141a4b4e545af9ad5273c39e6b8e756394d5280b6f6fa6cc",
+      "original_events_sha256": "e1f57da7c8537be0b0a5ed0fdaeeea318afe3178bcf0c4fdc5d5423b8d446599",
+      "full_original_csv_path": "/home/ubuntu22/Downloads/dual_uav_capture_fix/results/capture_audit_20261021/validated_study/20261021_safe_04/timeseries.csv"
+    },
+    {
+      "case_id": "20261021_safe_05",
+      "category": "safe",
+      "seed": 20261021,
+      "rows": 900,
+      "original_csv_sha256": "5ce4fab309dc64673f2d7e30090c52a207d5efac0a28da573245f9c557848bf0",
+      "original_events_sha256": "39195643cb186e16a53f564ef995f52875045aa4ed7e7766a8023c41716ba196",
+      "full_original_csv_path": "/home/ubuntu22/Downloads/dual_uav_capture_fix/results/capture_audit_20261021/validated_study/20261021_safe_05/timeseries.csv"
+    },
+    {
+      "case_id": "20261021_boundary_00",
+      "category": "boundary",
+      "seed": 20261021,
+      "rows": 900,
+      "original_csv_sha256": "f38f2610778f278d74799a4b17d49b34b48faa6011282cc4e2a0097bccd29dd4",
+      "original_events_sha256": "6eeea146eee5f56b56c269c99271b20bcc30366e5e9b4e3e564dd95b153556aa",
+      "full_original_csv_path": "/home/ubuntu22/Downloads/dual_uav_capture_fix/results/capture_audit_20261021/validated_study/20261021_boundary_00/timeseries.csv"
+    },
+    {
+      "case_id": "20261021_boundary_01",
+      "category": "boundary",
+      "seed": 20261021,
+      "rows": 900,
+      "original_csv_sha256": "2a0dac1d7d446d698f02c5b7d9924add301fb2677ba5cdeb9d5a320986f547b8",
+      "original_events_sha256": "5b38ae700c487034f6d4fe2ce7347a067ab2f494cc3e97a8e616d8145957192d",
+      "full_original_csv_path": "/home/ubuntu22/Downloads/dual_uav_capture_fix/results/capture_audit_20261021/validated_study/20261021_boundary_01/timeseries.csv"
+    },
+    {
+      "case_id": "20261021_boundary_02",
+      "category": "boundary",
+      "seed": 20261021,
+      "rows": 900,
+      "original_csv_sha256": "90875f9a31d50409fa1a739a112c2438dd7f5c91e22ad47a668d3c92a807e69a",
+      "original_events_sha256": "9fad257da7087f6163cfdba8ded505c190a0569b6e841fb3eee6f1eddbcdbbd3",
+      "full_original_csv_path": "/home/ubuntu22/Downloads/dual_uav_capture_fix/results/capture_audit_20261021/validated_study/20261021_boundary_02/timeseries.csv"
+    },
+    {
+      "case_id": "20261021_boundary_03",
+      "category": "boundary",
+      "seed": 20261021,
+      "rows": 900,
+      "original_csv_sha256": "4f24c6e0b3e64f6319946a5fe9c230625b5899aa43e39d5aec350279b1ce6228",
+      "original_events_sha256": "135b112fe45edb4433b9038533584b7b7071b9da7f9884b93f7c4e9c08dc7b4e",
+      "full_original_csv_path": "/home/ubuntu22/Downloads/dual_uav_capture_fix/results/capture_audit_20261021/validated_study/20261021_boundary_03/timeseries.csv"
+    },
+    {
+      "case_id": "20261021_boundary_04",
+      "category": "boundary",
+      "seed": 20261021,
+      "rows": 900,
+      "original_csv_sha256": "a7fe069641adcb361b28284dad72fe57c8c066dec0e303b6eb6b85ba9a4d6d54",
+      "original_events_sha256": "ae7f55a497e7fa0224189ebb1bd3f11aa8d62ac12b8f2359d31fe1237b1392dd",
+      "full_original_csv_path": "/home/ubuntu22/Downloads/dual_uav_capture_fix/results/capture_audit_20261021/validated_study/20261021_boundary_04/timeseries.csv"
+    },
+    {
+      "case_id": "20261021_boundary_05",
+      "category": "boundary",
+      "seed": 20261021,
+      "rows": 900,
+      "original_csv_sha256": "f64225d4b88702d539c496cb627c915267c39e539020808acb08a647ba5ddcdf",
+      "original_events_sha256": "a985e22d1ddf3774f9bce42a62cdfe7925d52b7efa144be209deb8d0be1d1ba4",
+      "full_original_csv_path": "/home/ubuntu22/Downloads/dual_uav_capture_fix/results/capture_audit_20261021/validated_study/20261021_boundary_05/timeseries.csv"
+    },
+    {
+      "case_id": "20261021_reject_00",
+      "category": "reject",
+      "seed": 20261021,
+      "rows": 900,
+      "original_csv_sha256": "6288d2b414846a370a646e87988ade258e794cecdf244a39155166324367376c",
+      "original_events_sha256": "5b3d4aca497d2c524366cb655ad7acad1373d4355ba11976678455e47c1f9c52",
+      "full_original_csv_path": "/home/ubuntu22/Downloads/dual_uav_capture_fix/results/capture_audit_20261021/validated_study/20261021_reject_00/timeseries.csv"
+    },
+    {
+      "case_id": "20261021_reject_01",
+      "category": "reject",
+      "seed": 20261021,
+      "rows": 900,
+      "original_csv_sha256": "31f44691630cd98cd8401cbee84ea3f670b1b2ea064554be2a7af53f6c1a9c4e",
+      "original_events_sha256": "22e5d36e5c79151e71c105c9b1f111bd3c1820b604eb1b16e6114c43d74a0dc7",
+      "full_original_csv_path": "/home/ubuntu22/Downloads/dual_uav_capture_fix/results/capture_audit_20261021/validated_study/20261021_reject_01/timeseries.csv"
+    },
+    {
+      "case_id": "20261021_reject_02",
+      "category": "reject",
+      "seed": 20261021,
+      "rows": 900,
+      "original_csv_sha256": "334f1c44dfca2b65c05f2c957c465010b33484844c2682c06f3cba15ec5b4522",
+      "original_events_sha256": "e0061e4a4ff465e21263311308cdac7851061d2bb88b2753011d8e22a9905377",
+      "full_original_csv_path": "/home/ubuntu22/Downloads/dual_uav_capture_fix/results/capture_audit_20261021/validated_study/20261021_reject_02/timeseries.csv"
+    },
+    {
+      "case_id": "20261021_reject_03",
+      "category": "reject",
+      "seed": 20261021,
+      "rows": 900,
+      "original_csv_sha256": "50654d60357ec163b1020fdecd485af2a40c3ae1d76ed34ffb926431f0012cba",
+      "original_events_sha256": "481c6ad4e230193de82f1c2a839073068a24039b2ebc5d52c7cf6750cf660b8d",
+      "full_original_csv_path": "/home/ubuntu22/Downloads/dual_uav_capture_fix/results/capture_audit_20261021/validated_study/20261021_reject_03/timeseries.csv"
+    },
+    {
+      "case_id": "20261021_reject_04",
+      "category": "reject",
+      "seed": 20261021,
+      "rows": 900,
+      "original_csv_sha256": "7f3dbd61606b98f03c9ffb6af640f06b4a1b4c668e9d86177929f47c663830bd",
+      "original_events_sha256": "0fb50f960bc86da1ee8178a93ff6d0b9db1a6e431371f4c9d025ba7632a1a553",
+      "full_original_csv_path": "/home/ubuntu22/Downloads/dual_uav_capture_fix/results/capture_audit_20261021/validated_study/20261021_reject_04/timeseries.csv"
+    },
+    {
+      "case_id": "20261021_reject_05",
+      "category": "reject",
+      "seed": 20261021,
+      "rows": 900,
+      "original_csv_sha256": "da690572815613b20eb9732c53c79a115672aa8c70bf5675a557ae1745a18a06",
+      "original_events_sha256": "c6e316a42033562a0822af499a3a3127601b53022faa1d05e63015a5642b191c",
+      "full_original_csv_path": "/home/ubuntu22/Downloads/dual_uav_capture_fix/results/capture_audit_20261021/validated_study/20261021_reject_05/timeseries.csv"
+    },
+    {
+      "case_id": "1042_safe_00",
+      "category": "safe",
+      "seed": 1042,
+      "rows": 900,
+      "original_csv_sha256": "8b5a856972837d2924f88ebbaf9f3dfa2c8ef84bffbf2ce6dcef1dcc4ede73cd",
+      "original_events_sha256": "a0900fc5af73c7782509b2cbef82a44351e2e05100231daad0291a0588f4dc26",
+      "full_original_csv_path": "/home/ubuntu22/Downloads/dual_uav_capture_fix/results/capture_audit_20261021/validated_study/1042_safe_00/timeseries.csv"
+    },
+    {
+      "case_id": "1042_safe_01",
+      "category": "safe",
+      "seed": 1042,
+      "rows": 900,
+      "original_csv_sha256": "141da7830319b35fcdee7639439f98232b6da4de5aeab46250379de9d3323f8d",
+      "original_events_sha256": "0d793a7b840d4e04460594cceebec7f7e023a51d52bb03b241f42a1aa6997ff3",
+      "full_original_csv_path": "/home/ubuntu22/Downloads/dual_uav_capture_fix/results/capture_audit_20261021/validated_study/1042_safe_01/timeseries.csv"
+    },
+    {
+      "case_id": "1042_safe_02",
+      "category": "safe",
+      "seed": 1042,
+      "rows": 900,
+      "original_csv_sha256": "67b7c897cce12187dc968e37ed6e87f3880946bf3cc94150c2e756116b4c3832",
+      "original_events_sha256": "ba21e9b7ff3878a58a602c4c200cddce158d937482720f90811c8306e6f9486d",
+      "full_original_csv_path": "/home/ubuntu22/Downloads/dual_uav_capture_fix/results/capture_audit_20261021/validated_study/1042_safe_02/timeseries.csv"
+    },
+    {
+      "case_id": "1042_safe_03",
+      "category": "safe",
+      "seed": 1042,
+      "rows": 900,
+      "original_csv_sha256": "be45fc07ca31422a8dc50ea8808b8fc99c4161dce8545257fed0773b9d3073a8",
+      "original_events_sha256": "09415127966b15a56289df90a765debb12f5b8ff53702f124cd6e02c0336d218",
+      "full_original_csv_path": "/home/ubuntu22/Downloads/dual_uav_capture_fix/results/capture_audit_20261021/validated_study/1042_safe_03/timeseries.csv"
+    },
+    {
+      "case_id": "1042_safe_04",
+      "category": "safe",
+      "seed": 1042,
+      "rows": 900,
+      "original_csv_sha256": "50d2674aa3470241f072c9c57b835542b7deeb75ce6c7170de44f33cb8a2b163",
+      "original_events_sha256": "4124f073893f63a52f592505a64dcc817bc4bd33038e9aec83a2030ddac449b3",
+      "full_original_csv_path": "/home/ubuntu22/Downloads/dual_uav_capture_fix/results/capture_audit_20261021/validated_study/1042_safe_04/timeseries.csv"
+    },
+    {
+      "case_id": "1042_safe_05",
+      "category": "safe",
+      "seed": 1042,
+      "rows": 900,
+      "original_csv_sha256": "af7800e9c1ab9058945663a130d5435d370735ab3ba0c1d695745ac80ede0382",
+      "original_events_sha256": "ae5e81df6f13c73291e0c59420c72e7cd5024469e9048d6a3a3d1d78a53ec71a",
+      "full_original_csv_path": "/home/ubuntu22/Downloads/dual_uav_capture_fix/results/capture_audit_20261021/validated_study/1042_safe_05/timeseries.csv"
+    },
+    {
+      "case_id": "1042_boundary_00",
+      "category": "boundary",
+      "seed": 1042,
+      "rows": 900,
+      "original_csv_sha256": "2442e0b33033b0a5a0ca9f472af259a0661be482a6c59c9e80f6d4bb1a291641",
+      "original_events_sha256": "a2e25a194ee795837828311fe03344b8dee723893595ae6c66cc35b99ea0159c",
+      "full_original_csv_path": "/home/ubuntu22/Downloads/dual_uav_capture_fix/results/capture_audit_20261021/validated_study/1042_boundary_00/timeseries.csv"
+    },
+    {
+      "case_id": "1042_boundary_01",
+      "category": "boundary",
+      "seed": 1042,
+      "rows": 900,
+      "original_csv_sha256": "d34525f0b1c65d150d73cdbde0619996e733348a0f3194490597899bbac3f8a1",
+      "original_events_sha256": "0e035e66561e7eafee651ee42022d84acdb39fada8f77047d58e9bb18406895f",
+      "full_original_csv_path": "/home/ubuntu22/Downloads/dual_uav_capture_fix/results/capture_audit_20261021/validated_study/1042_boundary_01/timeseries.csv"
+    },
+    {
+      "case_id": "1042_boundary_02",
+      "category": "boundary",
+      "seed": 1042,
+      "rows": 900,
+      "original_csv_sha256": "e5c0a88df749398650dc21b8014415258a66f00de58167736087cf58fe3eefcf",
+      "original_events_sha256": "05fbb874a545871a2daab56f1a7170bd9130eac27e46928e235e6f6699a90afa",
+      "full_original_csv_path": "/home/ubuntu22/Downloads/dual_uav_capture_fix/results/capture_audit_20261021/validated_study/1042_boundary_02/timeseries.csv"
+    },
+    {
+      "case_id": "1042_boundary_03",
+      "category": "boundary",
+      "seed": 1042,
+      "rows": 900,
+      "original_csv_sha256": "85f4f885b07d475de2958a15fe75a13d4204f11ab02144d54aec73441bcfceeb",
+      "original_events_sha256": "003b3202622bb95347cda59b3016d3335f419d62b2ac7ca4be3ec14ea362778f",
+      "full_original_csv_path": "/home/ubuntu22/Downloads/dual_uav_capture_fix/results/capture_audit_20261021/validated_study/1042_boundary_03/timeseries.csv"
+    },
+    {
+      "case_id": "1042_boundary_04",
+      "category": "boundary",
+      "seed": 1042,
+      "rows": 900,
+      "original_csv_sha256": "de08cb17104de7270c6114ca19ac81484d959bbb9eccca30269dd5bb88549290",
+      "original_events_sha256": "b9627bf5bad9d8868e3d5f4133524238ec33fc7ac682c427bac502b8d51acfe1",
+      "full_original_csv_path": "/home/ubuntu22/Downloads/dual_uav_capture_fix/results/capture_audit_20261021/validated_study/1042_boundary_04/timeseries.csv"
+    },
+    {
+      "case_id": "1042_boundary_05",
+      "category": "boundary",
+      "seed": 1042,
+      "rows": 900,
+      "original_csv_sha256": "1565f87736a134b1fd89a6e0989b05abeea7cc6c02a055824bba44f3cdfd92d6",
+      "original_events_sha256": "0c9b00599be82440efe4cefce4afaf5df75c33b2584992a18ec896aed5912b0d",
+      "full_original_csv_path": "/home/ubuntu22/Downloads/dual_uav_capture_fix/results/capture_audit_20261021/validated_study/1042_boundary_05/timeseries.csv"
+    },
+    {
+      "case_id": "1042_reject_00",
+      "category": "reject",
+      "seed": 1042,
+      "rows": 900,
+      "original_csv_sha256": "4b7e19bd3626253d894da22b962af938ecefd3220e2d2df888e880ab25d7e9b9",
+      "original_events_sha256": "10ba0bc044ddfd2111620ff79813d0fb9b3e6c9abd2ecac879b023e889a32d50",
+      "full_original_csv_path": "/home/ubuntu22/Downloads/dual_uav_capture_fix/results/capture_audit_20261021/validated_study/1042_reject_00/timeseries.csv"
+    },
+    {
+      "case_id": "1042_reject_01",
+      "category": "reject",
+      "seed": 1042,
+      "rows": 900,
+      "original_csv_sha256": "4ce11cdd94a783ab6aea866d33cdddf5820486d668dd461f1a2100243468806e",
+      "original_events_sha256": "afd077922e2cc221f4a32eacd9d0b805cf70b09a2cb069f4cd490c890f846545",
+      "full_original_csv_path": "/home/ubuntu22/Downloads/dual_uav_capture_fix/results/capture_audit_20261021/validated_study/1042_reject_01/timeseries.csv"
+    },
+    {
+      "case_id": "1042_reject_02",
+      "category": "reject",
+      "seed": 1042,
+      "rows": 900,
+      "original_csv_sha256": "e21153c9a9d04cbe3ad2b58a840ca5a1725254daaaea77a57d536c8b16abeacf",
+      "original_events_sha256": "b5c89223c77381e1332b57931803dad0e1b6b6112fb34110abc7a3ab11caa400",
+      "full_original_csv_path": "/home/ubuntu22/Downloads/dual_uav_capture_fix/results/capture_audit_20261021/validated_study/1042_reject_02/timeseries.csv"
+    },
+    {
+      "case_id": "1042_reject_03",
+      "category": "reject",
+      "seed": 1042,
+      "rows": 900,
+      "original_csv_sha256": "1ccb5eefa0ee708f3c884b823119ed83270be9c18253a00d09c1442da1ba06f0",
+      "original_events_sha256": "8a10c053bff0adc7cf5e460e1ac69d41cdc5bed601af9a4e58878407ae676166",
+      "full_original_csv_path": "/home/ubuntu22/Downloads/dual_uav_capture_fix/results/capture_audit_20261021/validated_study/1042_reject_03/timeseries.csv"
+    },
+    {
+      "case_id": "1042_reject_04",
+      "category": "reject",
+      "seed": 1042,
+      "rows": 900,
+      "original_csv_sha256": "dade4303af6bb69ac860b2860974e9700cfb9d5452fa562fe9a78fda8412552a",
+      "original_events_sha256": "84dd8eaba913a8c2726650fb920d116ede9241602de9dadcef591a42eb1ed967",
+      "full_original_csv_path": "/home/ubuntu22/Downloads/dual_uav_capture_fix/results/capture_audit_20261021/validated_study/1042_reject_04/timeseries.csv"
+    },
+    {
+      "case_id": "1042_reject_05",
+      "category": "reject",
+      "seed": 1042,
+      "rows": 900,
+      "original_csv_sha256": "e05acad3edd3fbf24a6fde3396c3ca1355ad0fec7decbf11556c324715c68d94",
+      "original_events_sha256": "8f935c5348423b214ef9e7dd282ce8f08add8f5ee2db79813570eb979138dcbb",
+      "full_original_csv_path": "/home/ubuntu22/Downloads/dual_uav_capture_fix/results/capture_audit_20261021/validated_study/1042_reject_05/timeseries.csv"
+    },
+    {
+      "case_id": "7301_safe_00",
+      "category": "safe",
+      "seed": 7301,
+      "rows": 900,
+      "original_csv_sha256": "0acc5db243b04421babacf3557983e14f12be9fcbd31ae1adaa41410c7a7c82d",
+      "original_events_sha256": "2113bd459d989011f2a494450f7238f6a7231f9c312b95f74b0c212fed675607",
+      "full_original_csv_path": "/home/ubuntu22/Downloads/dual_uav_capture_fix/results/capture_audit_20261021/validated_study/7301_safe_00/timeseries.csv"
+    },
+    {
+      "case_id": "7301_safe_01",
+      "category": "safe",
+      "seed": 7301,
+      "rows": 900,
+      "original_csv_sha256": "9e4a87e01e08696d58b7922b9e12d1a7db3f3f3dcfc8403a83377f3a76f19c90",
+      "original_events_sha256": "b478b31d89844a27365e3713ccc57c7ad6557fd61cde2bc17684eff493495914",
+      "full_original_csv_path": "/home/ubuntu22/Downloads/dual_uav_capture_fix/results/capture_audit_20261021/validated_study/7301_safe_01/timeseries.csv"
+    },
+    {
+      "case_id": "7301_safe_02",
+      "category": "safe",
+      "seed": 7301,
+      "rows": 900,
+      "original_csv_sha256": "03360eda9348d6f39b9a09ae0b0fc5732e2995bc38ff8e93ee2772c2c6d9debc",
+      "original_events_sha256": "af6dfa2e9476efa8e0df83094b95aaf8aefec3f7106e3c06e9509e88714a1dad",
+      "full_original_csv_path": "/home/ubuntu22/Downloads/dual_uav_capture_fix/results/capture_audit_20261021/validated_study/7301_safe_02/timeseries.csv"
+    },
+    {
+      "case_id": "7301_safe_03",
+      "category": "safe",
+      "seed": 7301,
+      "rows": 900,
+      "original_csv_sha256": "e32cb27ba2f918c26c1935187bff919821aff94e6407800ee90d9bef285f8074",
+      "original_events_sha256": "4836c890c5f006b162efee6da771c77f7f49357b86a5d6674fcfdbe0c4aeb38b",
+      "full_original_csv_path": "/home/ubuntu22/Downloads/dual_uav_capture_fix/results/capture_audit_20261021/validated_study/7301_safe_03/timeseries.csv"
+    },
+    {
+      "case_id": "7301_safe_04",
+      "category": "safe",
+      "seed": 7301,
+      "rows": 900,
+      "original_csv_sha256": "f7d0ea789d7af32ade74469c4641a747c6a2f6d2bd4bf24dd1012948d4bda570",
+      "original_events_sha256": "ceb2a9704377c6c0307a67af630b85c77eb13f0fac36376636388c6a874c0aa8",
+      "full_original_csv_path": "/home/ubuntu22/Downloads/dual_uav_capture_fix/results/capture_audit_20261021/validated_study/7301_safe_04/timeseries.csv"
+    },
+    {
+      "case_id": "7301_safe_05",
+      "category": "safe",
+      "seed": 7301,
+      "rows": 900,
+      "original_csv_sha256": "fd52615e6b0c09b8a559d8a529b464d1e3490ede352cc09fe2aa5033d42314a3",
+      "original_events_sha256": "45d2ed9f991af96a745a67f4f45c50b3600211535bc73ba7f9412d72f8e03745",
+      "full_original_csv_path": "/home/ubuntu22/Downloads/dual_uav_capture_fix/results/capture_audit_20261021/validated_study/7301_safe_05/timeseries.csv"
+    },
+    {
+      "case_id": "7301_boundary_00",
+      "category": "boundary",
+      "seed": 7301,
+      "rows": 900,
+      "original_csv_sha256": "18ec42897cfecd9dfa8fbce682567e027dcb40f56074a48667497a9edaea3dcb",
+      "original_events_sha256": "ec8caebd6a730458e6e410838cca61edbf6472ae5f50eb01038f857d6eb8f870",
+      "full_original_csv_path": "/home/ubuntu22/Downloads/dual_uav_capture_fix/results/capture_audit_20261021/validated_study/7301_boundary_00/timeseries.csv"
+    },
+    {
+      "case_id": "7301_boundary_01",
+      "category": "boundary",
+      "seed": 7301,
+      "rows": 900,
+      "original_csv_sha256": "fa81a244d1f63a3de5df92fd1d7850216e235270858c037b5ca78f5d019f278f",
+      "original_events_sha256": "7a6950d074ddcd100e2caf7e7d9bfa510e92399112681f9cdfea918163659c3d",
+      "full_original_csv_path": "/home/ubuntu22/Downloads/dual_uav_capture_fix/results/capture_audit_20261021/validated_study/7301_boundary_01/timeseries.csv"
+    },
+    {
+      "case_id": "7301_boundary_02",
+      "category": "boundary",
+      "seed": 7301,
+      "rows": 900,
+      "original_csv_sha256": "da3dd55e3bcf66fb4bbe9914fa7daa84d27a99ca9942e97692c8a4b3efa8ad49",
+      "original_events_sha256": "73bdba11110b767775dd4e17cd3fc848b1814b62f5a7ca02f4f6e8e7f40d5a56",
+      "full_original_csv_path": "/home/ubuntu22/Downloads/dual_uav_capture_fix/results/capture_audit_20261021/validated_study/7301_boundary_02/timeseries.csv"
+    },
+    {
+      "case_id": "7301_boundary_03",
+      "category": "boundary",
+      "seed": 7301,
+      "rows": 900,
+      "original_csv_sha256": "cd2f9bf72cad4a3832372dd324bdb54b598978d39213c47b477e42726a1d8fd6",
+      "original_events_sha256": "d7fb46334577cd44b88ab5f278e3953f54d608445b5762f44573d505221815c2",
+      "full_original_csv_path": "/home/ubuntu22/Downloads/dual_uav_capture_fix/results/capture_audit_20261021/validated_study/7301_boundary_03/timeseries.csv"
+    },
+    {
+      "case_id": "7301_boundary_04",
+      "category": "boundary",
+      "seed": 7301,
+      "rows": 900,
+      "original_csv_sha256": "2d139d94a2842993f08ceb3e9af6179021c6aeae7fd6f96aa972f6bdee1e664c",
+      "original_events_sha256": "a6000b5b067bb638883098e10d4805cc820216c85f5677a364fdca6f9d5e0ed8",
+      "full_original_csv_path": "/home/ubuntu22/Downloads/dual_uav_capture_fix/results/capture_audit_20261021/validated_study/7301_boundary_04/timeseries.csv"
+    },
+    {
+      "case_id": "7301_boundary_05",
+      "category": "boundary",
+      "seed": 7301,
+      "rows": 900,
+      "original_csv_sha256": "29940da332c82808050a49cb813f5229f271dfa567b2410127f1edca3d2115a6",
+      "original_events_sha256": "f9137e7cc666d342a64c850d9f4b5343ecd5601ff788a4c8236b5ca31178dc52",
+      "full_original_csv_path": "/home/ubuntu22/Downloads/dual_uav_capture_fix/results/capture_audit_20261021/validated_study/7301_boundary_05/timeseries.csv"
+    },
+    {
+      "case_id": "7301_reject_00",
+      "category": "reject",
+      "seed": 7301,
+      "rows": 900,
+      "original_csv_sha256": "2b72ac77905f639b8a8041078ca29c40cc1bcbc0941991aa8e91eae364dfe953",
+      "original_events_sha256": "2bcc8dcbda94136a0f71ecad97211f06487b46344a6ae75866673682ef54b5b7",
+      "full_original_csv_path": "/home/ubuntu22/Downloads/dual_uav_capture_fix/results/capture_audit_20261021/validated_study/7301_reject_00/timeseries.csv"
+    },
+    {
+      "case_id": "7301_reject_01",
+      "category": "reject",
+      "seed": 7301,
+      "rows": 900,
+      "original_csv_sha256": "774da424f779d7555e7483ad3ca65c47377f4427b5a967d708cf1cfae51ed123",
+      "original_events_sha256": "df9cb43f32169572251dbfa050ccea8218fa391d7d87e7aa50767461cdfb8d95",
+      "full_original_csv_path": "/home/ubuntu22/Downloads/dual_uav_capture_fix/results/capture_audit_20261021/validated_study/7301_reject_01/timeseries.csv"
+    },
+    {
+      "case_id": "7301_reject_02",
+      "category": "reject",
+      "seed": 7301,
+      "rows": 900,
+      "original_csv_sha256": "a6377d39c193ed463b13913270abdcd5c54b350327f971309bff6e2304d8e4ad",
+      "original_events_sha256": "e11b83dbfed9ace58b83d2aecb6d6ccd8e181208e67916b93b1bc176e9b30170",
+      "full_original_csv_path": "/home/ubuntu22/Downloads/dual_uav_capture_fix/results/capture_audit_20261021/validated_study/7301_reject_02/timeseries.csv"
+    },
+    {
+      "case_id": "7301_reject_03",
+      "category": "reject",
+      "seed": 7301,
+      "rows": 900,
+      "original_csv_sha256": "dd7de2b35ecbcd346a0327cc5a7f4f6b2e68adf2a6374252602ace0e26c1fdf8",
+      "original_events_sha256": "fae3f4f78ef1143399b9dc9d46ea11af8b71693d9974ca707387226a86fe6f6a",
+      "full_original_csv_path": "/home/ubuntu22/Downloads/dual_uav_capture_fix/results/capture_audit_20261021/validated_study/7301_reject_03/timeseries.csv"
+    },
+    {
+      "case_id": "7301_reject_04",
+      "category": "reject",
+      "seed": 7301,
+      "rows": 900,
+      "original_csv_sha256": "996cded72d25db062d25d43f3f8bc04525bfdf3e28b99588d5d418153dc1a1df",
+      "original_events_sha256": "09272a18a1e719509982f8e82f2d136ed9bdb204d93ad07130559e8025ae945a",
+      "full_original_csv_path": "/home/ubuntu22/Downloads/dual_uav_capture_fix/results/capture_audit_20261021/validated_study/7301_reject_04/timeseries.csv"
+    },
+    {
+      "case_id": "7301_reject_05",
+      "category": "reject",
+      "seed": 7301,
+      "rows": 900,
+      "original_csv_sha256": "8fbb04b61ef4b583dcad8cd24941dfcd9ded1991b4d729f8a3ad6e42ce14da99",
+      "original_events_sha256": "101eb9e3f80b7632974fc2bbdb46baaeb74db6320706611bdc07b74883d1fc2a",
+      "full_original_csv_path": "/home/ubuntu22/Downloads/dual_uav_capture_fix/results/capture_audit_20261021/validated_study/7301_reject_05/timeseries.csv"
+    },
+    {
+      "case_id": "nominal",
+      "category": "targeted",
+      "seed": null,
+      "rows": 5000,
+      "original_csv_sha256": "ec78630d0adc953ebdad57fa00ce0f08e39f8c8b645162a1a6527f1c6ef8052f",
+      "original_events_sha256": "2db6edde90a32aaf724acd9124f652108abd22c044abc2634a36f3ec22492508",
+      "full_original_csv_path": "/home/ubuntu22/Downloads/dual_uav_capture_fix/results/capture_audit_20261021/validated_study/nominal/timeseries.csv"
+    },
+    {
+      "case_id": "target_gap_30mm",
+      "category": "targeted",
+      "seed": null,
+      "rows": 3000,
+      "original_csv_sha256": "4cbc7dc49b7228785378356e132ea25309dfffc55ed25cff51a9630e4ed45489",
+      "original_events_sha256": "e214788087aa96ac33975e6e56d48d3233dc25fcf1605e21efb7926c6960e42f",
+      "full_original_csv_path": "/home/ubuntu22/Downloads/dual_uav_capture_fix/results/capture_audit_20261021/validated_study/target_gap_30mm/timeseries.csv"
+    },
+    {
+      "case_id": "miss_60mm",
+      "category": "targeted",
+      "seed": null,
+      "rows": 3000,
+      "original_csv_sha256": "2accf7a5528ac92dcc6f045ad4bd0c9103264be1f640c6330e9cc9fe265f9388",
+      "original_events_sha256": "33f121802bec9979947238cdd3f12d0c4dbd4f102e5d8d885db411de5d492543",
+      "full_original_csv_path": "/home/ubuntu22/Downloads/dual_uav_capture_fix/results/capture_audit_20261021/validated_study/miss_60mm/timeseries.csv"
+    },
+    {
+      "case_id": "high_speed_collision",
+      "category": "targeted",
+      "seed": null,
+      "rows": 500,
+      "original_csv_sha256": "6218263bcf0793d188eaa849ab0a8d18171758b9e7116ededd14eef843064e23",
+      "original_events_sha256": "8704ea49bbf0081054a5984064303040d4718fe068d9977be01fffcbab993269",
+      "full_original_csv_path": "/home/ubuntu22/Downloads/dual_uav_capture_fix/results/capture_audit_20261021/validated_study/high_speed_collision/timeseries.csv"
+    },
+    {
+      "case_id": "high_speed_failure",
+      "category": "targeted",
+      "seed": null,
+      "rows": 500,
+      "original_csv_sha256": "368bd08ab305dfd1790c6f134b2b25669587add629ffdb700738d9671277fe06",
+      "original_events_sha256": "8ee7c21902313bc0b79ab37d0d4d6c77e8c29ae062ed764800dca005bbeac967",
+      "full_original_csv_path": "/home/ubuntu22/Downloads/dual_uav_capture_fix/results/capture_audit_20261021/validated_study/high_speed_failure/timeseries.csv"
+    },
+    {
+      "case_id": "high_angular_collision",
+      "category": "targeted",
+      "seed": null,
+      "rows": 500,
+      "original_csv_sha256": "1d84b1ce9d0ed7c9138d584977b0a29c33dc38188c205e6bf42fbf97e58572e7",
+      "original_events_sha256": "030a6faef47aa277443f27196e0a9c9688d45b34ad3ef5ae16af52f75ac79491",
+      "full_original_csv_path": "/home/ubuntu22/Downloads/dual_uav_capture_fix/results/capture_audit_20261021/validated_study/high_angular_collision/timeseries.csv"
+    },
+    {
+      "case_id": "edge_contact",
+      "category": "targeted",
+      "seed": null,
+      "rows": 500,
+      "original_csv_sha256": "8dd7be0f809765d7faa4421a23018fd5966a31c54bccb36550d581cc4832b44f",
+      "original_events_sha256": "4a66ee98ba83ca08b1285dca8522f6064753b3647425ad26cb912a4ea91056ee",
+      "full_original_csv_path": "/home/ubuntu22/Downloads/dual_uav_capture_fix/results/capture_audit_20261021/validated_study/edge_contact/timeseries.csv"
+    },
+    {
+      "case_id": "deterministic_00",
+      "category": "deterministic",
+      "seed": null,
+      "rows": 2500,
+      "original_csv_sha256": "95a9ccf35179326fa31749b1a956cc2b66fa1af1552723d3ef6b166d7cd8d72f",
+      "original_events_sha256": "7b343f809d562b2dbfa3c03c2f9442e8b15393497ee790847390d33a16b05ee9",
+      "full_original_csv_path": "/home/ubuntu22/Downloads/dual_uav_capture_fix/results/capture_audit_20261021/deterministic_repeats/trial_00/timeseries.csv"
+    },
+    {
+      "case_id": "deterministic_01",
+      "category": "deterministic",
+      "seed": null,
+      "rows": 2500,
+      "original_csv_sha256": "1cfde196325e3be69516811e5fa37d0e788919b2c40f2015fd5ebf9404e38d2a",
+      "original_events_sha256": "144fb48ffbd6b8cca549c2f3654b95cc584bf2df659f453eac2e5cfdc79b0c00",
+      "full_original_csv_path": "/home/ubuntu22/Downloads/dual_uav_capture_fix/results/capture_audit_20261021/deterministic_repeats/trial_01/timeseries.csv"
+    },
+    {
+      "case_id": "deterministic_02",
+      "category": "deterministic",
+      "seed": null,
+      "rows": 2500,
+      "original_csv_sha256": "95b957d7d70cd60c892416cd236005a64c3b9227837d10cdabdcac1b1f8485f9",
+      "original_events_sha256": "c53a14993c0448c331159e691ceb12941737aac1d782bda56f0c2e8b773cfae9",
+      "full_original_csv_path": "/home/ubuntu22/Downloads/dual_uav_capture_fix/results/capture_audit_20261021/deterministic_repeats/trial_02/timeseries.csv"
+    },
+    {
+      "case_id": "deterministic_03",
+      "category": "deterministic",
+      "seed": null,
+      "rows": 2500,
+      "original_csv_sha256": "f003d672cdfb09dc23b8ae56928b1b747a603be549ff175e638b4da612e0e4b3",
+      "original_events_sha256": "054c44a10b301c1f40fee7202bae64baa082c02a9c34370ee98dc6f72f08e78e",
+      "full_original_csv_path": "/home/ubuntu22/Downloads/dual_uav_capture_fix/results/capture_audit_20261021/deterministic_repeats/trial_03/timeseries.csv"
+    },
+    {
+      "case_id": "deterministic_04",
+      "category": "deterministic",
+      "seed": null,
+      "rows": 2500,
+      "original_csv_sha256": "c305d4f0d813092b987ce236bee5954841ea6b5a59bb026b2df57ea508775942",
+      "original_events_sha256": "18dfb098ba9ebef437f924888c8bc4549ff0debb434e4d530f024cb07c341000",
+      "full_original_csv_path": "/home/ubuntu22/Downloads/dual_uav_capture_fix/results/capture_audit_20261021/deterministic_repeats/trial_04/timeseries.csv"
+    },
+    {
+      "case_id": "deterministic_05",
+      "category": "deterministic",
+      "seed": null,
+      "rows": 2500,
+      "original_csv_sha256": "bef856093caa0b67a9dfe13aec3ee519ada3d3aef2ce7fb3b602eed37d8ffb15",
+      "original_events_sha256": "b5d43ccf260ad4ff54e53042c4e3684b76a21c1e606824b6a41a46fa653ac7d4",
+      "full_original_csv_path": "/home/ubuntu22/Downloads/dual_uav_capture_fix/results/capture_audit_20261021/deterministic_repeats/trial_05/timeseries.csv"
+    },
+    {
+      "case_id": "deterministic_06",
+      "category": "deterministic",
+      "seed": null,
+      "rows": 2500,
+      "original_csv_sha256": "e12f17bb6229ffc9eea9c19705f878e629837586342ca721170d235b0f30b155",
+      "original_events_sha256": "236390de986de4a14ca28f46dc5fd706c45aff3ff91d66e6e562b2a76aaeaee1",
+      "full_original_csv_path": "/home/ubuntu22/Downloads/dual_uav_capture_fix/results/capture_audit_20261021/deterministic_repeats/trial_06/timeseries.csv"
+    },
+    {
+      "case_id": "deterministic_07",
+      "category": "deterministic",
+      "seed": null,
+      "rows": 2500,
+      "original_csv_sha256": "5f755b5bcc2a1e83dd9f0129e608cdfc29d73d26807da9f542c0174e3b7c78de",
+      "original_events_sha256": "429ef544cca4d36f56dc44935c5d5109b20620a07ac9c6ac849fb3242de42e85",
+      "full_original_csv_path": "/home/ubuntu22/Downloads/dual_uav_capture_fix/results/capture_audit_20261021/deterministic_repeats/trial_07/timeseries.csv"
+    },
+    {
+      "case_id": "deterministic_08",
+      "category": "deterministic",
+      "seed": null,
+      "rows": 2500,
+      "original_csv_sha256": "9a3ff804a871c334f2adeb81cbb81a946b39ad1fe8c991a28721d64c71f6e95c",
+      "original_events_sha256": "12f562a39abc37edeab214c8a7daa691bc7d58f48390eb5c47de074cb7d9d792",
+      "full_original_csv_path": "/home/ubuntu22/Downloads/dual_uav_capture_fix/results/capture_audit_20261021/deterministic_repeats/trial_08/timeseries.csv"
+    },
+    {
+      "case_id": "deterministic_09",
+      "category": "deterministic",
+      "seed": null,
+      "rows": 2500,
+      "original_csv_sha256": "2a58b828342ea4b4f6886a977f5cf78be94990ea7f7f6004da154a3b6e4dd504",
+      "original_events_sha256": "073c1f66fc12c2f54b30524868a9c77e436f0db5486e538d6ab006119df0d84e",
+      "full_original_csv_path": "/home/ubuntu22/Downloads/dual_uav_capture_fix/results/capture_audit_20261021/deterministic_repeats/trial_09/timeseries.csv"
+    }
+  ],
+  "total_rows": 86600,
+  "columns": [
+    "case_id",
+    "category",
+    "seed",
+    "time",
+    "mode",
+    "mode_name",
+    "phase",
+    "weld_active",
+    "control_updated",
+    "control_dt_s",
+    "controller_state_time_s",
+    "first_contact_time_s",
+    "dock_event_time_s",
+    "release_event_time_s",
+    "contact_actual",
+    "contact_held",
+    "contact_state",
+    "capture_active",
+    "capture_attempt_id",
+    "collision_index",
+    "connector_pair_collision_active",
+    "rel_dist",
+    "relative_attitude_rad",
+    "relative_normal_velocity_mps",
+    "relative_angular_speed_radps",
+    "contact_normal_force_N",
+    "step_contact_normal_N",
+    "contact_impulse_est_Ns",
+    "capture_static_force_N",
+    "capture_damping_force_N",
+    "capture_resultant_force_N",
+    "capture_damping_power_W",
+    "capture_potential_J",
+    "capture_reservoir_energy_J",
+    "capture_discarded_energy_J",
+    "capture_dissipated_energy_J",
+    "capture_transferred_energy_J",
+    "capture_returned_energy_J",
+    "weld_anchor_error_m",
+    "weld_attitude_error_rad",
+    "connector_relative_velocity_x",
+    "connector_relative_velocity_y",
+    "connector_relative_velocity_z",
+    "weld_q1_force_world_N_x",
+    "weld_q1_force_world_N_y",
+    "weld_q1_force_world_N_z",
+    "weld_q1_couple_at_anchor_world_Nm_x",
+    "weld_q1_couple_at_anchor_world_Nm_y",
+    "weld_q1_couple_at_anchor_world_Nm_z",
+    "motor0_command_N",
+    "motor0_actual_N",
+    "motor1_command_N",
+    "motor1_actual_N",
+    "motor2_command_N",
+    "motor2_actual_N",
+    "motor3_command_N",
+    "motor3_actual_N",
+    "motor4_command_N",
+    "motor4_actual_N",
+    "motor5_command_N",
+    "motor5_actual_N",
+    "motor6_command_N",
+    "motor6_actual_N",
+    "motor7_command_N",
+    "motor7_actual_N",
+    "q1_pos_error_m",
+    "q1_attitude_error_rad",
+    "q1_roll_error_deg",
+    "q1_pitch_error_deg",
+    "q2_pos_error_m",
+    "q2_attitude_error_rad",
+    "q2_roll_error_deg",
+    "q2_pitch_error_deg"
+  ],
+  "note": "Lossless column projection at original 500 Hz; ALL 71 cases retained. Full raw CSVs remain in new results directory, paths/hashes recorded."
+}

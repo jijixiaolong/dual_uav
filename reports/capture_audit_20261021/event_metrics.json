@@ -1,0 +1,992 @@
+[
+  {
+    "event": "CONTACT",
+    "time": 2.721999999999922,
+    "result": {
+      "anchor_time_s": 2.721999999999922,
+      "window": {
+        "requested_start_s": 2.721999999999922,
+        "requested_end_s": 3.9219999999999215,
+        "observed_start_s": 2.721999999999922,
+        "observed_end_s": 3.9219999999999215,
+        "observed_duration_s": 1.1999999999999997,
+        "complete": true,
+        "left_truncated": false,
+        "right_truncated": false,
+        "status": "complete",
+        "sample_count": 601
+      },
+      "metrics": {
+        "q1": {
+          "peak_attitude_error_deg": 3.657221536314892,
+          "peak_roll_error_deg": 3.6572215363142218,
+          "peak_pitch_error_deg": 3.174787523644911e-05,
+          "peak_absolute_roll_deg": 3.4761169706266086,
+          "peak_absolute_pitch_deg": 4.654007024882821e-05,
+          "peak_rate_deg_s": 14.634288821434188,
+          "peak_rate_rad_s": 0.2554165236218271,
+          "peak_body_rate_components_rad_s": {
+            "x": 0.2554165236218271,
+            "y": 1.4107791027127392e-05,
+            "z": 4.1247583130066515e-06
+          },
+          "max_position_error_m": 0.027448347140928364,
+          "attitude_error_integral_deg_s": 0.8611405877012446,
+          "position_error_integral_m_s": 0.00476022959222418,
+          "attitude_error_squared_integral_deg2_s": 1.4197206211654194,
+          "position_error_squared_integral_m2_s": 4.746451232302387e-05,
+          "attitude_recovery": {
+            "time_s": 0.34195474401026127,
+            "right_censored": false,
+            "status": "recovered"
+          },
+          "position_recovery": {
+            "time_s": 0.004545711262269325,
+            "right_censored": false,
+            "status": "recovered"
+          },
+          "rate_recovery": {
+            "time_s": 0.3327680216325297,
+            "right_censored": false,
+            "status": "recovered"
+          },
+          "joint_recovery": {
+            "time_s": 0.34195474401026127,
+            "right_censored": false,
+            "status": "recovered"
+          },
+          "settling_time_s": 0.34195474401026127,
+          "right_censored": false
+        },
+        "q2": {
+          "peak_attitude_error_deg": 3.6675889644556916,
+          "peak_roll_error_deg": 3.6675889644555273,
+          "peak_pitch_error_deg": 6.977205133992363e-05,
+          "peak_absolute_roll_deg": 3.476116970626605,
+          "peak_absolute_pitch_deg": 5.9107301287513596e-05,
+          "peak_rate_deg_s": 15.189368257173447,
+          "peak_rate_rad_s": 0.26510448738558945,
+          "peak_body_rate_components_rad_s": {
+            "x": 0.26510448738558945,
+            "y": 1.0056421859831671e-05,
+            "z": 3.7268020601623355e-06
+          },
+          "max_position_error_m": 0.027448347348074147,
+          "attitude_error_integral_deg_s": 0.871696637490909,
+          "position_error_integral_m_s": 0.004750030754269344,
+          "attitude_error_squared_integral_deg2_s": 1.4344337094809891,
+          "position_error_squared_integral_m2_s": 4.724934347921822e-05,
+          "attitude_recovery": {
+            "time_s": 0.4397420148060087,
+            "right_censored": false,
+            "status": "recovered"
+          },
+          "position_recovery": {
+            "time_s": 0.004545714004938528,
+            "right_censored": false,
+            "status": "recovered"
+          },
+          "rate_recovery": {
+            "time_s": 0.33338518661707894,
+            "right_censored": false,
+            "status": "recovered"
+          },
+          "joint_recovery": {
+            "time_s": 0.4397420148060087,
+            "right_censored": false,
+            "status": "recovered"
+          },
+          "settling_time_s": 0.4397420148060087,
+          "right_censored": false
+        },
+        "combined": {
+          "peak_attitude_error_deg": 3.6675889644556916,
+          "peak_roll_error_deg": 3.6675889644555273,
+          "peak_pitch_error_deg": 6.977205133992363e-05,
+          "peak_rate_deg_s": 15.189368257173447,
+          "peak_rate_rad_s": 0.26510448738558945,
+          "max_position_error_m": 0.027448347348074147,
+          "attitude_error_integral_deg_s": 1.7328372251921536,
+          "position_error_integral_m_s": 0.009510260346493524,
+          "attitude_error_squared_integral_deg2_s": 2.8541543306464083,
+          "position_error_squared_integral_m2_s": 9.471385580224209e-05,
+          "joint_recovery": {
+            "time_s": 0.4397420148060087,
+            "right_censored": false,
+            "status": "recovered"
+          },
+          "settling_time_s": 0.4397420148060087,
+          "right_censored": false
+        },
+        "control": {
+          "active_desired_thrust_squared_integral_N2_s": 397.43240376858625,
+          "active_desired_torque_squared_integral_Nm2_s": 0.0005878823342561129,
+          "actual_rotor_force_squared_integral_N2_s": 230.87882530299584,
+          "actual_rotor_torque_squared_integral_Nm2_s": 0.00031081823095678856,
+          "desired_wrench_scope": "aggregate wrench while connected; sum of two per-quad squared wrenches while independent",
+          "actual_wrench_scope": "sum of two per-quad squared physical rotor wrenches; comparable across modes",
+          "energy_is_mechanical_work_J": false,
+          "digital_signal_hold": "right"
+        },
+        "motors": {
+          "command": {
+            "available": true,
+            "thrust_squared_integral_N2_s": 57.72270380492309,
+            "total_variation_N": 2.7500471208378636,
+            "peak_sample_slope_N_s": 57.11636526067639,
+            "mean_absolute_slope_N_s": 0.28646324175394416,
+            "slope_squared_integral_N2_per_s": 54.71519473722697,
+            "saturation_fraction": 0.0,
+            "saturation_fraction_per_motor": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "sample_hold": "right_zero_order",
+            "peak_control_update_slope_N_s": 19.038788420225462
+          },
+          "target": {
+            "available": true,
+            "thrust_squared_integral_N2_s": 57.723167640225014,
+            "total_variation_N": 2.7500471208378636,
+            "peak_sample_slope_N_s": 45.00000000000489,
+            "mean_absolute_slope_N_s": 0.28646324175394416,
+            "slope_squared_integral_N2_per_s": 42.716020768153015,
+            "saturation_fraction": 0.0,
+            "saturation_fraction_per_motor": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "sample_hold": "right_zero_order"
+          },
+          "actual": {
+            "available": true,
+            "thrust_squared_integral_N2_s": 57.72508411456201,
+            "total_variation_N": 1.8175028168997756,
+            "peak_sample_slope_N_s": 4.977750251666461,
+            "mean_absolute_slope_N_s": 0.18932321009372666,
+            "slope_squared_integral_N2_per_s": 2.9784298779651186,
+            "saturation_fraction": 0.0,
+            "saturation_fraction_per_motor": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "sample_hold": "piecewise_linear"
+          }
+        },
+        "peak_contact_force_N": 31.53635653810903,
+        "contact_force_integral_N_s": 0.2410704422467792,
+        "peak_weld_force_N": 0.10893270762774651
+      }
+    }
+  },
+  {
+    "event": "CONTACT",
+    "time": 2.9619999999998954,
+    "result": {
+      "anchor_time_s": 2.9619999999998954,
+      "window": {
+        "requested_start_s": 2.9619999999998954,
+        "requested_end_s": 4.161999999999895,
+        "observed_start_s": 2.9619999999998954,
+        "observed_end_s": 4.161999999999895,
+        "observed_duration_s": 1.1999999999999997,
+        "complete": true,
+        "left_truncated": false,
+        "right_truncated": false,
+        "status": "complete",
+        "sample_count": 601
+      },
+      "metrics": {
+        "q1": {
+          "peak_attitude_error_deg": 0.9871470777893887,
+          "peak_roll_error_deg": 0.98714707778408,
+          "peak_pitch_error_deg": 3.174787523644911e-05,
+          "peak_absolute_roll_deg": 1.0917145787356306,
+          "peak_absolute_pitch_deg": 4.6540070248830073e-05,
+          "peak_rate_deg_s": 6.622677833219029,
+          "peak_rate_rad_s": 0.11558753348851596,
+          "peak_body_rate_components_rad_s": {
+            "x": 0.11558753348851596,
+            "y": 1.4107791027127392e-05,
+            "z": 4.1247583130066515e-06
+          },
+          "max_position_error_m": 0.03261156071563708,
+          "attitude_error_integral_deg_s": 0.4010720269609148,
+          "position_error_integral_m_s": 0.010523250146959795,
+          "attitude_error_squared_integral_deg2_s": 0.17798790794099406,
+          "position_error_squared_integral_m2_s": 0.0002029991411019695,
+          "attitude_recovery": {
+            "time_s": 0.1019547440102877,
+            "right_censored": false,
+            "status": "recovered"
+          },
+          "position_recovery": {
+            "time_s": null,
+            "right_censored": true,
+            "status": "unrecovered"
+          },
+          "rate_recovery": {
+            "time_s": 0.09276802163255615,
+            "right_censored": false,
+            "status": "recovered"
+          },
+          "joint_recovery": {
+            "time_s": null,
+            "right_censored": true,
+            "status": "unrecovered"
+          },
+          "settling_time_s": null,
+          "right_censored": true
+        },
+        "q2": {
+          "peak_attitude_error_deg": 0.9909397717901631,
+          "peak_roll_error_deg": 0.9909397717924618,
+          "peak_pitch_error_deg": 7.051467664415776e-05,
+          "peak_absolute_roll_deg": 1.1684765488312971,
+          "peak_absolute_pitch_deg": 5.9107301287513596e-05,
+          "peak_rate_deg_s": 6.621348888769178,
+          "peak_rate_rad_s": 0.11556433903228994,
+          "peak_body_rate_components_rad_s": {
+            "x": 0.11556433903228994,
+            "y": 1.0056421859831671e-05,
+            "z": 3.7268020601623355e-06
+          },
+          "max_position_error_m": 0.03261471211479811,
+          "attitude_error_integral_deg_s": 0.41047798176265693,
+          "position_error_integral_m_s": 0.010510730113345494,
+          "attitude_error_squared_integral_deg2_s": 0.18856268713707522,
+          "position_error_squared_integral_m2_s": 0.00020276672097047142,
+          "attitude_recovery": {
+            "time_s": 0.19974201480603515,
+            "right_censored": false,
+            "status": "recovered"
+          },
+          "position_recovery": {
+            "time_s": null,
+            "right_censored": true,
+            "status": "unrecovered"
+          },
+          "rate_recovery": {
+            "time_s": 0.09338518661710538,
+            "right_censored": false,
+            "status": "recovered"
+          },
+          "joint_recovery": {
+            "time_s": null,
+            "right_censored": true,
+            "status": "unrecovered"
+          },
+          "settling_time_s": null,
+          "right_censored": true
+        },
+        "combined": {
+          "peak_attitude_error_deg": 0.9909397717901631,
+          "peak_roll_error_deg": 0.9909397717924618,
+          "peak_pitch_error_deg": 7.051467664415776e-05,
+          "peak_rate_deg_s": 6.622677833219029,
+          "peak_rate_rad_s": 0.11558753348851596,
+          "max_position_error_m": 0.03261471211479811,
+          "attitude_error_integral_deg_s": 0.8115500087235717,
+          "position_error_integral_m_s": 0.02103398026030529,
+          "attitude_error_squared_integral_deg2_s": 0.3665505950780693,
+          "position_error_squared_integral_m2_s": 0.00040576586207244093,
+          "joint_recovery": {
+            "time_s": null,
+            "right_censored": true,
+            "status": "unrecovered"
+          },
+          "settling_time_s": null,
+          "right_censored": true
+        },
+        "control": {
+          "active_desired_thrust_squared_integral_N2_s": 443.6335386441167,
+          "active_desired_torque_squared_integral_Nm2_s": 0.00018138037116009593,
+          "actual_rotor_force_squared_integral_N2_s": 230.91151642913627,
+          "actual_rotor_torque_squared_integral_Nm2_s": 7.072115954048279e-06,
+          "desired_wrench_scope": "aggregate wrench while connected; sum of two per-quad squared wrenches while independent",
+          "actual_wrench_scope": "sum of two per-quad squared physical rotor wrenches; comparable across modes",
+          "energy_is_mechanical_work_J": false,
+          "digital_signal_hold": "right"
+        },
+        "motors": {
+          "command": {
+            "available": true,
+            "thrust_squared_integral_N2_s": 57.726835516345524,
+            "total_variation_N": 0.5301240345058686,
+            "peak_sample_slope_N_s": 12.386567812107595,
+            "mean_absolute_slope_N_s": 0.05522125359436133,
+            "slope_squared_integral_N2_per_s": 1.1133037828857681,
+            "saturation_fraction": 0.0,
+            "saturation_fraction_per_motor": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "sample_hold": "right_zero_order",
+            "peak_control_update_slope_N_s": 4.128855937369198
+          },
+          "target": {
+            "available": true,
+            "thrust_squared_integral_N2_s": 57.726835516345524,
+            "total_variation_N": 0.5301240345058686,
+            "peak_sample_slope_N_s": 12.386567812107595,
+            "mean_absolute_slope_N_s": 0.05522125359436133,
+            "slope_squared_integral_N2_per_s": 1.1133037828857681,
+            "saturation_fraction": 0.0,
+            "saturation_fraction_per_motor": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "sample_hold": "right_zero_order"
+          },
+          "actual": {
+            "available": true,
+            "thrust_squared_integral_N2_s": 57.72800152513597,
+            "total_variation_N": 0.4659635953946082,
+            "peak_sample_slope_N_s": 0.8248470835646524,
+            "mean_absolute_slope_N_s": 0.048537874520271695,
+            "slope_squared_integral_N2_per_s": 0.07297906771426502,
+            "saturation_fraction": 0.0,
+            "saturation_fraction_per_motor": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "sample_hold": "piecewise_linear"
+          }
+        },
+        "peak_contact_force_N": 2.6928354504964975,
+        "contact_force_integral_N_s": 0.06759010507537205,
+        "peak_weld_force_N": 0.10893270762774651
+      }
+    }
+  },
+  {
+    "event": "DOCK",
+    "time": 3.055999999999885,
+    "result": {
+      "anchor_time_s": 3.055999999999885,
+      "window": {
+        "requested_start_s": 3.055999999999885,
+        "requested_end_s": 4.255999999999885,
+        "observed_start_s": 3.055999999999885,
+        "observed_end_s": 4.255999999999885,
+        "observed_duration_s": 1.1999999999999997,
+        "complete": true,
+        "left_truncated": false,
+        "right_truncated": false,
+        "status": "complete",
+        "sample_count": 601
+      },
+      "metrics": {
+        "q1": {
+          "peak_attitude_error_deg": 0.5256035564902467,
+          "peak_roll_error_deg": 0.5256035564861189,
+          "peak_pitch_error_deg": 3.174787523644911e-05,
+          "peak_absolute_roll_deg": 0.8263804241780989,
+          "peak_absolute_pitch_deg": 4.6540070248830073e-05,
+          "peak_rate_deg_s": 4.973233030067204,
+          "peak_rate_rad_s": 0.08679929084360687,
+          "peak_body_rate_components_rad_s": {
+            "x": 0.08679929084360687,
+            "y": 1.4107791027127392e-05,
+            "z": 4.1247583130066515e-06
+          },
+          "max_position_error_m": 0.038035014695538494,
+          "attitude_error_integral_deg_s": 0.3313777521697854,
+          "position_error_integral_m_s": 0.013811348168845276,
+          "attitude_error_squared_integral_deg2_s": 0.11959779679252895,
+          "position_error_squared_integral_m2_s": 0.0003206945385975813,
+          "attitude_recovery": {
+            "time_s": 0.007954744010298054,
+            "right_censored": false,
+            "status": "recovered"
+          },
+          "position_recovery": {
+            "time_s": null,
+            "right_censored": true,
+            "status": "unrecovered"
+          },
+          "rate_recovery": {
+            "time_s": 0.0,
+            "right_censored": false,
+            "status": "within_tolerance_from_start"
+          },
+          "joint_recovery": {
+            "time_s": null,
+            "right_censored": true,
+            "status": "unrecovered"
+          },
+          "settling_time_s": null,
+          "right_censored": true
+        },
+        "q2": {
+          "peak_attitude_error_deg": 0.6293750309214196,
+          "peak_roll_error_deg": 0.6293750309157188,
+          "peak_pitch_error_deg": 7.051467664415776e-05,
+          "peak_absolute_roll_deg": 1.1684765488312971,
+          "peak_absolute_pitch_deg": 5.9107301287513596e-05,
+          "peak_rate_deg_s": 4.9866574569090565,
+          "peak_rate_rad_s": 0.0870335912921903,
+          "peak_body_rate_components_rad_s": {
+            "x": 0.0870335912921903,
+            "y": 1.0056421859831671e-05,
+            "z": 3.7268020601623355e-06
+          },
+          "max_position_error_m": 0.038036926352955754,
+          "attitude_error_integral_deg_s": 0.3405638979696136,
+          "position_error_integral_m_s": 0.013798790812458103,
+          "attitude_error_squared_integral_deg2_s": 0.1296185352788261,
+          "position_error_squared_integral_m2_s": 0.00032047960822493855,
+          "attitude_recovery": {
+            "time_s": 0.1057420148060455,
+            "right_censored": false,
+            "status": "recovered"
+          },
+          "position_recovery": {
+            "time_s": null,
+            "right_censored": true,
+            "status": "unrecovered"
+          },
+          "rate_recovery": {
+            "time_s": 0.0,
+            "right_censored": false,
+            "status": "within_tolerance_from_start"
+          },
+          "joint_recovery": {
+            "time_s": null,
+            "right_censored": true,
+            "status": "unrecovered"
+          },
+          "settling_time_s": null,
+          "right_censored": true
+        },
+        "combined": {
+          "peak_attitude_error_deg": 0.6293750309214196,
+          "peak_roll_error_deg": 0.6293750309157188,
+          "peak_pitch_error_deg": 7.051467664415776e-05,
+          "peak_rate_deg_s": 4.9866574569090565,
+          "peak_rate_rad_s": 0.0870335912921903,
+          "max_position_error_m": 0.038036926352955754,
+          "attitude_error_integral_deg_s": 0.671941650139399,
+          "position_error_integral_m_s": 0.027610138981303378,
+          "attitude_error_squared_integral_deg2_s": 0.24921633207135507,
+          "position_error_squared_integral_m2_s": 0.0006411741468225199,
+          "joint_recovery": {
+            "time_s": null,
+            "right_censored": true,
+            "status": "unrecovered"
+          },
+          "settling_time_s": null,
+          "right_censored": true
+        },
+        "control": {
+          "active_desired_thrust_squared_integral_N2_s": 461.6916071216851,
+          "active_desired_torque_squared_integral_Nm2_s": 0.0001912595479776442,
+          "actual_rotor_force_squared_integral_N2_s": 230.8925607800217,
+          "actual_rotor_torque_squared_integral_Nm2_s": 4.840083128946275e-06,
+          "desired_wrench_scope": "aggregate wrench while connected; sum of two per-quad squared wrenches while independent",
+          "actual_wrench_scope": "sum of two per-quad squared physical rotor wrenches; comparable across modes",
+          "energy_is_mechanical_work_J": false,
+          "digital_signal_hold": "right"
+        },
+        "motors": {
+          "command": {
+            "available": true,
+            "thrust_squared_integral_N2_s": 57.721945645184164,
+            "total_variation_N": 0.38384863703895666,
+            "peak_sample_slope_N_s": 12.386567812107595,
+            "mean_absolute_slope_N_s": 0.039984233024891326,
+            "slope_squared_integral_N2_per_s": 1.0159846461419277,
+            "saturation_fraction": 0.0,
+            "saturation_fraction_per_motor": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "sample_hold": "right_zero_order",
+            "peak_control_update_slope_N_s": 4.128855937369198
+          },
+          "target": {
+            "available": true,
+            "thrust_squared_integral_N2_s": 57.721945645184164,
+            "total_variation_N": 0.38384863703895666,
+            "peak_sample_slope_N_s": 12.386567812107595,
+            "mean_absolute_slope_N_s": 0.039984233024891326,
+            "slope_squared_integral_N2_per_s": 1.0159846461419277,
+            "saturation_fraction": 0.0,
+            "saturation_fraction_per_motor": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "sample_hold": "right_zero_order"
+          },
+          "actual": {
+            "available": true,
+            "thrust_squared_integral_N2_s": 57.72322396596181,
+            "total_variation_N": 0.3127173137004471,
+            "peak_sample_slope_N_s": 0.8248470835646524,
+            "mean_absolute_slope_N_s": 0.03257472017712991,
+            "slope_squared_integral_N2_per_s": 0.03687546336122004,
+            "saturation_fraction": 0.0,
+            "saturation_fraction_per_motor": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "sample_hold": "piecewise_linear"
+          }
+        },
+        "peak_contact_force_N": 0.6649403083366972,
+        "contact_force_integral_N_s": 0.000664940308336624,
+        "peak_weld_force_N": 0.10893270762774651
+      }
+    }
+  },
+  {
+    "event": "UNDOCK",
+    "time": 5.109999999999659,
+    "result": {
+      "anchor_time_s": 5.109999999999659,
+      "window": {
+        "requested_start_s": 5.109999999999659,
+        "requested_end_s": 6.309999999999659,
+        "observed_start_s": 5.109999999999659,
+        "observed_end_s": 6.309999999999659,
+        "observed_duration_s": 1.2000000000000002,
+        "complete": true,
+        "left_truncated": false,
+        "right_truncated": false,
+        "status": "complete",
+        "sample_count": 601
+      },
+      "metrics": {
+        "q1": {
+          "peak_attitude_error_deg": 4.350313636711288,
+          "peak_roll_error_deg": 4.350313636571715,
+          "peak_pitch_error_deg": 4.451419580655002e-05,
+          "peak_absolute_roll_deg": 8.732891160359447,
+          "peak_absolute_pitch_deg": 7.151812163173889e-05,
+          "peak_rate_deg_s": 32.23496784320424,
+          "peak_rate_rad_s": 0.5626063231384092,
+          "peak_body_rate_components_rad_s": {
+            "x": 0.5626063231200875,
+            "y": 9.592827596328625e-06,
+            "z": 5.159402219054331e-06
+          },
+          "max_position_error_m": 0.06501321121396864,
+          "attitude_error_integral_deg_s": 3.31729070620827,
+          "position_error_integral_m_s": 0.023436730118868227,
+          "attitude_error_squared_integral_deg2_s": 11.025153137792833,
+          "position_error_squared_integral_m2_s": 0.0006569505530949252,
+          "attitude_recovery": {
+            "time_s": null,
+            "right_censored": true,
+            "status": "unrecovered"
+          },
+          "position_recovery": {
+            "time_s": null,
+            "right_censored": true,
+            "status": "unrecovered"
+          },
+          "rate_recovery": {
+            "time_s": null,
+            "right_censored": true,
+            "status": "unrecovered"
+          },
+          "joint_recovery": {
+            "time_s": null,
+            "right_censored": true,
+            "status": "unrecovered"
+          },
+          "settling_time_s": null,
+          "right_censored": true
+        },
+        "q2": {
+          "peak_attitude_error_deg": 2.8842167380923307,
+          "peak_roll_error_deg": 2.8842167376948904,
+          "peak_pitch_error_deg": 8.002184208830918e-05,
+          "peak_absolute_roll_deg": 5.9526850289113025,
+          "peak_absolute_pitch_deg": 0.00010196386242962202,
+          "peak_rate_deg_s": 21.386178113214545,
+          "peak_rate_rad_s": 0.37325922249354243,
+          "peak_body_rate_components_rad_s": {
+            "x": 0.3732592224427498,
+            "y": 1.154064451484571e-05,
+            "z": 5.156946029609969e-06
+          },
+          "max_position_error_m": 0.06501498230070522,
+          "attitude_error_integral_deg_s": 2.1876831378791324,
+          "position_error_integral_m_s": 0.015222576374344664,
+          "attitude_error_squared_integral_deg2_s": 4.802125998730846,
+          "position_error_squared_integral_m2_s": 0.0002796767102038515,
+          "attitude_recovery": {
+            "time_s": null,
+            "right_censored": true,
+            "status": "unrecovered"
+          },
+          "position_recovery": {
+            "time_s": null,
+            "right_censored": true,
+            "status": "unrecovered"
+          },
+          "rate_recovery": {
+            "time_s": null,
+            "right_censored": true,
+            "status": "unrecovered"
+          },
+          "joint_recovery": {
+            "time_s": null,
+            "right_censored": true,
+            "status": "unrecovered"
+          },
+          "settling_time_s": null,
+          "right_censored": true
+        },
+        "combined": {
+          "peak_attitude_error_deg": 4.350313636711288,
+          "peak_roll_error_deg": 4.350313636571715,
+          "peak_pitch_error_deg": 8.002184208830918e-05,
+          "peak_rate_deg_s": 32.23496784320424,
+          "peak_rate_rad_s": 0.5626063231384092,
+          "max_position_error_m": 0.06501498230070522,
+          "attitude_error_integral_deg_s": 5.504973844087402,
+          "position_error_integral_m_s": 0.03865930649321289,
+          "attitude_error_squared_integral_deg2_s": 15.827279136523678,
+          "position_error_squared_integral_m2_s": 0.0009366272632987767,
+          "joint_recovery": {
+            "time_s": null,
+            "right_censored": true,
+            "status": "unrecovered"
+          },
+          "settling_time_s": null,
+          "right_censored": true
+        },
+        "control": {
+          "active_desired_thrust_squared_integral_N2_s": 232.57348533716691,
+          "active_desired_torque_squared_integral_Nm2_s": 0.0005157682048518692,
+          "actual_rotor_force_squared_integral_N2_s": 232.48105238868868,
+          "actual_rotor_torque_squared_integral_Nm2_s": 0.0004542047491834655,
+          "desired_wrench_scope": "aggregate wrench while connected; sum of two per-quad squared wrenches while independent",
+          "actual_wrench_scope": "sum of two per-quad squared physical rotor wrenches; comparable across modes",
+          "energy_is_mechanical_work_J": false,
+          "digital_signal_hold": "right"
+        },
+        "motors": {
+          "command": {
+            "available": true,
+            "thrust_squared_integral_N2_s": 58.15229465975641,
+            "total_variation_N": 2.6508724880006196,
+            "peak_sample_slope_N_s": 19.765497234841067,
+            "mean_absolute_slope_N_s": 0.2761325508333978,
+            "slope_squared_integral_N2_per_s": 10.992891443657909,
+            "saturation_fraction": 0.0,
+            "saturation_fraction_per_motor": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "sample_hold": "right_zero_order",
+            "peak_control_update_slope_N_s": 9.882748617420534
+          },
+          "target": {
+            "available": true,
+            "thrust_squared_integral_N2_s": 58.15229465975641,
+            "total_variation_N": 2.6508724880006196,
+            "peak_sample_slope_N_s": 19.765497234841067,
+            "mean_absolute_slope_N_s": 0.2761325508333978,
+            "slope_squared_integral_N2_per_s": 10.992891443657909,
+            "saturation_fraction": 0.0,
+            "saturation_fraction_per_motor": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "sample_hold": "right_zero_order"
+          },
+          "actual": {
+            "available": true,
+            "thrust_squared_integral_N2_s": 58.12812568919581,
+            "total_variation_N": 2.099683397375637,
+            "peak_sample_slope_N_s": 1.863483099477242,
+            "mean_absolute_slope_N_s": 0.21871702055996217,
+            "slope_squared_integral_N2_per_s": 1.4733044055315567,
+            "saturation_fraction": 0.0,
+            "saturation_fraction_per_motor": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "sample_hold": "piecewise_linear"
+          }
+        },
+        "peak_contact_force_N": 0.0,
+        "contact_force_integral_N_s": 0.0,
+        "peak_weld_force_N": 0.09153885007872968
+      }
+    }
+  },
+  {
+    "event": "CONTACT",
+    "time": 5.109999999999659,
+    "result": {
+      "anchor_time_s": 5.109999999999659,
+      "window": {
+        "requested_start_s": 5.109999999999659,
+        "requested_end_s": 6.309999999999659,
+        "observed_start_s": 5.109999999999659,
+        "observed_end_s": 6.309999999999659,
+        "observed_duration_s": 1.2000000000000002,
+        "complete": true,
+        "left_truncated": false,
+        "right_truncated": false,
+        "status": "complete",
+        "sample_count": 601
+      },
+      "metrics": {
+        "q1": {
+          "peak_attitude_error_deg": 4.350313636711288,
+          "peak_roll_error_deg": 4.350313636571715,
+          "peak_pitch_error_deg": 4.451419580655002e-05,
+          "peak_absolute_roll_deg": 8.732891160359447,
+          "peak_absolute_pitch_deg": 7.151812163173889e-05,
+          "peak_rate_deg_s": 32.23496784320424,
+          "peak_rate_rad_s": 0.5626063231384092,
+          "peak_body_rate_components_rad_s": {
+            "x": 0.5626063231200875,
+            "y": 9.592827596328625e-06,
+            "z": 5.159402219054331e-06
+          },
+          "max_position_error_m": 0.06501321121396864,
+          "attitude_error_integral_deg_s": 3.31729070620827,
+          "position_error_integral_m_s": 0.023436730118868227,
+          "attitude_error_squared_integral_deg2_s": 11.025153137792833,
+          "position_error_squared_integral_m2_s": 0.0006569505530949252,
+          "attitude_recovery": {
+            "time_s": null,
+            "right_censored": true,
+            "status": "unrecovered"
+          },
+          "position_recovery": {
+            "time_s": null,
+            "right_censored": true,
+            "status": "unrecovered"
+          },
+          "rate_recovery": {
+            "time_s": null,
+            "right_censored": true,
+            "status": "unrecovered"
+          },
+          "joint_recovery": {
+            "time_s": null,
+            "right_censored": true,
+            "status": "unrecovered"
+          },
+          "settling_time_s": null,
+          "right_censored": true
+        },
+        "q2": {
+          "peak_attitude_error_deg": 2.8842167380923307,
+          "peak_roll_error_deg": 2.8842167376948904,
+          "peak_pitch_error_deg": 8.002184208830918e-05,
+          "peak_absolute_roll_deg": 5.9526850289113025,
+          "peak_absolute_pitch_deg": 0.00010196386242962202,
+          "peak_rate_deg_s": 21.386178113214545,
+          "peak_rate_rad_s": 0.37325922249354243,
+          "peak_body_rate_components_rad_s": {
+            "x": 0.3732592224427498,
+            "y": 1.154064451484571e-05,
+            "z": 5.156946029609969e-06
+          },
+          "max_position_error_m": 0.06501498230070522,
+          "attitude_error_integral_deg_s": 2.1876831378791324,
+          "position_error_integral_m_s": 0.015222576374344664,
+          "attitude_error_squared_integral_deg2_s": 4.802125998730846,
+          "position_error_squared_integral_m2_s": 0.0002796767102038515,
+          "attitude_recovery": {
+            "time_s": null,
+            "right_censored": true,
+            "status": "unrecovered"
+          },
+          "position_recovery": {
+            "time_s": null,
+            "right_censored": true,
+            "status": "unrecovered"
+          },
+          "rate_recovery": {
+            "time_s": null,
+            "right_censored": true,
+            "status": "unrecovered"
+          },
+          "joint_recovery": {
+            "time_s": null,
+            "right_censored": true,
+            "status": "unrecovered"
+          },
+          "settling_time_s": null,
+          "right_censored": true
+        },
+        "combined": {
+          "peak_attitude_error_deg": 4.350313636711288,
+          "peak_roll_error_deg": 4.350313636571715,
+          "peak_pitch_error_deg": 8.002184208830918e-05,
+          "peak_rate_deg_s": 32.23496784320424,
+          "peak_rate_rad_s": 0.5626063231384092,
+          "max_position_error_m": 0.06501498230070522,
+          "attitude_error_integral_deg_s": 5.504973844087402,
+          "position_error_integral_m_s": 0.03865930649321289,
+          "attitude_error_squared_integral_deg2_s": 15.827279136523678,
+          "position_error_squared_integral_m2_s": 0.0009366272632987767,
+          "joint_recovery": {
+            "time_s": null,
+            "right_censored": true,
+            "status": "unrecovered"
+          },
+          "settling_time_s": null,
+          "right_censored": true
+        },
+        "control": {
+          "active_desired_thrust_squared_integral_N2_s": 232.57348533716691,
+          "active_desired_torque_squared_integral_Nm2_s": 0.0005157682048518692,
+          "actual_rotor_force_squared_integral_N2_s": 232.48105238868868,
+          "actual_rotor_torque_squared_integral_Nm2_s": 0.0004542047491834655,
+          "desired_wrench_scope": "aggregate wrench while connected; sum of two per-quad squared wrenches while independent",
+          "actual_wrench_scope": "sum of two per-quad squared physical rotor wrenches; comparable across modes",
+          "energy_is_mechanical_work_J": false,
+          "digital_signal_hold": "right"
+        },
+        "motors": {
+          "command": {
+            "available": true,
+            "thrust_squared_integral_N2_s": 58.15229465975641,
+            "total_variation_N": 2.6508724880006196,
+            "peak_sample_slope_N_s": 19.765497234841067,
+            "mean_absolute_slope_N_s": 0.2761325508333978,
+            "slope_squared_integral_N2_per_s": 10.992891443657909,
+            "saturation_fraction": 0.0,
+            "saturation_fraction_per_motor": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "sample_hold": "right_zero_order",
+            "peak_control_update_slope_N_s": 9.882748617420534
+          },
+          "target": {
+            "available": true,
+            "thrust_squared_integral_N2_s": 58.15229465975641,
+            "total_variation_N": 2.6508724880006196,
+            "peak_sample_slope_N_s": 19.765497234841067,
+            "mean_absolute_slope_N_s": 0.2761325508333978,
+            "slope_squared_integral_N2_per_s": 10.992891443657909,
+            "saturation_fraction": 0.0,
+            "saturation_fraction_per_motor": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "sample_hold": "right_zero_order"
+          },
+          "actual": {
+            "available": true,
+            "thrust_squared_integral_N2_s": 58.12812568919581,
+            "total_variation_N": 2.099683397375637,
+            "peak_sample_slope_N_s": 1.863483099477242,
+            "mean_absolute_slope_N_s": 0.21871702055996217,
+            "slope_squared_integral_N2_per_s": 1.4733044055315567,
+            "saturation_fraction": 0.0,
+            "saturation_fraction_per_motor": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "sample_hold": "piecewise_linear"
+          }
+        },
+        "peak_contact_force_N": 0.0,
+        "contact_force_integral_N_s": 0.0,
+        "peak_weld_force_N": 0.09153885007872968
+      }
+    }
+  }
+]

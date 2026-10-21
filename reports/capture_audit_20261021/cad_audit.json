@@ -1,0 +1,8620 @@
+{
+  "schema": "cad_mujoco_parameter_audit_v1",
+  "cad": [
+    {
+      "path": "/home/ubuntu22/Downloads/dual_uav_capture_fix/models/Machinable_Docking_UAV_300.FCStd",
+      "sha256": "9ca4cb482a6acd1d9c3799840f6c113383acb8b2a359cb4abcea9a836f6cee87",
+      "body_count": 18,
+      "sketch_count": 24,
+      "zero_constraint_sketches": [
+        "Bottom_Chassis_Sketch",
+        "Top_Rim_Sketch",
+        "Standoffs_Sketch",
+        "F60_Bases_Sketch",
+        "F60_Copper_Coils_Sketch",
+        "F60_Shells_Sketch",
+        "F60_Spokes_Sketch",
+        "F60_Shafts_Sketch",
+        "Props_Hubs_Sketch",
+        "Props_Blades_Sketch",
+        "Props_Nuts_Sketch",
+        "PDB_Standoffs_3mm_Sketch",
+        "Mateksys_PDB_Sketch",
+        "PDB_Pads_Sketch",
+        "PDB_Components_Sketch",
+        "PDB_Fasteners_Sketch",
+        "FC_Standoffs_10mm_Sketch",
+        "FC_Plate_Sketch",
+        "V6X_Baseboard_Sketch",
+        "V6X_IMU_Core_Sketch",
+        "Bat_Standoffs_Sketch",
+        "Bat_Plate_Sketch",
+        "Battery_Sketch",
+        "Docking_Bracket_Sketch"
+      ],
+      "additive_profile_envelope_mm": [
+        [
+          -186.0,
+          -186.0,
+          -32.0
+        ],
+        [
+          186.0,
+          186.0,
+          55.0
+        ]
+      ],
+      "motor_centers_xy_mm": [
+        [
+          -106.066,
+          -106.066
+        ],
+        [
+          -106.066,
+          106.066
+        ],
+        [
+          106.066,
+          -106.066
+        ],
+        [
+          106.066,
+          106.066
+        ]
+      ],
+      "magnet_profiles": {},
+      "docking_profiles": {
+        "Docking_Bracket_Sketch": {
+          "placement_mm": [
+            0.0,
+            0.0,
+            20.0
+          ],
+          "normal": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "circles": [
+            {
+              "center_mm": [
+                0.0,
+                180.0,
+                20.0
+              ],
+              "radius_mm": 6.0,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "center_mm": [
+                0.0,
+                180.0,
+                20.0
+              ],
+              "radius_mm": 2.5,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "center_mm": [
+                0.0,
+                -180.0,
+                20.0
+              ],
+              "radius_mm": 6.0,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "center_mm": [
+                0.0,
+                -180.0,
+                20.0
+              ],
+              "radius_mm": 2.5,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "center_mm": [
+                180.0,
+                0.0,
+                20.0
+              ],
+              "radius_mm": 6.0,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "center_mm": [
+                180.0,
+                0.0,
+                20.0
+              ],
+              "radius_mm": 2.5,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "center_mm": [
+                -180.0,
+                0.0,
+                20.0
+              ],
+              "radius_mm": 6.0,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "center_mm": [
+                -180.0,
+                0.0,
+                20.0
+              ],
+              "radius_mm": 2.5,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            }
+          ],
+          "geometry_count": 8,
+          "constraint_count": 0,
+          "bounds_mm": [
+            [
+              -186.0,
+              -186.0,
+              20.0
+            ],
+            [
+              186.0,
+              186.0,
+              20.0
+            ]
+          ],
+          "unparsed_geometry": false
+        }
+      },
+      "pads": [
+        {
+          "name": "Pad",
+          "profile": "Bottom_Chassis_Sketch",
+          "length_mm": 3.0,
+          "sweep_bounds_mm": [
+            [
+              -185.0,
+              -185.0,
+              0.0
+            ],
+            [
+              185.0,
+              185.0,
+              3.0
+            ]
+          ]
+        },
+        {
+          "name": "Pad001",
+          "profile": "Top_Rim_Sketch",
+          "length_mm": 2.0,
+          "sweep_bounds_mm": [
+            [
+              -185.0,
+              -185.0,
+              53.0
+            ],
+            [
+              185.0,
+              185.0,
+              55.0
+            ]
+          ]
+        },
+        {
+          "name": "Pad002",
+          "profile": "Standoffs_Sketch",
+          "length_mm": 50.0,
+          "sweep_bounds_mm": [
+            [
+              -181.454,
+              -181.454,
+              3.0
+            ],
+            [
+              181.454,
+              181.454,
+              53.0
+            ]
+          ]
+        },
+        {
+          "name": "Pad003",
+          "profile": "F60_Bases_Sketch",
+          "length_mm": 2.5,
+          "sweep_bounds_mm": [
+            [
+              -117.866,
+              -117.866,
+              3.0
+            ],
+            [
+              117.866,
+              117.866,
+              5.5
+            ]
+          ]
+        },
+        {
+          "name": "Pad004",
+          "profile": "F60_Copper_Coils_Sketch",
+          "length_mm": 11.0,
+          "sweep_bounds_mm": [
+            [
+              -117.066,
+              -117.066,
+              5.5
+            ],
+            [
+              117.066,
+              117.066,
+              16.5
+            ]
+          ]
+        },
+        {
+          "name": "Pad005",
+          "profile": "F60_Shells_Sketch",
+          "length_mm": 14.5,
+          "sweep_bounds_mm": [
+            [
+              -119.46600000000001,
+              -119.46600000000001,
+              4.0
+            ],
+            [
+              119.46600000000001,
+              119.46600000000001,
+              18.5
+            ]
+          ]
+        },
+        {
+          "name": "Pad006",
+          "profile": "F60_Spokes_Sketch",
+          "length_mm": 2.5,
+          "sweep_bounds_mm": [
+            [
+              -119.46600000000001,
+              -119.46600000000001,
+              18.5
+            ],
+            [
+              119.46600000000001,
+              119.46600000000001,
+              21.0
+            ]
+          ]
+        },
+        {
+          "name": "Pad007",
+          "profile": "F60_Shafts_Sketch",
+          "length_mm": 31.0,
+          "sweep_bounds_mm": [
+            [
+              -108.566,
+              -108.566,
+              4.0
+            ],
+            [
+              108.566,
+              108.566,
+              35.0
+            ]
+          ]
+        },
+        {
+          "name": "Pad008",
+          "profile": "Props_Hubs_Sketch",
+          "length_mm": 7.0,
+          "sweep_bounds_mm": [
+            [
+              -112.566,
+              -112.566,
+              21.0
+            ],
+            [
+              112.566,
+              112.566,
+              28.0
+            ]
+          ]
+        },
+        {
+          "name": "Pad009",
+          "profile": "Props_Blades_Sketch",
+          "length_mm": 2.5,
+          "sweep_bounds_mm": [
+            [
+              -170.836,
+              -170.836,
+              22.5
+            ],
+            [
+              170.836,
+              170.836,
+              25.0
+            ]
+          ]
+        },
+        {
+          "name": "Pad010",
+          "profile": "Props_Nuts_Sketch",
+          "length_mm": 3.0,
+          "sweep_bounds_mm": [
+            [
+              -110.066,
+              -110.066,
+              28.0
+            ],
+            [
+              110.066,
+              110.066,
+              31.0
+            ]
+          ]
+        },
+        {
+          "name": "Pad011",
+          "profile": "PDB_Standoffs_3mm_Sketch",
+          "length_mm": 3.0,
+          "sweep_bounds_mm": [
+            [
+              -17.75,
+              -17.75,
+              3.0
+            ],
+            [
+              17.75,
+              17.75,
+              6.0
+            ]
+          ]
+        },
+        {
+          "name": "Pad012",
+          "profile": "Mateksys_PDB_Sketch",
+          "length_mm": 1.6,
+          "sweep_bounds_mm": [
+            [
+              -25.0,
+              -25.0,
+              6.0
+            ],
+            [
+              25.0,
+              30.0,
+              7.6
+            ]
+          ]
+        },
+        {
+          "name": "Pad013",
+          "profile": "PDB_Pads_Sketch",
+          "length_mm": 0.25,
+          "sweep_bounds_mm": [
+            [
+              -23.2,
+              -23.2,
+              7.6
+            ],
+            [
+              23.2,
+              29.5,
+              7.85
+            ]
+          ]
+        },
+        {
+          "name": "Pad014",
+          "profile": "PDB_Components_Sketch",
+          "length_mm": 2.0,
+          "sweep_bounds_mm": [
+            [
+              -18.5,
+              -16.5,
+              7.6
+            ],
+            [
+              16.5,
+              19.2,
+              9.6
+            ]
+          ]
+        },
+        {
+          "name": "Pad015",
+          "profile": "PDB_Fasteners_Sketch",
+          "length_mm": 1.6,
+          "sweep_bounds_mm": [
+            [
+              -18.0,
+              -18.0,
+              7.6
+            ],
+            [
+              18.0,
+              18.0,
+              9.2
+            ]
+          ]
+        },
+        {
+          "name": "Pad016",
+          "profile": "FC_Standoffs_10mm_Sketch",
+          "length_mm": 10.0,
+          "sweep_bounds_mm": [
+            [
+              -38.5,
+              -14.5,
+              3.0
+            ],
+            [
+              38.5,
+              14.5,
+              13.0
+            ]
+          ]
+        },
+        {
+          "name": "Pad017",
+          "profile": "FC_Plate_Sketch",
+          "length_mm": 2.0,
+          "sweep_bounds_mm": [
+            [
+              -48.0,
+              -27.0,
+              13.0
+            ],
+            [
+              48.0,
+              27.0,
+              15.0
+            ]
+          ]
+        },
+        {
+          "name": "Pad018",
+          "profile": "V6X_Baseboard_Sketch",
+          "length_mm": 12.5,
+          "sweep_bounds_mm": [
+            [
+              -42.55,
+              -22.5,
+              15.0
+            ],
+            [
+              42.55,
+              22.5,
+              27.5
+            ]
+          ]
+        },
+        {
+          "name": "Pad019",
+          "profile": "V6X_IMU_Core_Sketch",
+          "length_mm": 16.7,
+          "sweep_bounds_mm": [
+            [
+              -16.4,
+              -15.825,
+              27.5
+            ],
+            [
+              22.25,
+              15.825,
+              44.2
+            ]
+          ]
+        },
+        {
+          "name": "Pad020",
+          "profile": "Bat_Standoffs_Sketch",
+          "length_mm": 30.0,
+          "sweep_bounds_mm": [
+            [
+              -50.5,
+              -28.5,
+              -30.0
+            ],
+            [
+              50.5,
+              28.5,
+              0.0
+            ]
+          ]
+        },
+        {
+          "name": "Pad021",
+          "profile": "Bat_Plate_Sketch",
+          "length_mm": 2.0,
+          "sweep_bounds_mm": [
+            [
+              -73.0,
+              -28.0,
+              -32.0
+            ],
+            [
+              73.0,
+              28.0,
+              -30.0
+            ]
+          ]
+        },
+        {
+          "name": "Pad022",
+          "profile": "Battery_Sketch",
+          "length_mm": 29.0,
+          "sweep_bounds_mm": [
+            [
+              -68.0,
+              -21.75,
+              -29.5
+            ],
+            [
+              68.0,
+              21.75,
+              -0.5
+            ]
+          ]
+        },
+        {
+          "name": "Pad023",
+          "profile": "Docking_Bracket_Sketch",
+          "length_mm": 15.0,
+          "sweep_bounds_mm": [
+            [
+              -186.0,
+              -186.0,
+              20.0
+            ],
+            [
+              186.0,
+              186.0,
+              35.0
+            ]
+          ]
+        }
+      ],
+      "all_sketch_parameters": {
+        "Bottom_Chassis_Sketch": {
+          "placement_mm": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "normal": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "circles": [
+            {
+              "center_mm": [
+                106.066,
+                106.066,
+                0.0
+              ],
+              "radius_mm": 4.5,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "center_mm": [
+                98.066,
+                98.066,
+                0.0
+              ],
+              "radius_mm": 1.6,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "center_mm": [
+                98.066,
+                114.066,
+                0.0
+              ],
+              "radius_mm": 1.6,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "center_mm": [
+                114.066,
+                98.066,
+                0.0
+              ],
+              "radius_mm": 1.6,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "center_mm": [
+                114.066,
+                114.066,
+                0.0
+              ],
+              "radius_mm": 1.6,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "center_mm": [
+                -106.066,
+                106.066,
+                0.0
+              ],
+              "radius_mm": 4.5,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "center_mm": [
+                -114.066,
+                98.066,
+                0.0
+              ],
+              "radius_mm": 1.6,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "center_mm": [
+                -114.066,
+                114.066,
+                0.0
+              ],
+              "radius_mm": 1.6,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "center_mm": [
+                -98.066,
+                98.066,
+                0.0
+              ],
+              "radius_mm": 1.6,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "center_mm": [
+                -98.066,
+                114.066,
+                0.0
+              ],
+              "radius_mm": 1.6,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "center_mm": [
+                -106.066,
+                -106.066,
+                0.0
+              ],
+              "radius_mm": 4.5,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "center_mm": [
+                -114.066,
+                -114.066,
+                0.0
+              ],
+              "radius_mm": 1.6,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "center_mm": [
+                -114.066,
+                -98.066,
+                0.0
+              ],
+              "radius_mm": 1.6,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "center_mm": [
+                -98.066,
+                -114.066,
+                0.0
+              ],
+              "radius_mm": 1.6,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "center_mm": [
+                -98.066,
+                -98.066,
+                0.0
+              ],
+              "radius_mm": 1.6,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "center_mm": [
+                106.066,
+                -106.066,
+                0.0
+              ],
+              "radius_mm": 4.5,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "center_mm": [
+                98.066,
+                -114.066,
+                0.0
+              ],
+              "radius_mm": 1.6,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "center_mm": [
+                98.066,
+                -98.066,
+                0.0
+              ],
+              "radius_mm": 1.6,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "center_mm": [
+                114.066,
+                -114.066,
+                0.0
+              ],
+              "radius_mm": 1.6,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "center_mm": [
+                114.066,
+                -98.066,
+                0.0
+              ],
+              "radius_mm": 1.6,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "center_mm": [
+                -15.25,
+                -15.25,
+                0.0
+              ],
+              "radius_mm": 1.6,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "center_mm": [
+                -15.25,
+                15.25,
+                0.0
+              ],
+              "radius_mm": 1.6,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "center_mm": [
+                15.25,
+                -15.25,
+                0.0
+              ],
+              "radius_mm": 1.6,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "center_mm": [
+                15.25,
+                15.25,
+                0.0
+              ],
+              "radius_mm": 1.6,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "center_mm": [
+                -36.0,
+                -12.0,
+                0.0
+              ],
+              "radius_mm": 1.6,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "center_mm": [
+                -36.0,
+                12.0,
+                0.0
+              ],
+              "radius_mm": 1.6,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "center_mm": [
+                36.0,
+                -12.0,
+                0.0
+              ],
+              "radius_mm": 1.6,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "center_mm": [
+                36.0,
+                12.0,
+                0.0
+              ],
+              "radius_mm": 1.6,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "center_mm": [
+                -48.0,
+                -26.0,
+                0.0
+              ],
+              "radius_mm": 1.6,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "center_mm": [
+                -48.0,
+                26.0,
+                0.0
+              ],
+              "radius_mm": 1.6,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "center_mm": [
+                48.0,
+                -26.0,
+                0.0
+              ],
+              "radius_mm": 1.6,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "center_mm": [
+                48.0,
+                26.0,
+                0.0
+              ],
+              "radius_mm": 1.6,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "center_mm": [
+                178.454,
+                125.4,
+                0.0
+              ],
+              "radius_mm": 1.6,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "center_mm": [
+                125.4,
+                178.454,
+                0.0
+              ],
+              "radius_mm": 1.6,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "center_mm": [
+                -125.4,
+                178.454,
+                0.0
+              ],
+              "radius_mm": 1.6,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "center_mm": [
+                -178.454,
+                125.4,
+                0.0
+              ],
+              "radius_mm": 1.6,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "center_mm": [
+                -178.454,
+                -125.4,
+                0.0
+              ],
+              "radius_mm": 1.6,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "center_mm": [
+                -125.4,
+                -178.454,
+                0.0
+              ],
+              "radius_mm": 1.6,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "center_mm": [
+                125.4,
+                -178.454,
+                0.0
+              ],
+              "radius_mm": 1.6,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "center_mm": [
+                178.454,
+                -125.4,
+                0.0
+              ],
+              "radius_mm": 1.6,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            }
+          ],
+          "geometry_count": 72,
+          "constraint_count": 0,
+          "bounds_mm": [
+            [
+              -185.0,
+              -185.0,
+              0.0
+            ],
+            [
+              185.0,
+              185.0,
+              0.0
+            ]
+          ],
+          "unparsed_geometry": false
+        },
+        "Top_Rim_Sketch": {
+          "placement_mm": [
+            0.0,
+            0.0,
+            53.0
+          ],
+          "normal": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "circles": [],
+          "geometry_count": 16,
+          "constraint_count": 0,
+          "bounds_mm": [
+            [
+              -185.0,
+              -185.0,
+              53.0
+            ],
+            [
+              185.0,
+              185.0,
+              53.0
+            ]
+          ],
+          "unparsed_geometry": false
+        },
+        "Standoffs_Sketch": {
+          "placement_mm": [
+            0.0,
+            0.0,
+            3.0
+          ],
+          "normal": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "circles": [
+            {
+              "center_mm": [
+                178.454,
+                125.4,
+                3.0
+              ],
+              "radius_mm": 3.0,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "center_mm": [
+                125.4,
+                178.454,
+                3.0
+              ],
+              "radius_mm": 3.0,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "center_mm": [
+                -125.4,
+                178.454,
+                3.0
+              ],
+              "radius_mm": 3.0,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "center_mm": [
+                -178.454,
+                125.4,
+                3.0
+              ],
+              "radius_mm": 3.0,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "center_mm": [
+                -178.454,
+                -125.4,
+                3.0
+              ],
+              "radius_mm": 3.0,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "center_mm": [
+                -125.4,
+                -178.454,
+                3.0
+              ],
+              "radius_mm": 3.0,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "center_mm": [
+                125.4,
+                -178.454,
+                3.0
+              ],
+              "radius_mm": 3.0,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "center_mm": [
+                178.454,
+                -125.4,
+                3.0
+              ],
+              "radius_mm": 3.0,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            }
+          ],
+          "geometry_count": 8,
+          "constraint_count": 0,
+          "bounds_mm": [
+            [
+              -181.454,
+              -181.454,
+              3.0
+            ],
+            [
+              181.454,
+              181.454,
+              3.0
+            ]
+          ],
+          "unparsed_geometry": false
+        },
+        "F60_Bases_Sketch": {
+          "placement_mm": [
+            0.0,
+            0.0,
+            3.0
+          ],
+          "normal": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "circles": [
+            {
+              "center_mm": [
+                106.066,
+                106.066,
+                3.0
+              ],
+              "radius_mm": 8.5,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "center_mm": [
+                98.066,
+                98.066,
+                3.0
+              ],
+              "radius_mm": 3.8,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "center_mm": [
+                98.066,
+                114.066,
+                3.0
+              ],
+              "radius_mm": 3.8,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "center_mm": [
+                114.066,
+                98.066,
+                3.0
+              ],
+              "radius_mm": 3.8,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "center_mm": [
+                114.066,
+                114.066,
+                3.0
+              ],
+              "radius_mm": 3.8,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "center_mm": [
+                -106.066,
+                106.066,
+                3.0
+              ],
+              "radius_mm": 8.5,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "center_mm": [
+                -114.066,
+                98.066,
+                3.0
+              ],
+              "radius_mm": 3.8,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "center_mm": [
+                -114.066,
+                114.066,
+                3.0
+              ],
+              "radius_mm": 3.8,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "center_mm": [
+                -98.066,
+                98.066,
+                3.0
+              ],
+              "radius_mm": 3.8,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "center_mm": [
+                -98.066,
+                114.066,
+                3.0
+              ],
+              "radius_mm": 3.8,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "center_mm": [
+                -106.066,
+                -106.066,
+                3.0
+              ],
+              "radius_mm": 8.5,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "center_mm": [
+                -114.066,
+                -114.066,
+                3.0
+              ],
+              "radius_mm": 3.8,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "center_mm": [
+                -114.066,
+                -98.066,
+                3.0
+              ],
+              "radius_mm": 3.8,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "center_mm": [
+                -98.066,
+                -114.066,
+                3.0
+              ],
+              "radius_mm": 3.8,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "center_mm": [
+                -98.066,
+                -98.066,
+                3.0
+              ],
+              "radius_mm": 3.8,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "center_mm": [
+                106.066,
+                -106.066,
+                3.0
+              ],
+              "radius_mm": 8.5,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "center_mm": [
+                98.066,
+                -114.066,
+                3.0
+              ],
+              "radius_mm": 3.8,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "center_mm": [
+                98.066,
+                -98.066,
+                3.0
+              ],
+              "radius_mm": 3.8,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "center_mm": [
+                114.066,
+                -114.066,
+                3.0
+              ],
+              "radius_mm": 3.8,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "center_mm": [
+                114.066,
+                -98.066,
+                3.0
+              ],
+              "radius_mm": 3.8,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            }
+          ],
+          "geometry_count": 20,
+          "constraint_count": 0,
+          "bounds_mm": [
+            [
+              -117.866,
+              -117.866,
+              3.0
+            ],
+            [
+              117.866,
+              117.866,
+              3.0
+            ]
+          ],
+          "unparsed_geometry": false
+        },
+        "F60_Copper_Coils_Sketch": {
+          "placement_mm": [
+            0.0,
+            0.0,
+            5.5
+          ],
+          "normal": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "circles": [
+            {
+              "center_mm": [
+                106.066,
+                106.066,
+                5.5
+              ],
+              "radius_mm": 11.0,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "center_mm": [
+                -106.066,
+                106.066,
+                5.5
+              ],
+              "radius_mm": 11.0,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "center_mm": [
+                -106.066,
+                -106.066,
+                5.5
+              ],
+              "radius_mm": 11.0,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "center_mm": [
+                106.066,
+                -106.066,
+                5.5
+              ],
+              "radius_mm": 11.0,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            }
+          ],
+          "geometry_count": 4,
+          "constraint_count": 0,
+          "bounds_mm": [
+            [
+              -117.066,
+              -117.066,
+              5.5
+            ],
+            [
+              117.066,
+              117.066,
+              5.5
+            ]
+          ],
+          "unparsed_geometry": false
+        },
+        "F60_Shells_Sketch": {
+          "placement_mm": [
+            0.0,
+            0.0,
+            4.0
+          ],
+          "normal": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "circles": [
+            {
+              "center_mm": [
+                106.066,
+                106.066,
+                4.0
+              ],
+              "radius_mm": 13.4,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "center_mm": [
+                106.066,
+                106.066,
+                4.0
+              ],
+              "radius_mm": 11.8,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "center_mm": [
+                -106.066,
+                106.066,
+                4.0
+              ],
+              "radius_mm": 13.4,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "center_mm": [
+                -106.066,
+                106.066,
+                4.0
+              ],
+              "radius_mm": 11.8,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "center_mm": [
+                -106.066,
+                -106.066,
+                4.0
+              ],
+              "radius_mm": 13.4,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "center_mm": [
+                -106.066,
+                -106.066,
+                4.0
+              ],
+              "radius_mm": 11.8,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "center_mm": [
+                106.066,
+                -106.066,
+                4.0
+              ],
+              "radius_mm": 13.4,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "center_mm": [
+                106.066,
+                -106.066,
+                4.0
+              ],
+              "radius_mm": 11.8,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            }
+          ],
+          "geometry_count": 8,
+          "constraint_count": 0,
+          "bounds_mm": [
+            [
+              -119.46600000000001,
+              -119.46600000000001,
+              4.0
+            ],
+            [
+              119.46600000000001,
+              119.46600000000001,
+              4.0
+            ]
+          ],
+          "unparsed_geometry": false
+        },
+        "F60_Spokes_Sketch": {
+          "placement_mm": [
+            0.0,
+            0.0,
+            18.5
+          ],
+          "normal": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "circles": [
+            {
+              "center_mm": [
+                106.066,
+                106.066,
+                18.5
+              ],
+              "radius_mm": 13.4,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "center_mm": [
+                -106.066,
+                106.066,
+                18.5
+              ],
+              "radius_mm": 13.4,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "center_mm": [
+                -106.066,
+                -106.066,
+                18.5
+              ],
+              "radius_mm": 13.4,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "center_mm": [
+                106.066,
+                -106.066,
+                18.5
+              ],
+              "radius_mm": 13.4,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            }
+          ],
+          "geometry_count": 84,
+          "constraint_count": 0,
+          "bounds_mm": [
+            [
+              -119.46600000000001,
+              -119.46600000000001,
+              18.5
+            ],
+            [
+              119.46600000000001,
+              119.46600000000001,
+              18.5
+            ]
+          ],
+          "unparsed_geometry": false
+        },
+        "F60_Shafts_Sketch": {
+          "placement_mm": [
+            0.0,
+            0.0,
+            4.0
+          ],
+          "normal": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "circles": [
+            {
+              "center_mm": [
+                106.066,
+                106.066,
+                4.0
+              ],
+              "radius_mm": 2.5,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "center_mm": [
+                -106.066,
+                106.066,
+                4.0
+              ],
+              "radius_mm": 2.5,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "center_mm": [
+                -106.066,
+                -106.066,
+                4.0
+              ],
+              "radius_mm": 2.5,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "center_mm": [
+                106.066,
+                -106.066,
+                4.0
+              ],
+              "radius_mm": 2.5,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            }
+          ],
+          "geometry_count": 4,
+          "constraint_count": 0,
+          "bounds_mm": [
+            [
+              -108.566,
+              -108.566,
+              4.0
+            ],
+            [
+              108.566,
+              108.566,
+              4.0
+            ]
+          ],
+          "unparsed_geometry": false
+        },
+        "Props_Hubs_Sketch": {
+          "placement_mm": [
+            0.0,
+            0.0,
+            21.0
+          ],
+          "normal": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "circles": [
+            {
+              "center_mm": [
+                106.066,
+                106.066,
+                21.0
+              ],
+              "radius_mm": 6.5,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "center_mm": [
+                106.066,
+                106.066,
+                21.0
+              ],
+              "radius_mm": 2.55,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "center_mm": [
+                -106.066,
+                106.066,
+                21.0
+              ],
+              "radius_mm": 6.5,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "center_mm": [
+                -106.066,
+                106.066,
+                21.0
+              ],
+              "radius_mm": 2.55,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "center_mm": [
+                -106.066,
+                -106.066,
+                21.0
+              ],
+              "radius_mm": 6.5,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "center_mm": [
+                -106.066,
+                -106.066,
+                21.0
+              ],
+              "radius_mm": 2.55,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "center_mm": [
+                106.066,
+                -106.066,
+                21.0
+              ],
+              "radius_mm": 6.5,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "center_mm": [
+                106.066,
+                -106.066,
+                21.0
+              ],
+              "radius_mm": 2.55,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            }
+          ],
+          "geometry_count": 8,
+          "constraint_count": 0,
+          "bounds_mm": [
+            [
+              -112.566,
+              -112.566,
+              21.0
+            ],
+            [
+              112.566,
+              112.566,
+              21.0
+            ]
+          ],
+          "unparsed_geometry": false
+        },
+        "Props_Blades_Sketch": {
+          "placement_mm": [
+            0.0,
+            0.0,
+            22.5
+          ],
+          "normal": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "circles": [],
+          "geometry_count": 84,
+          "constraint_count": 0,
+          "bounds_mm": [
+            [
+              -170.836,
+              -170.836,
+              22.5
+            ],
+            [
+              170.836,
+              170.836,
+              22.5
+            ]
+          ],
+          "unparsed_geometry": false
+        },
+        "Props_Nuts_Sketch": {
+          "placement_mm": [
+            0.0,
+            0.0,
+            28.0
+          ],
+          "normal": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "circles": [
+            {
+              "center_mm": [
+                106.066,
+                106.066,
+                28.0
+              ],
+              "radius_mm": 4.0,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "center_mm": [
+                -106.066,
+                106.066,
+                28.0
+              ],
+              "radius_mm": 4.0,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "center_mm": [
+                -106.066,
+                -106.066,
+                28.0
+              ],
+              "radius_mm": 4.0,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "center_mm": [
+                106.066,
+                -106.066,
+                28.0
+              ],
+              "radius_mm": 4.0,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            }
+          ],
+          "geometry_count": 4,
+          "constraint_count": 0,
+          "bounds_mm": [
+            [
+              -110.066,
+              -110.066,
+              28.0
+            ],
+            [
+              110.066,
+              110.066,
+              28.0
+            ]
+          ],
+          "unparsed_geometry": false
+        },
+        "PDB_Standoffs_3mm_Sketch": {
+          "placement_mm": [
+            0.0,
+            0.0,
+            3.0
+          ],
+          "normal": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "circles": [
+            {
+              "center_mm": [
+                -15.25,
+                -15.25,
+                3.0
+              ],
+              "radius_mm": 2.5,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "center_mm": [
+                -15.25,
+                15.25,
+                3.0
+              ],
+              "radius_mm": 2.5,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "center_mm": [
+                15.25,
+                -15.25,
+                3.0
+              ],
+              "radius_mm": 2.5,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "center_mm": [
+                15.25,
+                15.25,
+                3.0
+              ],
+              "radius_mm": 2.5,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            }
+          ],
+          "geometry_count": 4,
+          "constraint_count": 0,
+          "bounds_mm": [
+            [
+              -17.75,
+              -17.75,
+              3.0
+            ],
+            [
+              17.75,
+              17.75,
+              3.0
+            ]
+          ],
+          "unparsed_geometry": false
+        },
+        "Mateksys_PDB_Sketch": {
+          "placement_mm": [
+            0.0,
+            0.0,
+            6.0
+          ],
+          "normal": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "circles": [
+            {
+              "center_mm": [
+                -15.25,
+                -15.25,
+                6.0
+              ],
+              "radius_mm": 1.6,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "center_mm": [
+                -15.25,
+                15.25,
+                6.0
+              ],
+              "radius_mm": 1.6,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "center_mm": [
+                15.25,
+                -15.25,
+                6.0
+              ],
+              "radius_mm": 1.6,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "center_mm": [
+                15.25,
+                15.25,
+                6.0
+              ],
+              "radius_mm": 1.6,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            }
+          ],
+          "geometry_count": 24,
+          "constraint_count": 0,
+          "bounds_mm": [
+            [
+              -25.0,
+              -25.0,
+              6.0
+            ],
+            [
+              25.0,
+              30.0,
+              6.0
+            ]
+          ],
+          "unparsed_geometry": false
+        },
+        "PDB_Pads_Sketch": {
+          "placement_mm": [
+            0.0,
+            0.0,
+            7.6
+          ],
+          "normal": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "circles": [
+            {
+              "center_mm": [
+                -15.25,
+                -15.25,
+                7.6
+              ],
+              "radius_mm": 2.9,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "center_mm": [
+                -15.25,
+                -15.25,
+                7.6
+              ],
+              "radius_mm": 1.65,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "center_mm": [
+                -15.25,
+                15.25,
+                7.6
+              ],
+              "radius_mm": 2.9,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "center_mm": [
+                -15.25,
+                15.25,
+                7.6
+              ],
+              "radius_mm": 1.65,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "center_mm": [
+                15.25,
+                -15.25,
+                7.6
+              ],
+              "radius_mm": 2.9,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "center_mm": [
+                15.25,
+                -15.25,
+                7.6
+              ],
+              "radius_mm": 1.65,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "center_mm": [
+                15.25,
+                15.25,
+                7.6
+              ],
+              "radius_mm": 2.9,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "center_mm": [
+                15.25,
+                15.25,
+                7.6
+              ],
+              "radius_mm": 1.65,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "center_mm": [
+                -22.0,
+                18.0,
+                7.6
+              ],
+              "radius_mm": 1.2,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "center_mm": [
+                -18.0,
+                22.0,
+                7.6
+              ],
+              "radius_mm": 1.2,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "center_mm": [
+                -22.0,
+                -18.0,
+                7.6
+              ],
+              "radius_mm": 1.2,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "center_mm": [
+                -18.0,
+                -22.0,
+                7.6
+              ],
+              "radius_mm": 1.2,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "center_mm": [
+                22.0,
+                18.0,
+                7.6
+              ],
+              "radius_mm": 1.2,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "center_mm": [
+                18.0,
+                22.0,
+                7.6
+              ],
+              "radius_mm": 1.2,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "center_mm": [
+                22.0,
+                -18.0,
+                7.6
+              ],
+              "radius_mm": 1.2,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "center_mm": [
+                18.0,
+                -22.0,
+                7.6
+              ],
+              "radius_mm": 1.2,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            }
+          ],
+          "geometry_count": 28,
+          "constraint_count": 0,
+          "bounds_mm": [
+            [
+              -23.2,
+              -23.2,
+              7.6
+            ],
+            [
+              23.2,
+              29.5,
+              7.6
+            ]
+          ],
+          "unparsed_geometry": false
+        },
+        "PDB_Components_Sketch": {
+          "placement_mm": [
+            0.0,
+            0.0,
+            7.6
+          ],
+          "normal": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "circles": [],
+          "geometry_count": 20,
+          "constraint_count": 0,
+          "bounds_mm": [
+            [
+              -18.5,
+              -16.5,
+              7.6
+            ],
+            [
+              16.5,
+              19.2,
+              7.6
+            ]
+          ],
+          "unparsed_geometry": false
+        },
+        "PDB_Fasteners_Sketch": {
+          "placement_mm": [
+            0.0,
+            0.0,
+            7.6
+          ],
+          "normal": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "circles": [
+            {
+              "center_mm": [
+                -15.25,
+                -15.25,
+                7.6
+              ],
+              "radius_mm": 2.75,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "center_mm": [
+                -15.25,
+                15.25,
+                7.6
+              ],
+              "radius_mm": 2.75,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "center_mm": [
+                15.25,
+                -15.25,
+                7.6
+              ],
+              "radius_mm": 2.75,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "center_mm": [
+                15.25,
+                15.25,
+                7.6
+              ],
+              "radius_mm": 2.75,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            }
+          ],
+          "geometry_count": 4,
+          "constraint_count": 0,
+          "bounds_mm": [
+            [
+              -18.0,
+              -18.0,
+              7.6
+            ],
+            [
+              18.0,
+              18.0,
+              7.6
+            ]
+          ],
+          "unparsed_geometry": false
+        },
+        "FC_Standoffs_10mm_Sketch": {
+          "placement_mm": [
+            0.0,
+            0.0,
+            3.0
+          ],
+          "normal": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "circles": [
+            {
+              "center_mm": [
+                -36.0,
+                -12.0,
+                3.0
+              ],
+              "radius_mm": 2.5,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "center_mm": [
+                -36.0,
+                12.0,
+                3.0
+              ],
+              "radius_mm": 2.5,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "center_mm": [
+                36.0,
+                -12.0,
+                3.0
+              ],
+              "radius_mm": 2.5,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "center_mm": [
+                36.0,
+                12.0,
+                3.0
+              ],
+              "radius_mm": 2.5,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            }
+          ],
+          "geometry_count": 4,
+          "constraint_count": 0,
+          "bounds_mm": [
+            [
+              -38.5,
+              -14.5,
+              3.0
+            ],
+            [
+              38.5,
+              14.5,
+              3.0
+            ]
+          ],
+          "unparsed_geometry": false
+        },
+        "FC_Plate_Sketch": {
+          "placement_mm": [
+            0.0,
+            0.0,
+            13.0
+          ],
+          "normal": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "circles": [
+            {
+              "center_mm": [
+                -36.0,
+                -12.0,
+                13.0
+              ],
+              "radius_mm": 1.6,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "center_mm": [
+                -36.0,
+                12.0,
+                13.0
+              ],
+              "radius_mm": 1.6,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "center_mm": [
+                36.0,
+                -12.0,
+                13.0
+              ],
+              "radius_mm": 1.6,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "center_mm": [
+                36.0,
+                12.0,
+                13.0
+              ],
+              "radius_mm": 1.6,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            }
+          ],
+          "geometry_count": 16,
+          "constraint_count": 0,
+          "bounds_mm": [
+            [
+              -48.0,
+              -27.0,
+              13.0
+            ],
+            [
+              48.0,
+              27.0,
+              13.0
+            ]
+          ],
+          "unparsed_geometry": false
+        },
+        "V6X_Baseboard_Sketch": {
+          "placement_mm": [
+            0.0,
+            0.0,
+            15.0
+          ],
+          "normal": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "circles": [],
+          "geometry_count": 4,
+          "constraint_count": 0,
+          "bounds_mm": [
+            [
+              -42.55,
+              -22.5,
+              15.0
+            ],
+            [
+              42.55,
+              22.5,
+              15.0
+            ]
+          ],
+          "unparsed_geometry": false
+        },
+        "V6X_IMU_Core_Sketch": {
+          "placement_mm": [
+            0.0,
+            0.0,
+            27.5
+          ],
+          "normal": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "circles": [],
+          "geometry_count": 4,
+          "constraint_count": 0,
+          "bounds_mm": [
+            [
+              -16.4,
+              -15.825,
+              27.5
+            ],
+            [
+              22.25,
+              15.825,
+              27.5
+            ]
+          ],
+          "unparsed_geometry": false
+        },
+        "Bat_Standoffs_Sketch": {
+          "placement_mm": [
+            -0.0,
+            -0.0,
+            -30.0
+          ],
+          "normal": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "circles": [
+            {
+              "center_mm": [
+                -48.0,
+                -26.0,
+                -30.0
+              ],
+              "radius_mm": 2.5,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "center_mm": [
+                -48.0,
+                26.0,
+                -30.0
+              ],
+              "radius_mm": 2.5,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "center_mm": [
+                48.0,
+                -26.0,
+                -30.0
+              ],
+              "radius_mm": 2.5,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "center_mm": [
+                48.0,
+                26.0,
+                -30.0
+              ],
+              "radius_mm": 2.5,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            }
+          ],
+          "geometry_count": 4,
+          "constraint_count": 0,
+          "bounds_mm": [
+            [
+              -50.5,
+              -28.5,
+              -30.0
+            ],
+            [
+              50.5,
+              28.5,
+              -30.0
+            ]
+          ],
+          "unparsed_geometry": false
+        },
+        "Bat_Plate_Sketch": {
+          "placement_mm": [
+            -0.0,
+            -0.0,
+            -32.0
+          ],
+          "normal": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "circles": [
+            {
+              "center_mm": [
+                -48.0,
+                -26.0,
+                -32.0
+              ],
+              "radius_mm": 1.6,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "center_mm": [
+                -48.0,
+                26.0,
+                -32.0
+              ],
+              "radius_mm": 1.6,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "center_mm": [
+                48.0,
+                -26.0,
+                -32.0
+              ],
+              "radius_mm": 1.6,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "center_mm": [
+                48.0,
+                26.0,
+                -32.0
+              ],
+              "radius_mm": 1.6,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "center_mm": [
+                -30.0,
+                -18.0,
+                -32.0
+              ],
+              "radius_mm": 2.0,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "center_mm": [
+                30.0,
+                -18.0,
+                -32.0
+              ],
+              "radius_mm": 2.0,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "center_mm": [
+                -30.0,
+                18.0,
+                -32.0
+              ],
+              "radius_mm": 2.0,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "center_mm": [
+                30.0,
+                18.0,
+                -32.0
+              ],
+              "radius_mm": 2.0,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            }
+          ],
+          "geometry_count": 12,
+          "constraint_count": 0,
+          "bounds_mm": [
+            [
+              -73.0,
+              -28.0,
+              -32.0
+            ],
+            [
+              73.0,
+              28.0,
+              -32.0
+            ]
+          ],
+          "unparsed_geometry": false
+        },
+        "Battery_Sketch": {
+          "placement_mm": [
+            -0.0,
+            -0.0,
+            -29.5
+          ],
+          "normal": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "circles": [],
+          "geometry_count": 4,
+          "constraint_count": 0,
+          "bounds_mm": [
+            [
+              -68.0,
+              -21.75,
+              -29.5
+            ],
+            [
+              68.0,
+              21.75,
+              -29.5
+            ]
+          ],
+          "unparsed_geometry": false
+        },
+        "Docking_Bracket_Sketch": {
+          "placement_mm": [
+            0.0,
+            0.0,
+            20.0
+          ],
+          "normal": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "circles": [
+            {
+              "center_mm": [
+                0.0,
+                180.0,
+                20.0
+              ],
+              "radius_mm": 6.0,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "center_mm": [
+                0.0,
+                180.0,
+                20.0
+              ],
+              "radius_mm": 2.5,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "center_mm": [
+                0.0,
+                -180.0,
+                20.0
+              ],
+              "radius_mm": 6.0,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "center_mm": [
+                0.0,
+                -180.0,
+                20.0
+              ],
+              "radius_mm": 2.5,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "center_mm": [
+                180.0,
+                0.0,
+                20.0
+              ],
+              "radius_mm": 6.0,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "center_mm": [
+                180.0,
+                0.0,
+                20.0
+              ],
+              "radius_mm": 2.5,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "center_mm": [
+                -180.0,
+                0.0,
+                20.0
+              ],
+              "radius_mm": 6.0,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "center_mm": [
+                -180.0,
+                0.0,
+                20.0
+              ],
+              "radius_mm": 2.5,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            }
+          ],
+          "geometry_count": 8,
+          "constraint_count": 0,
+          "bounds_mm": [
+            [
+              -186.0,
+              -186.0,
+              20.0
+            ],
+            [
+              186.0,
+              186.0,
+              20.0
+            ]
+          ],
+          "unparsed_geometry": false
+        }
+      },
+      "limitations": [
+        "Read-only persisted XML, no CAD operations, no source generation script executed.",
+        "Profile sweep envelope is not a measured BREP bbox; unparsed arcs/splines explicitly flagged.",
+        "Native solid validity/volumes, material densities, mass, COM and inertias unverified.",
+        "No persistent assembly mate or CAD-to-FLU origin/COM transform provided."
+      ],
+      "disk_radius_from_readme_mm": 64.77,
+      "cross_vehicle_disk_gap_at_sim_440mm_mm": 98.328,
+      "disk_gap_at_candidate_372mm_mm": 30.328000000000003
+    },
+    {
+      "path": "/home/ubuntu22/Downloads/dual_quad_codex_sim/models/Machinable_Docking_UAV_300.FCStd",
+      "sha256": "38a48da35b713831ca7ff17cf30cacff1cf65a33b79dbbbe63d6e4fdd86541bd",
+      "body_count": 25,
+      "sketch_count": 38,
+      "zero_constraint_sketches": [
+        "Bottom_Chassis_Sketch",
+        "Top_Unified_Deck_Sketch",
+        "Standoffs_Sketch",
+        "F60_Bases_Sketch",
+        "F60_Copper_Coils_Sketch",
+        "F60_Shells_Sketch",
+        "F60_Spokes_Sketch",
+        "F60_Shafts_Sketch",
+        "Props_Hubs_Sketch",
+        "Props_Blades_Sketch",
+        "Props_Nuts_Sketch",
+        "PDB_Standoffs_3mm_Sketch",
+        "Mateksys_PDB_Sketch",
+        "PDB_Pads_Sketch",
+        "PDB_Components_Sketch",
+        "PDB_Fasteners_Sketch",
+        "FC_Standoffs_10mm_Sketch",
+        "FC_Plate_Sketch",
+        "V6X_Baseboard_Sketch",
+        "V6X_IMU_Core_Sketch",
+        "Bat_Standoffs_Sketch",
+        "Bat_Plate_Sketch",
+        "Battery_Sketch",
+        "Bracket_North_Sketch",
+        "Bracket_South_Sketch",
+        "Bracket_East_Sketch",
+        "Bracket_West_Sketch",
+        "Magnets_North_Sketch",
+        "Magnets_South_Sketch",
+        "Magnets_East_Sketch",
+        "Magnets_West_Sketch",
+        "Docking_Fasteners_Sketch",
+        "Tower_Standoffs_Sketch",
+        "Jetson_Standoffs_Sketch",
+        "Jetson_PCB_Sketch",
+        "Jetson_IO_Sketch",
+        "Jetson_Heatsink_Sketch",
+        "Jetson_Fan_Sketch"
+      ],
+      "additive_profile_envelope_mm": [
+        [
+          -189.0,
+          -189.0,
+          -37.0
+        ],
+        [
+          189.0,
+          189.0,
+          95.84
+        ]
+      ],
+      "motor_centers_xy_mm": [
+        [
+          -106.066,
+          -106.066
+        ],
+        [
+          -106.066,
+          106.066
+        ],
+        [
+          106.066,
+          -106.066
+        ],
+        [
+          106.066,
+          106.066
+        ]
+      ],
+      "magnet_profiles": {
+        "Magnets_North_Sketch": {
+          "placement_mm": [
+            -0.0,
+            186.0,
+            -4.13e-14
+          ],
+          "normal": [
+            0.0,
+            -1.0,
+            2.220446049250313e-16
+          ],
+          "circles": [
+            {
+              "center_mm": [
+                -16.0,
+                186.0,
+                23.999999999999957
+              ],
+              "radius_mm": 6.0,
+              "normal": [
+                0.0,
+                -1.0,
+                2.220446049250313e-16
+              ]
+            },
+            {
+              "center_mm": [
+                -16.0,
+                186.0,
+                38.99999999999996
+              ],
+              "radius_mm": 6.0,
+              "normal": [
+                0.0,
+                -1.0,
+                2.220446049250313e-16
+              ]
+            },
+            {
+              "center_mm": [
+                0.0,
+                186.0,
+                23.999999999999957
+              ],
+              "radius_mm": 6.0,
+              "normal": [
+                0.0,
+                -1.0,
+                2.220446049250313e-16
+              ]
+            },
+            {
+              "center_mm": [
+                0.0,
+                186.0,
+                38.99999999999996
+              ],
+              "radius_mm": 6.0,
+              "normal": [
+                0.0,
+                -1.0,
+                2.220446049250313e-16
+              ]
+            },
+            {
+              "center_mm": [
+                16.0,
+                186.0,
+                23.999999999999957
+              ],
+              "radius_mm": 6.0,
+              "normal": [
+                0.0,
+                -1.0,
+                2.220446049250313e-16
+              ]
+            },
+            {
+              "center_mm": [
+                16.0,
+                186.0,
+                38.99999999999996
+              ],
+              "radius_mm": 6.0,
+              "normal": [
+                0.0,
+                -1.0,
+                2.220446049250313e-16
+              ]
+            }
+          ],
+          "geometry_count": 6,
+          "constraint_count": 0,
+          "bounds_mm": [
+            [
+              -22.0,
+              186.0,
+              17.999999999999957
+            ],
+            [
+              22.0,
+              186.0,
+              44.99999999999996
+            ]
+          ],
+          "unparsed_geometry": false
+        },
+        "Magnets_South_Sketch": {
+          "placement_mm": [
+            0.0,
+            -186.0,
+            4.13e-14
+          ],
+          "normal": [
+            0.0,
+            -1.0,
+            2.220446049250313e-16
+          ],
+          "circles": [
+            {
+              "center_mm": [
+                -16.0,
+                -186.0,
+                24.000000000000043
+              ],
+              "radius_mm": 6.0,
+              "normal": [
+                0.0,
+                -1.0,
+                2.220446049250313e-16
+              ]
+            },
+            {
+              "center_mm": [
+                -16.0,
+                -186.0,
+                39.00000000000004
+              ],
+              "radius_mm": 6.0,
+              "normal": [
+                0.0,
+                -1.0,
+                2.220446049250313e-16
+              ]
+            },
+            {
+              "center_mm": [
+                0.0,
+                -186.0,
+                24.000000000000043
+              ],
+              "radius_mm": 6.0,
+              "normal": [
+                0.0,
+                -1.0,
+                2.220446049250313e-16
+              ]
+            },
+            {
+              "center_mm": [
+                0.0,
+                -186.0,
+                39.00000000000004
+              ],
+              "radius_mm": 6.0,
+              "normal": [
+                0.0,
+                -1.0,
+                2.220446049250313e-16
+              ]
+            },
+            {
+              "center_mm": [
+                16.0,
+                -186.0,
+                24.000000000000043
+              ],
+              "radius_mm": 6.0,
+              "normal": [
+                0.0,
+                -1.0,
+                2.220446049250313e-16
+              ]
+            },
+            {
+              "center_mm": [
+                16.0,
+                -186.0,
+                39.00000000000004
+              ],
+              "radius_mm": 6.0,
+              "normal": [
+                0.0,
+                -1.0,
+                2.220446049250313e-16
+              ]
+            }
+          ],
+          "geometry_count": 6,
+          "constraint_count": 0,
+          "bounds_mm": [
+            [
+              -22.0,
+              -186.0,
+              18.000000000000043
+            ],
+            [
+              22.0,
+              -186.0,
+              45.00000000000004
+            ]
+          ],
+          "unparsed_geometry": false
+        },
+        "Magnets_East_Sketch": {
+          "placement_mm": [
+            -186.0,
+            4.13e-14,
+            -4.13e-14
+          ],
+          "normal": [
+            1.0,
+            -2.220446049250313e-16,
+            2.220446049250313e-16
+          ],
+          "circles": [
+            {
+              "center_mm": [
+                -186.0,
+                -15.99999999999996,
+                23.999999999999957
+              ],
+              "radius_mm": 6.0,
+              "normal": [
+                1.0,
+                -2.220446049250313e-16,
+                2.220446049250313e-16
+              ]
+            },
+            {
+              "center_mm": [
+                -186.0,
+                -15.99999999999996,
+                38.99999999999996
+              ],
+              "radius_mm": 6.0,
+              "normal": [
+                1.0,
+                -2.220446049250313e-16,
+                2.220446049250313e-16
+              ]
+            },
+            {
+              "center_mm": [
+                -186.0,
+                4.13e-14,
+                23.999999999999957
+              ],
+              "radius_mm": 6.0,
+              "normal": [
+                1.0,
+                -2.220446049250313e-16,
+                2.220446049250313e-16
+              ]
+            },
+            {
+              "center_mm": [
+                -186.0,
+                4.13e-14,
+                38.99999999999996
+              ],
+              "radius_mm": 6.0,
+              "normal": [
+                1.0,
+                -2.220446049250313e-16,
+                2.220446049250313e-16
+              ]
+            },
+            {
+              "center_mm": [
+                -186.0,
+                16.000000000000043,
+                23.999999999999957
+              ],
+              "radius_mm": 6.0,
+              "normal": [
+                1.0,
+                -2.220446049250313e-16,
+                2.220446049250313e-16
+              ]
+            },
+            {
+              "center_mm": [
+                -186.0,
+                16.000000000000043,
+                38.99999999999996
+              ],
+              "radius_mm": 6.0,
+              "normal": [
+                1.0,
+                -2.220446049250313e-16,
+                2.220446049250313e-16
+              ]
+            }
+          ],
+          "geometry_count": 6,
+          "constraint_count": 0,
+          "bounds_mm": [
+            [
+              -186.0,
+              -21.999999999999957,
+              17.999999999999957
+            ],
+            [
+              -186.0,
+              22.000000000000043,
+              44.99999999999996
+            ]
+          ],
+          "unparsed_geometry": false
+        },
+        "Magnets_West_Sketch": {
+          "placement_mm": [
+            186.0,
+            -4.13e-14,
+            4.13e-14
+          ],
+          "normal": [
+            1.0,
+            -2.220446049250313e-16,
+            2.220446049250313e-16
+          ],
+          "circles": [
+            {
+              "center_mm": [
+                186.0,
+                -16.000000000000043,
+                24.000000000000043
+              ],
+              "radius_mm": 6.0,
+              "normal": [
+                1.0,
+                -2.220446049250313e-16,
+                2.220446049250313e-16
+              ]
+            },
+            {
+              "center_mm": [
+                186.0,
+                -16.000000000000043,
+                39.00000000000004
+              ],
+              "radius_mm": 6.0,
+              "normal": [
+                1.0,
+                -2.220446049250313e-16,
+                2.220446049250313e-16
+              ]
+            },
+            {
+              "center_mm": [
+                186.0,
+                -4.13e-14,
+                24.000000000000043
+              ],
+              "radius_mm": 6.0,
+              "normal": [
+                1.0,
+                -2.220446049250313e-16,
+                2.220446049250313e-16
+              ]
+            },
+            {
+              "center_mm": [
+                186.0,
+                -4.13e-14,
+                39.00000000000004
+              ],
+              "radius_mm": 6.0,
+              "normal": [
+                1.0,
+                -2.220446049250313e-16,
+                2.220446049250313e-16
+              ]
+            },
+            {
+              "center_mm": [
+                186.0,
+                15.99999999999996,
+                24.000000000000043
+              ],
+              "radius_mm": 6.0,
+              "normal": [
+                1.0,
+                -2.220446049250313e-16,
+                2.220446049250313e-16
+              ]
+            },
+            {
+              "center_mm": [
+                186.0,
+                15.99999999999996,
+                39.00000000000004
+              ],
+              "radius_mm": 6.0,
+              "normal": [
+                1.0,
+                -2.220446049250313e-16,
+                2.220446049250313e-16
+              ]
+            }
+          ],
+          "geometry_count": 6,
+          "constraint_count": 0,
+          "bounds_mm": [
+            [
+              186.0,
+              -22.000000000000043,
+              18.000000000000043
+            ],
+            [
+              186.0,
+              21.999999999999957,
+              45.00000000000004
+            ]
+          ],
+          "unparsed_geometry": false
+        }
+      },
+      "docking_profiles": {
+        "Docking_Fasteners_Sketch": {
+          "placement_mm": [
+            0.0,
+            0.0,
+            55.0
+          ],
+          "normal": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "circles": [
+            {
+              "center_mm": [
+                -18.0,
+                174.0,
+                55.0
+              ],
+              "radius_mm": 2.75,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "center_mm": [
+                -18.0,
+                -174.0,
+                55.0
+              ],
+              "radius_mm": 2.75,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "center_mm": [
+                18.0,
+                174.0,
+                55.0
+              ],
+              "radius_mm": 2.75,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "center_mm": [
+                18.0,
+                -174.0,
+                55.0
+              ],
+              "radius_mm": 2.75,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "center_mm": [
+                174.0,
+                -18.0,
+                55.0
+              ],
+              "radius_mm": 2.75,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "center_mm": [
+                -174.0,
+                -18.0,
+                55.0
+              ],
+              "radius_mm": 2.75,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "center_mm": [
+                174.0,
+                18.0,
+                55.0
+              ],
+              "radius_mm": 2.75,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "center_mm": [
+                -174.0,
+                18.0,
+                55.0
+              ],
+              "radius_mm": 2.75,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            }
+          ],
+          "geometry_count": 8,
+          "constraint_count": 0,
+          "bounds_mm": [
+            [
+              -176.75,
+              -176.75,
+              55.0
+            ],
+            [
+              176.75,
+              176.75,
+              55.0
+            ]
+          ],
+          "unparsed_geometry": false
+        }
+      },
+      "pads": [
+        {
+          "name": "Pad",
+          "profile": "Bottom_Chassis_Sketch",
+          "length_mm": 3.0,
+          "sweep_bounds_mm": [
+            [
+              -185.0,
+              -185.0,
+              0.0
+            ],
+            [
+              185.0,
+              185.0,
+              3.0
+            ]
+          ]
+        },
+        {
+          "name": "Pad001",
+          "profile": "Top_Unified_Deck_Sketch",
+          "length_mm": 2.0,
+          "sweep_bounds_mm": [
+            [
+              -185.0,
+              -185.0,
+              53.0
+            ],
+            [
+              185.0,
+              185.0,
+              55.0
+            ]
+          ]
+        },
+        {
+          "name": "Pad002",
+          "profile": "Standoffs_Sketch",
+          "length_mm": 50.0,
+          "sweep_bounds_mm": [
+            [
+              -181.454,
+              -181.454,
+              3.0
+            ],
+            [
+              181.454,
+              181.454,
+              53.0
+            ]
+          ]
+        },
+        {
+          "name": "Pad003",
+          "profile": "F60_Bases_Sketch",
+          "length_mm": 2.5,
+          "sweep_bounds_mm": [
+            [
+              -117.866,
+              -117.866,
+              3.0
+            ],
+            [
+              117.866,
+              117.866,
+              5.5
+            ]
+          ]
+        },
+        {
+          "name": "Pad004",
+          "profile": "F60_Copper_Coils_Sketch",
+          "length_mm": 11.0,
+          "sweep_bounds_mm": [
+            [
+              -117.066,
+              -117.066,
+              5.5
+            ],
+            [
+              117.066,
+              117.066,
+              16.5
+            ]
+          ]
+        },
+        {
+          "name": "Pad005",
+          "profile": "F60_Shells_Sketch",
+          "length_mm": 14.5,
+          "sweep_bounds_mm": [
+            [
+              -119.46600000000001,
+              -119.46600000000001,
+              4.0
+            ],
+            [
+              119.46600000000001,
+              119.46600000000001,
+              18.5
+            ]
+          ]
+        },
+        {
+          "name": "Pad006",
+          "profile": "F60_Spokes_Sketch",
+          "length_mm": 2.5,
+          "sweep_bounds_mm": [
+            [
+              -119.46600000000001,
+              -119.46600000000001,
+              18.5
+            ],
+            [
+              119.46600000000001,
+              119.46600000000001,
+              21.0
+            ]
+          ]
+        },
+        {
+          "name": "Pad007",
+          "profile": "F60_Shafts_Sketch",
+          "length_mm": 31.0,
+          "sweep_bounds_mm": [
+            [
+              -108.566,
+              -108.566,
+              4.0
+            ],
+            [
+              108.566,
+              108.566,
+              35.0
+            ]
+          ]
+        },
+        {
+          "name": "Pad008",
+          "profile": "Props_Hubs_Sketch",
+          "length_mm": 7.0,
+          "sweep_bounds_mm": [
+            [
+              -112.566,
+              -112.566,
+              21.0
+            ],
+            [
+              112.566,
+              112.566,
+              28.0
+            ]
+          ]
+        },
+        {
+          "name": "Pad009",
+          "profile": "Props_Blades_Sketch",
+          "length_mm": 2.5,
+          "sweep_bounds_mm": [
+            [
+              -170.836,
+              -170.836,
+              22.5
+            ],
+            [
+              170.836,
+              170.836,
+              25.0
+            ]
+          ]
+        },
+        {
+          "name": "Pad010",
+          "profile": "Props_Nuts_Sketch",
+          "length_mm": 3.0,
+          "sweep_bounds_mm": [
+            [
+              -110.066,
+              -110.066,
+              28.0
+            ],
+            [
+              110.066,
+              110.066,
+              31.0
+            ]
+          ]
+        },
+        {
+          "name": "Pad011",
+          "profile": "PDB_Standoffs_3mm_Sketch",
+          "length_mm": 3.0,
+          "sweep_bounds_mm": [
+            [
+              -17.75,
+              -17.75,
+              3.0
+            ],
+            [
+              17.75,
+              17.75,
+              6.0
+            ]
+          ]
+        },
+        {
+          "name": "Pad012",
+          "profile": "Mateksys_PDB_Sketch",
+          "length_mm": 1.6,
+          "sweep_bounds_mm": [
+            [
+              -25.0,
+              -25.0,
+              6.0
+            ],
+            [
+              25.0,
+              30.0,
+              7.6
+            ]
+          ]
+        },
+        {
+          "name": "Pad013",
+          "profile": "PDB_Pads_Sketch",
+          "length_mm": 0.25,
+          "sweep_bounds_mm": [
+            [
+              -23.2,
+              -23.2,
+              7.6
+            ],
+            [
+              23.2,
+              29.5,
+              7.85
+            ]
+          ]
+        },
+        {
+          "name": "Pad014",
+          "profile": "PDB_Components_Sketch",
+          "length_mm": 2.0,
+          "sweep_bounds_mm": [
+            [
+              -18.5,
+              -16.5,
+              7.6
+            ],
+            [
+              16.5,
+              19.2,
+              9.6
+            ]
+          ]
+        },
+        {
+          "name": "Pad015",
+          "profile": "PDB_Fasteners_Sketch",
+          "length_mm": 1.6,
+          "sweep_bounds_mm": [
+            [
+              -18.0,
+              -18.0,
+              7.6
+            ],
+            [
+              18.0,
+              18.0,
+              9.2
+            ]
+          ]
+        },
+        {
+          "name": "Pad016",
+          "profile": "FC_Standoffs_10mm_Sketch",
+          "length_mm": 10.0,
+          "sweep_bounds_mm": [
+            [
+              -38.5,
+              -14.5,
+              3.0
+            ],
+            [
+              38.5,
+              14.5,
+              13.0
+            ]
+          ]
+        },
+        {
+          "name": "Pad017",
+          "profile": "FC_Plate_Sketch",
+          "length_mm": 2.0,
+          "sweep_bounds_mm": [
+            [
+              -48.0,
+              -27.0,
+              13.0
+            ],
+            [
+              48.0,
+              27.0,
+              15.0
+            ]
+          ]
+        },
+        {
+          "name": "Pad018",
+          "profile": "V6X_Baseboard_Sketch",
+          "length_mm": 12.5,
+          "sweep_bounds_mm": [
+            [
+              -42.55,
+              -22.5,
+              15.0
+            ],
+            [
+              42.55,
+              22.5,
+              27.5
+            ]
+          ]
+        },
+        {
+          "name": "Pad019",
+          "profile": "V6X_IMU_Core_Sketch",
+          "length_mm": 16.7,
+          "sweep_bounds_mm": [
+            [
+              -16.4,
+              -15.825,
+              27.5
+            ],
+            [
+              22.25,
+              15.825,
+              44.2
+            ]
+          ]
+        },
+        {
+          "name": "Pad020",
+          "profile": "Bat_Standoffs_Sketch",
+          "length_mm": 35.0,
+          "sweep_bounds_mm": [
+            [
+              -53.5,
+              -31.5,
+              -35.0
+            ],
+            [
+              53.5,
+              31.5,
+              0.0
+            ]
+          ]
+        },
+        {
+          "name": "Pad021",
+          "profile": "Bat_Plate_Sketch",
+          "length_mm": 2.0,
+          "sweep_bounds_mm": [
+            [
+              -76.0,
+              -35.0,
+              -37.0
+            ],
+            [
+              76.0,
+              35.0,
+              -35.0
+            ]
+          ]
+        },
+        {
+          "name": "Pad022",
+          "profile": "Battery_Sketch",
+          "length_mm": 29.0,
+          "sweep_bounds_mm": [
+            [
+              -68.0,
+              -21.75,
+              -34.5
+            ],
+            [
+              68.0,
+              21.75,
+              -5.5
+            ]
+          ]
+        },
+        {
+          "name": "Pad023",
+          "profile": "Bracket_North_Sketch",
+          "length_mm": 60.0,
+          "sweep_bounds_mm": [
+            [
+              -29.999999999999975,
+              168.0,
+              15.999999999999993
+            ],
+            [
+              30.00000000000004,
+              186.0,
+              53.00000000000001
+            ]
+          ]
+        },
+        {
+          "name": "Pad024",
+          "profile": "Bracket_South_Sketch",
+          "length_mm": 60.0,
+          "sweep_bounds_mm": [
+            [
+              -30.000000000000053,
+              -186.0,
+              15.999999999999993
+            ],
+            [
+              29.999999999999957,
+              -168.0,
+              53.00000000000001
+            ]
+          ]
+        },
+        {
+          "name": "Pad025",
+          "profile": "Bracket_East_Sketch",
+          "length_mm": 60.0,
+          "sweep_bounds_mm": [
+            [
+              168.0,
+              -29.999999999999996,
+              15.999999999999993
+            ],
+            [
+              186.0,
+              30.00000000000001,
+              53.00000000000001
+            ]
+          ]
+        },
+        {
+          "name": "Pad026",
+          "profile": "Bracket_West_Sketch",
+          "length_mm": 60.0,
+          "sweep_bounds_mm": [
+            [
+              -186.0,
+              -29.999999999999996,
+              15.999999999999993
+            ],
+            [
+              -168.0,
+              30.00000000000001,
+              53.00000000000001
+            ]
+          ]
+        },
+        {
+          "name": "Pad027",
+          "profile": "Magnets_North_Sketch",
+          "length_mm": -3.0,
+          "sweep_bounds_mm": [
+            [
+              -22.0,
+              186.0,
+              17.999999999999957
+            ],
+            [
+              22.0,
+              189.0,
+              44.99999999999996
+            ]
+          ]
+        },
+        {
+          "name": "Pad028",
+          "profile": "Magnets_South_Sketch",
+          "length_mm": 3.0,
+          "sweep_bounds_mm": [
+            [
+              -22.0,
+              -189.0,
+              18.000000000000043
+            ],
+            [
+              22.0,
+              -186.0,
+              45.00000000000004
+            ]
+          ]
+        },
+        {
+          "name": "Pad029",
+          "profile": "Magnets_East_Sketch",
+          "length_mm": -3.0,
+          "sweep_bounds_mm": [
+            [
+              -189.0,
+              -21.999999999999957,
+              17.999999999999957
+            ],
+            [
+              -186.0,
+              22.000000000000043,
+              44.99999999999996
+            ]
+          ]
+        },
+        {
+          "name": "Pad030",
+          "profile": "Magnets_West_Sketch",
+          "length_mm": 3.0,
+          "sweep_bounds_mm": [
+            [
+              186.0,
+              -22.000000000000043,
+              18.000000000000043
+            ],
+            [
+              189.0,
+              21.999999999999957,
+              45.00000000000004
+            ]
+          ]
+        },
+        {
+          "name": "Pad031",
+          "profile": "Docking_Fasteners_Sketch",
+          "length_mm": 2.5,
+          "sweep_bounds_mm": [
+            [
+              -176.75,
+              -176.75,
+              55.0
+            ],
+            [
+              176.75,
+              176.75,
+              57.5
+            ]
+          ]
+        },
+        {
+          "name": "Pad032",
+          "profile": "Tower_Standoffs_Sketch",
+          "length_mm": 50.0,
+          "sweep_bounds_mm": [
+            [
+              -53.5,
+              -31.5,
+              3.0
+            ],
+            [
+              53.5,
+              31.5,
+              53.0
+            ]
+          ]
+        },
+        {
+          "name": "Pad033",
+          "profile": "Jetson_Standoffs_Sketch",
+          "length_mm": 6.0,
+          "sweep_bounds_mm": [
+            [
+              -48.5,
+              -38.5,
+              55.0
+            ],
+            [
+              48.5,
+              38.5,
+              61.0
+            ]
+          ]
+        },
+        {
+          "name": "Pad034",
+          "profile": "Jetson_PCB_Sketch",
+          "length_mm": 1.6,
+          "sweep_bounds_mm": [
+            [
+              -50.0,
+              -40.4,
+              61.0
+            ],
+            [
+              50.0,
+              40.4,
+              62.6
+            ]
+          ]
+        },
+        {
+          "name": "Pad035",
+          "profile": "Jetson_IO_Sketch",
+          "length_mm": 14.0,
+          "sweep_bounds_mm": [
+            [
+              -49.0,
+              -41.9,
+              62.6
+            ],
+            [
+              48.0,
+              33.0,
+              76.6
+            ]
+          ]
+        },
+        {
+          "name": "Pad036",
+          "profile": "Jetson_Heatsink_Sketch",
+          "length_mm": 22.4,
+          "sweep_bounds_mm": [
+            [
+              -34.0,
+              -14.399999999999999,
+              62.6
+            ],
+            [
+              34.0,
+              33.6,
+              85.0
+            ]
+          ]
+        },
+        {
+          "name": "Pad037",
+          "profile": "Jetson_Fan_Sketch",
+          "length_mm": 10.84,
+          "sweep_bounds_mm": [
+            [
+              -23.5,
+              -9.899999999999999,
+              85.0
+            ],
+            [
+              15.5,
+              29.1,
+              95.84
+            ]
+          ]
+        }
+      ],
+      "all_sketch_parameters": {
+        "Bottom_Chassis_Sketch": {
+          "placement_mm": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "normal": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "circles": [
+            {
+              "center_mm": [
+                106.066,
+                106.066,
+                0.0
+              ],
+              "radius_mm": 4.5,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "center_mm": [
+                98.066,
+                98.066,
+                0.0
+              ],
+              "radius_mm": 1.6,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "center_mm": [
+                98.066,
+                114.066,
+                0.0
+              ],
+              "radius_mm": 1.6,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "center_mm": [
+                114.066,
+                98.066,
+                0.0
+              ],
+              "radius_mm": 1.6,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "center_mm": [
+                114.066,
+                114.066,
+                0.0
+              ],
+              "radius_mm": 1.6,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "center_mm": [
+                -106.066,
+                106.066,
+                0.0
+              ],
+              "radius_mm": 4.5,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "center_mm": [
+                -114.066,
+                98.066,
+                0.0
+              ],
+              "radius_mm": 1.6,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "center_mm": [
+                -114.066,
+                114.066,
+                0.0
+              ],
+              "radius_mm": 1.6,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "center_mm": [
+                -98.066,
+                98.066,
+                0.0
+              ],
+              "radius_mm": 1.6,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "center_mm": [
+                -98.066,
+                114.066,
+                0.0
+              ],
+              "radius_mm": 1.6,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "center_mm": [
+                -106.066,
+                -106.066,
+                0.0
+              ],
+              "radius_mm": 4.5,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "center_mm": [
+                -114.066,
+                -114.066,
+                0.0
+              ],
+              "radius_mm": 1.6,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "center_mm": [
+                -114.066,
+                -98.066,
+                0.0
+              ],
+              "radius_mm": 1.6,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "center_mm": [
+                -98.066,
+                -114.066,
+                0.0
+              ],
+              "radius_mm": 1.6,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "center_mm": [
+                -98.066,
+                -98.066,
+                0.0
+              ],
+              "radius_mm": 1.6,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "center_mm": [
+                106.066,
+                -106.066,
+                0.0
+              ],
+              "radius_mm": 4.5,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "center_mm": [
+                98.066,
+                -114.066,
+                0.0
+              ],
+              "radius_mm": 1.6,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "center_mm": [
+                98.066,
+                -98.066,
+                0.0
+              ],
+              "radius_mm": 1.6,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "center_mm": [
+                114.066,
+                -114.066,
+                0.0
+              ],
+              "radius_mm": 1.6,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "center_mm": [
+                114.066,
+                -98.066,
+                0.0
+              ],
+              "radius_mm": 1.6,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "center_mm": [
+                -15.25,
+                -15.25,
+                0.0
+              ],
+              "radius_mm": 1.6,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "center_mm": [
+                -15.25,
+                15.25,
+                0.0
+              ],
+              "radius_mm": 1.6,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "center_mm": [
+                15.25,
+                -15.25,
+                0.0
+              ],
+              "radius_mm": 1.6,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "center_mm": [
+                15.25,
+                15.25,
+                0.0
+              ],
+              "radius_mm": 1.6,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "center_mm": [
+                -36.0,
+                -12.0,
+                0.0
+              ],
+              "radius_mm": 1.6,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "center_mm": [
+                -36.0,
+                12.0,
+                0.0
+              ],
+              "radius_mm": 1.6,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "center_mm": [
+                36.0,
+                -12.0,
+                0.0
+              ],
+              "radius_mm": 1.6,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "center_mm": [
+                36.0,
+                12.0,
+                0.0
+              ],
+              "radius_mm": 1.6,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "center_mm": [
+                -51.0,
+                -29.0,
+                0.0
+              ],
+              "radius_mm": 1.6,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "center_mm": [
+                -51.0,
+                29.0,
+                0.0
+              ],
+              "radius_mm": 1.6,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "center_mm": [
+                51.0,
+                -29.0,
+                0.0
+              ],
+              "radius_mm": 1.6,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "center_mm": [
+                51.0,
+                29.0,
+                0.0
+              ],
+              "radius_mm": 1.6,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "center_mm": [
+                178.454,
+                125.4,
+                0.0
+              ],
+              "radius_mm": 1.6,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "center_mm": [
+                125.4,
+                178.454,
+                0.0
+              ],
+              "radius_mm": 1.6,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "center_mm": [
+                -125.4,
+                178.454,
+                0.0
+              ],
+              "radius_mm": 1.6,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "center_mm": [
+                -178.454,
+                125.4,
+                0.0
+              ],
+              "radius_mm": 1.6,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "center_mm": [
+                -178.454,
+                -125.4,
+                0.0
+              ],
+              "radius_mm": 1.6,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "center_mm": [
+                -125.4,
+                -178.454,
+                0.0
+              ],
+              "radius_mm": 1.6,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "center_mm": [
+                125.4,
+                -178.454,
+                0.0
+              ],
+              "radius_mm": 1.6,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "center_mm": [
+                178.454,
+                -125.4,
+                0.0
+              ],
+              "radius_mm": 1.6,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            }
+          ],
+          "geometry_count": 72,
+          "constraint_count": 0,
+          "bounds_mm": [
+            [
+              -185.0,
+              -185.0,
+              0.0
+            ],
+            [
+              185.0,
+              185.0,
+              0.0
+            ]
+          ],
+          "unparsed_geometry": false
+        },
+        "Top_Unified_Deck_Sketch": {
+          "placement_mm": [
+            0.0,
+            0.0,
+            53.0
+          ],
+          "normal": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "circles": [
+            {
+              "center_mm": [
+                178.454,
+                125.4,
+                53.0
+              ],
+              "radius_mm": 1.6,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "center_mm": [
+                125.4,
+                178.454,
+                53.0
+              ],
+              "radius_mm": 1.6,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "center_mm": [
+                -125.4,
+                178.454,
+                53.0
+              ],
+              "radius_mm": 1.6,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "center_mm": [
+                -178.454,
+                125.4,
+                53.0
+              ],
+              "radius_mm": 1.6,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "center_mm": [
+                -178.454,
+                -125.4,
+                53.0
+              ],
+              "radius_mm": 1.6,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "center_mm": [
+                -125.4,
+                -178.454,
+                53.0
+              ],
+              "radius_mm": 1.6,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "center_mm": [
+                125.4,
+                -178.454,
+                53.0
+              ],
+              "radius_mm": 1.6,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "center_mm": [
+                178.454,
+                -125.4,
+                53.0
+              ],
+              "radius_mm": 1.6,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "center_mm": [
+                -18.0,
+                174.0,
+                53.0
+              ],
+              "radius_mm": 1.6,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "center_mm": [
+                -18.0,
+                -174.0,
+                53.0
+              ],
+              "radius_mm": 1.6,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "center_mm": [
+                18.0,
+                174.0,
+                53.0
+              ],
+              "radius_mm": 1.6,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "center_mm": [
+                18.0,
+                -174.0,
+                53.0
+              ],
+              "radius_mm": 1.6,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "center_mm": [
+                174.0,
+                -18.0,
+                53.0
+              ],
+              "radius_mm": 1.6,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "center_mm": [
+                -174.0,
+                -18.0,
+                53.0
+              ],
+              "radius_mm": 1.6,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "center_mm": [
+                174.0,
+                18.0,
+                53.0
+              ],
+              "radius_mm": 1.6,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "center_mm": [
+                -174.0,
+                18.0,
+                53.0
+              ],
+              "radius_mm": 1.6,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "center_mm": [
+                -51.0,
+                -29.0,
+                53.0
+              ],
+              "radius_mm": 1.6,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "center_mm": [
+                -51.0,
+                29.0,
+                53.0
+              ],
+              "radius_mm": 1.6,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "center_mm": [
+                51.0,
+                -29.0,
+                53.0
+              ],
+              "radius_mm": 1.6,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "center_mm": [
+                51.0,
+                29.0,
+                53.0
+              ],
+              "radius_mm": 1.6,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "center_mm": [
+                -46.0,
+                -36.0,
+                53.0
+              ],
+              "radius_mm": 1.6,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "center_mm": [
+                -46.0,
+                36.0,
+                53.0
+              ],
+              "radius_mm": 1.6,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "center_mm": [
+                46.0,
+                -36.0,
+                53.0
+              ],
+              "radius_mm": 1.6,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "center_mm": [
+                46.0,
+                36.0,
+                53.0
+              ],
+              "radius_mm": 1.6,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "center_mm": [
+                -20.0,
+                0.0,
+                53.0
+              ],
+              "radius_mm": 3.5,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "center_mm": [
+                20.0,
+                0.0,
+                53.0
+              ],
+              "radius_mm": 3.5,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            }
+          ],
+          "geometry_count": 58,
+          "constraint_count": 0,
+          "bounds_mm": [
+            [
+              -185.0,
+              -185.0,
+              53.0
+            ],
+            [
+              185.0,
+              185.0,
+              53.0
+            ]
+          ],
+          "unparsed_geometry": false
+        },
+        "Standoffs_Sketch": {
+          "placement_mm": [
+            0.0,
+            0.0,
+            3.0
+          ],
+          "normal": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "circles": [
+            {
+              "center_mm": [
+                178.454,
+                125.4,
+                3.0
+              ],
+              "radius_mm": 3.0,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "center_mm": [
+                125.4,
+                178.454,
+                3.0
+              ],
+              "radius_mm": 3.0,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "center_mm": [
+                -125.4,
+                178.454,
+                3.0
+              ],
+              "radius_mm": 3.0,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "center_mm": [
+                -178.454,
+                125.4,
+                3.0
+              ],
+              "radius_mm": 3.0,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "center_mm": [
+                -178.454,
+                -125.4,
+                3.0
+              ],
+              "radius_mm": 3.0,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "center_mm": [
+                -125.4,
+                -178.454,
+                3.0
+              ],
+              "radius_mm": 3.0,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "center_mm": [
+                125.4,
+                -178.454,
+                3.0
+              ],
+              "radius_mm": 3.0,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "center_mm": [
+                178.454,
+                -125.4,
+                3.0
+              ],
+              "radius_mm": 3.0,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            }
+          ],
+          "geometry_count": 8,
+          "constraint_count": 0,
+          "bounds_mm": [
+            [
+              -181.454,
+              -181.454,
+              3.0
+            ],
+            [
+              181.454,
+              181.454,
+              3.0
+            ]
+          ],
+          "unparsed_geometry": false
+        },
+        "F60_Bases_Sketch": {
+          "placement_mm": [
+            0.0,
+            0.0,
+            3.0
+          ],
+          "normal": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "circles": [
+            {
+              "center_mm": [
+                106.066,
+                106.066,
+                3.0
+              ],
+              "radius_mm": 8.5,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "center_mm": [
+                98.066,
+                98.066,
+                3.0
+              ],
+              "radius_mm": 3.8,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "center_mm": [
+                98.066,
+                114.066,
+                3.0
+              ],
+              "radius_mm": 3.8,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "center_mm": [
+                114.066,
+                98.066,
+                3.0
+              ],
+              "radius_mm": 3.8,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "center_mm": [
+                114.066,
+                114.066,
+                3.0
+              ],
+              "radius_mm": 3.8,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "center_mm": [
+                -106.066,
+                106.066,
+                3.0
+              ],
+              "radius_mm": 8.5,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "center_mm": [
+                -114.066,
+                98.066,
+                3.0
+              ],
+              "radius_mm": 3.8,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "center_mm": [
+                -114.066,
+                114.066,
+                3.0
+              ],
+              "radius_mm": 3.8,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "center_mm": [
+                -98.066,
+                98.066,
+                3.0
+              ],
+              "radius_mm": 3.8,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "center_mm": [
+                -98.066,
+                114.066,
+                3.0
+              ],
+              "radius_mm": 3.8,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "center_mm": [
+                -106.066,
+                -106.066,
+                3.0
+              ],
+              "radius_mm": 8.5,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "center_mm": [
+                -114.066,
+                -114.066,
+                3.0
+              ],
+              "radius_mm": 3.8,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "center_mm": [
+                -114.066,
+                -98.066,
+                3.0
+              ],
+              "radius_mm": 3.8,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "center_mm": [
+                -98.066,
+                -114.066,
+                3.0
+              ],
+              "radius_mm": 3.8,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "center_mm": [
+                -98.066,
+                -98.066,
+                3.0
+              ],
+              "radius_mm": 3.8,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "center_mm": [
+                106.066,
+                -106.066,
+                3.0
+              ],
+              "radius_mm": 8.5,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "center_mm": [
+                98.066,
+                -114.066,
+                3.0
+              ],
+              "radius_mm": 3.8,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "center_mm": [
+                98.066,
+                -98.066,
+                3.0
+              ],
+              "radius_mm": 3.8,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "center_mm": [
+                114.066,
+                -114.066,
+                3.0
+              ],
+              "radius_mm": 3.8,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "center_mm": [
+                114.066,
+                -98.066,
+                3.0
+              ],
+              "radius_mm": 3.8,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            }
+          ],
+          "geometry_count": 20,
+          "constraint_count": 0,
+          "bounds_mm": [
+            [
+              -117.866,
+              -117.866,
+              3.0
+            ],
+            [
+              117.866,
+              117.866,
+              3.0
+            ]
+          ],
+          "unparsed_geometry": false
+        },
+        "F60_Copper_Coils_Sketch": {
+          "placement_mm": [
+            0.0,
+            0.0,
+            5.5
+          ],
+          "normal": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "circles": [
+            {
+              "center_mm": [
+                106.066,
+                106.066,
+                5.5
+              ],
+              "radius_mm": 11.0,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "center_mm": [
+                -106.066,
+                106.066,
+                5.5
+              ],
+              "radius_mm": 11.0,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "center_mm": [
+                -106.066,
+                -106.066,
+                5.5
+              ],
+              "radius_mm": 11.0,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "center_mm": [
+                106.066,
+                -106.066,
+                5.5
+              ],
+              "radius_mm": 11.0,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            }
+          ],
+          "geometry_count": 4,
+          "constraint_count": 0,
+          "bounds_mm": [
+            [
+              -117.066,
+              -117.066,
+              5.5
+            ],
+            [
+              117.066,
+              117.066,
+              5.5
+            ]
+          ],
+          "unparsed_geometry": false
+        },
+        "F60_Shells_Sketch": {
+          "placement_mm": [
+            0.0,
+            0.0,
+            4.0
+          ],
+          "normal": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "circles": [
+            {
+              "center_mm": [
+                106.066,
+                106.066,
+                4.0
+              ],
+              "radius_mm": 13.4,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "center_mm": [
+                106.066,
+                106.066,
+                4.0
+              ],
+              "radius_mm": 11.8,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "center_mm": [
+                -106.066,
+                106.066,
+                4.0
+              ],
+              "radius_mm": 13.4,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "center_mm": [
+                -106.066,
+                106.066,
+                4.0
+              ],
+              "radius_mm": 11.8,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "center_mm": [
+                -106.066,
+                -106.066,
+                4.0
+              ],
+              "radius_mm": 13.4,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "center_mm": [
+                -106.066,
+                -106.066,
+                4.0
+              ],
+              "radius_mm": 11.8,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "center_mm": [
+                106.066,
+                -106.066,
+                4.0
+              ],
+              "radius_mm": 13.4,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "center_mm": [
+                106.066,
+                -106.066,
+                4.0
+              ],
+              "radius_mm": 11.8,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            }
+          ],
+          "geometry_count": 8,
+          "constraint_count": 0,
+          "bounds_mm": [
+            [
+              -119.46600000000001,
+              -119.46600000000001,
+              4.0
+            ],
+            [
+              119.46600000000001,
+              119.46600000000001,
+              4.0
+            ]
+          ],
+          "unparsed_geometry": false
+        },
+        "F60_Spokes_Sketch": {
+          "placement_mm": [
+            0.0,
+            0.0,
+            18.5
+          ],
+          "normal": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "circles": [
+            {
+              "center_mm": [
+                106.066,
+                106.066,
+                18.5
+              ],
+              "radius_mm": 13.4,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "center_mm": [
+                -106.066,
+                106.066,
+                18.5
+              ],
+              "radius_mm": 13.4,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "center_mm": [
+                -106.066,
+                -106.066,
+                18.5
+              ],
+              "radius_mm": 13.4,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "center_mm": [
+                106.066,
+                -106.066,
+                18.5
+              ],
+              "radius_mm": 13.4,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            }
+          ],
+          "geometry_count": 84,
+          "constraint_count": 0,
+          "bounds_mm": [
+            [
+              -119.46600000000001,
+              -119.46600000000001,
+              18.5
+            ],
+            [
+              119.46600000000001,
+              119.46600000000001,
+              18.5
+            ]
+          ],
+          "unparsed_geometry": false
+        },
+        "F60_Shafts_Sketch": {
+          "placement_mm": [
+            0.0,
+            0.0,
+            4.0
+          ],
+          "normal": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "circles": [
+            {
+              "center_mm": [
+                106.066,
+                106.066,
+                4.0
+              ],
+              "radius_mm": 2.5,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "center_mm": [
+                -106.066,
+                106.066,
+                4.0
+              ],
+              "radius_mm": 2.5,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "center_mm": [
+                -106.066,
+                -106.066,
+                4.0
+              ],
+              "radius_mm": 2.5,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "center_mm": [
+                106.066,
+                -106.066,
+                4.0
+              ],
+              "radius_mm": 2.5,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            }
+          ],
+          "geometry_count": 4,
+          "constraint_count": 0,
+          "bounds_mm": [
+            [
+              -108.566,
+              -108.566,
+              4.0
+            ],
+            [
+              108.566,
+              108.566,
+              4.0
+            ]
+          ],
+          "unparsed_geometry": false
+        },
+        "Props_Hubs_Sketch": {
+          "placement_mm": [
+            0.0,
+            0.0,
+            21.0
+          ],
+          "normal": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "circles": [
+            {
+              "center_mm": [
+                106.066,
+                106.066,
+                21.0
+              ],
+              "radius_mm": 6.5,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "center_mm": [
+                106.066,
+                106.066,
+                21.0
+              ],
+              "radius_mm": 2.55,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "center_mm": [
+                -106.066,
+                106.066,
+                21.0
+              ],
+              "radius_mm": 6.5,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "center_mm": [
+                -106.066,
+                106.066,
+                21.0
+              ],
+              "radius_mm": 2.55,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "center_mm": [
+                -106.066,
+                -106.066,
+                21.0
+              ],
+              "radius_mm": 6.5,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "center_mm": [
+                -106.066,
+                -106.066,
+                21.0
+              ],
+              "radius_mm": 2.55,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "center_mm": [
+                106.066,
+                -106.066,
+                21.0
+              ],
+              "radius_mm": 6.5,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "center_mm": [
+                106.066,
+                -106.066,
+                21.0
+              ],
+              "radius_mm": 2.55,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            }
+          ],
+          "geometry_count": 8,
+          "constraint_count": 0,
+          "bounds_mm": [
+            [
+              -112.566,
+              -112.566,
+              21.0
+            ],
+            [
+              112.566,
+              112.566,
+              21.0
+            ]
+          ],
+          "unparsed_geometry": false
+        },
+        "Props_Blades_Sketch": {
+          "placement_mm": [
+            0.0,
+            0.0,
+            22.5
+          ],
+          "normal": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "circles": [],
+          "geometry_count": 84,
+          "constraint_count": 0,
+          "bounds_mm": [
+            [
+              -170.836,
+              -170.836,
+              22.5
+            ],
+            [
+              170.836,
+              170.836,
+              22.5
+            ]
+          ],
+          "unparsed_geometry": false
+        },
+        "Props_Nuts_Sketch": {
+          "placement_mm": [
+            0.0,
+            0.0,
+            28.0
+          ],
+          "normal": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "circles": [
+            {
+              "center_mm": [
+                106.066,
+                106.066,
+                28.0
+              ],
+              "radius_mm": 4.0,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "center_mm": [
+                -106.066,
+                106.066,
+                28.0
+              ],
+              "radius_mm": 4.0,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "center_mm": [
+                -106.066,
+                -106.066,
+                28.0
+              ],
+              "radius_mm": 4.0,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "center_mm": [
+                106.066,
+                -106.066,
+                28.0
+              ],
+              "radius_mm": 4.0,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            }
+          ],
+          "geometry_count": 4,
+          "constraint_count": 0,
+          "bounds_mm": [
+            [
+              -110.066,
+              -110.066,
+              28.0
+            ],
+            [
+              110.066,
+              110.066,
+              28.0
+            ]
+          ],
+          "unparsed_geometry": false
+        },
+        "PDB_Standoffs_3mm_Sketch": {
+          "placement_mm": [
+            0.0,
+            0.0,
+            3.0
+          ],
+          "normal": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "circles": [
+            {
+              "center_mm": [
+                -15.25,
+                -15.25,
+                3.0
+              ],
+              "radius_mm": 2.5,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "center_mm": [
+                -15.25,
+                15.25,
+                3.0
+              ],
+              "radius_mm": 2.5,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "center_mm": [
+                15.25,
+                -15.25,
+                3.0
+              ],
+              "radius_mm": 2.5,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "center_mm": [
+                15.25,
+                15.25,
+                3.0
+              ],
+              "radius_mm": 2.5,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            }
+          ],
+          "geometry_count": 4,
+          "constraint_count": 0,
+          "bounds_mm": [
+            [
+              -17.75,
+              -17.75,
+              3.0
+            ],
+            [
+              17.75,
+              17.75,
+              3.0
+            ]
+          ],
+          "unparsed_geometry": false
+        },
+        "Mateksys_PDB_Sketch": {
+          "placement_mm": [
+            0.0,
+            0.0,
+            6.0
+          ],
+          "normal": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "circles": [
+            {
+              "center_mm": [
+                -15.25,
+                -15.25,
+                6.0
+              ],
+              "radius_mm": 1.6,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "center_mm": [
+                -15.25,
+                15.25,
+                6.0
+              ],
+              "radius_mm": 1.6,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "center_mm": [
+                15.25,
+                -15.25,
+                6.0
+              ],
+              "radius_mm": 1.6,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "center_mm": [
+                15.25,
+                15.25,
+                6.0
+              ],
+              "radius_mm": 1.6,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            }
+          ],
+          "geometry_count": 24,
+          "constraint_count": 0,
+          "bounds_mm": [
+            [
+              -25.0,
+              -25.0,
+              6.0
+            ],
+            [
+              25.0,
+              30.0,
+              6.0
+            ]
+          ],
+          "unparsed_geometry": false
+        },
+        "PDB_Pads_Sketch": {
+          "placement_mm": [
+            0.0,
+            0.0,
+            7.6
+          ],
+          "normal": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "circles": [
+            {
+              "center_mm": [
+                -15.25,
+                -15.25,
+                7.6
+              ],
+              "radius_mm": 2.9,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "center_mm": [
+                -15.25,
+                -15.25,
+                7.6
+              ],
+              "radius_mm": 1.65,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "center_mm": [
+                -15.25,
+                15.25,
+                7.6
+              ],
+              "radius_mm": 2.9,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "center_mm": [
+                -15.25,
+                15.25,
+                7.6
+              ],
+              "radius_mm": 1.65,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "center_mm": [
+                15.25,
+                -15.25,
+                7.6
+              ],
+              "radius_mm": 2.9,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "center_mm": [
+                15.25,
+                -15.25,
+                7.6
+              ],
+              "radius_mm": 1.65,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "center_mm": [
+                15.25,
+                15.25,
+                7.6
+              ],
+              "radius_mm": 2.9,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "center_mm": [
+                15.25,
+                15.25,
+                7.6
+              ],
+              "radius_mm": 1.65,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "center_mm": [
+                -22.0,
+                18.0,
+                7.6
+              ],
+              "radius_mm": 1.2,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "center_mm": [
+                -18.0,
+                22.0,
+                7.6
+              ],
+              "radius_mm": 1.2,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "center_mm": [
+                -22.0,
+                -18.0,
+                7.6
+              ],
+              "radius_mm": 1.2,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "center_mm": [
+                -18.0,
+                -22.0,
+                7.6
+              ],
+              "radius_mm": 1.2,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "center_mm": [
+                22.0,
+                18.0,
+                7.6
+              ],
+              "radius_mm": 1.2,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "center_mm": [
+                18.0,
+                22.0,
+                7.6
+              ],
+              "radius_mm": 1.2,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "center_mm": [
+                22.0,
+                -18.0,
+                7.6
+              ],
+              "radius_mm": 1.2,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "center_mm": [
+                18.0,
+                -22.0,
+                7.6
+              ],
+              "radius_mm": 1.2,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            }
+          ],
+          "geometry_count": 28,
+          "constraint_count": 0,
+          "bounds_mm": [
+            [
+              -23.2,
+              -23.2,
+              7.6
+            ],
+            [
+              23.2,
+              29.5,
+              7.6
+            ]
+          ],
+          "unparsed_geometry": false
+        },
+        "PDB_Components_Sketch": {
+          "placement_mm": [
+            0.0,
+            0.0,
+            7.6
+          ],
+          "normal": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "circles": [],
+          "geometry_count": 20,
+          "constraint_count": 0,
+          "bounds_mm": [
+            [
+              -18.5,
+              -16.5,
+              7.6
+            ],
+            [
+              16.5,
+              19.2,
+              7.6
+            ]
+          ],
+          "unparsed_geometry": false
+        },
+        "PDB_Fasteners_Sketch": {
+          "placement_mm": [
+            0.0,
+            0.0,
+            7.6
+          ],
+          "normal": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "circles": [
+            {
+              "center_mm": [
+                -15.25,
+                -15.25,
+                7.6
+              ],
+              "radius_mm": 2.75,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "center_mm": [
+                -15.25,
+                15.25,
+                7.6
+              ],
+              "radius_mm": 2.75,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "center_mm": [
+                15.25,
+                -15.25,
+                7.6
+              ],
+              "radius_mm": 2.75,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "center_mm": [
+                15.25,
+                15.25,
+                7.6
+              ],
+              "radius_mm": 2.75,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            }
+          ],
+          "geometry_count": 4,
+          "constraint_count": 0,
+          "bounds_mm": [
+            [
+              -18.0,
+              -18.0,
+              7.6
+            ],
+            [
+              18.0,
+              18.0,
+              7.6
+            ]
+          ],
+          "unparsed_geometry": false
+        },
+        "FC_Standoffs_10mm_Sketch": {
+          "placement_mm": [
+            0.0,
+            0.0,
+            3.0
+          ],
+          "normal": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "circles": [
+            {
+              "center_mm": [
+                -36.0,
+                -12.0,
+                3.0
+              ],
+              "radius_mm": 2.5,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "center_mm": [
+                -36.0,
+                12.0,
+                3.0
+              ],
+              "radius_mm": 2.5,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "center_mm": [
+                36.0,
+                -12.0,
+                3.0
+              ],
+              "radius_mm": 2.5,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "center_mm": [
+                36.0,
+                12.0,
+                3.0
+              ],
+              "radius_mm": 2.5,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            }
+          ],
+          "geometry_count": 4,
+          "constraint_count": 0,
+          "bounds_mm": [
+            [
+              -38.5,
+              -14.5,
+              3.0
+            ],
+            [
+              38.5,
+              14.5,
+              3.0
+            ]
+          ],
+          "unparsed_geometry": false
+        },
+        "FC_Plate_Sketch": {
+          "placement_mm": [
+            0.0,
+            0.0,
+            13.0
+          ],
+          "normal": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "circles": [
+            {
+              "center_mm": [
+                -36.0,
+                -12.0,
+                13.0
+              ],
+              "radius_mm": 1.6,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "center_mm": [
+                -36.0,
+                12.0,
+                13.0
+              ],
+              "radius_mm": 1.6,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "center_mm": [
+                36.0,
+                -12.0,
+                13.0
+              ],
+              "radius_mm": 1.6,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "center_mm": [
+                36.0,
+                12.0,
+                13.0
+              ],
+              "radius_mm": 1.6,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            }
+          ],
+          "geometry_count": 16,
+          "constraint_count": 0,
+          "bounds_mm": [
+            [
+              -48.0,
+              -27.0,
+              13.0
+            ],
+            [
+              48.0,
+              27.0,
+              13.0
+            ]
+          ],
+          "unparsed_geometry": false
+        },
+        "V6X_Baseboard_Sketch": {
+          "placement_mm": [
+            0.0,
+            0.0,
+            15.0
+          ],
+          "normal": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "circles": [],
+          "geometry_count": 4,
+          "constraint_count": 0,
+          "bounds_mm": [
+            [
+              -42.55,
+              -22.5,
+              15.0
+            ],
+            [
+              42.55,
+              22.5,
+              15.0
+            ]
+          ],
+          "unparsed_geometry": false
+        },
+        "V6X_IMU_Core_Sketch": {
+          "placement_mm": [
+            0.0,
+            0.0,
+            27.5
+          ],
+          "normal": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "circles": [],
+          "geometry_count": 4,
+          "constraint_count": 0,
+          "bounds_mm": [
+            [
+              -16.4,
+              -15.825,
+              27.5
+            ],
+            [
+              22.25,
+              15.825,
+              27.5
+            ]
+          ],
+          "unparsed_geometry": false
+        },
+        "Bat_Standoffs_Sketch": {
+          "placement_mm": [
+            -0.0,
+            -0.0,
+            -35.0
+          ],
+          "normal": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "circles": [
+            {
+              "center_mm": [
+                -51.0,
+                -29.0,
+                -35.0
+              ],
+              "radius_mm": 2.5,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "center_mm": [
+                -51.0,
+                29.0,
+                -35.0
+              ],
+              "radius_mm": 2.5,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "center_mm": [
+                51.0,
+                -29.0,
+                -35.0
+              ],
+              "radius_mm": 2.5,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "center_mm": [
+                51.0,
+                29.0,
+                -35.0
+              ],
+              "radius_mm": 2.5,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            }
+          ],
+          "geometry_count": 4,
+          "constraint_count": 0,
+          "bounds_mm": [
+            [
+              -53.5,
+              -31.5,
+              -35.0
+            ],
+            [
+              53.5,
+              31.5,
+              -35.0
+            ]
+          ],
+          "unparsed_geometry": false
+        },
+        "Bat_Plate_Sketch": {
+          "placement_mm": [
+            -0.0,
+            -0.0,
+            -37.0
+          ],
+          "normal": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "circles": [
+            {
+              "center_mm": [
+                -51.0,
+                -29.0,
+                -37.0
+              ],
+              "radius_mm": 1.6,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "center_mm": [
+                -51.0,
+                29.0,
+                -37.0
+              ],
+              "radius_mm": 1.6,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "center_mm": [
+                51.0,
+                -29.0,
+                -37.0
+              ],
+              "radius_mm": 1.6,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "center_mm": [
+                51.0,
+                29.0,
+                -37.0
+              ],
+              "radius_mm": 1.6,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            }
+          ],
+          "geometry_count": 16,
+          "constraint_count": 0,
+          "bounds_mm": [
+            [
+              -76.0,
+              -35.0,
+              -37.0
+            ],
+            [
+              76.0,
+              35.0,
+              -37.0
+            ]
+          ],
+          "unparsed_geometry": false
+        },
+        "Battery_Sketch": {
+          "placement_mm": [
+            -0.0,
+            -0.0,
+            -34.5
+          ],
+          "normal": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "circles": [],
+          "geometry_count": 4,
+          "constraint_count": 0,
+          "bounds_mm": [
+            [
+              -68.0,
+              -21.75,
+              -34.5
+            ],
+            [
+              68.0,
+              21.75,
+              -34.5
+            ]
+          ],
+          "unparsed_geometry": false
+        },
+        "Bracket_North_Sketch": {
+          "placement_mm": [
+            -30.0,
+            6.7e-15,
+            -6.7e-15
+          ],
+          "normal": [
+            1.0,
+            -2.220446049250313e-16,
+            2.220446049250313e-16
+          ],
+          "circles": [],
+          "geometry_count": 6,
+          "constraint_count": 0,
+          "bounds_mm": [
+            [
+              -29.999999999999975,
+              168.0,
+              15.999999999999993
+            ],
+            [
+              -29.99999999999996,
+              186.0,
+              52.99999999999999
+            ]
+          ],
+          "unparsed_geometry": false
+        },
+        "Bracket_South_Sketch": {
+          "placement_mm": [
+            -30.0,
+            6.7e-15,
+            -6.7e-15
+          ],
+          "normal": [
+            1.0,
+            -2.220446049250313e-16,
+            2.220446049250313e-16
+          ],
+          "circles": [],
+          "geometry_count": 6,
+          "constraint_count": 0,
+          "bounds_mm": [
+            [
+              -30.000000000000053,
+              -186.0,
+              15.999999999999993
+            ],
+            [
+              -30.000000000000043,
+              -168.0,
+              52.99999999999999
+            ]
+          ],
+          "unparsed_geometry": false
+        },
+        "Bracket_East_Sketch": {
+          "placement_mm": [
+            -0.0,
+            30.0,
+            -6.7e-15
+          ],
+          "normal": [
+            0.0,
+            -1.0,
+            2.220446049250313e-16
+          ],
+          "circles": [],
+          "geometry_count": 6,
+          "constraint_count": 0,
+          "bounds_mm": [
+            [
+              168.0,
+              30.000000000000004,
+              15.999999999999993
+            ],
+            [
+              186.0,
+              30.00000000000001,
+              52.99999999999999
+            ]
+          ],
+          "unparsed_geometry": false
+        },
+        "Bracket_West_Sketch": {
+          "placement_mm": [
+            -0.0,
+            30.0,
+            -6.7e-15
+          ],
+          "normal": [
+            0.0,
+            -1.0,
+            2.220446049250313e-16
+          ],
+          "circles": [],
+          "geometry_count": 6,
+          "constraint_count": 0,
+          "bounds_mm": [
+            [
+              -186.0,
+              30.000000000000004,
+              15.999999999999993
+            ],
+            [
+              -168.0,
+              30.00000000000001,
+              52.99999999999999
+            ]
+          ],
+          "unparsed_geometry": false
+        },
+        "Magnets_North_Sketch": {
+          "placement_mm": [
+            -0.0,
+            186.0,
+            -4.13e-14
+          ],
+          "normal": [
+            0.0,
+            -1.0,
+            2.220446049250313e-16
+          ],
+          "circles": [
+            {
+              "center_mm": [
+                -16.0,
+                186.0,
+                23.999999999999957
+              ],
+              "radius_mm": 6.0,
+              "normal": [
+                0.0,
+                -1.0,
+                2.220446049250313e-16
+              ]
+            },
+            {
+              "center_mm": [
+                -16.0,
+                186.0,
+                38.99999999999996
+              ],
+              "radius_mm": 6.0,
+              "normal": [
+                0.0,
+                -1.0,
+                2.220446049250313e-16
+              ]
+            },
+            {
+              "center_mm": [
+                0.0,
+                186.0,
+                23.999999999999957
+              ],
+              "radius_mm": 6.0,
+              "normal": [
+                0.0,
+                -1.0,
+                2.220446049250313e-16
+              ]
+            },
+            {
+              "center_mm": [
+                0.0,
+                186.0,
+                38.99999999999996
+              ],
+              "radius_mm": 6.0,
+              "normal": [
+                0.0,
+                -1.0,
+                2.220446049250313e-16
+              ]
+            },
+            {
+              "center_mm": [
+                16.0,
+                186.0,
+                23.999999999999957
+              ],
+              "radius_mm": 6.0,
+              "normal": [
+                0.0,
+                -1.0,
+                2.220446049250313e-16
+              ]
+            },
+            {
+              "center_mm": [
+                16.0,
+                186.0,
+                38.99999999999996
+              ],
+              "radius_mm": 6.0,
+              "normal": [
+                0.0,
+                -1.0,
+                2.220446049250313e-16
+              ]
+            }
+          ],
+          "geometry_count": 6,
+          "constraint_count": 0,
+          "bounds_mm": [
+            [
+              -22.0,
+              186.0,
+              17.999999999999957
+            ],
+            [
+              22.0,
+              186.0,
+              44.99999999999996
+            ]
+          ],
+          "unparsed_geometry": false
+        },
+        "Magnets_South_Sketch": {
+          "placement_mm": [
+            0.0,
+            -186.0,
+            4.13e-14
+          ],
+          "normal": [
+            0.0,
+            -1.0,
+            2.220446049250313e-16
+          ],
+          "circles": [
+            {
+              "center_mm": [
+                -16.0,
+                -186.0,
+                24.000000000000043
+              ],
+              "radius_mm": 6.0,
+              "normal": [
+                0.0,
+                -1.0,
+                2.220446049250313e-16
+              ]
+            },
+            {
+              "center_mm": [
+                -16.0,
+                -186.0,
+                39.00000000000004
+              ],
+              "radius_mm": 6.0,
+              "normal": [
+                0.0,
+                -1.0,
+                2.220446049250313e-16
+              ]
+            },
+            {
+              "center_mm": [
+                0.0,
+                -186.0,
+                24.000000000000043
+              ],
+              "radius_mm": 6.0,
+              "normal": [
+                0.0,
+                -1.0,
+                2.220446049250313e-16
+              ]
+            },
+            {
+              "center_mm": [
+                0.0,
+                -186.0,
+                39.00000000000004
+              ],
+              "radius_mm": 6.0,
+              "normal": [
+                0.0,
+                -1.0,
+                2.220446049250313e-16
+              ]
+            },
+            {
+              "center_mm": [
+                16.0,
+                -186.0,
+                24.000000000000043
+              ],
+              "radius_mm": 6.0,
+              "normal": [
+                0.0,
+                -1.0,
+                2.220446049250313e-16
+              ]
+            },
+            {
+              "center_mm": [
+                16.0,
+                -186.0,
+                39.00000000000004
+              ],
+              "radius_mm": 6.0,
+              "normal": [
+                0.0,
+                -1.0,
+                2.220446049250313e-16
+              ]
+            }
+          ],
+          "geometry_count": 6,
+          "constraint_count": 0,
+          "bounds_mm": [
+            [
+              -22.0,
+              -186.0,
+              18.000000000000043
+            ],
+            [
+              22.0,
+              -186.0,
+              45.00000000000004
+            ]
+          ],
+          "unparsed_geometry": false
+        },
+        "Magnets_East_Sketch": {
+          "placement_mm": [
+            -186.0,
+            4.13e-14,
+            -4.13e-14
+          ],
+          "normal": [
+            1.0,
+            -2.220446049250313e-16,
+            2.220446049250313e-16
+          ],
+          "circles": [
+            {
+              "center_mm": [
+                -186.0,
+                -15.99999999999996,
+                23.999999999999957
+              ],
+              "radius_mm": 6.0,
+              "normal": [
+                1.0,
+                -2.220446049250313e-16,
+                2.220446049250313e-16
+              ]
+            },
+            {
+              "center_mm": [
+                -186.0,
+                -15.99999999999996,
+                38.99999999999996
+              ],
+              "radius_mm": 6.0,
+              "normal": [
+                1.0,
+                -2.220446049250313e-16,
+                2.220446049250313e-16
+              ]
+            },
+            {
+              "center_mm": [
+                -186.0,
+                4.13e-14,
+                23.999999999999957
+              ],
+              "radius_mm": 6.0,
+              "normal": [
+                1.0,
+                -2.220446049250313e-16,
+                2.220446049250313e-16
+              ]
+            },
+            {
+              "center_mm": [
+                -186.0,
+                4.13e-14,
+                38.99999999999996
+              ],
+              "radius_mm": 6.0,
+              "normal": [
+                1.0,
+                -2.220446049250313e-16,
+                2.220446049250313e-16
+              ]
+            },
+            {
+              "center_mm": [
+                -186.0,
+                16.000000000000043,
+                23.999999999999957
+              ],
+              "radius_mm": 6.0,
+              "normal": [
+                1.0,
+                -2.220446049250313e-16,
+                2.220446049250313e-16
+              ]
+            },
+            {
+              "center_mm": [
+                -186.0,
+                16.000000000000043,
+                38.99999999999996
+              ],
+              "radius_mm": 6.0,
+              "normal": [
+                1.0,
+                -2.220446049250313e-16,
+                2.220446049250313e-16
+              ]
+            }
+          ],
+          "geometry_count": 6,
+          "constraint_count": 0,
+          "bounds_mm": [
+            [
+              -186.0,
+              -21.999999999999957,
+              17.999999999999957
+            ],
+            [
+              -186.0,
+              22.000000000000043,
+              44.99999999999996
+            ]
+          ],
+          "unparsed_geometry": false
+        },
+        "Magnets_West_Sketch": {
+          "placement_mm": [
+            186.0,
+            -4.13e-14,
+            4.13e-14
+          ],
+          "normal": [
+            1.0,
+            -2.220446049250313e-16,
+            2.220446049250313e-16
+          ],
+          "circles": [
+            {
+              "center_mm": [
+                186.0,
+                -16.000000000000043,
+                24.000000000000043
+              ],
+              "radius_mm": 6.0,
+              "normal": [
+                1.0,
+                -2.220446049250313e-16,
+                2.220446049250313e-16
+              ]
+            },
+            {
+              "center_mm": [
+                186.0,
+                -16.000000000000043,
+                39.00000000000004
+              ],
+              "radius_mm": 6.0,
+              "normal": [
+                1.0,
+                -2.220446049250313e-16,
+                2.220446049250313e-16
+              ]
+            },
+            {
+              "center_mm": [
+                186.0,
+                -4.13e-14,
+                24.000000000000043
+              ],
+              "radius_mm": 6.0,
+              "normal": [
+                1.0,
+                -2.220446049250313e-16,
+                2.220446049250313e-16
+              ]
+            },
+            {
+              "center_mm": [
+                186.0,
+                -4.13e-14,
+                39.00000000000004
+              ],
+              "radius_mm": 6.0,
+              "normal": [
+                1.0,
+                -2.220446049250313e-16,
+                2.220446049250313e-16
+              ]
+            },
+            {
+              "center_mm": [
+                186.0,
+                15.99999999999996,
+                24.000000000000043
+              ],
+              "radius_mm": 6.0,
+              "normal": [
+                1.0,
+                -2.220446049250313e-16,
+                2.220446049250313e-16
+              ]
+            },
+            {
+              "center_mm": [
+                186.0,
+                15.99999999999996,
+                39.00000000000004
+              ],
+              "radius_mm": 6.0,
+              "normal": [
+                1.0,
+                -2.220446049250313e-16,
+                2.220446049250313e-16
+              ]
+            }
+          ],
+          "geometry_count": 6,
+          "constraint_count": 0,
+          "bounds_mm": [
+            [
+              186.0,
+              -22.000000000000043,
+              18.000000000000043
+            ],
+            [
+              186.0,
+              21.999999999999957,
+              45.00000000000004
+            ]
+          ],
+          "unparsed_geometry": false
+        },
+        "Docking_Fasteners_Sketch": {
+          "placement_mm": [
+            0.0,
+            0.0,
+            55.0
+          ],
+          "normal": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "circles": [
+            {
+              "center_mm": [
+                -18.0,
+                174.0,
+                55.0
+              ],
+              "radius_mm": 2.75,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "center_mm": [
+                -18.0,
+                -174.0,
+                55.0
+              ],
+              "radius_mm": 2.75,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "center_mm": [
+                18.0,
+                174.0,
+                55.0
+              ],
+              "radius_mm": 2.75,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "center_mm": [
+                18.0,
+                -174.0,
+                55.0
+              ],
+              "radius_mm": 2.75,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "center_mm": [
+                174.0,
+                -18.0,
+                55.0
+              ],
+              "radius_mm": 2.75,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "center_mm": [
+                -174.0,
+                -18.0,
+                55.0
+              ],
+              "radius_mm": 2.75,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "center_mm": [
+                174.0,
+                18.0,
+                55.0
+              ],
+              "radius_mm": 2.75,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "center_mm": [
+                -174.0,
+                18.0,
+                55.0
+              ],
+              "radius_mm": 2.75,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            }
+          ],
+          "geometry_count": 8,
+          "constraint_count": 0,
+          "bounds_mm": [
+            [
+              -176.75,
+              -176.75,
+              55.0
+            ],
+            [
+              176.75,
+              176.75,
+              55.0
+            ]
+          ],
+          "unparsed_geometry": false
+        },
+        "Tower_Standoffs_Sketch": {
+          "placement_mm": [
+            0.0,
+            0.0,
+            3.0
+          ],
+          "normal": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "circles": [
+            {
+              "center_mm": [
+                -51.0,
+                -29.0,
+                3.0
+              ],
+              "radius_mm": 2.5,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "center_mm": [
+                -51.0,
+                29.0,
+                3.0
+              ],
+              "radius_mm": 2.5,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "center_mm": [
+                51.0,
+                -29.0,
+                3.0
+              ],
+              "radius_mm": 2.5,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "center_mm": [
+                51.0,
+                29.0,
+                3.0
+              ],
+              "radius_mm": 2.5,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            }
+          ],
+          "geometry_count": 4,
+          "constraint_count": 0,
+          "bounds_mm": [
+            [
+              -53.5,
+              -31.5,
+              3.0
+            ],
+            [
+              53.5,
+              31.5,
+              3.0
+            ]
+          ],
+          "unparsed_geometry": false
+        },
+        "Jetson_Standoffs_Sketch": {
+          "placement_mm": [
+            0.0,
+            0.0,
+            55.0
+          ],
+          "normal": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "circles": [
+            {
+              "center_mm": [
+                -46.0,
+                -36.0,
+                55.0
+              ],
+              "radius_mm": 2.5,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "center_mm": [
+                -46.0,
+                36.0,
+                55.0
+              ],
+              "radius_mm": 2.5,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "center_mm": [
+                46.0,
+                -36.0,
+                55.0
+              ],
+              "radius_mm": 2.5,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "center_mm": [
+                46.0,
+                36.0,
+                55.0
+              ],
+              "radius_mm": 2.5,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            }
+          ],
+          "geometry_count": 4,
+          "constraint_count": 0,
+          "bounds_mm": [
+            [
+              -48.5,
+              -38.5,
+              55.0
+            ],
+            [
+              48.5,
+              38.5,
+              55.0
+            ]
+          ],
+          "unparsed_geometry": false
+        },
+        "Jetson_PCB_Sketch": {
+          "placement_mm": [
+            0.0,
+            0.0,
+            61.0
+          ],
+          "normal": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "circles": [
+            {
+              "center_mm": [
+                -46.0,
+                -36.0,
+                61.0
+              ],
+              "radius_mm": 1.6,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "center_mm": [
+                -46.0,
+                36.0,
+                61.0
+              ],
+              "radius_mm": 1.6,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "center_mm": [
+                46.0,
+                -36.0,
+                61.0
+              ],
+              "radius_mm": 1.6,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "center_mm": [
+                46.0,
+                36.0,
+                61.0
+              ],
+              "radius_mm": 1.6,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            }
+          ],
+          "geometry_count": 8,
+          "constraint_count": 0,
+          "bounds_mm": [
+            [
+              -50.0,
+              -40.4,
+              61.0
+            ],
+            [
+              50.0,
+              40.4,
+              61.0
+            ]
+          ],
+          "unparsed_geometry": false
+        },
+        "Jetson_IO_Sketch": {
+          "placement_mm": [
+            0.0,
+            0.0,
+            62.6
+          ],
+          "normal": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "circles": [
+            {
+              "center_mm": [
+                -44.0,
+                -34.4,
+                62.6
+              ],
+              "radius_mm": 4.5,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            }
+          ],
+          "geometry_count": 29,
+          "constraint_count": 0,
+          "bounds_mm": [
+            [
+              -49.0,
+              -41.9,
+              62.6
+            ],
+            [
+              48.0,
+              33.0,
+              62.6
+            ]
+          ],
+          "unparsed_geometry": false
+        },
+        "Jetson_Heatsink_Sketch": {
+          "placement_mm": [
+            0.0,
+            0.0,
+            62.6
+          ],
+          "normal": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "circles": [],
+          "geometry_count": 4,
+          "constraint_count": 0,
+          "bounds_mm": [
+            [
+              -34.0,
+              -14.399999999999999,
+              62.6
+            ],
+            [
+              34.0,
+              33.6,
+              62.6
+            ]
+          ],
+          "unparsed_geometry": false
+        },
+        "Jetson_Fan_Sketch": {
+          "placement_mm": [
+            0.0,
+            0.0,
+            85.0
+          ],
+          "normal": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "circles": [
+            {
+              "center_mm": [
+                -4.0,
+                9.600000000000001,
+                85.0
+              ],
+              "radius_mm": 19.5,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            },
+            {
+              "center_mm": [
+                -4.0,
+                9.600000000000001,
+                85.0
+              ],
+              "radius_mm": 8.0,
+              "normal": [
+                0.0,
+                0.0,
+                1.0
+              ]
+            }
+          ],
+          "geometry_count": 2,
+          "constraint_count": 0,
+          "bounds_mm": [
+            [
+              -23.5,
+              -9.899999999999999,
+              85.0
+            ],
+            [
+              15.5,
+              29.1,
+              85.0
+            ]
+          ],
+          "unparsed_geometry": false
+        }
+      },
+      "limitations": [
+        "Read-only persisted XML, no CAD operations, no source generation script executed.",
+        "Profile sweep envelope is not a measured BREP bbox; unparsed arcs/splines explicitly flagged.",
+        "Native solid validity/volumes, material densities, mass, COM and inertias unverified.",
+        "No persistent assembly mate or CAD-to-FLU origin/COM transform provided."
+      ],
+      "disk_radius_from_readme_mm": 64.77,
+      "cross_vehicle_disk_gap_at_sim_440mm_mm": 98.328,
+      "disk_gap_at_candidate_372mm_mm": 30.328000000000003
+    }
+  ],
+  "mujoco": {
+    "units": "m, kg, s; body FLU; origin assumed COM",
+    "body_box_mm": [
+      160,
+      160,
+      60
+    ],
+    "rotor_centers_mm": [
+      [
+        120.208152801713,
+        120.208152801713,
+        20.0
+      ],
+      [
+        -120.208152801713,
+        120.208152801713,
+        20.0
+      ],
+      [
+        -120.208152801713,
+        -120.208152801713,
+        20.0
+      ],
+      [
+        120.208152801713,
+        -120.208152801713,
+        20.0
+      ]
+    ],
+    "rotor_disk_radius_mm": 60,
+    "q1_contact_site_mm": [
+      0.0,
+      220.0,
+      0.0
+    ],
+    "q2_contact_site_mm": [
+      0.0,
+      -220.0,
+      0.0
+    ],
+    "q1_face_normal": [
+      0,
+      1,
+      0
+    ],
+    "q2_face_normal": [
+      0,
+      -1,
+      0
+    ],
+    "pad_dimensions_mm": [
+      40,
+      20,
+      40
+    ],
+    "locked_center_spacing_mm": 440,
+    "min_cross_vehicle_rotor_disk_clearance_mm": 79.58369439657403,
+    "body_mass_kg": 1.0,
+    "body_inertia_kg_m2": [
+      0.0082,
+      0.0082,
+      0.0145
+    ]
+  },
+  "conclusion": "Geometry is NOT equivalent; CAD contact mates, COM registration and mass properties remain unverified. Do not replace collision pads with a visual mesh."
+}

@@ -1,3 +1,0 @@
-docking_core_tests 19 8.56932e-05
-docking_research_compensation_tests 8 0.000154762
----

@@ -1,0 +1,35 @@
+{
+  "damping_only": {
+    "dt_s": 0.0005,
+    "initial_kinetic_J": 0.0016402300000000003,
+    "final_kinetic_J": 0.001022455110422238,
+    "max_linear_momentum_error": 2.7755575615628914e-17,
+    "max_angular_momentum_error": 2.0134020860195053e-09,
+    "initial_total_energy_J": 0.004261264521921091,
+    "max_energy_accounting_excess_J": 3.2355064159559146e-06,
+    "dissipated_J": 0.000621010395993718,
+    "max_damping_power_W": -0.00032582450758368673
+  },
+  "tensile_capture": {
+    "dt_s": 0.0005,
+    "initial_kinetic_J": 0.0016402300000000003,
+    "final_kinetic_J": 0.0023920417537766207,
+    "max_linear_momentum_error": 6.245004513516506e-17,
+    "max_angular_momentum_error": 9.923355021479491e-09,
+    "initial_total_energy_J": 0.010880230000000001,
+    "max_energy_accounting_excess_J": -1.2200238045691203e-07,
+    "dissipated_J": 0.002333619275759288,
+    "max_damping_power_W": -0.00019367847357586762
+  },
+  "tensile_refined": {
+    "dt_s": 0.00025,
+    "initial_kinetic_J": 0.0016402300000000003,
+    "final_kinetic_J": 0.0023872296237559573,
+    "max_linear_momentum_error": 5.551115123125783e-17,
+    "max_angular_momentum_error": 4.937351833064644e-09,
+    "initial_total_energy_J": 0.010880230000000001,
+    "max_energy_accounting_excess_J": -3.051791091189526e-08,
+    "dissipated_J": 0.00232782827735993,
+    "max_damping_power_W": -0.00019299365903077413
+  }
+}

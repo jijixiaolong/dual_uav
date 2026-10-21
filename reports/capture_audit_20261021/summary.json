@@ -1,0 +1,4124 @@
+{
+  "groups": {
+    "safe": {
+      "trials": 18,
+      "captured": 13,
+      "success_rate": 0.7222222222222222,
+      "false_locks": 0,
+      "false_lock_trial_rate": 0.0,
+      "unexpected_reject_locks": 0,
+      "exceptions": 0,
+      "premature_terminations": 0,
+      "statistics": {
+        "contact_to_lock_s": {
+          "observed_count": 13,
+          "mean": 0.03169230769230772,
+          "min": 0.030000000000000013,
+          "max": 0.03400000000000003
+        },
+        "max_postcontact_distance_m": {
+          "observed_count": 15,
+          "mean": 0.0035452730382947205,
+          "min": 0.0005551288333836047,
+          "max": 0.009900810305112744
+        },
+        "peak_contact_normal_N": {
+          "observed_count": 18,
+          "mean": 1.426601117493374,
+          "min": 0.0,
+          "max": 2.896108794733772
+        },
+        "peak_internal_weld_force_N": {
+          "observed_count": 18,
+          "mean": 0.054580738472519714,
+          "min": 0.0,
+          "max": 0.1661427925388707
+        },
+        "max_weld_anchor_error_m": {
+          "observed_count": 13,
+          "mean": 3.6664613387833307e-06,
+          "min": 3.410152009636965e-07,
+          "max": 9.142175512460005e-06
+        },
+        "max_weld_attitude_error_rad": {
+          "observed_count": 13,
+          "mean": 0.0011470240335689783,
+          "min": 2.1451048358900446e-05,
+          "max": 0.002851423550636951
+        },
+        "motor_saturation_fraction": {
+          "observed_count": 18,
+          "mean": 0.0,
+          "min": 0.0,
+          "max": 0.0
+        },
+        "peak_motor_command_slew_Nps": {
+          "observed_count": 18,
+          "mean": 15.348360461555423,
+          "min": 0.5924313920200319,
+          "max": 45.0
+        }
+      }
+    },
+    "boundary": {
+      "trials": 18,
+      "captured": 1,
+      "success_rate": 0.05555555555555555,
+      "false_locks": 0,
+      "false_lock_trial_rate": 0.0,
+      "unexpected_reject_locks": 0,
+      "exceptions": 0,
+      "premature_terminations": 0,
+      "statistics": {
+        "contact_to_lock_s": {
+          "observed_count": 1,
+          "mean": 0.20600000000000016,
+          "min": 0.20600000000000016,
+          "max": 0.20600000000000016
+        },
+        "max_postcontact_distance_m": {
+          "observed_count": 17,
+          "mean": 0.05824183031955933,
+          "min": 0.006313481243482805,
+          "max": 0.12202800857715518
+        },
+        "peak_contact_normal_N": {
+          "observed_count": 18,
+          "mean": 13.429416156696973,
+          "min": 0.0,
+          "max": 23.492389394723016
+        },
+        "peak_internal_weld_force_N": {
+          "observed_count": 18,
+          "mean": 0.01681299488426472,
+          "min": 0.0,
+          "max": 0.302633907916765
+        },
+        "max_weld_anchor_error_m": {
+          "observed_count": 1,
+          "mean": 6.930234237013386e-06,
+          "min": 6.930234237013386e-06,
+          "max": 6.930234237013386e-06
+        },
+        "max_weld_attitude_error_rad": {
+          "observed_count": 1,
+          "mean": 0.009759099800811556,
+          "min": 0.009759099800811556,
+          "max": 0.009759099800811556
+        },
+        "motor_saturation_fraction": {
+          "observed_count": 18,
+          "mean": 0.0,
+          "min": 0.0,
+          "max": 0.0
+        },
+        "peak_motor_command_slew_Nps": {
+          "observed_count": 18,
+          "mean": 45.00000000000005,
+          "min": 45.000000000000036,
+          "max": 45.000000000000114
+        }
+      }
+    },
+    "reject": {
+      "trials": 18,
+      "captured": 0,
+      "success_rate": 0.0,
+      "false_locks": 0,
+      "false_lock_trial_rate": 0.0,
+      "unexpected_reject_locks": 0,
+      "exceptions": 0,
+      "premature_terminations": 0,
+      "statistics": {
+        "contact_to_lock_s": {
+          "observed_count": 0,
+          "mean": null,
+          "min": null,
+          "max": null
+        },
+        "max_postcontact_distance_m": {
+          "observed_count": 16,
+          "mean": 0.0719563958366376,
+          "min": 0.035540227934564475,
+          "max": 0.15090089558573822
+        },
+        "peak_contact_normal_N": {
+          "observed_count": 18,
+          "mean": 18.03101626961718,
+          "min": 0.0,
+          "max": 39.73064136128002
+        },
+        "peak_internal_weld_force_N": {
+          "observed_count": 18,
+          "mean": 0.0,
+          "min": 0.0,
+          "max": 0.0
+        },
+        "max_weld_anchor_error_m": {
+          "observed_count": 0,
+          "mean": null,
+          "min": null,
+          "max": null
+        },
+        "max_weld_attitude_error_rad": {
+          "observed_count": 0,
+          "mean": null,
+          "min": null,
+          "max": null
+        },
+        "motor_saturation_fraction": {
+          "observed_count": 18,
+          "mean": 0.0,
+          "min": 0.0,
+          "max": 0.0
+        },
+        "peak_motor_command_slew_Nps": {
+          "observed_count": 18,
+          "mean": 40.69176348591867,
+          "min": 9.383961588733447,
+          "max": 45.000000000000114
+        }
+      }
+    },
+    "targeted": {
+      "trials": 7,
+      "captured": 3,
+      "success_rate": 0.42857142857142855,
+      "false_locks": 0,
+      "false_lock_trial_rate": 0.0,
+      "unexpected_reject_locks": 0,
+      "exceptions": 0,
+      "premature_terminations": 0,
+      "statistics": {
+        "contact_to_lock_s": {
+          "observed_count": 3,
+          "mean": 0.23933333333330986,
+          "min": 0.07800000000000007,
+          "max": 0.3339999999999632
+        },
+        "max_postcontact_distance_m": {
+          "observed_count": 6,
+          "mean": 0.0393197215838609,
+          "min": 0.0025188770629995024,
+          "max": 0.12292179520795304
+        },
+        "peak_contact_normal_N": {
+          "observed_count": 7,
+          "mean": 83.02387997251581,
+          "min": 0.0,
+          "max": 367.9652840001686
+        },
+        "peak_internal_weld_force_N": {
+          "observed_count": 7,
+          "mean": 0.1560677791998088,
+          "min": 0.0,
+          "max": 0.8323987260775864
+        },
+        "max_weld_anchor_error_m": {
+          "observed_count": 3,
+          "mean": 2.2191548092010733e-05,
+          "min": 9.68763862862209e-06,
+          "max": 4.64002356322873e-05
+        },
+        "max_weld_attitude_error_rad": {
+          "observed_count": 3,
+          "mean": 0.0029295709737113492,
+          "min": 0.0017234835670197053,
+          "max": 0.0036146601333201947
+        },
+        "motor_saturation_fraction": {
+          "observed_count": 7,
+          "mean": 0.01892857142857143,
+          "min": 0.0,
+          "max": 0.1325
+        },
+        "peak_motor_command_slew_Nps": {
+          "observed_count": 7,
+          "mean": 24.646959736832574,
+          "min": 0.7409862186092594,
+          "max": 45.000000000000114
+        }
+      }
+    }
+  },
+  "trials": [
+    {
+      "id": "20261021_safe_00",
+      "seed": 20261021,
+      "category": "safe",
+      "expectation": "capture_expected",
+      "metrics": {
+        "capture_success": true,
+        "false_lock_count": 0,
+        "first_collision_invalid": true,
+        "continuous_dwell_violation_samples": 0,
+        "first_contact_time_s": 0.10600000000000008,
+        "dock_time_s": 0.1360000000000001,
+        "contact_to_lock_s": 0.030000000000000013,
+        "max_postcontact_distance_m": 0.004567127616909587,
+        "peak_contact_normal_N": 1.6082675059219316,
+        "peak_integrated_step_contact_N": 1.862084868465749,
+        "peak_static_capture_N": 0.6984672221454458,
+        "peak_resultant_capture_N": 0.7947341161826921,
+        "max_weld_anchor_error_m": 2.496082019897863e-06,
+        "max_weld_attitude_error_rad": 0.0006424412960261606,
+        "peak_internal_weld_force_N": 0.06634018258441253,
+        "peak_internal_weld_couple_Nm": 0.0026761040702132964,
+        "motor_saturation_fraction": 0.0,
+        "peak_motor_command_slew_Nps": 30.038600520753885,
+        "capture_failure_count": 0,
+        "collision_count": 1,
+        "attempt_count": 1,
+        "completed_steps": 900
+      },
+      "exception": null,
+      "early_termination": false,
+      "realized_plant": {
+        "mass_kg": [
+          0.9925528264525154,
+          0.9704810837611388
+        ],
+        "inertia_kg_m2": [
+          [
+            0.00820304552881963,
+            0.008244471973417627,
+            0.014954978664833052
+          ],
+          [
+            0.008244426733684189,
+            0.007998958868329808,
+            0.014723244009144047
+          ]
+        ],
+        "pad_solref": [
+          [
+            0.011663244991633478,
+            0.980700998493721
+          ],
+          [
+            0.011663244991633478,
+            0.980700998493721
+          ]
+        ],
+        "capture_stiffness_Npm": 144.0407253379241,
+        "capture_damping_Nspm": 11.493442418526369,
+        "motor_tau_s": 0.02102080113771262
+      }
+    },
+    {
+      "id": "20261021_safe_01",
+      "seed": 20261021,
+      "category": "safe",
+      "expectation": "capture_expected",
+      "metrics": {
+        "capture_success": true,
+        "false_lock_count": 0,
+        "first_collision_invalid": true,
+        "continuous_dwell_violation_samples": 0,
+        "first_contact_time_s": 0.20400000000000015,
+        "dock_time_s": 0.23600000000000018,
+        "contact_to_lock_s": 0.03200000000000003,
+        "max_postcontact_distance_m": 0.005993380071416106,
+        "peak_contact_normal_N": 0.8435845538211654,
+        "peak_integrated_step_contact_N": 0.9370435906656651,
+        "peak_static_capture_N": 0.5589582598845395,
+        "peak_resultant_capture_N": 0.6793405728359541,
+        "max_weld_anchor_error_m": 1.6845222152608668e-06,
+        "max_weld_attitude_error_rad": 0.0009536373135897219,
+        "peak_internal_weld_force_N": 0.05278429181909128,
+        "peak_internal_weld_couple_Nm": 0.004227224417663831,
+        "motor_saturation_fraction": 0.0,
+        "peak_motor_command_slew_Nps": 28.7046659802723,
+        "capture_failure_count": 0,
+        "collision_count": 1,
+        "attempt_count": 1,
+        "completed_steps": 900
+      },
+      "exception": null,
+      "early_termination": false,
+      "realized_plant": {
+        "mass_kg": [
+          1.0153367739954218,
+          0.9914252528534597
+        ],
+        "inertia_kg_m2": [
+          [
+            0.008369930249793612,
+            0.007882270943107294,
+            0.01403853521678521
+          ],
+          [
+            0.008399639908478225,
+            0.008110392193748798,
+            0.014889456277076238
+          ]
+        ],
+        "pad_solref": [
+          [
+            0.013754773672626987,
+            0.9432480561337421
+          ],
+          [
+            0.013754773672626987,
+            0.9432480561337421
+          ]
+        ],
+        "capture_stiffness_Npm": 137.66298659970295,
+        "capture_damping_Nspm": 8.457674494840424,
+        "motor_tau_s": 0.01829012152039298
+      }
+    },
+    {
+      "id": "20261021_safe_02",
+      "seed": 20261021,
+      "category": "safe",
+      "expectation": "capture_expected",
+      "metrics": {
+        "capture_success": true,
+        "false_lock_count": 0,
+        "first_collision_invalid": true,
+        "continuous_dwell_violation_samples": 0,
+        "first_contact_time_s": 1.258000000000001,
+        "dock_time_s": 1.290000000000001,
+        "contact_to_lock_s": 0.03200000000000003,
+        "max_postcontact_distance_m": 0.004353239246349687,
+        "peak_contact_normal_N": 0.6317834127737366,
+        "peak_integrated_step_contact_N": 0.6303054687572626,
+        "peak_static_capture_N": 0.6630046370387134,
+        "peak_resultant_capture_N": 0.6626204820405912,
+        "max_weld_anchor_error_m": 3.410152009636965e-07,
+        "max_weld_attitude_error_rad": 2.1451048358900446e-05,
+        "peak_internal_weld_force_N": 0.003979849920346095,
+        "peak_internal_weld_couple_Nm": 9.018797048989748e-05,
+        "motor_saturation_fraction": 0.0,
+        "peak_motor_command_slew_Nps": 6.5536967546290175,
+        "capture_failure_count": 0,
+        "collision_count": 1,
+        "attempt_count": 1,
+        "completed_steps": 900
+      },
+      "exception": null,
+      "early_termination": false,
+      "realized_plant": {
+        "mass_kg": [
+          0.9922640000989499,
+          0.9948698752549431
+        ],
+        "inertia_kg_m2": [
+          [
+            0.008140008575944732,
+            0.007900291358596824,
+            0.015034664237589175
+          ],
+          [
+            0.008282045980888173,
+            0.008196464186333768,
+            0.014915654051533958
+          ]
+        ],
+        "pad_solref": [
+          [
+            0.013638278238481535,
+            0.9548673090904126
+          ],
+          [
+            0.013638278238481535,
+            0.9548673090904126
+          ]
+        ],
+        "capture_stiffness_Npm": 135.31293528747295,
+        "capture_damping_Nspm": 8.863867437584187,
+        "motor_tau_s": 0.021355619683077365
+      }
+    },
+    {
+      "id": "20261021_safe_03",
+      "seed": 20261021,
+      "category": "safe",
+      "expectation": "capture_expected",
+      "metrics": {
+        "capture_success": true,
+        "false_lock_count": 0,
+        "first_collision_invalid": true,
+        "continuous_dwell_violation_samples": 0,
+        "first_contact_time_s": 0.1220000000000001,
+        "dock_time_s": 0.1560000000000001,
+        "contact_to_lock_s": 0.034000000000000016,
+        "max_postcontact_distance_m": 0.005009556382360763,
+        "peak_contact_normal_N": 1.6292172785100856,
+        "peak_integrated_step_contact_N": 1.846443365483289,
+        "peak_static_capture_N": 0.7638226791845231,
+        "peak_resultant_capture_N": 0.7812618181632748,
+        "max_weld_anchor_error_m": 1.956178768559524e-06,
+        "max_weld_attitude_error_rad": 0.0013833372931639297,
+        "peak_internal_weld_force_N": 0.03733261579733239,
+        "peak_internal_weld_couple_Nm": 0.006125715524648643,
+        "motor_saturation_fraction": 0.0,
+        "peak_motor_command_slew_Nps": 23.135781688460586,
+        "capture_failure_count": 0,
+        "collision_count": 1,
+        "attempt_count": 1,
+        "completed_steps": 900
+      },
+      "exception": null,
+      "early_termination": false,
+      "realized_plant": {
+        "mass_kg": [
+          0.9826323744546305,
+          0.9883228074397337
+        ],
+        "inertia_kg_m2": [
+          [
+            0.008209652656931781,
+            0.008006604122649271,
+            0.01400572858985449
+          ],
+          [
+            0.007925239925954074,
+            0.008458480287184423,
+            0.014078150193165847
+          ]
+        ],
+        "pad_solref": [
+          [
+            0.011819242773607169,
+            0.9700589546821969
+          ],
+          [
+            0.011819242773607169,
+            0.9700589546821969
+          ]
+        ],
+        "capture_stiffness_Npm": 166.80157003264736,
+        "capture_damping_Nspm": 8.474933909441036,
+        "motor_tau_s": 0.027004901770350212
+      }
+    },
+    {
+      "id": "20261021_safe_04",
+      "seed": 20261021,
+      "category": "safe",
+      "expectation": "capture_expected",
+      "metrics": {
+        "capture_success": true,
+        "false_lock_count": 0,
+        "first_collision_invalid": true,
+        "continuous_dwell_violation_samples": 0,
+        "first_contact_time_s": 0.06400000000000004,
+        "dock_time_s": 0.09600000000000007,
+        "contact_to_lock_s": 0.03200000000000003,
+        "max_postcontact_distance_m": 0.0005551288333836047,
+        "peak_contact_normal_N": 2.515875306818498,
+        "peak_integrated_step_contact_N": 3.052732831975173,
+        "peak_static_capture_N": 0.9124875507886928,
+        "peak_resultant_capture_N": 0.9406647433774825,
+        "max_weld_anchor_error_m": 8.5215833721148e-06,
+        "max_weld_attitude_error_rad": 0.0010762621818300156,
+        "peak_internal_weld_force_N": 0.15905111983777168,
+        "peak_internal_weld_couple_Nm": 0.005019237879501076,
+        "motor_saturation_fraction": 0.0,
+        "peak_motor_command_slew_Nps": 8.124993642018122,
+        "capture_failure_count": 0,
+        "collision_count": 1,
+        "attempt_count": 1,
+        "completed_steps": 900
+      },
+      "exception": null,
+      "early_termination": false,
+      "realized_plant": {
+        "mass_kg": [
+          1.029635704931703,
+          1.0206608767299272
+        ],
+        "inertia_kg_m2": [
+          [
+            0.008460575014879299,
+            0.00827909126347105,
+            0.014132099909351234
+          ],
+          [
+            0.008458073627273022,
+            0.008007116767292956,
+            0.014745605665038056
+          ]
+        ],
+        "pad_solref": [
+          [
+            0.013809155441196742,
+            0.8937013440497993
+          ],
+          [
+            0.013809155441196742,
+            0.8937013440497993
+          ]
+        ],
+        "capture_stiffness_Npm": 152.08125846478214,
+        "capture_damping_Nspm": 9.559550905121695,
+        "motor_tau_s": 0.029269672776234164
+      }
+    },
+    {
+      "id": "20261021_safe_05",
+      "seed": 20261021,
+      "category": "safe",
+      "expectation": "capture_expected",
+      "metrics": {
+        "capture_success": false,
+        "false_lock_count": 0,
+        "first_collision_invalid": true,
+        "continuous_dwell_violation_samples": 0,
+        "first_contact_time_s": 0.2960000000000002,
+        "dock_time_s": null,
+        "contact_to_lock_s": null,
+        "max_postcontact_distance_m": 0.009900810305112744,
+        "peak_contact_normal_N": 0.3174029229900659,
+        "peak_integrated_step_contact_N": 0.3174144607203709,
+        "peak_static_capture_N": 0.0,
+        "peak_resultant_capture_N": 0.0,
+        "max_weld_anchor_error_m": null,
+        "max_weld_attitude_error_rad": null,
+        "peak_internal_weld_force_N": 0.0,
+        "peak_internal_weld_couple_Nm": 0.0,
+        "motor_saturation_fraction": 0.0,
+        "peak_motor_command_slew_Nps": 9.332456409529502,
+        "capture_failure_count": 1,
+        "collision_count": 1,
+        "attempt_count": 1,
+        "completed_steps": 900
+      },
+      "exception": null,
+      "early_termination": false,
+      "realized_plant": {
+        "mass_kg": [
+          1.0143778232396512,
+          1.007984029990448
+        ],
+        "inertia_kg_m2": [
+          [
+            0.00831716839930242,
+            0.007962690723139392,
+            0.014225872527361351
+          ],
+          [
+            0.008067251971768753,
+            0.008444343327446188,
+            0.014601172900298335
+          ]
+        ],
+        "pad_solref": [
+          [
+            0.012854176222633306,
+            0.877177542359779
+          ],
+          [
+            0.012854176222633306,
+            0.877177542359779
+          ]
+        ],
+        "capture_stiffness_Npm": 153.8105895119608,
+        "capture_damping_Nspm": 9.408163161769131,
+        "motor_tau_s": 0.023050177479401867
+      }
+    },
+    {
+      "id": "20261021_boundary_00",
+      "seed": 20261021,
+      "category": "boundary",
+      "expectation": "outcome_unspecified",
+      "metrics": {
+        "capture_success": false,
+        "false_lock_count": 0,
+        "first_collision_invalid": true,
+        "continuous_dwell_violation_samples": 0,
+        "first_contact_time_s": 0.012,
+        "dock_time_s": null,
+        "contact_to_lock_s": null,
+        "max_postcontact_distance_m": 0.02568446854895227,
+        "peak_contact_normal_N": 5.552064903769232,
+        "peak_integrated_step_contact_N": 5.549113661399354,
+        "peak_static_capture_N": 0.0,
+        "peak_resultant_capture_N": 0.0,
+        "max_weld_anchor_error_m": null,
+        "max_weld_attitude_error_rad": null,
+        "peak_internal_weld_force_N": 0.0,
+        "peak_internal_weld_couple_Nm": 0.0,
+        "motor_saturation_fraction": 0.0,
+        "peak_motor_command_slew_Nps": 45.00000000000006,
+        "capture_failure_count": 3,
+        "collision_count": 3,
+        "attempt_count": 3,
+        "completed_steps": 900
+      },
+      "exception": null,
+      "early_termination": false,
+      "realized_plant": {
+        "mass_kg": [
+          0.9713079797861105,
+          0.9798585968800566
+        ],
+        "inertia_kg_m2": [
+          [
+            0.008169456238323033,
+            0.008376072748657063,
+            0.014573645268001168
+          ],
+          [
+            0.008279251029472374,
+            0.008509144489998894,
+            0.014514107606114452
+          ]
+        ],
+        "pad_solref": [
+          [
+            0.012533472276959733,
+            0.955767428111233
+          ],
+          [
+            0.012533472276959733,
+            0.955767428111233
+          ]
+        ],
+        "capture_stiffness_Npm": 167.70592082447445,
+        "capture_damping_Nspm": 11.283093539295121,
+        "motor_tau_s": 0.03175604244444542
+      }
+    },
+    {
+      "id": "20261021_boundary_01",
+      "seed": 20261021,
+      "category": "boundary",
+      "expectation": "outcome_unspecified",
+      "metrics": {
+        "capture_success": false,
+        "false_lock_count": 0,
+        "first_collision_invalid": true,
+        "continuous_dwell_violation_samples": 0,
+        "first_contact_time_s": 0.0,
+        "dock_time_s": null,
+        "contact_to_lock_s": null,
+        "max_postcontact_distance_m": 0.07914851624705395,
+        "peak_contact_normal_N": 15.881056015874249,
+        "peak_integrated_step_contact_N": 23.767569162247852,
+        "peak_static_capture_N": 0.0,
+        "peak_resultant_capture_N": 0.0,
+        "max_weld_anchor_error_m": null,
+        "max_weld_attitude_error_rad": null,
+        "peak_internal_weld_force_N": 0.0,
+        "peak_internal_weld_couple_Nm": 0.0,
+        "motor_saturation_fraction": 0.0,
+        "peak_motor_command_slew_Nps": 45.000000000000114,
+        "capture_failure_count": 2,
+        "collision_count": 2,
+        "attempt_count": 2,
+        "completed_steps": 900
+      },
+      "exception": null,
+      "early_termination": false,
+      "realized_plant": {
+        "mass_kg": [
+          0.9863697289406433,
+          0.9737829737720589
+        ],
+        "inertia_kg_m2": [
+          [
+            0.007931659320233401,
+            0.008284812910766002,
+            0.01499359745383677
+          ],
+          [
+            0.008154596869933898,
+            0.008098158103197018,
+            0.014563354874953367
+          ]
+        ],
+        "pad_solref": [
+          [
+            0.01239685147195165,
+            0.9203474638750256
+          ],
+          [
+            0.01239685147195165,
+            0.9203474638750256
+          ]
+        ],
+        "capture_stiffness_Npm": 154.63363743407103,
+        "capture_damping_Nspm": 9.87338454798015,
+        "motor_tau_s": 0.027605993662696754
+      }
+    },
+    {
+      "id": "20261021_boundary_02",
+      "seed": 20261021,
+      "category": "boundary",
+      "expectation": "outcome_unspecified",
+      "metrics": {
+        "capture_success": false,
+        "false_lock_count": 0,
+        "first_collision_invalid": true,
+        "continuous_dwell_violation_samples": 0,
+        "first_contact_time_s": 0.0,
+        "dock_time_s": null,
+        "contact_to_lock_s": null,
+        "max_postcontact_distance_m": 0.12202800857715518,
+        "peak_contact_normal_N": 19.167838719339304,
+        "peak_integrated_step_contact_N": 30.07585939111339,
+        "peak_static_capture_N": 0.0,
+        "peak_resultant_capture_N": 0.0,
+        "max_weld_anchor_error_m": null,
+        "max_weld_attitude_error_rad": null,
+        "peak_internal_weld_force_N": 0.0,
+        "peak_internal_weld_couple_Nm": 0.0,
+        "motor_saturation_fraction": 0.0,
+        "peak_motor_command_slew_Nps": 45.000000000000114,
+        "capture_failure_count": 2,
+        "collision_count": 2,
+        "attempt_count": 2,
+        "completed_steps": 900
+      },
+      "exception": null,
+      "early_termination": false,
+      "realized_plant": {
+        "mass_kg": [
+          1.0018171838609415,
+          0.989373141295566
+        ],
+        "inertia_kg_m2": [
+          [
+            0.008477398606544161,
+            0.007899859439464153,
+            0.014272425840639801
+          ],
+          [
+            0.008048157207172028,
+            0.008154118402249607,
+            0.015067500172553967
+          ]
+        ],
+        "pad_solref": [
+          [
+            0.011232245540795372,
+            0.9834937020264153
+          ],
+          [
+            0.011232245540795372,
+            0.9834937020264153
+          ]
+        ],
+        "capture_stiffness_Npm": 127.58662087695726,
+        "capture_damping_Nspm": 8.6471729754794,
+        "motor_tau_s": 0.03111510452098667
+      }
+    },
+    {
+      "id": "20261021_boundary_03",
+      "seed": 20261021,
+      "category": "boundary",
+      "expectation": "outcome_unspecified",
+      "metrics": {
+        "capture_success": false,
+        "false_lock_count": 0,
+        "first_collision_invalid": true,
+        "continuous_dwell_violation_samples": 0,
+        "first_contact_time_s": 0.0,
+        "dock_time_s": null,
+        "contact_to_lock_s": null,
+        "max_postcontact_distance_m": 0.053641512669896654,
+        "peak_contact_normal_N": 20.65338682720608,
+        "peak_integrated_step_contact_N": 31.23732837506277,
+        "peak_static_capture_N": 0.0,
+        "peak_resultant_capture_N": 0.0,
+        "max_weld_anchor_error_m": null,
+        "max_weld_attitude_error_rad": null,
+        "peak_internal_weld_force_N": 0.0,
+        "peak_internal_weld_couple_Nm": 0.0,
+        "motor_saturation_fraction": 0.0,
+        "peak_motor_command_slew_Nps": 45.000000000000036,
+        "capture_failure_count": 2,
+        "collision_count": 2,
+        "attempt_count": 2,
+        "completed_steps": 900
+      },
+      "exception": null,
+      "early_termination": false,
+      "realized_plant": {
+        "mass_kg": [
+          1.0050437963289631,
+          1.0046699960681535
+        ],
+        "inertia_kg_m2": [
+          [
+            0.008384677011736116,
+            0.007901834229053741,
+            0.01473926923144897
+          ],
+          [
+            0.008062403803648156,
+            0.00811267589947102,
+            0.014536174757081393
+          ]
+        ],
+        "pad_solref": [
+          [
+            0.011838353615411362,
+            0.9740824429803152
+          ],
+          [
+            0.011838353615411362,
+            0.9740824429803152
+          ]
+        ],
+        "capture_stiffness_Npm": 117.07508443033657,
+        "capture_damping_Nspm": 9.886883453157454,
+        "motor_tau_s": 0.023951248041745483
+      }
+    },
+    {
+      "id": "20261021_boundary_04",
+      "seed": 20261021,
+      "category": "boundary",
+      "expectation": "outcome_unspecified",
+      "metrics": {
+        "capture_success": false,
+        "false_lock_count": 0,
+        "first_collision_invalid": true,
+        "continuous_dwell_violation_samples": 0,
+        "first_contact_time_s": 0.004,
+        "dock_time_s": null,
+        "contact_to_lock_s": null,
+        "max_postcontact_distance_m": 0.032220659452622286,
+        "peak_contact_normal_N": 18.55761570211111,
+        "peak_integrated_step_contact_N": 18.556054634954204,
+        "peak_static_capture_N": 0.0,
+        "peak_resultant_capture_N": 0.0,
+        "max_weld_anchor_error_m": null,
+        "max_weld_attitude_error_rad": null,
+        "peak_internal_weld_force_N": 0.0,
+        "peak_internal_weld_couple_Nm": 0.0,
+        "motor_saturation_fraction": 0.0,
+        "peak_motor_command_slew_Nps": 45.000000000000036,
+        "capture_failure_count": 1,
+        "collision_count": 1,
+        "attempt_count": 1,
+        "completed_steps": 900
+      },
+      "exception": null,
+      "early_termination": false,
+      "realized_plant": {
+        "mass_kg": [
+          0.973251768344129,
+          0.9823473354084906
+        ],
+        "inertia_kg_m2": [
+          [
+            0.008481537761129703,
+            0.008334150046245905,
+            0.014461112924444838
+          ],
+          [
+            0.008316811780166673,
+            0.008420153917794748,
+            0.014524225711421467
+          ]
+        ],
+        "pad_solref": [
+          [
+            0.011285906818393351,
+            1.1562721694474714
+          ],
+          [
+            0.011285906818393351,
+            1.1562721694474714
+          ]
+        ],
+        "capture_stiffness_Npm": 162.2859289941536,
+        "capture_damping_Nspm": 11.063290146083418,
+        "motor_tau_s": 0.027162646026062557
+      }
+    },
+    {
+      "id": "20261021_boundary_05",
+      "seed": 20261021,
+      "category": "boundary",
+      "expectation": "outcome_unspecified",
+      "metrics": {
+        "capture_success": false,
+        "false_lock_count": 0,
+        "first_collision_invalid": true,
+        "continuous_dwell_violation_samples": 0,
+        "first_contact_time_s": 0.034000000000000016,
+        "dock_time_s": null,
+        "contact_to_lock_s": null,
+        "max_postcontact_distance_m": 0.07066303300357046,
+        "peak_contact_normal_N": 10.764575993672233,
+        "peak_integrated_step_contact_N": 10.764038868560169,
+        "peak_static_capture_N": 0.0,
+        "peak_resultant_capture_N": 0.0,
+        "max_weld_anchor_error_m": null,
+        "max_weld_attitude_error_rad": null,
+        "peak_internal_weld_force_N": 0.0,
+        "peak_internal_weld_couple_Nm": 0.0,
+        "motor_saturation_fraction": 0.0,
+        "peak_motor_command_slew_Nps": 45.000000000000036,
+        "capture_failure_count": 1,
+        "collision_count": 1,
+        "attempt_count": 1,
+        "completed_steps": 900
+      },
+      "exception": null,
+      "early_termination": false,
+      "realized_plant": {
+        "mass_kg": [
+          0.9728514778695376,
+          1.0132471457717447
+        ],
+        "inertia_kg_m2": [
+          [
+            0.008466536671662948,
+            0.008403070814784376,
+            0.014529043968938594
+          ],
+          [
+            0.007886345818462415,
+            0.008154644469795368,
+            0.014794374807385477
+          ]
+        ],
+        "pad_solref": [
+          [
+            0.011304613969199984,
+            1.1058496653030008
+          ],
+          [
+            0.011304613969199984,
+            1.1058496653030008
+          ]
+        ],
+        "capture_stiffness_Npm": 125.36387309614099,
+        "capture_damping_Nspm": 9.987331085397068,
+        "motor_tau_s": 0.025370093931973745
+      }
+    },
+    {
+      "id": "20261021_reject_00",
+      "seed": 20261021,
+      "category": "reject",
+      "expectation": "no_lock",
+      "metrics": {
+        "capture_success": false,
+        "false_lock_count": 0,
+        "first_collision_invalid": true,
+        "continuous_dwell_violation_samples": 0,
+        "first_contact_time_s": 0.02800000000000001,
+        "dock_time_s": null,
+        "contact_to_lock_s": null,
+        "max_postcontact_distance_m": 0.09590829357745242,
+        "peak_contact_normal_N": 6.446760371473405,
+        "peak_integrated_step_contact_N": 6.44470504588185,
+        "peak_static_capture_N": 0.0,
+        "peak_resultant_capture_N": 0.0,
+        "max_weld_anchor_error_m": null,
+        "max_weld_attitude_error_rad": null,
+        "peak_internal_weld_force_N": 0.0,
+        "peak_internal_weld_couple_Nm": 0.0,
+        "motor_saturation_fraction": 0.0,
+        "peak_motor_command_slew_Nps": 45.0,
+        "capture_failure_count": 6,
+        "collision_count": 6,
+        "attempt_count": 6,
+        "completed_steps": 900
+      },
+      "exception": null,
+      "early_termination": false,
+      "realized_plant": {
+        "mass_kg": [
+          1.0070485173381016,
+          1.0040063448847303
+        ],
+        "inertia_kg_m2": [
+          [
+            0.008225710420243188,
+            0.008359463987233771,
+            0.014810673035622942
+          ],
+          [
+            0.00846465777100801,
+            0.008452570703650047,
+            0.014201098213353948
+          ]
+        ],
+        "pad_solref": [
+          [
+            0.010357797872927135,
+            1.13433445546504
+          ],
+          [
+            0.010357797872927135,
+            1.13433445546504
+          ]
+        ],
+        "capture_stiffness_Npm": 140.6188919421314,
+        "capture_damping_Nspm": 8.016525487882861,
+        "motor_tau_s": 0.024876843329110547
+      }
+    },
+    {
+      "id": "20261021_reject_01",
+      "seed": 20261021,
+      "category": "reject",
+      "expectation": "no_lock",
+      "metrics": {
+        "capture_success": false,
+        "false_lock_count": 0,
+        "first_collision_invalid": true,
+        "continuous_dwell_violation_samples": 0,
+        "first_contact_time_s": 0.008,
+        "dock_time_s": null,
+        "contact_to_lock_s": null,
+        "max_postcontact_distance_m": 0.07243974048996583,
+        "peak_contact_normal_N": 28.929670611138626,
+        "peak_integrated_step_contact_N": 28.92963342345753,
+        "peak_static_capture_N": 0.0,
+        "peak_resultant_capture_N": 0.0,
+        "max_weld_anchor_error_m": null,
+        "max_weld_attitude_error_rad": null,
+        "peak_internal_weld_force_N": 0.0,
+        "peak_internal_weld_couple_Nm": 0.0,
+        "motor_saturation_fraction": 0.0,
+        "peak_motor_command_slew_Nps": 45.000000000000036,
+        "capture_failure_count": 1,
+        "collision_count": 1,
+        "attempt_count": 1,
+        "completed_steps": 900
+      },
+      "exception": null,
+      "early_termination": false,
+      "realized_plant": {
+        "mass_kg": [
+          0.9865916323376498,
+          1.0231509559047116
+        ],
+        "inertia_kg_m2": [
+          [
+            0.008366818146926018,
+            0.008520090797911212,
+            0.014061235787485705
+          ],
+          [
+            0.007967450069530096,
+            0.008069595945950803,
+            0.01498996928531177
+          ]
+        ],
+        "pad_solref": [
+          [
+            0.011063917377629686,
+            1.0630424365553353
+          ],
+          [
+            0.011063917377629686,
+            1.0630424365553353
+          ]
+        ],
+        "capture_stiffness_Npm": 160.8919772918137,
+        "capture_damping_Nspm": 10.051685457758829,
+        "motor_tau_s": 0.030694820460914783
+      }
+    },
+    {
+      "id": "20261021_reject_02",
+      "seed": 20261021,
+      "category": "reject",
+      "expectation": "no_lock",
+      "metrics": {
+        "capture_success": false,
+        "false_lock_count": 0,
+        "first_collision_invalid": true,
+        "continuous_dwell_violation_samples": 0,
+        "first_contact_time_s": 1.7920000000000014,
+        "dock_time_s": null,
+        "contact_to_lock_s": null,
+        "max_postcontact_distance_m": 0.05161940588587243,
+        "peak_contact_normal_N": 0.9194543340032615,
+        "peak_integrated_step_contact_N": 0.9194552615983158,
+        "peak_static_capture_N": 0.0,
+        "peak_resultant_capture_N": 0.0,
+        "max_weld_anchor_error_m": null,
+        "max_weld_attitude_error_rad": null,
+        "peak_internal_weld_force_N": 0.0,
+        "peak_internal_weld_couple_Nm": 0.0,
+        "motor_saturation_fraction": 0.0,
+        "peak_motor_command_slew_Nps": 21.011164606029865,
+        "capture_failure_count": 0,
+        "collision_count": 1,
+        "attempt_count": 1,
+        "completed_steps": 900
+      },
+      "exception": null,
+      "early_termination": false,
+      "realized_plant": {
+        "mass_kg": [
+          1.0126730242469661,
+          0.9922904532127582
+        ],
+        "inertia_kg_m2": [
+          [
+            0.008270645078753707,
+            0.008000747362430111,
+            0.014395849465779058
+          ],
+          [
+            0.007922196758885868,
+            0.008175732428464,
+            0.015048106562336228
+          ]
+        ],
+        "pad_solref": [
+          [
+            0.011077089400505544,
+            1.1039978530171513
+          ],
+          [
+            0.011077089400505544,
+            1.1039978530171513
+          ]
+        ],
+        "capture_stiffness_Npm": 136.5051826794514,
+        "capture_damping_Nspm": 9.141005494406578,
+        "motor_tau_s": 0.018717787627724598
+      }
+    },
+    {
+      "id": "20261021_reject_03",
+      "seed": 20261021,
+      "category": "reject",
+      "expectation": "no_lock",
+      "metrics": {
+        "capture_success": false,
+        "false_lock_count": 0,
+        "first_collision_invalid": null,
+        "continuous_dwell_violation_samples": 0,
+        "first_contact_time_s": null,
+        "dock_time_s": null,
+        "contact_to_lock_s": null,
+        "max_postcontact_distance_m": null,
+        "peak_contact_normal_N": 0.0,
+        "peak_integrated_step_contact_N": 0.0,
+        "peak_static_capture_N": 0.0,
+        "peak_resultant_capture_N": 0.0,
+        "max_weld_anchor_error_m": null,
+        "max_weld_attitude_error_rad": null,
+        "peak_internal_weld_force_N": 0.0,
+        "peak_internal_weld_couple_Nm": 0.0,
+        "motor_saturation_fraction": 0.0,
+        "peak_motor_command_slew_Nps": 33.75265672162323,
+        "capture_failure_count": 0,
+        "collision_count": 0,
+        "attempt_count": 0,
+        "completed_steps": 900
+      },
+      "exception": null,
+      "early_termination": false,
+      "realized_plant": {
+        "mass_kg": [
+          0.9771606897769404,
+          1.0111846970986231
+        ],
+        "inertia_kg_m2": [
+          [
+            0.00825082386874338,
+            0.008265450119011229,
+            0.01486717567521256
+          ],
+          [
+            0.00798885179040731,
+            0.008520273206891065,
+            0.013953418557416228
+          ]
+        ],
+        "pad_solref": [
+          [
+            0.010941560015034497,
+            1.0153430005230715
+          ],
+          [
+            0.010941560015034497,
+            1.0153430005230715
+          ]
+        ],
+        "capture_stiffness_Npm": 140.0263841731418,
+        "capture_damping_Nspm": 9.321777010648379,
+        "motor_tau_s": 0.02902930072195722
+      }
+    },
+    {
+      "id": "20261021_reject_04",
+      "seed": 20261021,
+      "category": "reject",
+      "expectation": "no_lock",
+      "metrics": {
+        "capture_success": false,
+        "false_lock_count": 0,
+        "first_collision_invalid": true,
+        "continuous_dwell_violation_samples": 0,
+        "first_contact_time_s": 0.02800000000000001,
+        "dock_time_s": null,
+        "contact_to_lock_s": null,
+        "max_postcontact_distance_m": 0.05454769483873403,
+        "peak_contact_normal_N": 6.096871536557698,
+        "peak_integrated_step_contact_N": 6.096959203298596,
+        "peak_static_capture_N": 0.0,
+        "peak_resultant_capture_N": 0.0,
+        "max_weld_anchor_error_m": null,
+        "max_weld_attitude_error_rad": null,
+        "peak_internal_weld_force_N": 0.0,
+        "peak_internal_weld_couple_Nm": 0.0,
+        "motor_saturation_fraction": 0.0,
+        "peak_motor_command_slew_Nps": 38.30395983014908,
+        "capture_failure_count": 1,
+        "collision_count": 1,
+        "attempt_count": 1,
+        "completed_steps": 900
+      },
+      "exception": null,
+      "early_termination": false,
+      "realized_plant": {
+        "mass_kg": [
+          0.9966526726030679,
+          0.9781130866008346
+        ],
+        "inertia_kg_m2": [
+          [
+            0.008432931710867429,
+            0.007943099667860215,
+            0.0145040624383687
+          ],
+          [
+            0.008472955160948398,
+            0.008474955603299443,
+            0.013982405865590845
+          ]
+        ],
+        "pad_solref": [
+          [
+            0.011590379927435142,
+            1.0252769645043602
+          ],
+          [
+            0.011590379927435142,
+            1.0252769645043602
+          ]
+        ],
+        "capture_stiffness_Npm": 128.01741050834767,
+        "capture_damping_Nspm": 8.555737879520688,
+        "motor_tau_s": 0.018955341262632538
+      }
+    },
+    {
+      "id": "20261021_reject_05",
+      "seed": 20261021,
+      "category": "reject",
+      "expectation": "no_lock",
+      "metrics": {
+        "capture_success": false,
+        "false_lock_count": 0,
+        "first_collision_invalid": true,
+        "continuous_dwell_violation_samples": 0,
+        "first_contact_time_s": 0.006,
+        "dock_time_s": null,
+        "contact_to_lock_s": null,
+        "max_postcontact_distance_m": 0.15090089558573822,
+        "peak_contact_normal_N": 25.868847817356464,
+        "peak_integrated_step_contact_N": 25.868982745665008,
+        "peak_static_capture_N": 0.0,
+        "peak_resultant_capture_N": 0.0,
+        "max_weld_anchor_error_m": null,
+        "max_weld_attitude_error_rad": null,
+        "peak_internal_weld_force_N": 0.0,
+        "peak_internal_weld_couple_Nm": 0.0,
+        "motor_saturation_fraction": 0.0,
+        "peak_motor_command_slew_Nps": 45.000000000000036,
+        "capture_failure_count": 1,
+        "collision_count": 1,
+        "attempt_count": 1,
+        "completed_steps": 900
+      },
+      "exception": null,
+      "early_termination": false,
+      "realized_plant": {
+        "mass_kg": [
+          0.9929971478556714,
+          0.9737903954106286
+        ],
+        "inertia_kg_m2": [
+          [
+            0.007872976136408564,
+            0.0078769391538935,
+            0.015055588417353603
+          ],
+          [
+            0.008091317250224538,
+            0.008003251953380171,
+            0.014273691524364134
+          ]
+        ],
+        "pad_solref": [
+          [
+            0.010126337362256207,
+            1.225888381149855
+          ],
+          [
+            0.010126337362256207,
+            1.225888381149855
+          ]
+        ],
+        "capture_stiffness_Npm": 159.66086338959514,
+        "capture_damping_Nspm": 11.515884182693155,
+        "motor_tau_s": 0.020031995208657172
+      }
+    },
+    {
+      "id": "1042_safe_00",
+      "seed": 1042,
+      "category": "safe",
+      "expectation": "capture_expected",
+      "metrics": {
+        "capture_success": false,
+        "false_lock_count": 0,
+        "first_collision_invalid": null,
+        "continuous_dwell_violation_samples": 0,
+        "first_contact_time_s": null,
+        "dock_time_s": null,
+        "contact_to_lock_s": null,
+        "max_postcontact_distance_m": null,
+        "peak_contact_normal_N": 0.0,
+        "peak_integrated_step_contact_N": 0.0,
+        "peak_static_capture_N": 0.0,
+        "peak_resultant_capture_N": 0.0,
+        "max_weld_anchor_error_m": null,
+        "max_weld_attitude_error_rad": null,
+        "peak_internal_weld_force_N": 0.0,
+        "peak_internal_weld_couple_Nm": 0.0,
+        "motor_saturation_fraction": 0.0,
+        "peak_motor_command_slew_Nps": 0.5924313920200319,
+        "capture_failure_count": 0,
+        "collision_count": 0,
+        "attempt_count": 0,
+        "completed_steps": 900
+      },
+      "exception": null,
+      "early_termination": false,
+      "realized_plant": {
+        "mass_kg": [
+          1.0059999681783032,
+          1.0218079271827227
+        ],
+        "inertia_kg_m2": [
+          [
+            0.007982135066222298,
+            0.00799925052225215,
+            0.014516638341504233
+          ],
+          [
+            0.007938023221878475,
+            0.008386493701294899,
+            0.01443511294720323
+          ]
+        ],
+        "pad_solref": [
+          [
+            0.012478959896472273,
+            1.057158884945076
+          ],
+          [
+            0.012478959896472273,
+            1.057158884945076
+          ]
+        ],
+        "capture_stiffness_Npm": 159.56457071989485,
+        "capture_damping_Nspm": 11.917069699158652,
+        "motor_tau_s": 0.02580116089072291
+      }
+    },
+    {
+      "id": "1042_safe_01",
+      "seed": 1042,
+      "category": "safe",
+      "expectation": "capture_expected",
+      "metrics": {
+        "capture_success": true,
+        "false_lock_count": 0,
+        "first_collision_invalid": true,
+        "continuous_dwell_violation_samples": 0,
+        "first_contact_time_s": 0.1380000000000001,
+        "dock_time_s": 0.17000000000000012,
+        "contact_to_lock_s": 0.03200000000000003,
+        "max_postcontact_distance_m": 0.0014824105668060565,
+        "peak_contact_normal_N": 1.4791407741186784,
+        "peak_integrated_step_contact_N": 1.8296826226819798,
+        "peak_static_capture_N": 0.9233606792675646,
+        "peak_resultant_capture_N": 0.9259211865419509,
+        "max_weld_anchor_error_m": 8.998663128977248e-07,
+        "max_weld_attitude_error_rad": 0.00045287511476516925,
+        "peak_internal_weld_force_N": 0.01962050097006453,
+        "peak_internal_weld_couple_Nm": 0.0019844150167823912,
+        "motor_saturation_fraction": 0.0,
+        "peak_motor_command_slew_Nps": 11.749192999574987,
+        "capture_failure_count": 0,
+        "collision_count": 1,
+        "attempt_count": 1,
+        "completed_steps": 900
+      },
+      "exception": null,
+      "early_termination": false,
+      "realized_plant": {
+        "mass_kg": [
+          1.0148540578866163,
+          1.014428226263864
+        ],
+        "inertia_kg_m2": [
+          [
+            0.008403836403628535,
+            0.008056011394779794,
+            0.01432546779236688
+          ],
+          [
+            0.008495673412585896,
+            0.00807060978392128,
+            0.014239984158245471
+          ]
+        ],
+        "pad_solref": [
+          [
+            0.010657849165870462,
+            1.1972738578148383
+          ],
+          [
+            0.010657849165870462,
+            1.1972738578148383
+          ]
+        ],
+        "capture_stiffness_Npm": 156.95528919708707,
+        "capture_damping_Nspm": 10.872984261261482,
+        "motor_tau_s": 0.022542836654252055
+      }
+    },
+    {
+      "id": "1042_safe_02",
+      "seed": 1042,
+      "category": "safe",
+      "expectation": "capture_expected",
+      "metrics": {
+        "capture_success": true,
+        "false_lock_count": 0,
+        "first_collision_invalid": true,
+        "continuous_dwell_violation_samples": 0,
+        "first_contact_time_s": 0.07800000000000006,
+        "dock_time_s": 0.11000000000000008,
+        "contact_to_lock_s": 0.03200000000000003,
+        "max_postcontact_distance_m": 0.0029518904227512663,
+        "peak_contact_normal_N": 2.424758419806438,
+        "peak_integrated_step_contact_N": 2.86417927182517,
+        "peak_static_capture_N": 0.6359863565024427,
+        "peak_resultant_capture_N": 0.6341017015974366,
+        "max_weld_anchor_error_m": 2.3647553624693243e-06,
+        "max_weld_attitude_error_rad": 0.0014947799902214076,
+        "peak_internal_weld_force_N": 0.0892661756611332,
+        "peak_internal_weld_couple_Nm": 0.006643697430196234,
+        "motor_saturation_fraction": 0.0,
+        "peak_motor_command_slew_Nps": 45.0,
+        "capture_failure_count": 0,
+        "collision_count": 1,
+        "attempt_count": 1,
+        "completed_steps": 900
+      },
+      "exception": null,
+      "early_termination": false,
+      "realized_plant": {
+        "mass_kg": [
+          0.9708989958334573,
+          1.0228730901346723
+        ],
+        "inertia_kg_m2": [
+          [
+            0.008520798043161795,
+            0.008376658877481912,
+            0.014539299240316899
+          ],
+          [
+            0.008098859112288418,
+            0.008013646631542607,
+            0.014927733588518207
+          ]
+        ],
+        "pad_solref": [
+          [
+            0.010159718888702273,
+            1.3085134383133303
+          ],
+          [
+            0.010159718888702273,
+            1.3085134383133303
+          ]
+        ],
+        "capture_stiffness_Npm": 116.44555679981988,
+        "capture_damping_Nspm": 10.958440959981408,
+        "motor_tau_s": 0.02290503578132522
+      }
+    },
+    {
+      "id": "1042_safe_03",
+      "seed": 1042,
+      "category": "safe",
+      "expectation": "capture_expected",
+      "metrics": {
+        "capture_success": true,
+        "false_lock_count": 0,
+        "first_collision_invalid": true,
+        "continuous_dwell_violation_samples": 0,
+        "first_contact_time_s": 0.05200000000000003,
+        "dock_time_s": 0.08600000000000006,
+        "contact_to_lock_s": 0.03400000000000003,
+        "max_postcontact_distance_m": 0.0016015237046620547,
+        "peak_contact_normal_N": 2.459828560399994,
+        "peak_integrated_step_contact_N": 3.0125145400816975,
+        "peak_static_capture_N": 0.8370893796406905,
+        "peak_resultant_capture_N": 0.8670906400848916,
+        "max_weld_anchor_error_m": 9.142175512460005e-06,
+        "max_weld_attitude_error_rad": 0.0004191675157035831,
+        "peak_internal_weld_force_N": 0.1661427925388707,
+        "peak_internal_weld_couple_Nm": 0.00174642249380464,
+        "motor_saturation_fraction": 0.0,
+        "peak_motor_command_slew_Nps": 21.455137360400887,
+        "capture_failure_count": 0,
+        "collision_count": 1,
+        "attempt_count": 1,
+        "completed_steps": 900
+      },
+      "exception": null,
+      "early_termination": false,
+      "realized_plant": {
+        "mass_kg": [
+          1.0117100420674705,
+          1.0007735384095735
+        ],
+        "inertia_kg_m2": [
+          [
+            0.008129100581950047,
+            0.008269166986492023,
+            0.013932083865149485
+          ],
+          [
+            0.008077170668599244,
+            0.008417789348710639,
+            0.015042733253711237
+          ]
+        ],
+        "pad_solref": [
+          [
+            0.013502082707476586,
+            0.888504034905701
+          ],
+          [
+            0.013502082707476586,
+            0.888504034905701
+          ]
+        ],
+        "capture_stiffness_Npm": 140.36354345998384,
+        "capture_damping_Nspm": 9.137410303718156,
+        "motor_tau_s": 0.02117420894491608
+      }
+    },
+    {
+      "id": "1042_safe_04",
+      "seed": 1042,
+      "category": "safe",
+      "expectation": "capture_expected",
+      "metrics": {
+        "capture_success": true,
+        "false_lock_count": 0,
+        "first_collision_invalid": true,
+        "continuous_dwell_violation_samples": 0,
+        "first_contact_time_s": 0.07400000000000005,
+        "dock_time_s": 0.10600000000000008,
+        "contact_to_lock_s": 0.03200000000000003,
+        "max_postcontact_distance_m": 0.001676835369915868,
+        "peak_contact_normal_N": 2.8658482346787038,
+        "peak_integrated_step_contact_N": 3.243688850733112,
+        "peak_static_capture_N": 0.6739399884965481,
+        "peak_resultant_capture_N": 0.6982206566446617,
+        "max_weld_anchor_error_m": 7.583066612538521e-06,
+        "max_weld_attitude_error_rad": 0.0015592972360335543,
+        "peak_internal_weld_force_N": 0.13939108345621,
+        "peak_internal_weld_couple_Nm": 0.006368090398893695,
+        "motor_saturation_fraction": 0.0,
+        "peak_motor_command_slew_Nps": 15.553198249754749,
+        "capture_failure_count": 0,
+        "collision_count": 1,
+        "attempt_count": 1,
+        "completed_steps": 900
+      },
+      "exception": null,
+      "early_termination": false,
+      "realized_plant": {
+        "mass_kg": [
+          1.0199337654181766,
+          1.0270500670833433
+        ],
+        "inertia_kg_m2": [
+          [
+            0.00788309019023855,
+            0.007995191115617776,
+            0.014934029683280598
+          ],
+          [
+            0.008397792021259096,
+            0.008027986468104407,
+            0.014748162977956248
+          ]
+        ],
+        "pad_solref": [
+          [
+            0.012118355742235026,
+            0.9703966299017557
+          ],
+          [
+            0.012118355742235026,
+            0.9703966299017557
+          ]
+        ],
+        "capture_stiffness_Npm": 113.66212508996719,
+        "capture_damping_Nspm": 8.587916196821746,
+        "motor_tau_s": 0.02945617873337234
+      }
+    },
+    {
+      "id": "1042_safe_05",
+      "seed": 1042,
+      "category": "safe",
+      "expectation": "capture_expected",
+      "metrics": {
+        "capture_success": true,
+        "false_lock_count": 0,
+        "first_collision_invalid": true,
+        "continuous_dwell_violation_samples": 0,
+        "first_contact_time_s": 0.12000000000000009,
+        "dock_time_s": 0.1500000000000001,
+        "contact_to_lock_s": 0.030000000000000013,
+        "max_postcontact_distance_m": 0.0010430633860906398,
+        "peak_contact_normal_N": 1.4611924398002571,
+        "peak_integrated_step_contact_N": 1.9209219198353789,
+        "peak_static_capture_N": 0.7065467430819761,
+        "peak_resultant_capture_N": 0.6983582596829329,
+        "max_weld_anchor_error_m": 3.1910922408135345e-06,
+        "max_weld_attitude_error_rad": 0.001604857129690702,
+        "peak_internal_weld_force_N": 0.054237628741087666,
+        "peak_internal_weld_couple_Nm": 0.007151099812268359,
+        "motor_saturation_fraction": 0.0,
+        "peak_motor_command_slew_Nps": 14.731775855748573,
+        "capture_failure_count": 0,
+        "collision_count": 1,
+        "attempt_count": 1,
+        "completed_steps": 900
+      },
+      "exception": null,
+      "early_termination": false,
+      "realized_plant": {
+        "mass_kg": [
+          0.9965784990395989,
+          1.009521641228079
+        ],
+        "inertia_kg_m2": [
+          [
+            0.007949487456446426,
+            0.00796141642338022,
+            0.01463640758707587
+          ],
+          [
+            0.008105307142646673,
+            0.008509029019522205,
+            0.014000238650776849
+          ]
+        ],
+        "pad_solref": [
+          [
+            0.010152577381310403,
+            1.3072998934637157
+          ],
+          [
+            0.010152577381310403,
+            1.3072998934637157
+          ]
+        ],
+        "capture_stiffness_Npm": 119.1766936464074,
+        "capture_damping_Nspm": 10.448146735029805,
+        "motor_tau_s": 0.02386013265954508
+      }
+    },
+    {
+      "id": "1042_boundary_00",
+      "seed": 1042,
+      "category": "boundary",
+      "expectation": "outcome_unspecified",
+      "metrics": {
+        "capture_success": true,
+        "false_lock_count": 0,
+        "first_collision_invalid": true,
+        "continuous_dwell_violation_samples": 0,
+        "first_contact_time_s": 0.0,
+        "dock_time_s": 0.20600000000000016,
+        "contact_to_lock_s": 0.20600000000000016,
+        "max_postcontact_distance_m": 0.006313481243482805,
+        "peak_contact_normal_N": 7.260709099082889,
+        "peak_integrated_step_contact_N": 11.743309941369436,
+        "peak_static_capture_N": 0.7407988424071899,
+        "peak_resultant_capture_N": 0.7897871443784074,
+        "max_weld_anchor_error_m": 6.930234237013386e-06,
+        "max_weld_attitude_error_rad": 0.009759099800811556,
+        "peak_internal_weld_force_N": 0.302633907916765,
+        "peak_internal_weld_couple_Nm": 0.07886874530738676,
+        "motor_saturation_fraction": 0.0,
+        "peak_motor_command_slew_Nps": 45.000000000000036,
+        "capture_failure_count": 0,
+        "collision_count": 2,
+        "attempt_count": 1,
+        "completed_steps": 900
+      },
+      "exception": null,
+      "early_termination": false,
+      "realized_plant": {
+        "mass_kg": [
+          0.9875513618243913,
+          1.014570234172326
+        ],
+        "inertia_kg_m2": [
+          [
+            0.008261263597649468,
+            0.008294089574421766,
+            0.014046985339181178
+          ],
+          [
+            0.008495765245945598,
+            0.008167051323683238,
+            0.013975264735938632
+          ]
+        ],
+        "pad_solref": [
+          [
+            0.010002402416320576,
+            1.1843700867340288
+          ],
+          [
+            0.010002402416320576,
+            1.1843700867340288
+          ]
+        ],
+        "capture_stiffness_Npm": 139.54020716601866,
+        "capture_damping_Nspm": 8.931401696051147,
+        "motor_tau_s": 0.024253237970929237
+      }
+    },
+    {
+      "id": "1042_boundary_01",
+      "seed": 1042,
+      "category": "boundary",
+      "expectation": "outcome_unspecified",
+      "metrics": {
+        "capture_success": false,
+        "false_lock_count": 0,
+        "first_collision_invalid": true,
+        "continuous_dwell_violation_samples": 0,
+        "first_contact_time_s": 0.044000000000000025,
+        "dock_time_s": null,
+        "contact_to_lock_s": null,
+        "max_postcontact_distance_m": 0.03860162839250804,
+        "peak_contact_normal_N": 11.83857959880284,
+        "peak_integrated_step_contact_N": 11.834825479738264,
+        "peak_static_capture_N": 0.0,
+        "peak_resultant_capture_N": 0.0,
+        "max_weld_anchor_error_m": null,
+        "max_weld_attitude_error_rad": null,
+        "peak_internal_weld_force_N": 0.0,
+        "peak_internal_weld_couple_Nm": 0.0,
+        "motor_saturation_fraction": 0.0,
+        "peak_motor_command_slew_Nps": 45.000000000000114,
+        "capture_failure_count": 2,
+        "collision_count": 2,
+        "attempt_count": 2,
+        "completed_steps": 900
+      },
+      "exception": null,
+      "early_termination": false,
+      "realized_plant": {
+        "mass_kg": [
+          1.010192416836727,
+          1.0186496575584683
+        ],
+        "inertia_kg_m2": [
+          [
+            0.008519601469730527,
+            0.0080610505808304,
+            0.01501130984465938
+          ],
+          [
+            0.00813478322944707,
+            0.007885032244666045,
+            0.014108193318490394
+          ]
+        ],
+        "pad_solref": [
+          [
+            0.010482004892308402,
+            1.2776695240049043
+          ],
+          [
+            0.010482004892308402,
+            1.2776695240049043
+          ]
+        ],
+        "capture_stiffness_Npm": 142.15229878193668,
+        "capture_damping_Nspm": 9.31575420075119,
+        "motor_tau_s": 0.021191374428015136
+      }
+    },
+    {
+      "id": "1042_boundary_02",
+      "seed": 1042,
+      "category": "boundary",
+      "expectation": "outcome_unspecified",
+      "metrics": {
+        "capture_success": false,
+        "false_lock_count": 0,
+        "first_collision_invalid": true,
+        "continuous_dwell_violation_samples": 0,
+        "first_contact_time_s": 0.014,
+        "dock_time_s": null,
+        "contact_to_lock_s": null,
+        "max_postcontact_distance_m": 0.0886536229330105,
+        "peak_contact_normal_N": 17.887864128328495,
+        "peak_integrated_step_contact_N": 17.889491223272724,
+        "peak_static_capture_N": 0.0,
+        "peak_resultant_capture_N": 0.0,
+        "max_weld_anchor_error_m": null,
+        "max_weld_attitude_error_rad": null,
+        "peak_internal_weld_force_N": 0.0,
+        "peak_internal_weld_couple_Nm": 0.0,
+        "motor_saturation_fraction": 0.0,
+        "peak_motor_command_slew_Nps": 45.000000000000114,
+        "capture_failure_count": 1,
+        "collision_count": 1,
+        "attempt_count": 1,
+        "completed_steps": 900
+      },
+      "exception": null,
+      "early_termination": false,
+      "realized_plant": {
+        "mass_kg": [
+          0.9808169522556714,
+          0.9980172436155738
+        ],
+        "inertia_kg_m2": [
+          [
+            0.008099408940687558,
+            0.008131855134290773,
+            0.014619097465660463
+          ],
+          [
+            0.00829790895547771,
+            0.007950623681107199,
+            0.014511673876969739
+          ]
+        ],
+        "pad_solref": [
+          [
+            0.014429104390936942,
+            0.7976054751060833
+          ],
+          [
+            0.014429104390936942,
+            0.7976054751060833
+          ]
+        ],
+        "capture_stiffness_Npm": 146.54825051165338,
+        "capture_damping_Nspm": 8.138303451330351,
+        "motor_tau_s": 0.029844208599517544
+      }
+    },
+    {
+      "id": "1042_boundary_03",
+      "seed": 1042,
+      "category": "boundary",
+      "expectation": "outcome_unspecified",
+      "metrics": {
+        "capture_success": false,
+        "false_lock_count": 0,
+        "first_collision_invalid": true,
+        "continuous_dwell_violation_samples": 0,
+        "first_contact_time_s": 0.01,
+        "dock_time_s": null,
+        "contact_to_lock_s": null,
+        "max_postcontact_distance_m": 0.05622055287111515,
+        "peak_contact_normal_N": 6.603145276876689,
+        "peak_integrated_step_contact_N": 6.602670379211062,
+        "peak_static_capture_N": 0.0,
+        "peak_resultant_capture_N": 0.0,
+        "max_weld_anchor_error_m": null,
+        "max_weld_attitude_error_rad": null,
+        "peak_internal_weld_force_N": 0.0,
+        "peak_internal_weld_couple_Nm": 0.0,
+        "motor_saturation_fraction": 0.0,
+        "peak_motor_command_slew_Nps": 45.000000000000036,
+        "capture_failure_count": 1,
+        "collision_count": 1,
+        "attempt_count": 1,
+        "completed_steps": 900
+      },
+      "exception": null,
+      "early_termination": false,
+      "realized_plant": {
+        "mass_kg": [
+          1.0283357664103001,
+          1.0023212825227716
+        ],
+        "inertia_kg_m2": [
+          [
+            0.00829241054942315,
+            0.007948503413331835,
+            0.01437509395178764
+          ],
+          [
+            0.008072901176356267,
+            0.008196950025987288,
+            0.014150909387478648
+          ]
+        ],
+        "pad_solref": [
+          [
+            0.0111419680463496,
+            1.1779611170919366
+          ],
+          [
+            0.0111419680463496,
+            1.1779611170919366
+          ]
+        ],
+        "capture_stiffness_Npm": 134.47495583890708,
+        "capture_damping_Nspm": 9.319967683992434,
+        "motor_tau_s": 0.021755358514958866
+      }
+    },
+    {
+      "id": "1042_boundary_04",
+      "seed": 1042,
+      "category": "boundary",
+      "expectation": "outcome_unspecified",
+      "metrics": {
+        "capture_success": false,
+        "false_lock_count": 0,
+        "first_collision_invalid": true,
+        "continuous_dwell_violation_samples": 0,
+        "first_contact_time_s": 0.0,
+        "dock_time_s": null,
+        "contact_to_lock_s": null,
+        "max_postcontact_distance_m": 0.045660232056507995,
+        "peak_contact_normal_N": 13.947098992794402,
+        "peak_integrated_step_contact_N": 20.694995968882534,
+        "peak_static_capture_N": 0.5901432590415933,
+        "peak_resultant_capture_N": 0.590237890880485,
+        "max_weld_anchor_error_m": null,
+        "max_weld_attitude_error_rad": null,
+        "peak_internal_weld_force_N": 0.0,
+        "peak_internal_weld_couple_Nm": 0.0,
+        "motor_saturation_fraction": 0.0,
+        "peak_motor_command_slew_Nps": 45.000000000000036,
+        "capture_failure_count": 1,
+        "collision_count": 2,
+        "attempt_count": 2,
+        "completed_steps": 900
+      },
+      "exception": null,
+      "early_termination": false,
+      "realized_plant": {
+        "mass_kg": [
+          0.9922517898304192,
+          0.9938964303882851
+        ],
+        "inertia_kg_m2": [
+          [
+            0.008205742259305725,
+            0.007905621324787714,
+            0.014563689398006749
+          ],
+          [
+            0.007962872329088617,
+            0.008037179606435511,
+            0.014081331542538654
+          ]
+        ],
+        "pad_solref": [
+          [
+            0.01059237868081319,
+            1.1651819357515292
+          ],
+          [
+            0.01059237868081319,
+            1.1651819357515292
+          ]
+        ],
+        "capture_stiffness_Npm": 127.12779100859173,
+        "capture_damping_Nspm": 8.25544766528631,
+        "motor_tau_s": 0.023275609299769212
+      }
+    },
+    {
+      "id": "1042_boundary_05",
+      "seed": 1042,
+      "category": "boundary",
+      "expectation": "outcome_unspecified",
+      "metrics": {
+        "capture_success": false,
+        "false_lock_count": 0,
+        "first_collision_invalid": true,
+        "continuous_dwell_violation_samples": 0,
+        "first_contact_time_s": 0.002,
+        "dock_time_s": null,
+        "contact_to_lock_s": null,
+        "max_postcontact_distance_m": 0.06614832496087567,
+        "peak_contact_normal_N": 11.648069298476301,
+        "peak_integrated_step_contact_N": 11.648154171123487,
+        "peak_static_capture_N": 0.0,
+        "peak_resultant_capture_N": 0.0,
+        "max_weld_anchor_error_m": null,
+        "max_weld_attitude_error_rad": null,
+        "peak_internal_weld_force_N": 0.0,
+        "peak_internal_weld_couple_Nm": 0.0,
+        "motor_saturation_fraction": 0.0,
+        "peak_motor_command_slew_Nps": 45.000000000000036,
+        "capture_failure_count": 1,
+        "collision_count": 1,
+        "attempt_count": 1,
+        "completed_steps": 900
+      },
+      "exception": null,
+      "early_termination": false,
+      "realized_plant": {
+        "mass_kg": [
+          0.9881172531167731,
+          1.0173764558473324
+        ],
+        "inertia_kg_m2": [
+          [
+            0.008402589690275993,
+            0.008170284268800744,
+            0.014023669942429
+          ],
+          [
+            0.00813979423512412,
+            0.008370954396529736,
+            0.0140640861938614
+          ]
+        ],
+        "pad_solref": [
+          [
+            0.01304033069046875,
+            1.0203633838859631
+          ],
+          [
+            0.01304033069046875,
+            1.0203633838859631
+          ]
+        ],
+        "capture_stiffness_Npm": 162.30268818193179,
+        "capture_damping_Nspm": 10.599883012700108,
+        "motor_tau_s": 0.024672650296113235
+      }
+    },
+    {
+      "id": "1042_reject_00",
+      "seed": 1042,
+      "category": "reject",
+      "expectation": "no_lock",
+      "metrics": {
+        "capture_success": false,
+        "false_lock_count": 0,
+        "first_collision_invalid": true,
+        "continuous_dwell_violation_samples": 0,
+        "first_contact_time_s": 0.04200000000000002,
+        "dock_time_s": null,
+        "contact_to_lock_s": null,
+        "max_postcontact_distance_m": 0.040916518821154074,
+        "peak_contact_normal_N": 3.98888396719878,
+        "peak_integrated_step_contact_N": 3.9887683580562623,
+        "peak_static_capture_N": 0.0,
+        "peak_resultant_capture_N": 0.0,
+        "max_weld_anchor_error_m": null,
+        "max_weld_attitude_error_rad": null,
+        "peak_internal_weld_force_N": 0.0,
+        "peak_internal_weld_couple_Nm": 0.0,
+        "motor_saturation_fraction": 0.0,
+        "peak_motor_command_slew_Nps": 45.000000000000036,
+        "capture_failure_count": 1,
+        "collision_count": 1,
+        "attempt_count": 1,
+        "completed_steps": 900
+      },
+      "exception": null,
+      "early_termination": false,
+      "realized_plant": {
+        "mass_kg": [
+          1.0279441007767178,
+          1.017555024529095
+        ],
+        "inertia_kg_m2": [
+          [
+            0.007984633387305304,
+            0.008267967226411104,
+            0.014900982575515155
+          ],
+          [
+            0.007932346275717029,
+            0.008471719294524374,
+            0.014720753947745153
+          ]
+        ],
+        "pad_solref": [
+          [
+            0.014125284462462978,
+            0.8402136207595987
+          ],
+          [
+            0.014125284462462978,
+            0.8402136207595987
+          ]
+        ],
+        "capture_stiffness_Npm": 164.96218809235626,
+        "capture_damping_Nspm": 10.101816066965737,
+        "motor_tau_s": 0.023194307815943976
+      }
+    },
+    {
+      "id": "1042_reject_01",
+      "seed": 1042,
+      "category": "reject",
+      "expectation": "no_lock",
+      "metrics": {
+        "capture_success": false,
+        "false_lock_count": 0,
+        "first_collision_invalid": true,
+        "continuous_dwell_violation_samples": 0,
+        "first_contact_time_s": 0.014,
+        "dock_time_s": null,
+        "contact_to_lock_s": null,
+        "max_postcontact_distance_m": 0.04875238071524426,
+        "peak_contact_normal_N": 9.792939697825402,
+        "peak_integrated_step_contact_N": 9.795064218821043,
+        "peak_static_capture_N": 0.0,
+        "peak_resultant_capture_N": 0.0,
+        "max_weld_anchor_error_m": null,
+        "max_weld_attitude_error_rad": null,
+        "peak_internal_weld_force_N": 0.0,
+        "peak_internal_weld_couple_Nm": 0.0,
+        "motor_saturation_fraction": 0.0,
+        "peak_motor_command_slew_Nps": 45.000000000000036,
+        "capture_failure_count": 1,
+        "collision_count": 1,
+        "attempt_count": 1,
+        "completed_steps": 900
+      },
+      "exception": null,
+      "early_termination": false,
+      "realized_plant": {
+        "mass_kg": [
+          0.9949578392452837,
+          1.0154968984775055
+        ],
+        "inertia_kg_m2": [
+          [
+            0.008336659655643319,
+            0.008101206147668072,
+            0.01495822728196883
+          ],
+          [
+            0.008139399698699675,
+            0.007893172433523244,
+            0.014244786886229474
+          ]
+        ],
+        "pad_solref": [
+          [
+            0.014121016178218032,
+            0.8896011496811558
+          ],
+          [
+            0.014121016178218032,
+            0.8896011496811558
+          ]
+        ],
+        "capture_stiffness_Npm": 159.09328811753986,
+        "capture_damping_Nspm": 11.774648643326056,
+        "motor_tau_s": 0.02641222993998594
+      }
+    },
+    {
+      "id": "1042_reject_02",
+      "seed": 1042,
+      "category": "reject",
+      "expectation": "no_lock",
+      "metrics": {
+        "capture_success": false,
+        "false_lock_count": 0,
+        "first_collision_invalid": null,
+        "continuous_dwell_violation_samples": 0,
+        "first_contact_time_s": null,
+        "dock_time_s": null,
+        "contact_to_lock_s": null,
+        "max_postcontact_distance_m": null,
+        "peak_contact_normal_N": 0.0,
+        "peak_integrated_step_contact_N": 0.0,
+        "peak_static_capture_N": 0.0,
+        "peak_resultant_capture_N": 0.0,
+        "max_weld_anchor_error_m": null,
+        "max_weld_attitude_error_rad": null,
+        "peak_internal_weld_force_N": 0.0,
+        "peak_internal_weld_couple_Nm": 0.0,
+        "motor_saturation_fraction": 0.0,
+        "peak_motor_command_slew_Nps": 9.383961588733447,
+        "capture_failure_count": 0,
+        "collision_count": 0,
+        "attempt_count": 0,
+        "completed_steps": 900
+      },
+      "exception": null,
+      "early_termination": false,
+      "realized_plant": {
+        "mass_kg": [
+          1.0166450916161553,
+          0.9885797933315729
+        ],
+        "inertia_kg_m2": [
+          [
+            0.007874772282647775,
+            0.008300890456978774,
+            0.013964555815546984
+          ],
+          [
+            0.008238667376889547,
+            0.007973112019188038,
+            0.014037482045011486
+          ]
+        ],
+        "pad_solref": [
+          [
+            0.013270545921895282,
+            0.9022097228147243
+          ],
+          [
+            0.013270545921895282,
+            0.9022097228147243
+          ]
+        ],
+        "capture_stiffness_Npm": 146.3177984262637,
+        "capture_damping_Nspm": 10.588723019621648,
+        "motor_tau_s": 0.02547463428696172
+      }
+    },
+    {
+      "id": "1042_reject_03",
+      "seed": 1042,
+      "category": "reject",
+      "expectation": "no_lock",
+      "metrics": {
+        "capture_success": false,
+        "false_lock_count": 0,
+        "first_collision_invalid": true,
+        "continuous_dwell_violation_samples": 0,
+        "first_contact_time_s": 0.006,
+        "dock_time_s": null,
+        "contact_to_lock_s": null,
+        "max_postcontact_distance_m": 0.035540227934564475,
+        "peak_contact_normal_N": 38.09423885140694,
+        "peak_integrated_step_contact_N": 38.09429215631448,
+        "peak_static_capture_N": 0.0,
+        "peak_resultant_capture_N": 0.0,
+        "max_weld_anchor_error_m": null,
+        "max_weld_attitude_error_rad": null,
+        "peak_internal_weld_force_N": 0.0,
+        "peak_internal_weld_couple_Nm": 0.0,
+        "motor_saturation_fraction": 0.0,
+        "peak_motor_command_slew_Nps": 45.000000000000036,
+        "capture_failure_count": 1,
+        "collision_count": 1,
+        "attempt_count": 1,
+        "completed_steps": 900
+      },
+      "exception": null,
+      "early_termination": false,
+      "realized_plant": {
+        "mass_kg": [
+          0.9942564305155163,
+          0.9974106899137277
+        ],
+        "inertia_kg_m2": [
+          [
+            0.007883900133965983,
+            0.008122781247002983,
+            0.014081634885574746
+          ],
+          [
+            0.007876416641668603,
+            0.008387178993112747,
+            0.014326794177872491
+          ]
+        ],
+        "pad_solref": [
+          [
+            0.011247524661405862,
+            1.02530612391133
+          ],
+          [
+            0.011247524661405862,
+            1.02530612391133
+          ]
+        ],
+        "capture_stiffness_Npm": 163.7107224768964,
+        "capture_damping_Nspm": 11.706144471663315,
+        "motor_tau_s": 0.02840983503514534
+      }
+    },
+    {
+      "id": "1042_reject_04",
+      "seed": 1042,
+      "category": "reject",
+      "expectation": "no_lock",
+      "metrics": {
+        "capture_success": false,
+        "false_lock_count": 0,
+        "first_collision_invalid": true,
+        "continuous_dwell_violation_samples": 0,
+        "first_contact_time_s": 0.008,
+        "dock_time_s": null,
+        "contact_to_lock_s": null,
+        "max_postcontact_distance_m": 0.1276466594669169,
+        "peak_contact_normal_N": 26.318390544725162,
+        "peak_integrated_step_contact_N": 26.318500866929313,
+        "peak_static_capture_N": 0.0,
+        "peak_resultant_capture_N": 0.0,
+        "max_weld_anchor_error_m": null,
+        "max_weld_attitude_error_rad": null,
+        "peak_internal_weld_force_N": 0.0,
+        "peak_internal_weld_couple_Nm": 0.0,
+        "motor_saturation_fraction": 0.0,
+        "peak_motor_command_slew_Nps": 45.000000000000036,
+        "capture_failure_count": 2,
+        "collision_count": 2,
+        "attempt_count": 2,
+        "completed_steps": 900
+      },
+      "exception": null,
+      "early_termination": false,
+      "realized_plant": {
+        "mass_kg": [
+          0.9792655331292219,
+          0.9840007660622345
+        ],
+        "inertia_kg_m2": [
+          [
+            0.008307115233178515,
+            0.008350114299711255,
+            0.014166349362257493
+          ],
+          [
+            0.00830632954639235,
+            0.008253124409886682,
+            0.014735910269970797
+          ]
+        ],
+        "pad_solref": [
+          [
+            0.01234210302080143,
+            1.0269954224170614
+          ],
+          [
+            0.01234210302080143,
+            1.0269954224170614
+          ]
+        ],
+        "capture_stiffness_Npm": 112.18428339073945,
+        "capture_damping_Nspm": 9.057289115002446,
+        "motor_tau_s": 0.018890425964327412
+      }
+    },
+    {
+      "id": "1042_reject_05",
+      "seed": 1042,
+      "category": "reject",
+      "expectation": "no_lock",
+      "metrics": {
+        "capture_success": false,
+        "false_lock_count": 0,
+        "first_collision_invalid": true,
+        "continuous_dwell_violation_samples": 0,
+        "first_contact_time_s": 0.008,
+        "dock_time_s": null,
+        "contact_to_lock_s": null,
+        "max_postcontact_distance_m": 0.0577793120381955,
+        "peak_contact_normal_N": 31.72336096180325,
+        "peak_integrated_step_contact_N": 31.723287639438556,
+        "peak_static_capture_N": 0.0,
+        "peak_resultant_capture_N": 0.0,
+        "max_weld_anchor_error_m": null,
+        "max_weld_attitude_error_rad": null,
+        "peak_internal_weld_force_N": 0.0,
+        "peak_internal_weld_couple_Nm": 0.0,
+        "motor_saturation_fraction": 0.0,
+        "peak_motor_command_slew_Nps": 45.000000000000036,
+        "capture_failure_count": 1,
+        "collision_count": 1,
+        "attempt_count": 1,
+        "completed_steps": 900
+      },
+      "exception": null,
+      "early_termination": false,
+      "realized_plant": {
+        "mass_kg": [
+          1.0064052090598956,
+          0.97764796802209
+        ],
+        "inertia_kg_m2": [
+          [
+            0.008214009244818831,
+            0.008217964981702491,
+            0.01422366307838899
+          ],
+          [
+            0.008073178356007488,
+            0.0083680876117468,
+            0.014416243809973472
+          ]
+        ],
+        "pad_solref": [
+          [
+            0.010120669643268911,
+            1.2923468576051695
+          ],
+          [
+            0.010120669643268911,
+            1.2923468576051695
+          ]
+        ],
+        "capture_stiffness_Npm": 141.05084148440275,
+        "capture_damping_Nspm": 11.936396710291646,
+        "motor_tau_s": 0.030250001674308774
+      }
+    },
+    {
+      "id": "7301_safe_00",
+      "seed": 7301,
+      "category": "safe",
+      "expectation": "capture_expected",
+      "metrics": {
+        "capture_success": true,
+        "false_lock_count": 0,
+        "first_collision_invalid": true,
+        "continuous_dwell_violation_samples": 0,
+        "first_contact_time_s": 0.056000000000000036,
+        "dock_time_s": 0.08600000000000006,
+        "contact_to_lock_s": 0.030000000000000027,
+        "max_postcontact_distance_m": 0.0009880090322754982,
+        "peak_contact_normal_N": 2.896108794733772,
+        "peak_integrated_step_contact_N": 3.2639181889829048,
+        "peak_static_capture_N": 0.7481732916008218,
+        "peak_resultant_capture_N": 0.7745658854431193,
+        "max_weld_anchor_error_m": 6.800774268211851e-06,
+        "max_weld_attitude_error_rad": 0.0007497722604878186,
+        "peak_internal_weld_force_N": 0.12358054217579553,
+        "peak_internal_weld_couple_Nm": 0.0031108537967095206,
+        "motor_saturation_fraction": 0.0,
+        "peak_motor_command_slew_Nps": 14.329885679197893,
+        "capture_failure_count": 0,
+        "collision_count": 1,
+        "attempt_count": 1,
+        "completed_steps": 900
+      },
+      "exception": null,
+      "early_termination": false,
+      "realized_plant": {
+        "mass_kg": [
+          1.0255797476455342,
+          1.0146000937707904
+        ],
+        "inertia_kg_m2": [
+          [
+            0.00841939081291239,
+            0.008491751330342788,
+            0.014768595683594541
+          ],
+          [
+            0.00826001510385834,
+            0.008467011577520509,
+            0.014258351573798306
+          ]
+        ],
+        "pad_solref": [
+          [
+            0.011536036109738733,
+            1.0167189285003952
+          ],
+          [
+            0.011536036109738733,
+            1.0167189285003952
+          ]
+        ],
+        "capture_stiffness_Npm": 124.69554860013696,
+        "capture_damping_Nspm": 10.755591992842536,
+        "motor_tau_s": 0.021389677768423845
+      }
+    },
+    {
+      "id": "7301_safe_01",
+      "seed": 7301,
+      "category": "safe",
+      "expectation": "capture_expected",
+      "metrics": {
+        "capture_success": true,
+        "false_lock_count": 0,
+        "first_collision_invalid": true,
+        "continuous_dwell_violation_samples": 0,
+        "first_contact_time_s": 0.04800000000000003,
+        "dock_time_s": 0.08000000000000006,
+        "contact_to_lock_s": 0.03200000000000003,
+        "max_postcontact_distance_m": 0.0011022185810080536,
+        "peak_contact_normal_N": 2.197126256608301,
+        "peak_integrated_step_contact_N": 2.5728889201060237,
+        "peak_static_capture_N": 0.9291225101300242,
+        "peak_resultant_capture_N": 0.9378299260742425,
+        "max_weld_anchor_error_m": 1.6102095090795954e-06,
+        "max_weld_attitude_error_rad": 0.002851423550636951,
+        "peak_internal_weld_force_N": 0.042536940335543665,
+        "peak_internal_weld_couple_Nm": 0.013032641197883376,
+        "motor_saturation_fraction": 0.0,
+        "peak_motor_command_slew_Nps": 30.18805539259836,
+        "capture_failure_count": 0,
+        "collision_count": 1,
+        "attempt_count": 1,
+        "completed_steps": 900
+      },
+      "exception": null,
+      "early_termination": false,
+      "realized_plant": {
+        "mass_kg": [
+          1.0204290571952774,
+          1.008327617714555
+        ],
+        "inertia_kg_m2": [
+          [
+            0.008035380707622337,
+            0.00852654338339921,
+            0.014925808005070675
+          ],
+          [
+            0.008183116462281929,
+            0.008498178534321861,
+            0.014393831259068646
+          ]
+        ],
+        "pad_solref": [
+          [
+            0.01453287769154331,
+            0.7819132185064852
+          ],
+          [
+            0.01453287769154331,
+            0.7819132185064852
+          ]
+        ],
+        "capture_stiffness_Npm": 156.35774244816952,
+        "capture_damping_Nspm": 10.644641577699435,
+        "motor_tau_s": 0.02009278134444717
+      }
+    },
+    {
+      "id": "7301_safe_02",
+      "seed": 7301,
+      "category": "safe",
+      "expectation": "capture_expected",
+      "metrics": {
+        "capture_success": false,
+        "false_lock_count": 0,
+        "first_collision_invalid": true,
+        "continuous_dwell_violation_samples": 0,
+        "first_contact_time_s": 0.36000000000000026,
+        "dock_time_s": null,
+        "contact_to_lock_s": null,
+        "max_postcontact_distance_m": 0.009142761601897984,
+        "peak_contact_normal_N": 0.3287154318068237,
+        "peak_integrated_step_contact_N": 0.3287002063743574,
+        "peak_static_capture_N": 0.0,
+        "peak_resultant_capture_N": 0.0,
+        "max_weld_anchor_error_m": null,
+        "max_weld_attitude_error_rad": null,
+        "peak_internal_weld_force_N": 0.0,
+        "peak_internal_weld_couple_Nm": 0.0,
+        "motor_saturation_fraction": 0.0,
+        "peak_motor_command_slew_Nps": 7.592375453151642,
+        "capture_failure_count": 2,
+        "collision_count": 2,
+        "attempt_count": 2,
+        "completed_steps": 900
+      },
+      "exception": null,
+      "early_termination": false,
+      "realized_plant": {
+        "mass_kg": [
+          1.000967368335856,
+          1.0053868088265707
+        ],
+        "inertia_kg_m2": [
+          [
+            0.007968214083060398,
+            0.008108283970084628,
+            0.014931930218278351
+          ],
+          [
+            0.008380809556273528,
+            0.008451582060021855,
+            0.014093015079360234
+          ]
+        ],
+        "pad_solref": [
+          [
+            0.011013874524011013,
+            1.1351545765916675
+          ],
+          [
+            0.011013874524011013,
+            1.1351545765916675
+          ]
+        ],
+        "capture_stiffness_Npm": 115.62164167644346,
+        "capture_damping_Nspm": 9.251417842546495,
+        "motor_tau_s": 0.028937066269643492
+      }
+    },
+    {
+      "id": "7301_safe_03",
+      "seed": 7301,
+      "category": "safe",
+      "expectation": "capture_expected",
+      "metrics": {
+        "capture_success": false,
+        "false_lock_count": 0,
+        "first_collision_invalid": null,
+        "continuous_dwell_violation_samples": 0,
+        "first_contact_time_s": null,
+        "dock_time_s": null,
+        "contact_to_lock_s": null,
+        "max_postcontact_distance_m": null,
+        "peak_contact_normal_N": 0.0,
+        "peak_integrated_step_contact_N": 0.0,
+        "peak_static_capture_N": 0.0,
+        "peak_resultant_capture_N": 0.0,
+        "max_weld_anchor_error_m": null,
+        "max_weld_attitude_error_rad": null,
+        "peak_internal_weld_force_N": 0.0,
+        "peak_internal_weld_couple_Nm": 0.0,
+        "motor_saturation_fraction": 0.0,
+        "peak_motor_command_slew_Nps": 0.744194038810541,
+        "capture_failure_count": 0,
+        "collision_count": 0,
+        "attempt_count": 0,
+        "completed_steps": 900
+      },
+      "exception": null,
+      "early_termination": false,
+      "realized_plant": {
+        "mass_kg": [
+          1.0207185497241982,
+          0.9723459819455615
+        ],
+        "inertia_kg_m2": [
+          [
+            0.008363434678984746,
+            0.007921317081847581,
+            0.014484980320089092
+          ],
+          [
+            0.008023759743362125,
+            0.008490332197461222,
+            0.01453440746765405
+          ]
+        ],
+        "pad_solref": [
+          [
+            0.010426450181561372,
+            1.1851883147640194
+          ],
+          [
+            0.010426450181561372,
+            1.1851883147640194
+          ]
+        ],
+        "capture_stiffness_Npm": 146.27746938846988,
+        "capture_damping_Nspm": 10.605289013680572,
+        "motor_tau_s": 0.018089642592439205
+      }
+    },
+    {
+      "id": "7301_safe_04",
+      "seed": 7301,
+      "category": "safe",
+      "expectation": "capture_expected",
+      "metrics": {
+        "capture_success": true,
+        "false_lock_count": 0,
+        "first_collision_invalid": true,
+        "continuous_dwell_violation_samples": 0,
+        "first_contact_time_s": 0.09600000000000007,
+        "dock_time_s": 0.12600000000000008,
+        "contact_to_lock_s": 0.030000000000000013,
+        "max_postcontact_distance_m": 0.0028111404534808897,
+        "peak_contact_normal_N": 2.0199702220922777,
+        "peak_integrated_step_contact_N": 2.5217255310613664,
+        "peak_static_capture_N": 0.7546747351361675,
+        "peak_resultant_capture_N": 0.7574897552764298,
+        "max_weld_anchor_error_m": 1.0726760089159955e-06,
+        "max_weld_attitude_error_rad": 0.0017020105058888032,
+        "peak_internal_weld_force_N": 0.028189568667695574,
+        "peak_internal_weld_couple_Nm": 0.0076170212740071476,
+        "motor_saturation_fraction": 0.0,
+        "peak_motor_command_slew_Nps": 7.63692441774693,
+        "capture_failure_count": 0,
+        "collision_count": 1,
+        "attempt_count": 1,
+        "completed_steps": 900
+      },
+      "exception": null,
+      "early_termination": false,
+      "realized_plant": {
+        "mass_kg": [
+          1.0084425767448064,
+          1.0275334776236131
+        ],
+        "inertia_kg_m2": [
+          [
+            0.007903792674226555,
+            0.008290032442878232,
+            0.01500695866199168
+          ],
+          [
+            0.008430591530603227,
+            0.007933795743871368,
+            0.01417513921149261
+          ]
+        ],
+        "pad_solref": [
+          [
+            0.010569949074900829,
+            1.249720632939725
+          ],
+          [
+            0.010569949074900829,
+            1.249720632939725
+          ]
+        ],
+        "capture_stiffness_Npm": 136.27391227975937,
+        "capture_damping_Nspm": 9.978364443054828,
+        "motor_tau_s": 0.028418709470632398
+      }
+    },
+    {
+      "id": "7301_safe_05",
+      "seed": 7301,
+      "category": "safe",
+      "expectation": "capture_expected",
+      "metrics": {
+        "capture_success": false,
+        "false_lock_count": 0,
+        "first_collision_invalid": null,
+        "continuous_dwell_violation_samples": 0,
+        "first_contact_time_s": null,
+        "dock_time_s": null,
+        "contact_to_lock_s": null,
+        "max_postcontact_distance_m": null,
+        "peak_contact_normal_N": 0.0,
+        "peak_integrated_step_contact_N": 0.0,
+        "peak_static_capture_N": 0.0,
+        "peak_resultant_capture_N": 0.0,
+        "max_weld_anchor_error_m": null,
+        "max_weld_attitude_error_rad": null,
+        "peak_internal_weld_force_N": 0.0,
+        "peak_internal_weld_couple_Nm": 0.0,
+        "motor_saturation_fraction": 0.0,
+        "peak_motor_command_slew_Nps": 0.8071224733296275,
+        "capture_failure_count": 0,
+        "collision_count": 0,
+        "attempt_count": 0,
+        "completed_steps": 900
+      },
+      "exception": null,
+      "early_termination": false,
+      "realized_plant": {
+        "mass_kg": [
+          1.0063534644370749,
+          0.9777295970202171
+        ],
+        "inertia_kg_m2": [
+          [
+            0.008182654014789644,
+            0.008325977544078987,
+            0.014107237581890059
+          ],
+          [
+            0.008319361971634808,
+            0.008129513242880726,
+            0.014404287613323007
+          ]
+        ],
+        "pad_solref": [
+          [
+            0.014503511133631686,
+            0.8902566495194358
+          ],
+          [
+            0.014503511133631686,
+            0.8902566495194358
+          ]
+        ],
+        "capture_stiffness_Npm": 141.2130858578413,
+        "capture_damping_Nspm": 10.347370537264293,
+        "motor_tau_s": 0.025445740276734668
+      }
+    },
+    {
+      "id": "7301_boundary_00",
+      "seed": 7301,
+      "category": "boundary",
+      "expectation": "outcome_unspecified",
+      "metrics": {
+        "capture_success": false,
+        "false_lock_count": 0,
+        "first_collision_invalid": true,
+        "continuous_dwell_violation_samples": 0,
+        "first_contact_time_s": 0.0,
+        "dock_time_s": null,
+        "contact_to_lock_s": null,
+        "max_postcontact_distance_m": 0.06280602060366643,
+        "peak_contact_normal_N": 20.058448006117292,
+        "peak_integrated_step_contact_N": 29.08459322039134,
+        "peak_static_capture_N": 0.0,
+        "peak_resultant_capture_N": 0.0,
+        "max_weld_anchor_error_m": null,
+        "max_weld_attitude_error_rad": null,
+        "peak_internal_weld_force_N": 0.0,
+        "peak_internal_weld_couple_Nm": 0.0,
+        "motor_saturation_fraction": 0.0,
+        "peak_motor_command_slew_Nps": 45.000000000000036,
+        "capture_failure_count": 2,
+        "collision_count": 2,
+        "attempt_count": 2,
+        "completed_steps": 900
+      },
+      "exception": null,
+      "early_termination": false,
+      "realized_plant": {
+        "mass_kg": [
+          0.9877890066706392,
+          0.9706019259879332
+        ],
+        "inertia_kg_m2": [
+          [
+            0.007900644549629316,
+            0.008346695960015093,
+            0.014756344084025215
+          ],
+          [
+            0.008089938281151971,
+            0.008231543818504503,
+            0.014195151305271431
+          ]
+        ],
+        "pad_solref": [
+          [
+            0.012800399469967177,
+            0.9337638346429755
+          ],
+          [
+            0.012800399469967177,
+            0.9337638346429755
+          ]
+        ],
+        "capture_stiffness_Npm": 164.49485519096888,
+        "capture_damping_Nspm": 8.799924392456521,
+        "motor_tau_s": 0.02053355873651414
+      }
+    },
+    {
+      "id": "7301_boundary_01",
+      "seed": 7301,
+      "category": "boundary",
+      "expectation": "outcome_unspecified",
+      "metrics": {
+        "capture_success": false,
+        "false_lock_count": 0,
+        "first_collision_invalid": null,
+        "continuous_dwell_violation_samples": 0,
+        "first_contact_time_s": null,
+        "dock_time_s": null,
+        "contact_to_lock_s": null,
+        "max_postcontact_distance_m": null,
+        "peak_contact_normal_N": 0.0,
+        "peak_integrated_step_contact_N": 0.0,
+        "peak_static_capture_N": 0.0,
+        "peak_resultant_capture_N": 0.0,
+        "max_weld_anchor_error_m": null,
+        "max_weld_attitude_error_rad": null,
+        "peak_internal_weld_force_N": 0.0,
+        "peak_internal_weld_couple_Nm": 0.0,
+        "motor_saturation_fraction": 0.0,
+        "peak_motor_command_slew_Nps": 45.000000000000036,
+        "capture_failure_count": 0,
+        "collision_count": 0,
+        "attempt_count": 0,
+        "completed_steps": 900
+      },
+      "exception": null,
+      "early_termination": false,
+      "realized_plant": {
+        "mass_kg": [
+          0.9800650581426313,
+          0.9702349827201521
+        ],
+        "inertia_kg_m2": [
+          [
+            0.00821504589990625,
+            0.008183660140246851,
+            0.014812692962868869
+          ],
+          [
+            0.008109387353450575,
+            0.007920574928758252,
+            0.015065830584745027
+          ]
+        ],
+        "pad_solref": [
+          [
+            0.013472958943718262,
+            0.9617563055017067
+          ],
+          [
+            0.013472958943718262,
+            0.9617563055017067
+          ]
+        ],
+        "capture_stiffness_Npm": 130.8858891370313,
+        "capture_damping_Nspm": 11.904822046409679,
+        "motor_tau_s": 0.025890890512208838
+      }
+    },
+    {
+      "id": "7301_boundary_02",
+      "seed": 7301,
+      "category": "boundary",
+      "expectation": "outcome_unspecified",
+      "metrics": {
+        "capture_success": false,
+        "false_lock_count": 0,
+        "first_collision_invalid": true,
+        "continuous_dwell_violation_samples": 0,
+        "first_contact_time_s": 0.0,
+        "dock_time_s": null,
+        "contact_to_lock_s": null,
+        "max_postcontact_distance_m": 0.0702708482165529,
+        "peak_contact_normal_N": 23.492389394723016,
+        "peak_integrated_step_contact_N": 34.97761287563219,
+        "peak_static_capture_N": 0.0,
+        "peak_resultant_capture_N": 0.0,
+        "max_weld_anchor_error_m": null,
+        "max_weld_attitude_error_rad": null,
+        "peak_internal_weld_force_N": 0.0,
+        "peak_internal_weld_couple_Nm": 0.0,
+        "motor_saturation_fraction": 0.0,
+        "peak_motor_command_slew_Nps": 45.000000000000036,
+        "capture_failure_count": 1,
+        "collision_count": 2,
+        "attempt_count": 2,
+        "completed_steps": 900
+      },
+      "exception": null,
+      "early_termination": false,
+      "realized_plant": {
+        "mass_kg": [
+          1.0180821932381363,
+          1.0021190693118927
+        ],
+        "inertia_kg_m2": [
+          [
+            0.008240559365182334,
+            0.008175931729343501,
+            0.01476227501145522
+          ],
+          [
+            0.00803058655708128,
+            0.008447145107593996,
+            0.014889046140296689
+          ]
+        ],
+        "pad_solref": [
+          [
+            0.011773700840647022,
+            1.0750084408754987
+          ],
+          [
+            0.011773700840647022,
+            1.0750084408754987
+          ]
+        ],
+        "capture_stiffness_Npm": 141.1232075459755,
+        "capture_damping_Nspm": 10.311365157855196,
+        "motor_tau_s": 0.02635732008759408
+      }
+    },
+    {
+      "id": "7301_boundary_03",
+      "seed": 7301,
+      "category": "boundary",
+      "expectation": "outcome_unspecified",
+      "metrics": {
+        "capture_success": false,
+        "false_lock_count": 0,
+        "first_collision_invalid": true,
+        "continuous_dwell_violation_samples": 0,
+        "first_contact_time_s": 0.06000000000000004,
+        "dock_time_s": null,
+        "contact_to_lock_s": null,
+        "max_postcontact_distance_m": 0.06041892246617748,
+        "peak_contact_normal_N": 4.778535340299964,
+        "peak_integrated_step_contact_N": 4.777942931531234,
+        "peak_static_capture_N": 0.0,
+        "peak_resultant_capture_N": 0.0,
+        "max_weld_anchor_error_m": null,
+        "max_weld_attitude_error_rad": null,
+        "peak_internal_weld_force_N": 0.0,
+        "peak_internal_weld_couple_Nm": 0.0,
+        "motor_saturation_fraction": 0.0,
+        "peak_motor_command_slew_Nps": 45.000000000000036,
+        "capture_failure_count": 2,
+        "collision_count": 2,
+        "attempt_count": 2,
+        "completed_steps": 900
+      },
+      "exception": null,
+      "early_termination": false,
+      "realized_plant": {
+        "mass_kg": [
+          0.9809482325565759,
+          1.0155606264773605
+        ],
+        "inertia_kg_m2": [
+          [
+            0.007979794178672625,
+            0.008186758436285494,
+            0.014431206521622048
+          ],
+          [
+            0.008324468083646059,
+            0.008065868630601394,
+            0.014029832765741431
+          ]
+        ],
+        "pad_solref": [
+          [
+            0.013236595547276011,
+            0.861257924424295
+          ],
+          [
+            0.013236595547276011,
+            0.861257924424295
+          ]
+        ],
+        "capture_stiffness_Npm": 112.83626259195077,
+        "capture_damping_Nspm": 9.981591613066733,
+        "motor_tau_s": 0.024469740176823088
+      }
+    },
+    {
+      "id": "7301_boundary_04",
+      "seed": 7301,
+      "category": "boundary",
+      "expectation": "outcome_unspecified",
+      "metrics": {
+        "capture_success": false,
+        "false_lock_count": 0,
+        "first_collision_invalid": true,
+        "continuous_dwell_violation_samples": 0,
+        "first_contact_time_s": 0.01,
+        "dock_time_s": null,
+        "contact_to_lock_s": null,
+        "max_postcontact_distance_m": 0.0756816117984126,
+        "peak_contact_normal_N": 18.26607742876529,
+        "peak_integrated_step_contact_N": 18.268343475569704,
+        "peak_static_capture_N": 0.0,
+        "peak_resultant_capture_N": 0.0,
+        "max_weld_anchor_error_m": null,
+        "max_weld_attitude_error_rad": null,
+        "peak_internal_weld_force_N": 0.0,
+        "peak_internal_weld_couple_Nm": 0.0,
+        "motor_saturation_fraction": 0.0,
+        "peak_motor_command_slew_Nps": 45.000000000000036,
+        "capture_failure_count": 1,
+        "collision_count": 1,
+        "attempt_count": 1,
+        "completed_steps": 900
+      },
+      "exception": null,
+      "early_termination": false,
+      "realized_plant": {
+        "mass_kg": [
+          0.9922902089182049,
+          1.0071442995369824
+        ],
+        "inertia_kg_m2": [
+          [
+            0.00811824213631428,
+            0.008257845989311263,
+            0.013977641456278445
+          ],
+          [
+            0.008205875884790877,
+            0.008219853622086137,
+            0.014329377411687626
+          ]
+        ],
+        "pad_solref": [
+          [
+            0.012573221863765083,
+            0.955305463510001
+          ],
+          [
+            0.012573221863765083,
+            0.955305463510001
+          ]
+        ],
+        "capture_stiffness_Npm": 119.58709875832537,
+        "capture_damping_Nspm": 9.216492571567546,
+        "motor_tau_s": 0.026233982778524137
+      }
+    },
+    {
+      "id": "7301_boundary_05",
+      "seed": 7301,
+      "category": "boundary",
+      "expectation": "outcome_unspecified",
+      "metrics": {
+        "capture_success": false,
+        "false_lock_count": 0,
+        "first_collision_invalid": true,
+        "continuous_dwell_violation_samples": 0,
+        "first_contact_time_s": 0.03800000000000002,
+        "dock_time_s": null,
+        "contact_to_lock_s": null,
+        "max_postcontact_distance_m": 0.03594967139094827,
+        "peak_contact_normal_N": 15.372036094306132,
+        "peak_integrated_step_contact_N": 15.372720237066694,
+        "peak_static_capture_N": 0.0,
+        "peak_resultant_capture_N": 0.0,
+        "max_weld_anchor_error_m": null,
+        "max_weld_attitude_error_rad": null,
+        "peak_internal_weld_force_N": 0.0,
+        "peak_internal_weld_couple_Nm": 0.0,
+        "motor_saturation_fraction": 0.0,
+        "peak_motor_command_slew_Nps": 45.000000000000036,
+        "capture_failure_count": 1,
+        "collision_count": 1,
+        "attempt_count": 1,
+        "completed_steps": 900
+      },
+      "exception": null,
+      "early_termination": false,
+      "realized_plant": {
+        "mass_kg": [
+          1.0170669407962525,
+          0.9915224924047124
+        ],
+        "inertia_kg_m2": [
+          [
+            0.00803345566490696,
+            0.0084497757406204,
+            0.014172644889993704
+          ],
+          [
+            0.007977248526847015,
+            0.008224543225389383,
+            0.014637452027462222
+          ]
+        ],
+        "pad_solref": [
+          [
+            0.010948278335211517,
+            1.0007803492789997
+          ],
+          [
+            0.010948278335211517,
+            1.0007803492789997
+          ]
+        ],
+        "capture_stiffness_Npm": 161.9817724235453,
+        "capture_damping_Nspm": 8.261460077046785,
+        "motor_tau_s": 0.025823926530248596
+      }
+    },
+    {
+      "id": "7301_reject_00",
+      "seed": 7301,
+      "category": "reject",
+      "expectation": "no_lock",
+      "metrics": {
+        "capture_success": false,
+        "false_lock_count": 0,
+        "first_collision_invalid": true,
+        "continuous_dwell_violation_samples": 0,
+        "first_contact_time_s": 0.012,
+        "dock_time_s": null,
+        "contact_to_lock_s": null,
+        "max_postcontact_distance_m": 0.05188069674374233,
+        "peak_contact_normal_N": 16.476521415251604,
+        "peak_integrated_step_contact_N": 16.47140385930055,
+        "peak_static_capture_N": 0.0,
+        "peak_resultant_capture_N": 0.0,
+        "max_weld_anchor_error_m": null,
+        "max_weld_attitude_error_rad": null,
+        "peak_internal_weld_force_N": 0.0,
+        "peak_internal_weld_couple_Nm": 0.0,
+        "motor_saturation_fraction": 0.0,
+        "peak_motor_command_slew_Nps": 45.000000000000036,
+        "capture_failure_count": 1,
+        "collision_count": 1,
+        "attempt_count": 1,
+        "completed_steps": 900
+      },
+      "exception": null,
+      "early_termination": false,
+      "realized_plant": {
+        "mass_kg": [
+          0.9877617893131179,
+          1.0117443216541397
+        ],
+        "inertia_kg_m2": [
+          [
+            0.008252652585451692,
+            0.008462972868664417,
+            0.01462286188505423
+          ],
+          [
+            0.008430574655228416,
+            0.008191122016576244,
+            0.014798322723449902
+          ]
+        ],
+        "pad_solref": [
+          [
+            0.012147619957252364,
+            1.0811865130106115
+          ],
+          [
+            0.012147619957252364,
+            1.0811865130106115
+          ]
+        ],
+        "capture_stiffness_Npm": 147.930123890833,
+        "capture_damping_Nspm": 8.976020939507434,
+        "motor_tau_s": 0.028872695152110127
+      }
+    },
+    {
+      "id": "7301_reject_01",
+      "seed": 7301,
+      "category": "reject",
+      "expectation": "no_lock",
+      "metrics": {
+        "capture_success": false,
+        "false_lock_count": 0,
+        "first_collision_invalid": true,
+        "continuous_dwell_violation_samples": 0,
+        "first_contact_time_s": 0.006,
+        "dock_time_s": null,
+        "contact_to_lock_s": null,
+        "max_postcontact_distance_m": 0.11522582373747828,
+        "peak_contact_normal_N": 29.347598978268753,
+        "peak_integrated_step_contact_N": 29.347599909482234,
+        "peak_static_capture_N": 0.0,
+        "peak_resultant_capture_N": 0.0,
+        "max_weld_anchor_error_m": null,
+        "max_weld_attitude_error_rad": null,
+        "peak_internal_weld_force_N": 0.0,
+        "peak_internal_weld_couple_Nm": 0.0,
+        "motor_saturation_fraction": 0.0,
+        "peak_motor_command_slew_Nps": 45.000000000000114,
+        "capture_failure_count": 1,
+        "collision_count": 1,
+        "attempt_count": 1,
+        "completed_steps": 900
+      },
+      "exception": null,
+      "early_termination": false,
+      "realized_plant": {
+        "mass_kg": [
+          1.0260647497255357,
+          0.9858686784108266
+        ],
+        "inertia_kg_m2": [
+          [
+            0.00836043055686536,
+            0.008100466107332293,
+            0.014826139686068022
+          ],
+          [
+            0.007957310261915878,
+            0.008444024141776538,
+            0.014085306345811252
+          ]
+        ],
+        "pad_solref": [
+          [
+            0.012099949952987889,
+            1.0845182994615263
+          ],
+          [
+            0.012099949952987889,
+            1.0845182994615263
+          ]
+        ],
+        "capture_stiffness_Npm": 118.2460996584086,
+        "capture_damping_Nspm": 9.017125576839678,
+        "motor_tau_s": 0.02586698580169827
+      }
+    },
+    {
+      "id": "7301_reject_02",
+      "seed": 7301,
+      "category": "reject",
+      "expectation": "no_lock",
+      "metrics": {
+        "capture_success": false,
+        "false_lock_count": 0,
+        "first_collision_invalid": true,
+        "continuous_dwell_violation_samples": 0,
+        "first_contact_time_s": 0.008,
+        "dock_time_s": null,
+        "contact_to_lock_s": null,
+        "max_postcontact_distance_m": 0.05260434111683542,
+        "peak_contact_normal_N": 39.73064136128002,
+        "peak_integrated_step_contact_N": 39.73059617361167,
+        "peak_static_capture_N": 0.0,
+        "peak_resultant_capture_N": 0.0,
+        "max_weld_anchor_error_m": null,
+        "max_weld_attitude_error_rad": null,
+        "peak_internal_weld_force_N": 0.0,
+        "peak_internal_weld_couple_Nm": 0.0,
+        "motor_saturation_fraction": 0.0,
+        "peak_motor_command_slew_Nps": 45.000000000000036,
+        "capture_failure_count": 1,
+        "collision_count": 1,
+        "attempt_count": 1,
+        "completed_steps": 900
+      },
+      "exception": null,
+      "early_termination": false,
+      "realized_plant": {
+        "mass_kg": [
+          1.0202145319279718,
+          1.022295133564535
+        ],
+        "inertia_kg_m2": [
+          [
+            0.007927928534700921,
+            0.007947794584335113,
+            0.014460988359931223
+          ],
+          [
+            0.008194315566751854,
+            0.008359118253973041,
+            0.014989965563260479
+          ]
+        ],
+        "pad_solref": [
+          [
+            0.010581438260422744,
+            1.1062364203184367
+          ],
+          [
+            0.010581438260422744,
+            1.1062364203184367
+          ]
+        ],
+        "capture_stiffness_Npm": 155.73837196176194,
+        "capture_damping_Nspm": 8.22132095238175,
+        "motor_tau_s": 0.02641682592388431
+      }
+    },
+    {
+      "id": "7301_reject_03",
+      "seed": 7301,
+      "category": "reject",
+      "expectation": "no_lock",
+      "metrics": {
+        "capture_success": false,
+        "false_lock_count": 0,
+        "first_collision_invalid": true,
+        "continuous_dwell_violation_samples": 0,
+        "first_contact_time_s": 0.008,
+        "dock_time_s": null,
+        "contact_to_lock_s": null,
+        "max_postcontact_distance_m": 0.06371129973901545,
+        "peak_contact_normal_N": 32.80255844563662,
+        "peak_integrated_step_contact_N": 32.80258445600181,
+        "peak_static_capture_N": 0.0,
+        "peak_resultant_capture_N": 0.0,
+        "max_weld_anchor_error_m": null,
+        "max_weld_attitude_error_rad": null,
+        "peak_internal_weld_force_N": 0.0,
+        "peak_internal_weld_couple_Nm": 0.0,
+        "motor_saturation_fraction": 0.0,
+        "peak_motor_command_slew_Nps": 45.000000000000036,
+        "capture_failure_count": 1,
+        "collision_count": 1,
+        "attempt_count": 1,
+        "completed_steps": 900
+      },
+      "exception": null,
+      "early_termination": false,
+      "realized_plant": {
+        "mass_kg": [
+          0.9919403840744574,
+          1.0110631414051028
+        ],
+        "inertia_kg_m2": [
+          [
+            0.00818014323890762,
+            0.008038955509343667,
+            0.014194564932672382
+          ],
+          [
+            0.008173743277181315,
+            0.008157753162024706,
+            0.014455348344545703
+          ]
+        ],
+        "pad_solref": [
+          [
+            0.010766064504152762,
+            1.0868608534783986
+          ],
+          [
+            0.010766064504152762,
+            1.0868608534783986
+          ]
+        ],
+        "capture_stiffness_Npm": 116.3551469431552,
+        "capture_damping_Nspm": 10.938283138868286,
+        "motor_tau_s": 0.029531184272292413
+      }
+    },
+    {
+      "id": "7301_reject_04",
+      "seed": 7301,
+      "category": "reject",
+      "expectation": "no_lock",
+      "metrics": {
+        "capture_success": false,
+        "false_lock_count": 0,
+        "first_collision_invalid": true,
+        "continuous_dwell_violation_samples": 0,
+        "first_contact_time_s": 0.012,
+        "dock_time_s": null,
+        "contact_to_lock_s": null,
+        "max_postcontact_distance_m": 0.060355690261204735,
+        "peak_contact_normal_N": 14.228447919585255,
+        "peak_integrated_step_contact_N": 14.228737126779919,
+        "peak_static_capture_N": 0.0,
+        "peak_resultant_capture_N": 0.0,
+        "max_weld_anchor_error_m": null,
+        "max_weld_attitude_error_rad": null,
+        "peak_internal_weld_force_N": 0.0,
+        "peak_internal_weld_couple_Nm": 0.0,
+        "motor_saturation_fraction": 0.0,
+        "peak_motor_command_slew_Nps": 45.0,
+        "capture_failure_count": 1,
+        "collision_count": 1,
+        "attempt_count": 1,
+        "completed_steps": 900
+      },
+      "exception": null,
+      "early_termination": false,
+      "realized_plant": {
+        "mass_kg": [
+          0.9749996438440091,
+          0.994230381305568
+        ],
+        "inertia_kg_m2": [
+          [
+            0.008379482220477305,
+            0.008512458597146895,
+            0.014047960344557568
+          ],
+          [
+            0.008500474256368441,
+            0.008488131412080071,
+            0.014453664430566332
+          ]
+        ],
+        "pad_solref": [
+          [
+            0.011113369207294112,
+            1.0489877954326738
+          ],
+          [
+            0.011113369207294112,
+            1.0489877954326738
+          ]
+        ],
+        "capture_stiffness_Npm": 150.35379233994942,
+        "capture_damping_Nspm": 10.572683440842926,
+        "motor_tau_s": 0.031160792039685706
+      }
+    },
+    {
+      "id": "7301_reject_05",
+      "seed": 7301,
+      "category": "reject",
+      "expectation": "no_lock",
+      "metrics": {
+        "capture_success": false,
+        "false_lock_count": 0,
+        "first_collision_invalid": true,
+        "continuous_dwell_violation_samples": 0,
+        "first_contact_time_s": 0.016,
+        "dock_time_s": null,
+        "contact_to_lock_s": null,
+        "max_postcontact_distance_m": 0.07147335243408715,
+        "peak_contact_normal_N": 13.793106039597964,
+        "peak_integrated_step_contact_N": 13.793181091445515,
+        "peak_static_capture_N": 0.0,
+        "peak_resultant_capture_N": 0.0,
+        "max_weld_anchor_error_m": null,
+        "max_weld_attitude_error_rad": null,
+        "peak_internal_weld_force_N": 0.0,
+        "peak_internal_weld_couple_Nm": 0.0,
+        "motor_saturation_fraction": 0.0,
+        "peak_motor_command_slew_Nps": 45.000000000000036,
+        "capture_failure_count": 1,
+        "collision_count": 1,
+        "attempt_count": 1,
+        "completed_steps": 900
+      },
+      "exception": null,
+      "early_termination": false,
+      "realized_plant": {
+        "mass_kg": [
+          1.0018727850899805,
+          1.0214478952869819
+        ],
+        "inertia_kg_m2": [
+          [
+            0.008112641992552627,
+            0.008405823775084734,
+            0.014416887780015082
+          ],
+          [
+            0.007933159487791993,
+            0.00833702401683858,
+            0.01491537251709799
+          ]
+        ],
+        "pad_solref": [
+          [
+            0.011900697156214677,
+            0.9778875864080931
+          ],
+          [
+            0.011900697156214677,
+            0.9778875864080931
+          ]
+        ],
+        "capture_stiffness_Npm": 163.54081584982788,
+        "capture_damping_Nspm": 8.043753894477298,
+        "motor_tau_s": 0.02512520431860593
+      }
+    },
+    {
+      "id": "nominal",
+      "seed": null,
+      "category": "targeted",
+      "expectation": "inspect_physical_history",
+      "metrics": {
+        "capture_success": true,
+        "false_lock_count": 0,
+        "first_collision_invalid": true,
+        "continuous_dwell_violation_samples": 0,
+        "first_contact_time_s": 2.721999999999922,
+        "dock_time_s": 3.055999999999885,
+        "contact_to_lock_s": 0.3339999999999632,
+        "max_postcontact_distance_m": 0.0026110405904731585,
+        "peak_contact_normal_N": 31.53635653810903,
+        "peak_integrated_step_contact_N": 31.53205620512952,
+        "peak_static_capture_N": 0.7882929574260481,
+        "peak_resultant_capture_N": 1.0394882431108512,
+        "max_weld_anchor_error_m": 1.0486770015122808e-05,
+        "max_weld_attitude_error_rad": 0.0034505692207941474,
+        "peak_internal_weld_force_N": 0.10893270762774651,
+        "peak_internal_weld_couple_Nm": 0.01682839625174945,
+        "motor_saturation_fraction": 0.0,
+        "peak_motor_command_slew_Nps": 19.038788420225462,
+        "capture_failure_count": 0,
+        "collision_count": 3,
+        "attempt_count": 1,
+        "completed_steps": 5000
+      },
+      "exception": null,
+      "early_termination": false,
+      "realized_plant": {
+        "mass_kg": [
+          1.0,
+          1.0
+        ],
+        "inertia_kg_m2": [
+          [
+            0.0082,
+            0.0082,
+            0.0145
+          ],
+          [
+            0.0082,
+            0.0082,
+            0.0145
+          ]
+        ],
+        "pad_solref": [
+          [
+            0.012,
+            1.0
+          ],
+          [
+            0.012,
+            1.0
+          ]
+        ],
+        "capture_stiffness_Npm": 140.0,
+        "capture_damping_Nspm": 10.0,
+        "motor_tau_s": 0.025
+      }
+    },
+    {
+      "id": "target_gap_30mm",
+      "seed": null,
+      "category": "targeted",
+      "expectation": "inspect_physical_history",
+      "metrics": {
+        "capture_success": true,
+        "false_lock_count": 0,
+        "first_collision_invalid": true,
+        "continuous_dwell_violation_samples": 0,
+        "first_contact_time_s": 2.8239999999999106,
+        "dock_time_s": 3.129999999999877,
+        "contact_to_lock_s": 0.3059999999999663,
+        "max_postcontact_distance_m": 0.0025188770629995024,
+        "peak_contact_normal_N": 20.831331114565398,
+        "peak_integrated_step_contact_N": 20.832074935842392,
+        "peak_static_capture_N": 0.7567835473358376,
+        "peak_resultant_capture_N": 0.918273288619524,
+        "max_weld_anchor_error_m": 9.68763862862209e-06,
+        "max_weld_attitude_error_rad": 0.0036146601333201947,
+        "peak_internal_weld_force_N": 0.15114302069332874,
+        "peak_internal_weld_couple_Nm": 0.017790992680966546,
+        "motor_saturation_fraction": 0.0,
+        "peak_motor_command_slew_Nps": 16.998847870248692,
+        "capture_failure_count": 0,
+        "collision_count": 2,
+        "attempt_count": 1,
+        "completed_steps": 3000
+      },
+      "exception": null,
+      "early_termination": false,
+      "realized_plant": {
+        "mass_kg": [
+          1.0,
+          1.0
+        ],
+        "inertia_kg_m2": [
+          [
+            0.0082,
+            0.0082,
+            0.0145
+          ],
+          [
+            0.0082,
+            0.0082,
+            0.0145
+          ]
+        ],
+        "pad_solref": [
+          [
+            0.012,
+            1.0
+          ],
+          [
+            0.012,
+            1.0
+          ]
+        ],
+        "capture_stiffness_Npm": 140.0,
+        "capture_damping_Nspm": 10.0,
+        "motor_tau_s": 0.025
+      }
+    },
+    {
+      "id": "miss_60mm",
+      "seed": null,
+      "category": "targeted",
+      "expectation": "inspect_physical_history",
+      "metrics": {
+        "capture_success": false,
+        "false_lock_count": 0,
+        "first_collision_invalid": null,
+        "continuous_dwell_violation_samples": 0,
+        "first_contact_time_s": null,
+        "dock_time_s": null,
+        "contact_to_lock_s": null,
+        "max_postcontact_distance_m": null,
+        "peak_contact_normal_N": 0.0,
+        "peak_integrated_step_contact_N": 0.0,
+        "peak_static_capture_N": 0.0,
+        "peak_resultant_capture_N": 0.0,
+        "max_weld_anchor_error_m": null,
+        "max_weld_attitude_error_rad": null,
+        "peak_internal_weld_force_N": 0.0,
+        "peak_internal_weld_couple_Nm": 0.0,
+        "motor_saturation_fraction": 0.0,
+        "peak_motor_command_slew_Nps": 0.7500956487444803,
+        "capture_failure_count": 0,
+        "collision_count": 0,
+        "attempt_count": 0,
+        "completed_steps": 3000
+      },
+      "exception": null,
+      "early_termination": false,
+      "realized_plant": {
+        "mass_kg": [
+          1.0,
+          1.0
+        ],
+        "inertia_kg_m2": [
+          [
+            0.0082,
+            0.0082,
+            0.0145
+          ],
+          [
+            0.0082,
+            0.0082,
+            0.0145
+          ]
+        ],
+        "pad_solref": [
+          [
+            0.012,
+            1.0
+          ],
+          [
+            0.012,
+            1.0
+          ]
+        ],
+        "capture_stiffness_Npm": 140.0,
+        "capture_damping_Nspm": 10.0,
+        "motor_tau_s": 0.025
+      }
+    },
+    {
+      "id": "high_speed_collision",
+      "seed": null,
+      "category": "targeted",
+      "expectation": "inspect_physical_history",
+      "metrics": {
+        "capture_success": true,
+        "false_lock_count": 0,
+        "first_collision_invalid": true,
+        "continuous_dwell_violation_samples": 0,
+        "first_contact_time_s": 0.008,
+        "dock_time_s": 0.08600000000000006,
+        "contact_to_lock_s": 0.07800000000000007,
+        "max_postcontact_distance_m": 0.006781845037654726,
+        "peak_contact_normal_N": 148.62851866603793,
+        "peak_integrated_step_contact_N": 148.62851562448353,
+        "peak_static_capture_N": 0.84,
+        "peak_resultant_capture_N": 2.9999739735105857,
+        "max_weld_anchor_error_m": 4.64002356322873e-05,
+        "max_weld_attitude_error_rad": 0.0017234835670197053,
+        "peak_internal_weld_force_N": 0.8323987260775864,
+        "peak_internal_weld_couple_Nm": 0.007413053270858974,
+        "motor_saturation_fraction": 0.0,
+        "peak_motor_command_slew_Nps": 45.0,
+        "capture_failure_count": 0,
+        "collision_count": 1,
+        "attempt_count": 1,
+        "completed_steps": 500
+      },
+      "exception": null,
+      "early_termination": false,
+      "realized_plant": {
+        "mass_kg": [
+          1.0,
+          1.0
+        ],
+        "inertia_kg_m2": [
+          [
+            0.0082,
+            0.0082,
+            0.0145
+          ],
+          [
+            0.0082,
+            0.0082,
+            0.0145
+          ]
+        ],
+        "pad_solref": [
+          [
+            0.012,
+            1.0
+          ],
+          [
+            0.012,
+            1.0
+          ]
+        ],
+        "capture_stiffness_Npm": 140.0,
+        "capture_damping_Nspm": 10.0,
+        "motor_tau_s": 0.025
+      }
+    },
+    {
+      "id": "high_speed_failure",
+      "seed": null,
+      "category": "targeted",
+      "expectation": "inspect_physical_history",
+      "metrics": {
+        "capture_success": false,
+        "false_lock_count": 0,
+        "first_collision_invalid": true,
+        "continuous_dwell_violation_samples": 0,
+        "first_contact_time_s": 0.004,
+        "dock_time_s": null,
+        "contact_to_lock_s": null,
+        "max_postcontact_distance_m": 0.0629077552328487,
+        "peak_contact_normal_N": 367.9652840001686,
+        "peak_integrated_step_contact_N": 367.9652836827946,
+        "peak_static_capture_N": 0.84,
+        "peak_resultant_capture_N": 6.0,
+        "max_weld_anchor_error_m": null,
+        "max_weld_attitude_error_rad": null,
+        "peak_internal_weld_force_N": 0.0,
+        "peak_internal_weld_couple_Nm": 0.0,
+        "motor_saturation_fraction": 0.0,
+        "peak_motor_command_slew_Nps": 45.0,
+        "capture_failure_count": 2,
+        "collision_count": 1,
+        "attempt_count": 2,
+        "completed_steps": 500
+      },
+      "exception": null,
+      "early_termination": false,
+      "realized_plant": {
+        "mass_kg": [
+          1.0,
+          1.0
+        ],
+        "inertia_kg_m2": [
+          [
+            0.0082,
+            0.0082,
+            0.0145
+          ],
+          [
+            0.0082,
+            0.0082,
+            0.0145
+          ]
+        ],
+        "pad_solref": [
+          [
+            0.012,
+            1.0
+          ],
+          [
+            0.012,
+            1.0
+          ]
+        ],
+        "capture_stiffness_Npm": 140.0,
+        "capture_damping_Nspm": 10.0,
+        "motor_tau_s": 0.025
+      }
+    },
+    {
+      "id": "high_angular_collision",
+      "seed": null,
+      "category": "targeted",
+      "expectation": "inspect_physical_history",
+      "metrics": {
+        "capture_success": false,
+        "false_lock_count": 0,
+        "first_collision_invalid": true,
+        "continuous_dwell_violation_samples": 0,
+        "first_contact_time_s": 0.0,
+        "dock_time_s": null,
+        "contact_to_lock_s": null,
+        "max_postcontact_distance_m": 0.12292179520795304,
+        "peak_contact_normal_N": 11.780655541083815,
+        "peak_integrated_step_contact_N": 17.99964073548746,
+        "peak_static_capture_N": 0.84,
+        "peak_resultant_capture_N": 3.064066229031497,
+        "max_weld_anchor_error_m": null,
+        "max_weld_attitude_error_rad": null,
+        "peak_internal_weld_force_N": 0.0,
+        "peak_internal_weld_couple_Nm": 0.0,
+        "motor_saturation_fraction": 0.1325,
+        "peak_motor_command_slew_Nps": 45.000000000000114,
+        "capture_failure_count": 1,
+        "collision_count": 1,
+        "attempt_count": 1,
+        "completed_steps": 500
+      },
+      "exception": null,
+      "early_termination": false,
+      "realized_plant": {
+        "mass_kg": [
+          1.0,
+          1.0
+        ],
+        "inertia_kg_m2": [
+          [
+            0.0082,
+            0.0082,
+            0.0145
+          ],
+          [
+            0.0082,
+            0.0082,
+            0.0145
+          ]
+        ],
+        "pad_solref": [
+          [
+            0.012,
+            1.0
+          ],
+          [
+            0.012,
+            1.0
+          ]
+        ],
+        "capture_stiffness_Npm": 140.0,
+        "capture_damping_Nspm": 10.0,
+        "motor_tau_s": 0.025
+      }
+    },
+    {
+      "id": "edge_contact",
+      "seed": null,
+      "category": "targeted",
+      "expectation": "inspect_physical_history",
+      "metrics": {
+        "capture_success": false,
+        "false_lock_count": 0,
+        "first_collision_invalid": true,
+        "continuous_dwell_violation_samples": 0,
+        "first_contact_time_s": 0.0,
+        "dock_time_s": null,
+        "contact_to_lock_s": null,
+        "max_postcontact_distance_m": 0.038177016371236265,
+        "peak_contact_normal_N": 0.42501394764594175,
+        "peak_integrated_step_contact_N": 0.6737629674464987,
+        "peak_static_capture_N": 0.0,
+        "peak_resultant_capture_N": 0.0,
+        "max_weld_anchor_error_m": null,
+        "max_weld_attitude_error_rad": null,
+        "peak_internal_weld_force_N": 0.0,
+        "peak_internal_weld_couple_Nm": 0.0,
+        "motor_saturation_fraction": 0.0,
+        "peak_motor_command_slew_Nps": 0.7409862186092594,
+        "capture_failure_count": 1,
+        "collision_count": 1,
+        "attempt_count": 1,
+        "completed_steps": 500
+      },
+      "exception": null,
+      "early_termination": false,
+      "realized_plant": {
+        "mass_kg": [
+          1.0,
+          1.0
+        ],
+        "inertia_kg_m2": [
+          [
+            0.0082,
+            0.0082,
+            0.0145
+          ],
+          [
+            0.0082,
+            0.0082,
+            0.0145
+          ]
+        ],
+        "pad_solref": [
+          [
+            0.012,
+            1.0
+          ],
+          [
+            0.012,
+            1.0
+          ]
+        ],
+        "capture_stiffness_Npm": 140.0,
+        "capture_damping_Nspm": 10.0,
+        "motor_tau_s": 0.025
+      }
+    }
+  ],
+  "independent": {
+    "damping_only": {
+      "dt_s": 0.0005,
+      "initial_kinetic_J": 0.0016402300000000003,
+      "final_kinetic_J": 0.001022455110422238,
+      "max_linear_momentum_error": 2.7755575615628914e-17,
+      "max_angular_momentum_error": 2.0134020860195053e-09,
+      "initial_total_energy_J": 0.004261264521921091,
+      "max_energy_accounting_excess_J": 3.2355064159559146e-06,
+      "dissipated_J": 0.000621010395993718,
+      "max_damping_power_W": -0.00032582450758368673
+    },
+    "tensile_capture": {
+      "dt_s": 0.0005,
+      "initial_kinetic_J": 0.0016402300000000003,
+      "final_kinetic_J": 0.0023920417537766207,
+      "max_linear_momentum_error": 6.245004513516506e-17,
+      "max_angular_momentum_error": 9.923355021479491e-09,
+      "initial_total_energy_J": 0.010880230000000001,
+      "max_energy_accounting_excess_J": -1.2200238045691203e-07,
+      "dissipated_J": 0.002333619275759288,
+      "max_damping_power_W": -0.00019367847357586762
+    },
+    "tensile_refined": {
+      "dt_s": 0.00025,
+      "initial_kinetic_J": 0.0016402300000000003,
+      "final_kinetic_J": 0.0023872296237559573,
+      "max_linear_momentum_error": 5.551115123125783e-17,
+      "max_angular_momentum_error": 4.937351833064644e-09,
+      "initial_total_energy_J": 0.010880230000000001,
+      "max_energy_accounting_excess_J": -3.051791091189526e-08,
+      "dissipated_J": 0.00232782827735993,
+      "max_damping_power_W": -0.00019299365903077413
+    }
+  }
+}

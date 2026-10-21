@@ -321,6 +321,31 @@ void test_hybrid_fsm() {
     std::cout << "[PASS] test_hybrid_fsm\n";
 }
 
+void test_capture_dwell_is_continuous_and_rejects_fast_contacts() {
+    DockingParams p; p.lin_vel_tol=.10; p.dwell_time=.03;
+    HybridFSM fsm(p); fsm.command_approach();
+    RigidBodyState a,b; a.pos={0,-.22,1}; b.pos={0,.22,1};
+    double t=0.;
+    auto tick=[&](bool contact=true) {
+        t+=.005; fsm.set_capture_contact(contact); return fsm.update(a,b,t,.005);
+    };
+    tick(); tick();
+    b.vel={0,.8,0};
+    for (int i=0;i<20;++i) assert(tick()==FlightMode::ALIGN);
+    b.vel={0,0,0}; tick();
+    for (int i=0;i<4;++i) tick();
+    assert(tick(false)==FlightMode::ALIGN);
+    tick();
+    for (int i=0;i<4;++i) tick();
+    b.vel={0,.11,0}; assert(tick()==FlightMode::ALIGN);
+    b.vel={0,0,0}; tick();
+    for (int i=0;i<5;++i) assert(tick()==FlightMode::CAPTURE_PENDING);
+    assert(tick()==FlightMode::CONNECTED);
+    fsm.command_abort(); assert(tick()==FlightMode::ABORT);
+    fsm.reset(); assert(fsm.current_mode()==FlightMode::FREE);
+    std::cout << "[PASS] test_capture_dwell_is_continuous_and_rejects_fast_contacts\n";
+}
+
 void test_safety_monitor() {
     SafetyMonitor sm;
     RigidBodyState safe_state;
@@ -348,6 +373,7 @@ int main() {
     test_tilted_capture_rotor_axes();
     test_small_capture_tilt_does_not_create_control_preload();
     test_hybrid_fsm();
+    test_capture_dwell_is_continuous_and_rejects_fast_contacts();
     test_safety_monitor();
     std::cout << "All C++ Unit Tests Passed Successfully!\n";
     return 0;

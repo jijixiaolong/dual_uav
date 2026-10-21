@@ -29,6 +29,8 @@ def record_state(runner, motor_cmd, nominal, compensation, control_updated, cont
     row['phase'] = phase[row['mode_name']]
     if row['mode_name'] == 'FREE' and runner.release_event_time is not None:
         row['phase'] = 'SEPARATED'
+    row['release_transition_time_s'] = runner.release_transition_time
+    row['physical_release_observed'] = int(runner.release_event_time is not None)
     row['aggregate_controller_active'] = int(runner.aggregate_control_active)
     row['control_delay_s'] = float(getattr(runner,'research_options',{}).get('control_delay_s',0.))
     row['motor_tau_s'] = float(world.motor_tau)
@@ -84,6 +86,8 @@ def record_state(runner, motor_cmd, nominal, compensation, control_updated, cont
     rel = latch.relative_state()
     for key in ('position','velocity','angular_velocity_world'):
         add_xyz(row,f'connector_relative_{key}',rel[key])
+    row['relative_normal_velocity_mps'] = float(np.dot(rel['velocity'],world.rotation(1)[:,1]))
+    row['relative_angular_speed_radps'] = float(np.linalg.norm(rel['angular_velocity_world']))
     row['relative_attitude_rad'] = rel['angle_rad']
     row['rel_dist'] = float(np.linalg.norm(rel['position']))
     for c,x in zip('wxyz',rel['quaternion']):
@@ -117,9 +121,34 @@ def record_state(runner, motor_cmd, nominal, compensation, control_updated, cont
         anchor = world.data.xpos[b]+world.rotation(i)@anchor_local
         add_xyz(row,f'weld_q{i}_anchor_world_m',anchor)
         add_xyz(row,f'weld_q{i}_couple_at_anchor_world_Nm',torque-np.cross(anchor-world.data.xipos[b],qforce[a:a+3]))
+    eq = world.model.eq_data[world.weld_eq_id]
+    a1 = world.data.xpos[world.q1_body_id]+world.rotation(1)@eq[3:6]
+    a2 = world.data.xpos[world.q2_body_id]+world.rotation(2)@eq[:3]
+    row['weld_anchor_error_m'] = float(np.linalg.norm(a2-a1)) if world.is_weld_active() else None
+    Rref = np.zeros(9)
+    mujoco.mju_quat2Mat(Rref,eq[6:10])
+    Rerr = Rref.reshape(3,3).T@world.rotation(1).T@world.rotation(2)
+    row['weld_attitude_error_rad'] = float(np.arccos(np.clip((np.trace(Rerr)-1)/2,-1,1))) if world.is_weld_active() else None
     row['spring_force_N'] = latch.preload_force
     row['spring_energy_J'] = latch.spring_energy()
-    row['capture_force_N'] = getattr(latch, 'last_capture_force', 0.0)
+    # Current state evaluation and previous integration-step load are distinct.
+    latch.capture_force_generalized()
+    row['capture_force_N'] = latch.last_capture_force
+    for key in ('static_force_N','damping_force_N','resultant_force_N','axial_velocity_mps','damping_power_W','potential_J'):
+        row['capture_'+key] = latch.capture_diagnostics[key]
+        row['capture_step_'+key] = latch.last_capture_diagnostics[key]
+    row['capture_transferred_energy_J'] = latch.capture_transferred_energy_J
+    row['capture_reservoir_energy_J'] = latch.capture_reservoir_energy_J
+    row['capture_reservoir_initial_J'] = latch.capture_reservoir_initial_J
+    row['capture_returned_energy_J'] = latch.capture_returned_energy_J
+    row['capture_discarded_energy_J'] = latch.capture_discarded_energy_J
+    row['capture_dissipated_energy_J'] = latch.capture_dissipated_energy_J
+    row['contact_actual'] = int(latch.current_contact)
+    row['contact_state'] = latch.contact_state()
+    row['contact_held'] = int(latch.contact_state() == 'CONTACT_HOLD')
+    row['capture_attempt_id'] = latch.attempt_id
+    row['collision_index'] = latch.collision_index
+    row['connector_pair_collision_active'] = int(latch.collision_filter.active)
     row['capture_active'] = int(getattr(latch, 'is_captured', False))
     for k in range(8):
         row[f'motor{k}_nominal_N'] = float(nominal[k])
