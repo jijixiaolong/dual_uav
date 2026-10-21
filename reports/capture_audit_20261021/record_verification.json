@@ -717,6 +717,6 @@
   ],
   "inputs_sha256": {
     "capture_traces.csv.gz": "58d26396060b5cc61da06931f50c5640269605ee86fda825d8a3823bd8e24aa5",
-    "events.json": "bc6b9f358baaf77b18ef81c65cd059870443bd822f4f7e9d283419ef1a60b43b"
+    "events.json.gz": "b31efee40982af862ffdb2c40d2da4047d8085fcf6b2150aed90b8b6765a3278"
   }
 }

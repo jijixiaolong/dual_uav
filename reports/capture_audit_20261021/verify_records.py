@@ -17,7 +17,7 @@ from analysis_tools.capture_trials import row_eligible,snapshot_eligible
 def verify():
     directory=Path(__file__).resolve().parent
     data=directory/'data'
-    events=json.loads((data/'events.json').read_text())
+    events=json.loads(gzip.decompress((data/'events.json.gz').read_bytes()))
     criteria=yaml.safe_load((ROOT/'configs/docking_mechanism.yaml').read_text())['docking']['latch_criteria']
     text_fields={'case_id','category','seed','mode_name','phase','contact_state'}
     results=[]
@@ -47,7 +47,7 @@ def verify():
                 passed=mismatch==0 and bad_locks==0 and jump==0. and cadence))
     output=dict(passed=all(r['passed'] for r in results),cases=len(results),rows=sum(r['rows'] for r in results),
         events=sum(r['events'] for r in results),results=results,
-        inputs_sha256={p.name:hashlib.sha256(p.read_bytes()).hexdigest() for p in (data/'capture_traces.csv.gz',data/'events.json')})
+        inputs_sha256={p.name:hashlib.sha256(p.read_bytes()).hexdigest() for p in (data/'capture_traces.csv.gz',data/'events.json.gz')})
     (directory/'record_verification.json').write_text(json.dumps(output,indent=2)+'\n')
     print(json.dumps({k:v for k,v in output.items() if k!='results'},indent=2))
     if not output['passed']:raise SystemExit(1)

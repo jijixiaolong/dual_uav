@@ -1,0 +1,5 @@
+
+# Retained simulation evidence is generated data, separate from source review.
+reports/capture_audit_20261021/data/** linguist-generated=true
+reports/capture_audit_20261021/*.json linguist-generated=true
+reports/capture_audit_20261021/*.xml linguist-generated=true
