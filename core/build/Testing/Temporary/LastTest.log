@@ -1,0 +1,58 @@
+Start testing: Oct 21 18:59 CST
+----------------------------------------------------------
+1/2 Testing: docking_core_tests
+1/2 Test: docking_core_tests
+Command: "/home/ubuntu22/Downloads/dual_quad_codex_sim/core/build/docking_core_tests"
+Directory: /home/ubuntu22/Downloads/dual_quad_codex_sim/core/build
+"docking_core_tests" start time: Oct 21 18:59 CST
+Output:
+----------------------------------------------------------
+Running Core C++ Unit Tests...
+[PASS] test_math_foundation
+[PASS] test_geometric_se3_hover
+[PASS] test_geometric_attitude_error_scale
+[PASS] test_single_quad_allocator
+[PASS] test_connected_allocator_and_parallel_axis
+[PASS] test_connected_actual_capture_geometry
+[PASS] test_feasible_wrench_reconstruction_and_redistribution (200 feasible commands)
+[PASS] test_allocator_limits_slew_and_handover
+[PASS] test_tilted_capture_rotor_axes
+[PASS] test_small_capture_tilt_does_not_create_control_preload
+[PASS] test_hybrid_fsm
+[PASS] test_safety_monitor
+All C++ Unit Tests Passed Successfully!
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"docking_core_tests" end time: Oct 21 18:59 CST
+"docking_core_tests" time elapsed: 00:00:00
+----------------------------------------------------------
+
+2/2 Testing: docking_research_compensation_tests
+2/2 Test: docking_research_compensation_tests
+Command: "/home/ubuntu22/Downloads/dual_quad_codex_sim/core/build/docking_research_compensation_tests"
+Directory: /home/ubuntu22/Downloads/dual_quad_codex_sim/core/build
+"docking_research_compensation_tests" start time: Oct 21 18:59 CST
+Output:
+----------------------------------------------------------
+[PASS] feature_schema_exact32_version_event_finiteness
+[PASS] finite_window_basis_zero_value_and_derivative_at_endpoints
+[PASS] feedforward_motor_order_two_zero_collectives_and_common_bound
+[PASS] independent_contact_dock_undock_and_causal_coefficient_snapshot
+[PASS] feedforward_causal_timing_reset_and_invalid_inputs
+[PASS] observer_known_disturbance_variable_dt_actual_input_and_cancellation_sign
+[PASS] observer_no_disturbance_offdiagonal_inertia_and_gyroscopic_term
+[PASS] observer_persistent_body_axes_and_rotation_equivariance
+[PASS] observer_torque_norm_bound_event_reset_and_inertia_handover
+[PASS] observer_invalid_dt_measurement_settings_and_inertia_rejected
+All 10 research compensation tests passed.
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"docking_research_compensation_tests" end time: Oct 21 18:59 CST
+"docking_research_compensation_tests" time elapsed: 00:00:00
+----------------------------------------------------------
+
+End testing: Oct 21 18:59 CST

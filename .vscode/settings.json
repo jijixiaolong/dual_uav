@@ -1,0 +1,4 @@
+{
+    "ros.distro": "humble",
+    "cmake.sourceDirectory": "/home/ubuntu22/Downloads/dual_quad_codex_sim/core"
+}

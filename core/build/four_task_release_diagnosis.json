@@ -1,0 +1,34 @@
+{
+  "dock_time_s": 4.905999999999682,
+  "release_time_s": 6.109999999999549,
+  "pre_release_actual_motors_N": [
+    2.463207129224377,
+    2.4551576482308364,
+    2.44852203870626,
+    2.4458842535970886,
+    2.4427053097066453,
+    2.4424723554576464,
+    2.4605803899725265,
+    2.454949417188847
+  ],
+  "pre_release_contact_N": 0.3343017782144578,
+  "pre_release_weld_force_N": 0.3612499622103344,
+  "pre_release_q1_rotor_torque_Nm": [
+    0.0028800052440330903,
+    -0.0006505299657846852,
+    0.00017099625764339238
+  ],
+  "pre_release_q2_rotor_torque_Nm": [
+    -0.0036485749230446007,
+    0.0006488858368432493,
+    9.382283252285656e-05
+  ],
+  "q1_release_peak_true_attitude_error_deg": 3.864548180313307,
+  "q1_release_peak_rate_radps": 0.4996965408073235,
+  "q1_tail_position_error_m": 0.0001716158745220859,
+  "q1_tail_velocity_mps": 0.0005064416423779842,
+  "q2_release_peak_true_attitude_error_deg": 3.4203346982245804,
+  "q2_release_peak_rate_radps": 0.4422828024890922,
+  "q2_tail_position_error_m": 0.00020301717479510986,
+  "q2_tail_velocity_mps": 0.0004732428347091076
+}

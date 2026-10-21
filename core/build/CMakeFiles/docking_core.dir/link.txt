@@ -1,0 +1,2 @@
+/usr/bin/ar qc libdocking_core.a CMakeFiles/docking_core.dir/src/geometric_se3.cpp.o CMakeFiles/docking_core.dir/src/allocator.cpp.o CMakeFiles/docking_core.dir/src/fsm.cpp.o CMakeFiles/docking_core.dir/src/compensator.cpp.o CMakeFiles/docking_core.dir/src/research_compensation.cpp.o CMakeFiles/docking_core.dir/src/safety.cpp.o
+/usr/bin/ranlib libdocking_core.a

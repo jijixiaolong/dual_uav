@@ -1,0 +1,30 @@
+# Simulation and benchmark experiment matrix configurations
+experiments:
+  simulation:
+    timestep_s: 0.002      # 500 Hz physics step
+    control_rate_hz: 200   # 200 Hz flight control loop (5 ms)
+    estimator_rate_hz: 200 # 200 Hz simulated Vicon/estimator
+    default_duration_s: 8.0
+    approach_duration_s: 2.2
+    connected_reference_transition_s: 0.8
+    minimum_connected_hold_s: 1.0 # Release requests wait for confirmed connected dwell.
+    separation_duration_s: 1.5
+    calibration_status: simulation_assumption
+
+  scenarios:
+    nominal_hover:
+      q1_start: [0.0, -0.6, 1.0]
+      q2_start: [0.0, 0.6, 1.0]
+      dock_target: [0.0, 0.0, 1.0]
+      dock_time_s: 2.0
+      connected_flight_duration_s: 3.0
+      undock_time_s: 5.0
+      q1_post_undock_target: [0.0, -0.6, 1.0]
+      q2_post_undock_target: [0.0, 0.6, 1.0]
+
+  learning:
+    event_window_s: 1.2    # post-event evaluation horizon
+    basis_functions: 4     # temporal decaying basis count
+    decay_times: [0.08, 0.16, 0.28, 0.45]
+    ridge_lambda: 1.0e-4
+    qp_box_limit_N: 1.5    # max rotor force delta from feedforward

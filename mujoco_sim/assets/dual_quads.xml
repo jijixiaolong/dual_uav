@@ -1,0 +1,107 @@
+<mujoco model="dual_quads_docking">
+  <compiler angle="degree" coordinate="local"/>
+  <option timestep="0.002" gravity="0 0 -9.80665" iterations="100" tolerance="1e-10" solver="Newton" cone="elliptic" jacobian="dense"/>
+
+  <visual>
+    <global offwidth="1280" offheight="720"/>
+    <headlight ambient="0.4 0.4 0.4" diffuse="0.8 0.8 0.8" specular="0.1 0.1 0.1"/>
+  </visual>
+
+  <asset>
+    <texture type="skybox" builtin="gradient" rgb1="0.3 0.5 0.7" rgb2="0.1 0.1 0.2" width="512" height="512"/>
+    <texture name="grid" type="2d" builtin="checker" rgb1="0.8 0.8 0.8" rgb2="0.6 0.6 0.6" width="512" height="512" mark="cross" markrgb="0.2 0.2 0.2"/>
+    <material name="grid_mat" texture="grid" texrepeat="5 5" reflectance="0.2"/>
+    <material name="q1_mat" rgba="0.2 0.4 0.9 1.0" specular="0.5"/>
+    <material name="q2_mat" rgba="0.9 0.3 0.2 1.0" specular="0.5"/>
+    <material name="rotor_mat" rgba="0.1 0.1 0.1 0.8"/>
+    <material name="connector_mat" rgba="0.9 0.8 0.1 1.0"/>
+  </asset>
+
+  <worldbody>
+    <!-- Ground plane -->
+    <geom name="floor" type="plane" size="10 10 0.1" material="grid_mat" friction="1 0.005 0.0001"/>
+
+    <!-- ==================== QUADROTOR 1 (Blue) ==================== -->
+    <body name="quad1" pos="0 -0.6 1.0">
+      <freejoint name="root_q1"/>
+      <inertial pos="0 0 0" mass="1.0" diaginertia="0.0082 0.0082 0.0145"/>
+
+      <!-- Fuselage -->
+      <geom name="q1_body" type="box" size="0.08 0.08 0.03" material="q1_mat"/>
+      <!-- Cross Arms -->
+      <geom name="q1_arm1" type="capsule" fromto="0.120208152801713 0.120208152801713 0 -0.120208152801713 -0.120208152801713 0" size="0.008" material="q1_mat"/>
+      <geom name="q1_arm2" type="capsule" fromto="-0.120208152801713 0.120208152801713 0 0.120208152801713 -0.120208152801713 0" size="0.008" material="q1_mat"/>
+
+      <!-- Rotor Sites & Visual Props -->
+      <site name="q1_rotor0" pos="0.120208152801713 0.120208152801713 0.02"/>
+      <geom name="q1_prop0" type="cylinder" pos="0.120208152801713 0.120208152801713 0.02" size="0.06 0.002" material="rotor_mat" contype="0" conaffinity="0"/>
+
+      <site name="q1_rotor1" pos="-0.120208152801713 0.120208152801713 0.02"/>
+      <geom name="q1_prop1" type="cylinder" pos="-0.120208152801713 0.120208152801713 0.02" size="0.06 0.002" material="rotor_mat" contype="0" conaffinity="0"/>
+
+      <site name="q1_rotor2" pos="-0.120208152801713 -0.120208152801713 0.02"/>
+      <geom name="q1_prop2" type="cylinder" pos="-0.120208152801713 -0.120208152801713 0.02" size="0.06 0.002" material="rotor_mat" contype="0" conaffinity="0"/>
+
+      <site name="q1_rotor3" pos="0.120208152801713 -0.120208152801713 0.02"/>
+      <geom name="q1_prop3" type="cylinder" pos="0.120208152801713 -0.120208152801713 0.02" size="0.06 0.002" material="rotor_mat" contype="0" conaffinity="0"/>
+
+      <!-- Passive contact pad: normal along +Y, surface at site y=0.22. -->
+      <site name="q1_conn_site" pos="0 0.22 0"/>
+      <geom name="q1_conn_mount" type="capsule" fromto="0 0.08 0 0 0.20 0" size="0.006" material="connector_mat"/>
+      <geom name="q1_conn_funnel" type="box" pos="0 0.21 0" size="0.02 0.01 0.02" material="connector_mat" friction="0.8 0.01 0.001" solref="0.012 1"/>
+    </body>
+
+    <!-- ==================== QUADROTOR 2 (Red) ==================== -->
+    <body name="quad2" pos="0 0.6 1.0">
+      <freejoint name="root_q2"/>
+      <inertial pos="0 0 0" mass="1.0" diaginertia="0.0082 0.0082 0.0145"/>
+
+      <!-- Fuselage -->
+      <geom name="q2_body" type="box" size="0.08 0.08 0.03" material="q2_mat"/>
+      <!-- Cross Arms -->
+      <geom name="q2_arm1" type="capsule" fromto="0.120208152801713 0.120208152801713 0 -0.120208152801713 -0.120208152801713 0" size="0.008" material="q2_mat"/>
+      <geom name="q2_arm2" type="capsule" fromto="-0.120208152801713 0.120208152801713 0 0.120208152801713 -0.120208152801713 0" size="0.008" material="q2_mat"/>
+
+      <!-- Rotor Sites & Visual Props -->
+      <site name="q2_rotor0" pos="0.120208152801713 0.120208152801713 0.02"/>
+      <geom name="q2_prop0" type="cylinder" pos="0.120208152801713 0.120208152801713 0.02" size="0.06 0.002" material="rotor_mat" contype="0" conaffinity="0"/>
+
+      <site name="q2_rotor1" pos="-0.120208152801713 0.120208152801713 0.02"/>
+      <geom name="q2_prop1" type="cylinder" pos="-0.120208152801713 0.120208152801713 0.02" size="0.06 0.002" material="rotor_mat" contype="0" conaffinity="0"/>
+
+      <site name="q2_rotor2" pos="-0.120208152801713 -0.120208152801713 0.02"/>
+      <geom name="q2_prop2" type="cylinder" pos="-0.120208152801713 -0.120208152801713 0.02" size="0.06 0.002" material="rotor_mat" contype="0" conaffinity="0"/>
+
+      <site name="q2_rotor3" pos="0.120208152801713 -0.120208152801713 0.02"/>
+      <geom name="q2_prop3" type="cylinder" pos="0.120208152801713 -0.120208152801713 0.02" size="0.06 0.002" material="rotor_mat" contype="0" conaffinity="0"/>
+
+      <!-- Passive contact pad: normal along -Y, surface at site y=-0.22. -->
+      <site name="q2_conn_site" pos="0 -0.22 0"/>
+      <geom name="q2_conn_mount" type="capsule" fromto="0 -0.08 0 0 -0.20 0" size="0.006" material="connector_mat"/>
+      <geom name="q2_conn_probe" type="box" pos="0 -0.21 0" size="0.02 0.01 0.02" material="connector_mat" friction="0.8 0.01 0.001" solref="0.012 1"/>
+    </body>
+  </worldbody>
+
+  <!-- Actuators: 8 Rotors -->
+  <!-- gear="0 0 1 0 0 torque_ratio": Fz = ctrl, Tz = torque_ratio * ctrl -->
+  <actuator>
+    <!-- Quad 1: Rotors 0..3 -->
+    <motor name="q1_m0" site="q1_rotor0" gear="0 0 1 0 0 0.016" ctrllimited="true" ctrlrange="0 5.5"/>
+    <motor name="q1_m1" site="q1_rotor1" gear="0 0 1 0 0 -0.016" ctrllimited="true" ctrlrange="0 5.5"/>
+    <motor name="q1_m2" site="q1_rotor2" gear="0 0 1 0 0 0.016" ctrllimited="true" ctrlrange="0 5.5"/>
+    <motor name="q1_m3" site="q1_rotor3" gear="0 0 1 0 0 -0.016" ctrllimited="true" ctrlrange="0 5.5"/>
+
+    <!-- Quad 2: Rotors 4..7 -->
+    <motor name="q2_m0" site="q2_rotor0" gear="0 0 1 0 0 0.016" ctrllimited="true" ctrlrange="0 5.5"/>
+    <motor name="q2_m1" site="q2_rotor1" gear="0 0 1 0 0 -0.016" ctrllimited="true" ctrlrange="0 5.5"/>
+    <motor name="q2_m2" site="q2_rotor2" gear="0 0 1 0 0 0.016" ctrllimited="true" ctrlrange="0 5.5"/>
+    <motor name="q2_m3" site="q2_rotor3" gear="0 0 1 0 0 -0.016" ctrllimited="true" ctrlrange="0 5.5"/>
+  </actuator>
+
+  <!-- Equality constraints for Docking Latch -->
+  <!-- Nominal body2 separation 0.44m. Compiled anchors: body2 y=-.22, body1 y=+.22.
+       Capture updates both anchors and relative quaternion at the actual pose. -->
+  <equality>
+    <weld name="dock_weld" body1="quad1" body2="quad2" anchor="0 -0.22 0" active="false" relpose="0 0.22 0 1 0 0 0" solref="0.012 1" torquescale="0.22"/>
+  </equality>
+</mujoco>

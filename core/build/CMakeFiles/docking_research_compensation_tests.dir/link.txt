@@ -1,0 +1,1 @@
+/usr/bin/c++ -O3 -DNDEBUG CMakeFiles/docking_research_compensation_tests.dir/tests/test_research_compensation.cpp.o -o docking_research_compensation_tests  libdocking_core.a 

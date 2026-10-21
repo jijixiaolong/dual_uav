@@ -1,0 +1,28 @@
+# Nominal physical parameters for identical quadrotors Q1 and Q2
+quadrotor:
+  mass: 1.0              # kg
+  gravity: 9.80665       # m/s^2
+  arm_length: 0.17       # m (distance from COM to each rotor center)
+  inertia:
+    ixx: 0.0082          # kg*m^2
+    iyy: 0.0082          # kg*m^2
+    izz: 0.0145          # kg*m^2
+    ixy: 0.0
+    ixz: 0.0
+    iyz: 0.0
+  motor:
+    num_rotors: 4
+    min_thrust: 0.05     # N per rotor
+    max_thrust: 5.5      # N per rotor (4x = 22N, TWR ~ 2.24)
+    torque_ratio: 0.016  # torque = torque_ratio * thrust (m)
+    time_constant: 0.025 # first-order motor lag tau_m (s)
+    slew_rate_limit: 45.0 # max d(thrust)/dt (N/s)
+  geometry:
+    # Body FLU only (X-forward, Y-left, Z-up); angles measured +X towards +Y.
+    # Rotor 0: (+dx, +dy), rotor 1: (-dx, +dy)
+    # Rotor 2: (-dx, -dy), rotor 3: (+dx, -dy)
+    # With arm_length l, dx = dy = l / sqrt(2)
+    rotor_angles_deg: [45.0, 135.0, 225.0, 315.0]
+    # Signs of reaction torque on the BODY; rotor spin has the opposite sign.
+    rotor_directions: [1, -1, 1, -1]
+  calibration_status: simulation_assumption # Includes connector mass in total lumped inertia.

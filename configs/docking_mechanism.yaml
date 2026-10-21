@@ -1,0 +1,26 @@
+# Docking mechanism specifications and latching criteria
+docking:
+  configuration: "side_by_side" # Q1 +Y (left) docks with Q2 -Y (right), body FLU.
+  capture_model: "passive_contact_latch" # No magnetic attraction law is implemented.
+  calibration_status: simulation_assumption
+  contact_required: true
+  connector_offset_q1: [0.0, 0.22, 0.0]  # Connector position in Q1 body frame (m)
+  connector_offset_q2: [0.0, -0.22, 0.0] # Connector position in Q2 body frame (m)
+  nominal_separation_at_dock: [0.0, 0.44, 0.0]
+
+  latch_criteria:
+    position_tolerance_m: 0.020      # 20 mm
+    orientation_tolerance_rad: 0.08  # ~4.6 deg
+    relative_linear_velocity_mps: 0.10 # 0.10 m/s
+    relative_angular_velocity_radps: 0.20 # 0.20 rad/s
+    dwell_time_s: 0.03               # must stay within tolerance for 30 ms
+
+  release:
+    zero_preload_mode: true
+    elastic_preload:
+      enabled: false
+      spring_stiffness_N_per_m: 60.0
+      preload_deflection_m: 0.008    # ~0.48 N initial repulsion force
+      damping_Ns_per_m: 2.0
+      # A finite compressed spring acts at connector sites before AND after release.
+      # Elastic energy is explicitly logged; no velocity reset or infinite force pulse.

@@ -1,0 +1,37 @@
+# P0/P1 acceptance limits; these are engineering simulation assumptions, not measurements.
+validation:
+  model: passive_contact_latch_with_optional_finite_energy_spring
+  learning_enabled: false
+  tail_window_s: 0.5
+  max_tail_position_error_m: 0.025
+  max_tail_speed_mps: 0.02
+  max_tail_attitude_error_deg: 1.0
+  max_release_attitude_error_deg: 6.0
+  max_prerelease_rotor_torque_Nm: 0.05
+  cases:
+    independent_hover:
+      duration: 3.0
+      dock_cmd_time: 100.0
+      undock_cmd_time: null
+    preconnected_hover:
+      duration: 10.0
+      preconnected: true
+      undock_cmd_time: null
+    connected_tracking:
+      duration: 7.0
+      preconnected: true
+      connected_trajectory: true
+      undock_cmd_time: null
+    contact_capture_release:
+      duration: 12.0
+      dock_cmd_time: 1.0
+      undock_cmd_time: 6.0
+    preloaded_capture_release:
+      duration: 12.0
+      dock_cmd_time: 1.0
+      undock_cmd_time: 6.0
+    missed_capture:
+      duration: 7.0
+      dock_cmd_time: 1.0
+      undock_cmd_time: 4.0
+      approach_offset: 0.03
