@@ -1,0 +1,722 @@
+{
+  "passed": true,
+  "cases": 71,
+  "rows": 86600,
+  "events": 528,
+  "results": [
+    {
+      "case_id": "20261021_safe_00",
+      "rows": 900,
+      "events": 8,
+      "mode_mismatch_samples": 0,
+      "invalid_lock_events": 0,
+      "max_instantaneous_qpos_qvel_jump": 0.0,
+      "physics_cadence_valid": true,
+      "passed": true
+    },
+    {
+      "case_id": "20261021_safe_01",
+      "rows": 900,
+      "events": 8,
+      "mode_mismatch_samples": 0,
+      "invalid_lock_events": 0,
+      "max_instantaneous_qpos_qvel_jump": 0.0,
+      "physics_cadence_valid": true,
+      "passed": true
+    },
+    {
+      "case_id": "20261021_safe_02",
+      "rows": 900,
+      "events": 8,
+      "mode_mismatch_samples": 0,
+      "invalid_lock_events": 0,
+      "max_instantaneous_qpos_qvel_jump": 0.0,
+      "physics_cadence_valid": true,
+      "passed": true
+    },
+    {
+      "case_id": "20261021_safe_03",
+      "rows": 900,
+      "events": 8,
+      "mode_mismatch_samples": 0,
+      "invalid_lock_events": 0,
+      "max_instantaneous_qpos_qvel_jump": 0.0,
+      "physics_cadence_valid": true,
+      "passed": true
+    },
+    {
+      "case_id": "20261021_safe_04",
+      "rows": 900,
+      "events": 8,
+      "mode_mismatch_samples": 0,
+      "invalid_lock_events": 0,
+      "max_instantaneous_qpos_qvel_jump": 0.0,
+      "physics_cadence_valid": true,
+      "passed": true
+    },
+    {
+      "case_id": "20261021_safe_05",
+      "rows": 900,
+      "events": 4,
+      "mode_mismatch_samples": 0,
+      "invalid_lock_events": 0,
+      "max_instantaneous_qpos_qvel_jump": 0.0,
+      "physics_cadence_valid": true,
+      "passed": true
+    },
+    {
+      "case_id": "20261021_boundary_00",
+      "rows": 900,
+      "events": 8,
+      "mode_mismatch_samples": 0,
+      "invalid_lock_events": 0,
+      "max_instantaneous_qpos_qvel_jump": 0.0,
+      "physics_cadence_valid": true,
+      "passed": true
+    },
+    {
+      "case_id": "20261021_boundary_01",
+      "rows": 900,
+      "events": 6,
+      "mode_mismatch_samples": 0,
+      "invalid_lock_events": 0,
+      "max_instantaneous_qpos_qvel_jump": 0.0,
+      "physics_cadence_valid": true,
+      "passed": true
+    },
+    {
+      "case_id": "20261021_boundary_02",
+      "rows": 900,
+      "events": 6,
+      "mode_mismatch_samples": 0,
+      "invalid_lock_events": 0,
+      "max_instantaneous_qpos_qvel_jump": 0.0,
+      "physics_cadence_valid": true,
+      "passed": true
+    },
+    {
+      "case_id": "20261021_boundary_03",
+      "rows": 900,
+      "events": 6,
+      "mode_mismatch_samples": 0,
+      "invalid_lock_events": 0,
+      "max_instantaneous_qpos_qvel_jump": 0.0,
+      "physics_cadence_valid": true,
+      "passed": true
+    },
+    {
+      "case_id": "20261021_boundary_04",
+      "rows": 900,
+      "events": 4,
+      "mode_mismatch_samples": 0,
+      "invalid_lock_events": 0,
+      "max_instantaneous_qpos_qvel_jump": 0.0,
+      "physics_cadence_valid": true,
+      "passed": true
+    },
+    {
+      "case_id": "20261021_boundary_05",
+      "rows": 900,
+      "events": 4,
+      "mode_mismatch_samples": 0,
+      "invalid_lock_events": 0,
+      "max_instantaneous_qpos_qvel_jump": 0.0,
+      "physics_cadence_valid": true,
+      "passed": true
+    },
+    {
+      "case_id": "20261021_reject_00",
+      "rows": 900,
+      "events": 14,
+      "mode_mismatch_samples": 0,
+      "invalid_lock_events": 0,
+      "max_instantaneous_qpos_qvel_jump": 0.0,
+      "physics_cadence_valid": true,
+      "passed": true
+    },
+    {
+      "case_id": "20261021_reject_01",
+      "rows": 900,
+      "events": 4,
+      "mode_mismatch_samples": 0,
+      "invalid_lock_events": 0,
+      "max_instantaneous_qpos_qvel_jump": 0.0,
+      "physics_cadence_valid": true,
+      "passed": true
+    },
+    {
+      "case_id": "20261021_reject_02",
+      "rows": 900,
+      "events": 3,
+      "mode_mismatch_samples": 0,
+      "invalid_lock_events": 0,
+      "max_instantaneous_qpos_qvel_jump": 0.0,
+      "physics_cadence_valid": true,
+      "passed": true
+    },
+    {
+      "case_id": "20261021_reject_03",
+      "rows": 900,
+      "events": 2,
+      "mode_mismatch_samples": 0,
+      "invalid_lock_events": 0,
+      "max_instantaneous_qpos_qvel_jump": 0.0,
+      "physics_cadence_valid": true,
+      "passed": true
+    },
+    {
+      "case_id": "20261021_reject_04",
+      "rows": 900,
+      "events": 4,
+      "mode_mismatch_samples": 0,
+      "invalid_lock_events": 0,
+      "max_instantaneous_qpos_qvel_jump": 0.0,
+      "physics_cadence_valid": true,
+      "passed": true
+    },
+    {
+      "case_id": "20261021_reject_05",
+      "rows": 900,
+      "events": 4,
+      "mode_mismatch_samples": 0,
+      "invalid_lock_events": 0,
+      "max_instantaneous_qpos_qvel_jump": 0.0,
+      "physics_cadence_valid": true,
+      "passed": true
+    },
+    {
+      "case_id": "1042_safe_00",
+      "rows": 900,
+      "events": 2,
+      "mode_mismatch_samples": 0,
+      "invalid_lock_events": 0,
+      "max_instantaneous_qpos_qvel_jump": 0.0,
+      "physics_cadence_valid": true,
+      "passed": true
+    },
+    {
+      "case_id": "1042_safe_01",
+      "rows": 900,
+      "events": 8,
+      "mode_mismatch_samples": 0,
+      "invalid_lock_events": 0,
+      "max_instantaneous_qpos_qvel_jump": 0.0,
+      "physics_cadence_valid": true,
+      "passed": true
+    },
+    {
+      "case_id": "1042_safe_02",
+      "rows": 900,
+      "events": 8,
+      "mode_mismatch_samples": 0,
+      "invalid_lock_events": 0,
+      "max_instantaneous_qpos_qvel_jump": 0.0,
+      "physics_cadence_valid": true,
+      "passed": true
+    },
+    {
+      "case_id": "1042_safe_03",
+      "rows": 900,
+      "events": 8,
+      "mode_mismatch_samples": 0,
+      "invalid_lock_events": 0,
+      "max_instantaneous_qpos_qvel_jump": 0.0,
+      "physics_cadence_valid": true,
+      "passed": true
+    },
+    {
+      "case_id": "1042_safe_04",
+      "rows": 900,
+      "events": 8,
+      "mode_mismatch_samples": 0,
+      "invalid_lock_events": 0,
+      "max_instantaneous_qpos_qvel_jump": 0.0,
+      "physics_cadence_valid": true,
+      "passed": true
+    },
+    {
+      "case_id": "1042_safe_05",
+      "rows": 900,
+      "events": 8,
+      "mode_mismatch_samples": 0,
+      "invalid_lock_events": 0,
+      "max_instantaneous_qpos_qvel_jump": 0.0,
+      "physics_cadence_valid": true,
+      "passed": true
+    },
+    {
+      "case_id": "1042_boundary_00",
+      "rows": 900,
+      "events": 9,
+      "mode_mismatch_samples": 0,
+      "invalid_lock_events": 0,
+      "max_instantaneous_qpos_qvel_jump": 0.0,
+      "physics_cadence_valid": true,
+      "passed": true
+    },
+    {
+      "case_id": "1042_boundary_01",
+      "rows": 900,
+      "events": 6,
+      "mode_mismatch_samples": 0,
+      "invalid_lock_events": 0,
+      "max_instantaneous_qpos_qvel_jump": 0.0,
+      "physics_cadence_valid": true,
+      "passed": true
+    },
+    {
+      "case_id": "1042_boundary_02",
+      "rows": 900,
+      "events": 4,
+      "mode_mismatch_samples": 0,
+      "invalid_lock_events": 0,
+      "max_instantaneous_qpos_qvel_jump": 0.0,
+      "physics_cadence_valid": true,
+      "passed": true
+    },
+    {
+      "case_id": "1042_boundary_03",
+      "rows": 900,
+      "events": 4,
+      "mode_mismatch_samples": 0,
+      "invalid_lock_events": 0,
+      "max_instantaneous_qpos_qvel_jump": 0.0,
+      "physics_cadence_valid": true,
+      "passed": true
+    },
+    {
+      "case_id": "1042_boundary_04",
+      "rows": 900,
+      "events": 8,
+      "mode_mismatch_samples": 0,
+      "invalid_lock_events": 0,
+      "max_instantaneous_qpos_qvel_jump": 0.0,
+      "physics_cadence_valid": true,
+      "passed": true
+    },
+    {
+      "case_id": "1042_boundary_05",
+      "rows": 900,
+      "events": 4,
+      "mode_mismatch_samples": 0,
+      "invalid_lock_events": 0,
+      "max_instantaneous_qpos_qvel_jump": 0.0,
+      "physics_cadence_valid": true,
+      "passed": true
+    },
+    {
+      "case_id": "1042_reject_00",
+      "rows": 900,
+      "events": 4,
+      "mode_mismatch_samples": 0,
+      "invalid_lock_events": 0,
+      "max_instantaneous_qpos_qvel_jump": 0.0,
+      "physics_cadence_valid": true,
+      "passed": true
+    },
+    {
+      "case_id": "1042_reject_01",
+      "rows": 900,
+      "events": 4,
+      "mode_mismatch_samples": 0,
+      "invalid_lock_events": 0,
+      "max_instantaneous_qpos_qvel_jump": 0.0,
+      "physics_cadence_valid": true,
+      "passed": true
+    },
+    {
+      "case_id": "1042_reject_02",
+      "rows": 900,
+      "events": 2,
+      "mode_mismatch_samples": 0,
+      "invalid_lock_events": 0,
+      "max_instantaneous_qpos_qvel_jump": 0.0,
+      "physics_cadence_valid": true,
+      "passed": true
+    },
+    {
+      "case_id": "1042_reject_03",
+      "rows": 900,
+      "events": 4,
+      "mode_mismatch_samples": 0,
+      "invalid_lock_events": 0,
+      "max_instantaneous_qpos_qvel_jump": 0.0,
+      "physics_cadence_valid": true,
+      "passed": true
+    },
+    {
+      "case_id": "1042_reject_04",
+      "rows": 900,
+      "events": 6,
+      "mode_mismatch_samples": 0,
+      "invalid_lock_events": 0,
+      "max_instantaneous_qpos_qvel_jump": 0.0,
+      "physics_cadence_valid": true,
+      "passed": true
+    },
+    {
+      "case_id": "1042_reject_05",
+      "rows": 900,
+      "events": 4,
+      "mode_mismatch_samples": 0,
+      "invalid_lock_events": 0,
+      "max_instantaneous_qpos_qvel_jump": 0.0,
+      "physics_cadence_valid": true,
+      "passed": true
+    },
+    {
+      "case_id": "7301_safe_00",
+      "rows": 900,
+      "events": 8,
+      "mode_mismatch_samples": 0,
+      "invalid_lock_events": 0,
+      "max_instantaneous_qpos_qvel_jump": 0.0,
+      "physics_cadence_valid": true,
+      "passed": true
+    },
+    {
+      "case_id": "7301_safe_01",
+      "rows": 900,
+      "events": 8,
+      "mode_mismatch_samples": 0,
+      "invalid_lock_events": 0,
+      "max_instantaneous_qpos_qvel_jump": 0.0,
+      "physics_cadence_valid": true,
+      "passed": true
+    },
+    {
+      "case_id": "7301_safe_02",
+      "rows": 900,
+      "events": 6,
+      "mode_mismatch_samples": 0,
+      "invalid_lock_events": 0,
+      "max_instantaneous_qpos_qvel_jump": 0.0,
+      "physics_cadence_valid": true,
+      "passed": true
+    },
+    {
+      "case_id": "7301_safe_03",
+      "rows": 900,
+      "events": 2,
+      "mode_mismatch_samples": 0,
+      "invalid_lock_events": 0,
+      "max_instantaneous_qpos_qvel_jump": 0.0,
+      "physics_cadence_valid": true,
+      "passed": true
+    },
+    {
+      "case_id": "7301_safe_04",
+      "rows": 900,
+      "events": 8,
+      "mode_mismatch_samples": 0,
+      "invalid_lock_events": 0,
+      "max_instantaneous_qpos_qvel_jump": 0.0,
+      "physics_cadence_valid": true,
+      "passed": true
+    },
+    {
+      "case_id": "7301_safe_05",
+      "rows": 900,
+      "events": 2,
+      "mode_mismatch_samples": 0,
+      "invalid_lock_events": 0,
+      "max_instantaneous_qpos_qvel_jump": 0.0,
+      "physics_cadence_valid": true,
+      "passed": true
+    },
+    {
+      "case_id": "7301_boundary_00",
+      "rows": 900,
+      "events": 6,
+      "mode_mismatch_samples": 0,
+      "invalid_lock_events": 0,
+      "max_instantaneous_qpos_qvel_jump": 0.0,
+      "physics_cadence_valid": true,
+      "passed": true
+    },
+    {
+      "case_id": "7301_boundary_01",
+      "rows": 900,
+      "events": 2,
+      "mode_mismatch_samples": 0,
+      "invalid_lock_events": 0,
+      "max_instantaneous_qpos_qvel_jump": 0.0,
+      "physics_cadence_valid": true,
+      "passed": true
+    },
+    {
+      "case_id": "7301_boundary_02",
+      "rows": 900,
+      "events": 5,
+      "mode_mismatch_samples": 0,
+      "invalid_lock_events": 0,
+      "max_instantaneous_qpos_qvel_jump": 0.0,
+      "physics_cadence_valid": true,
+      "passed": true
+    },
+    {
+      "case_id": "7301_boundary_03",
+      "rows": 900,
+      "events": 6,
+      "mode_mismatch_samples": 0,
+      "invalid_lock_events": 0,
+      "max_instantaneous_qpos_qvel_jump": 0.0,
+      "physics_cadence_valid": true,
+      "passed": true
+    },
+    {
+      "case_id": "7301_boundary_04",
+      "rows": 900,
+      "events": 4,
+      "mode_mismatch_samples": 0,
+      "invalid_lock_events": 0,
+      "max_instantaneous_qpos_qvel_jump": 0.0,
+      "physics_cadence_valid": true,
+      "passed": true
+    },
+    {
+      "case_id": "7301_boundary_05",
+      "rows": 900,
+      "events": 4,
+      "mode_mismatch_samples": 0,
+      "invalid_lock_events": 0,
+      "max_instantaneous_qpos_qvel_jump": 0.0,
+      "physics_cadence_valid": true,
+      "passed": true
+    },
+    {
+      "case_id": "7301_reject_00",
+      "rows": 900,
+      "events": 4,
+      "mode_mismatch_samples": 0,
+      "invalid_lock_events": 0,
+      "max_instantaneous_qpos_qvel_jump": 0.0,
+      "physics_cadence_valid": true,
+      "passed": true
+    },
+    {
+      "case_id": "7301_reject_01",
+      "rows": 900,
+      "events": 4,
+      "mode_mismatch_samples": 0,
+      "invalid_lock_events": 0,
+      "max_instantaneous_qpos_qvel_jump": 0.0,
+      "physics_cadence_valid": true,
+      "passed": true
+    },
+    {
+      "case_id": "7301_reject_02",
+      "rows": 900,
+      "events": 4,
+      "mode_mismatch_samples": 0,
+      "invalid_lock_events": 0,
+      "max_instantaneous_qpos_qvel_jump": 0.0,
+      "physics_cadence_valid": true,
+      "passed": true
+    },
+    {
+      "case_id": "7301_reject_03",
+      "rows": 900,
+      "events": 4,
+      "mode_mismatch_samples": 0,
+      "invalid_lock_events": 0,
+      "max_instantaneous_qpos_qvel_jump": 0.0,
+      "physics_cadence_valid": true,
+      "passed": true
+    },
+    {
+      "case_id": "7301_reject_04",
+      "rows": 900,
+      "events": 4,
+      "mode_mismatch_samples": 0,
+      "invalid_lock_events": 0,
+      "max_instantaneous_qpos_qvel_jump": 0.0,
+      "physics_cadence_valid": true,
+      "passed": true
+    },
+    {
+      "case_id": "7301_reject_05",
+      "rows": 900,
+      "events": 4,
+      "mode_mismatch_samples": 0,
+      "invalid_lock_events": 0,
+      "max_instantaneous_qpos_qvel_jump": 0.0,
+      "physics_cadence_valid": true,
+      "passed": true
+    },
+    {
+      "case_id": "nominal",
+      "rows": 5000,
+      "events": 16,
+      "mode_mismatch_samples": 0,
+      "invalid_lock_events": 0,
+      "max_instantaneous_qpos_qvel_jump": 0.0,
+      "physics_cadence_valid": true,
+      "passed": true
+    },
+    {
+      "case_id": "target_gap_30mm",
+      "rows": 3000,
+      "events": 13,
+      "mode_mismatch_samples": 0,
+      "invalid_lock_events": 0,
+      "max_instantaneous_qpos_qvel_jump": 0.0,
+      "physics_cadence_valid": true,
+      "passed": true
+    },
+    {
+      "case_id": "miss_60mm",
+      "rows": 3000,
+      "events": 2,
+      "mode_mismatch_samples": 0,
+      "invalid_lock_events": 0,
+      "max_instantaneous_qpos_qvel_jump": 0.0,
+      "physics_cadence_valid": true,
+      "passed": true
+    },
+    {
+      "case_id": "high_speed_collision",
+      "rows": 500,
+      "events": 12,
+      "mode_mismatch_samples": 0,
+      "invalid_lock_events": 0,
+      "max_instantaneous_qpos_qvel_jump": 0.0,
+      "physics_cadence_valid": true,
+      "passed": true
+    },
+    {
+      "case_id": "high_speed_failure",
+      "rows": 500,
+      "events": 7,
+      "mode_mismatch_samples": 0,
+      "invalid_lock_events": 0,
+      "max_instantaneous_qpos_qvel_jump": 0.0,
+      "physics_cadence_valid": true,
+      "passed": true
+    },
+    {
+      "case_id": "high_angular_collision",
+      "rows": 500,
+      "events": 5,
+      "mode_mismatch_samples": 0,
+      "invalid_lock_events": 0,
+      "max_instantaneous_qpos_qvel_jump": 0.0,
+      "physics_cadence_valid": true,
+      "passed": true
+    },
+    {
+      "case_id": "edge_contact",
+      "rows": 500,
+      "events": 4,
+      "mode_mismatch_samples": 0,
+      "invalid_lock_events": 0,
+      "max_instantaneous_qpos_qvel_jump": 0.0,
+      "physics_cadence_valid": true,
+      "passed": true
+    },
+    {
+      "case_id": "deterministic_00",
+      "rows": 2500,
+      "events": 19,
+      "mode_mismatch_samples": 0,
+      "invalid_lock_events": 0,
+      "max_instantaneous_qpos_qvel_jump": 0.0,
+      "physics_cadence_valid": true,
+      "passed": true
+    },
+    {
+      "case_id": "deterministic_01",
+      "rows": 2500,
+      "events": 19,
+      "mode_mismatch_samples": 0,
+      "invalid_lock_events": 0,
+      "max_instantaneous_qpos_qvel_jump": 0.0,
+      "physics_cadence_valid": true,
+      "passed": true
+    },
+    {
+      "case_id": "deterministic_02",
+      "rows": 2500,
+      "events": 19,
+      "mode_mismatch_samples": 0,
+      "invalid_lock_events": 0,
+      "max_instantaneous_qpos_qvel_jump": 0.0,
+      "physics_cadence_valid": true,
+      "passed": true
+    },
+    {
+      "case_id": "deterministic_03",
+      "rows": 2500,
+      "events": 19,
+      "mode_mismatch_samples": 0,
+      "invalid_lock_events": 0,
+      "max_instantaneous_qpos_qvel_jump": 0.0,
+      "physics_cadence_valid": true,
+      "passed": true
+    },
+    {
+      "case_id": "deterministic_04",
+      "rows": 2500,
+      "events": 15,
+      "mode_mismatch_samples": 0,
+      "invalid_lock_events": 0,
+      "max_instantaneous_qpos_qvel_jump": 0.0,
+      "physics_cadence_valid": true,
+      "passed": true
+    },
+    {
+      "case_id": "deterministic_05",
+      "rows": 2500,
+      "events": 15,
+      "mode_mismatch_samples": 0,
+      "invalid_lock_events": 0,
+      "max_instantaneous_qpos_qvel_jump": 0.0,
+      "physics_cadence_valid": true,
+      "passed": true
+    },
+    {
+      "case_id": "deterministic_06",
+      "rows": 2500,
+      "events": 15,
+      "mode_mismatch_samples": 0,
+      "invalid_lock_events": 0,
+      "max_instantaneous_qpos_qvel_jump": 0.0,
+      "physics_cadence_valid": true,
+      "passed": true
+    },
+    {
+      "case_id": "deterministic_07",
+      "rows": 2500,
+      "events": 15,
+      "mode_mismatch_samples": 0,
+      "invalid_lock_events": 0,
+      "max_instantaneous_qpos_qvel_jump": 0.0,
+      "physics_cadence_valid": true,
+      "passed": true
+    },
+    {
+      "case_id": "deterministic_08",
+      "rows": 2500,
+      "events": 19,
+      "mode_mismatch_samples": 0,
+      "invalid_lock_events": 0,
+      "max_instantaneous_qpos_qvel_jump": 0.0,
+      "physics_cadence_valid": true,
+      "passed": true
+    },
+    {
+      "case_id": "deterministic_09",
+      "rows": 2500,
+      "events": 19,
+      "mode_mismatch_samples": 0,
+      "invalid_lock_events": 0,
+      "max_instantaneous_qpos_qvel_jump": 0.0,
+      "physics_cadence_valid": true,
+      "passed": true
+    }
+  ],
+  "inputs_sha256": {
+    "capture_traces.csv.gz": "58d26396060b5cc61da06931f50c5640269605ee86fda825d8a3823bd8e24aa5",
+    "events.json": "bc6b9f358baaf77b18ef81c65cd059870443bd822f4f7e9d283419ef1a60b43b"
+  }
+}

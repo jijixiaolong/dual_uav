@@ -1,0 +1,94 @@
+[
+  {
+    "name": "test_math_foundation",
+    "status": "PASS"
+  },
+  {
+    "name": "test_geometric_se3_hover",
+    "status": "PASS"
+  },
+  {
+    "name": "test_geometric_attitude_error_scale",
+    "status": "PASS"
+  },
+  {
+    "name": "test_single_quad_allocator",
+    "status": "PASS"
+  },
+  {
+    "name": "test_connected_allocator_and_parallel_axis",
+    "status": "PASS"
+  },
+  {
+    "name": "test_connected_actual_capture_geometry",
+    "status": "PASS"
+  },
+  {
+    "name": "test_feasible_wrench_reconstruction_and_redistribution",
+    "status": "PASS"
+  },
+  {
+    "name": "test_allocator_limits_slew_and_handover",
+    "status": "PASS"
+  },
+  {
+    "name": "test_tilted_capture_rotor_axes",
+    "status": "PASS"
+  },
+  {
+    "name": "test_small_capture_tilt_does_not_create_control_preload",
+    "status": "PASS"
+  },
+  {
+    "name": "test_hybrid_fsm",
+    "status": "PASS"
+  },
+  {
+    "name": "test_capture_dwell_is_continuous_and_rejects_fast_contacts",
+    "status": "PASS"
+  },
+  {
+    "name": "test_safety_monitor",
+    "status": "PASS"
+  },
+  {
+    "name": "feature_schema_exact32_version_event_finiteness",
+    "status": "PASS"
+  },
+  {
+    "name": "finite_window_basis_zero_value_and_derivative_at_endpoints",
+    "status": "PASS"
+  },
+  {
+    "name": "feedforward_motor_order_two_zero_collectives_and_common_bound",
+    "status": "PASS"
+  },
+  {
+    "name": "independent_contact_dock_undock_and_causal_coefficient_snapshot",
+    "status": "PASS"
+  },
+  {
+    "name": "feedforward_causal_timing_reset_and_invalid_inputs",
+    "status": "PASS"
+  },
+  {
+    "name": "observer_known_disturbance_variable_dt_actual_input_and_cancellation_sign",
+    "status": "PASS"
+  },
+  {
+    "name": "observer_no_disturbance_offdiagonal_inertia_and_gyroscopic_term",
+    "status": "PASS"
+  },
+  {
+    "name": "observer_persistent_body_axes_and_rotation_equivariance",
+    "status": "PASS"
+  },
+  {
+    "name": "observer_torque_norm_bound_event_reset_and_inertia_handover",
+    "status": "PASS"
+  },
+  {
+    "name": "observer_invalid_dt_measurement_settings_and_inertia_rejected",
+    "status": "PASS"
+  }
+]

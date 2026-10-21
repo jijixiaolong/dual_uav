@@ -1,0 +1,114 @@
+[
+  {
+    "event": "FSM_TRANSITION",
+    "time_s": 1.0000000000000007,
+    "attempt_id": 0,
+    "complete": true,
+    "samples": 601
+  },
+  {
+    "event": "FSM_TRANSITION",
+    "time_s": 2.439999999999953,
+    "attempt_id": 0,
+    "complete": true,
+    "samples": 601
+  },
+  {
+    "event": "CONTACT",
+    "time_s": 2.721999999999922,
+    "attempt_id": 1,
+    "complete": true,
+    "samples": 601
+  },
+  {
+    "event": "CAPTURE_START",
+    "time_s": 2.721999999999922,
+    "attempt_id": 1,
+    "complete": true,
+    "samples": 601
+  },
+  {
+    "event": "CONTACT",
+    "time_s": 2.9619999999998954,
+    "attempt_id": 1,
+    "complete": true,
+    "samples": 601
+  },
+  {
+    "event": "FSM_TRANSITION",
+    "time_s": 3.0259999999998883,
+    "attempt_id": 1,
+    "complete": true,
+    "samples": 601
+  },
+  {
+    "event": "CAPTURE_READY",
+    "time_s": 3.0259999999998883,
+    "attempt_id": 1,
+    "complete": true,
+    "samples": 601
+  },
+  {
+    "event": "FSM_TRANSITION",
+    "time_s": 3.055999999999885,
+    "attempt_id": 1,
+    "complete": true,
+    "samples": 601
+  },
+  {
+    "event": "DOCK",
+    "time_s": 3.055999999999885,
+    "attempt_id": 1,
+    "complete": true,
+    "samples": 601
+  },
+  {
+    "event": "FSM_TRANSITION",
+    "time_s": 5.005999999999671,
+    "attempt_id": 1,
+    "complete": true,
+    "samples": 601
+  },
+  {
+    "event": "RELEASE_PREP",
+    "time_s": 5.005999999999671,
+    "attempt_id": 1,
+    "complete": true,
+    "samples": 601
+  },
+  {
+    "event": "FSM_TRANSITION",
+    "time_s": 5.109999999999659,
+    "attempt_id": 1,
+    "complete": true,
+    "samples": 601
+  },
+  {
+    "event": "UNDOCK",
+    "time_s": 5.109999999999659,
+    "attempt_id": 1,
+    "complete": true,
+    "samples": 601
+  },
+  {
+    "event": "CONTACT",
+    "time_s": 5.109999999999659,
+    "attempt_id": 1,
+    "complete": true,
+    "samples": 601
+  },
+  {
+    "event": "FSM_TRANSITION",
+    "time_s": 5.73599999999959,
+    "attempt_id": 1,
+    "complete": true,
+    "samples": 601
+  },
+  {
+    "event": "FSM_TRANSITION",
+    "time_s": 6.73999999999948,
+    "attempt_id": 1,
+    "complete": true,
+    "samples": 601
+  }
+]

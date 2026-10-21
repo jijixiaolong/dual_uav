@@ -1,0 +1,54 @@
+Internal ctest changing into directory: /home/ubuntu22/Downloads/dual_uav_capture_fix/core/build
+UpdateCTestConfiguration  from :/home/ubuntu22/Downloads/dual_uav_capture_fix/core/build/DartConfiguration.tcl
+UpdateCTestConfiguration  from :/home/ubuntu22/Downloads/dual_uav_capture_fix/core/build/DartConfiguration.tcl
+Test project /home/ubuntu22/Downloads/dual_uav_capture_fix/core/build
+Constructing a list of tests
+Done constructing a list of tests
+Updating test list for fixtures
+Added 0 tests to meet fixture requirements
+Checking test dependency graph...
+Checking test dependency graph end
+test 1
+    Start 1: docking_core_tests
+
+1: Test command: /home/ubuntu22/Downloads/dual_uav_capture_fix/core/build/docking_core_tests
+1: Working Directory: /home/ubuntu22/Downloads/dual_uav_capture_fix/core/build
+1: Test timeout computed to be: 10000000
+1: Running Core C++ Unit Tests...
+1: [PASS] test_math_foundation
+1: [PASS] test_geometric_se3_hover
+1: [PASS] test_geometric_attitude_error_scale
+1: [PASS] test_single_quad_allocator
+1: [PASS] test_connected_allocator_and_parallel_axis
+1: [PASS] test_connected_actual_capture_geometry
+1: [PASS] test_feasible_wrench_reconstruction_and_redistribution (200 feasible commands)
+1: [PASS] test_allocator_limits_slew_and_handover
+1: [PASS] test_tilted_capture_rotor_axes
+1: [PASS] test_small_capture_tilt_does_not_create_control_preload
+1: [PASS] test_hybrid_fsm
+1: [PASS] test_capture_dwell_is_continuous_and_rejects_fast_contacts
+1: [PASS] test_safety_monitor
+1: All C++ Unit Tests Passed Successfully!
+1/2 Test #1: docking_core_tests ....................   Passed    0.00 sec
+test 2
+    Start 2: docking_research_compensation_tests
+
+2: Test command: /home/ubuntu22/Downloads/dual_uav_capture_fix/core/build/docking_research_compensation_tests
+2: Working Directory: /home/ubuntu22/Downloads/dual_uav_capture_fix/core/build
+2: Test timeout computed to be: 10000000
+2: [PASS] feature_schema_exact32_version_event_finiteness
+2: [PASS] finite_window_basis_zero_value_and_derivative_at_endpoints
+2: [PASS] feedforward_motor_order_two_zero_collectives_and_common_bound
+2: [PASS] independent_contact_dock_undock_and_causal_coefficient_snapshot
+2: [PASS] feedforward_causal_timing_reset_and_invalid_inputs
+2: [PASS] observer_known_disturbance_variable_dt_actual_input_and_cancellation_sign
+2: [PASS] observer_no_disturbance_offdiagonal_inertia_and_gyroscopic_term
+2: [PASS] observer_persistent_body_axes_and_rotation_equivariance
+2: [PASS] observer_torque_norm_bound_event_reset_and_inertia_handover
+2: [PASS] observer_invalid_dt_measurement_settings_and_inertia_rejected
+2: All 10 research compensation tests passed.
+2/2 Test #2: docking_research_compensation_tests ...   Passed    0.00 sec
+
+100% tests passed, 0 tests failed out of 2
+
+Total Test time (real) =   0.00 sec
