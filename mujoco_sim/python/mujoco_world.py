@@ -38,6 +38,8 @@ class MuJoCoWorld:
         self.target_thrusts = np.zeros(8)
         self.requested_thrusts = np.zeros(8)
         self.force_providers = []
+        self.step_observers = []
+        self.force_step_observers = []
         self._managed_qforce = np.zeros(self.model.nv)
         self.connector_geoms = {mujoco.mj_name2id(self.model,mujoco.mjtObj.mjOBJ_GEOM,n)
                                 for n in ('q1_conn_funnel','q2_conn_probe')}
@@ -98,11 +100,19 @@ class MuJoCoWorld:
         lagged = alpha*self.applied_thrusts + (1-alpha)*self.target_thrusts
         self.applied_thrusts += np.clip(lagged-self.applied_thrusts, -max_delta, max_delta)
         self.data.ctrl[:] = self.applied_thrusts
+        for observer in self.step_observers:
+            observer()
         # Providers own only their additive component. Unrelated external forces survive.
         new_force = sum((p() for p in self.force_providers), np.zeros(self.model.nv))
         self.data.qfrc_applied += new_force - self._managed_qforce
         self._managed_qforce = new_force
+        for observer in self.force_step_observers:
+            observer()
+        time_before = self.time
+        warnings_before = self.data.warning.number.copy()
         mujoco.mj_step(self.model, self.data)
+        if self.time < time_before or np.any(self.data.warning.number > warnings_before):
+            raise FloatingPointError('MuJoCo warning or automatic state reset during integration')
         self.last_step_contact_normal_N = 0.
         for j in range(self.data.ncon):
             c = self.data.contact[j]
@@ -112,6 +122,8 @@ class MuJoCoWorld:
                 self.last_step_contact_normal_N += abs(f[0])
         self.contact_impulse_est_Ns += self.last_step_contact_normal_N*self.dt
         self.forward()
+        for observer in self.step_observers:
+            observer()
         if not np.isfinite(self.data.qpos).all() or not np.isfinite(self.data.qvel).all():
             raise FloatingPointError('Non-finite MuJoCo state')
 

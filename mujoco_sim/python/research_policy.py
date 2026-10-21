@@ -170,7 +170,7 @@ class ResearchPolicy:
         self._moment_elapsed_s = 0.
         self._last_observer_interval_s = 0.
 
-    def on_event(self, runner, event, t, motorcopy):
+    def prepare_event(self, runner, event, t, motorcopy):
         if event not in EVENTS:
             raise ValueError(f'Unsupported event {event!r}')
         features = event_features(runner, event)
@@ -187,6 +187,14 @@ class ResearchPolicy:
                       feature_names=list(FEATURE_NAMES), values32=features.tolist(),
                       oracle_loads=oracle_loads, motor_command_N=np.asarray(motorcopy).tolist(),
                       motor_state_source='simulation filtered actual rotor thrust; deployment requires estimation')
+        return packet
+
+    def on_event(self, runner, event, t, motorcopy, pre_packet=None):
+        # Extract before a constraint switch, activate ONLY after it succeeds.
+        packet = pre_packet if pre_packet is not None else self.prepare_event(runner,event,t,motorcopy)
+        if packet['event'] != event or packet['time'] != float(t):
+            raise ValueError('Prepared event does not match the applied physical switch')
+        features = np.asarray(packet['values32'],dtype=float)
         self.pre_event_packets[event] = packet
         if self.method in ('B1', 'B2', 'B4'):
             coefficients = (self.selector(event, features.copy()) if self.method == 'B4'

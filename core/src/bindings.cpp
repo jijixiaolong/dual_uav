@@ -205,6 +205,7 @@ PYBIND11_MODULE(docking_core_py, m) {
         .def("command_undock", &HybridFSM::command_undock)
         .def("command_abort", &HybridFSM::command_abort)
         .def("set_capture_contact", &HybridFSM::set_capture_contact)
+        .def("invalidate_capture_dwell", &HybridFSM::invalidate_capture_dwell)
         .def("current_mode", &HybridFSM::current_mode)
         .def("is_latched", &HybridFSM::is_latched)
         .def("rel_state", &HybridFSM::rel_state)

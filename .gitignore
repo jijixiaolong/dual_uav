@@ -3,3 +3,6 @@ __pycache__/
 .venv/
 *.pyc
 results/
+
+# Generated CMake caches and platform-specific binaries are rebuilt locally.
+core/build/

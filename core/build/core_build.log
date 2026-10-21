@@ -1,8 +1,0 @@
-[ 10%] Building CXX object CMakeFiles/docking_core.dir/src/allocator.cpp.o
-[ 20%] Linking CXX static library libdocking_core.a
-[ 60%] Built target docking_core
-[ 70%] Building CXX object CMakeFiles/docking_core_tests.dir/tests/test_core.cpp.o
-[ 80%] Linking CXX shared module docking_core_py.cpython-310-x86_64-linux-gnu.so
-[ 90%] Linking CXX executable docking_core_tests
-[ 90%] Built target docking_core_tests
-[100%] Built target docking_core_py

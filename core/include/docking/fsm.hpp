@@ -37,6 +37,8 @@ public:
     // is never sufficient to engage the passive capture approximation.
     void set_capture_contact(bool contact) { capture_contact_ = contact; }
 
+    void invalidate_capture_dwell() { dwell_timer_ = 0.0; }
+
     FlightMode current_mode() const { return current_mode_; }
     bool is_latched() const { return current_mode_ == FlightMode::CONNECTED || current_mode_ == FlightMode::RELEASE_PREP; }
 

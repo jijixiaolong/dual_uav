@@ -19,8 +19,9 @@ docking:
     enabled: true
     capture_distance_m: 0.006          # 6 mm capture distance envelope (cleanly rejects 30mm missed capture)
     capture_angle_rad: 0.15            # ~8.6 deg capture attitude envelope
-    max_attraction_force_N: 6.0        # Max magnetic / latch attraction force
-    stiffness_N_per_m: 140.0           # Capture attraction stiffness
+    max_resultant_force_N: 6.0         # Static + dashpot resultant cap, NOT static attraction
+    anchor_inset_m: 0.004              # Each tensile anchor is 4 mm behind its contact face
+    stiffness_N_per_m: 140.0           # Max static tension = 140 * .006 = .84 N
     damping_Ns_per_m: 10.0             # Linear axial damping (Ns/m) for energy dissipation
     angular_damping_Nms_per_rad: 0.08  # Rotational damping (Nms/rad)
     filter_contact_on_lock: true       # Filter connector contact during weld to prevent constraint fighting

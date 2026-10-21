@@ -1,7 +1,0 @@
-/home/ubuntu22/Downloads/dual_quad_codex_sim/core/build/CMakeFiles/docking_core.dir
-/home/ubuntu22/Downloads/dual_quad_codex_sim/core/build/CMakeFiles/docking_core_tests.dir
-/home/ubuntu22/Downloads/dual_quad_codex_sim/core/build/CMakeFiles/docking_research_compensation_tests.dir
-/home/ubuntu22/Downloads/dual_quad_codex_sim/core/build/CMakeFiles/docking_core_py.dir
-/home/ubuntu22/Downloads/dual_quad_codex_sim/core/build/CMakeFiles/test.dir
-/home/ubuntu22/Downloads/dual_quad_codex_sim/core/build/CMakeFiles/edit_cache.dir
-/home/ubuntu22/Downloads/dual_quad_codex_sim/core/build/CMakeFiles/rebuild_cache.dir

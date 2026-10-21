@@ -93,11 +93,16 @@ FlightMode HybridFSM::update(const RigidBodyState& q1,
                              const RigidBodyState& q2,
                              double current_time,
                              double dt) {
+    if (!std::isfinite(current_time) || !std::isfinite(dt) || dt <= 0.)
+        throw std::invalid_argument("FSM requires finite time and positive dt");
     transition_time_ += dt;
     compute_relative_connector_state(q1, q2);
 
     if (abort_requested_) {
         current_mode_ = FlightMode::ABORT;
+        dwell_timer_ = 0.;
+        last_event_name_ = "ABORT";
+        last_event_time_ = current_time;
         return current_mode_;
     }
 
@@ -135,7 +140,7 @@ FlightMode HybridFSM::update(const RigidBodyState& q1,
         case FlightMode::CAPTURE_PENDING: {
             if (check_latch_criteria()) {
                 dwell_timer_ += dt;
-                if (dwell_timer_ >= params_.dwell_time - 1e-5) {
+                if (dwell_timer_ >= params_.dwell_time - 1e-12) {
                     current_mode_ = FlightMode::CONNECTED;
                     last_event_time_ = current_time;
                     last_event_name_ = "DOCK";
@@ -143,24 +148,10 @@ FlightMode HybridFSM::update(const RigidBodyState& q1,
                     transition_time_ = 0.0;
                 }
             } else {
-                // Capture state hysteresis:
-                // Only drop back to ALIGN if kinematic error exceeds hysteresis boundary
-                // (e.g. true separation or loss of alignment)
-                double hyst_pos = params_.pos_tol * 1.5;
-                double hyst_vel = params_.lin_vel_tol * 1.5;
-                double hyst_rot = params_.rot_tol * 1.5;
-                double hyst_ang_vel = params_.ang_vel_tol * 1.5;
-                bool fail_pos = rel_state_.distance > hyst_pos;
-                bool fail_vel = rel_state_.vel_rel.norm() > hyst_vel;
-                bool fail_rot = rel_state_.angle_err_rad > hyst_rot;
-                bool fail_ang_vel = rel_state_.ang_vel_rel.norm() > hyst_ang_vel;
-                if (fail_pos || fail_vel || fail_rot || fail_ang_vel) {
-                    current_mode_ = FlightMode::ALIGN;
-                    dwell_timer_ = 0.0;
-                } else {
-                    // Inside capture envelope but momentary boundary chatter: decay dwell gracefully
-                    dwell_timer_ = std::max(0.0, dwell_timer_ - dt);
-                }
+                // Lock requires a continuous dwell inside ALL strict guards.
+                // A stale contact or a speed excursion cannot preserve dwell credit.
+                current_mode_ = FlightMode::ALIGN;
+                dwell_timer_ = 0.0;
             }
             break;
         }

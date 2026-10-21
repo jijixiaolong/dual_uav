@@ -49,6 +49,10 @@ class SimulationRunner:
         if xml_path is None:
             xml_path = Path(__file__).resolve().parents[1]/'assets'/'dual_quads.xml'
         self.world = MuJoCoWorld(xml_path,dt=self.dt_sim)
+        self._nominal_mass = self.world.model.body_mass.copy()
+        self._nominal_inertia = self.world.model.body_inertia.copy()
+        self._nominal_solref = self.world.model.geom_solref.copy()
+        self._capture_parameter_backup = None
         self.latch = LatchManager(self.world,zero_preload=zero_preload)
         self.q1_params,self.q2_params = [self._quad_params(i) for i in (1,2)]
         self.dock_params = dcp.DockingParams()
@@ -66,6 +70,7 @@ class SimulationRunner:
         self.alloc_conn = dcp.ConnectedQuadAllocator(self.q1_params,self.q2_params,self.dock_params)
         self.ctrl_conn = dcp.GeometricSE3Controller(self.alloc_conn.total_mass(),self.alloc_conn.aggregate_inertia(),self.conn_gains)
         self.fsm = dcp.HybridFSM(self.dock_params)
+        self.latch.mode_provider = self.fsm.current_mode
         self.compensator = dcp.EventCompensator()
         self.configure_compensator(compensator_type)
         self.telemetry = []
@@ -157,43 +162,94 @@ class SimulationRunner:
         separation = np.array(self.config['docking']['nominal_separation_at_dock'])
         self.alloc_conn.update_geometry(v3(separation),dcp.Quat())
         self.alloc_conn.reset()
+        self.ctrl_conn.update_inertia(self.alloc_conn.total_mass(),self.alloc_conn.aggregate_inertia())
         self.sp_q1,self.sp_q2,self.sp_conn = dcp.Setpoint(),dcp.Setpoint(),dcp.Setpoint()
         self.telemetry,self.events = [],[]
         self.dock_event_time,self.release_event_time = None,None
+        self.release_transition_time = None
         self.first_contact_time = None
         self.last_control_sample_time = None
         self.aggregate_control_active = bool(preconnected)
         self.research_release_checkpoint = None
         self.last_delayed_motor_command = self.world.applied_thrusts.copy()
         self.last_wrenches = {name:dcp.WrenchCommand() for name in ('q1','q2','aggregate')}
-        if preconnected:
-            self.latch.initialize_connected()
-            self._capture_geometry()
-            self.fsm.initialize_connected(0.)
-            self.dock_event_time = 0.
         self.world.forward()
+
+    def _apply_trial_parameters(self, options):
+        """Perturb the plant only; validated nominal C++ controller stays fixed."""
+        if self._capture_parameter_backup is not None:
+            for key,value in self._capture_parameter_backup.items():
+                setattr(self.latch,key,value)
+            self._capture_parameter_backup = None
+        capture = options.get('capture_parameters',{})
+        permitted = {'capture_stiffness','capture_damping','capture_ang_damping'}
+        if set(capture)-permitted:
+            raise ValueError('Unsupported capture parameter override')
+        self._capture_parameter_backup = {key:getattr(self.latch,key) for key in capture}
+        for key,value in capture.items():
+            if not np.isfinite(value) or value < 0:
+                raise ValueError('Capture parameters must be finite and nonnegative')
+            setattr(self.latch,key,float(value))
+        self.world.model.body_mass[:] = self._nominal_mass
+        self.world.model.body_inertia[:] = self._nominal_inertia
+        self.world.model.geom_solref[:] = self._nominal_solref
+        mass = np.asarray(options.get('mass_scales',[1.,1.]),dtype=float)
+        inertia = np.asarray(options.get('inertia_scales',np.ones((2,3))),dtype=float)
+        if mass.shape != (2,) or inertia.shape != (2,3) or not np.isfinite(mass).all() or not np.isfinite(inertia).all() or min(mass.min(),inertia.min()) <= 0:
+            raise ValueError('Expected positive finite two mass and 2x3 inertia scales')
+        for i,body in enumerate(self.world.body_ids):
+            self.world.model.body_mass[body] *= mass[i]
+            self.world.model.body_inertia[body] *= inertia[i]
+        k,b = options.get('contact_stiffness_scale',1.),options.get('contact_damping_scale',1.)
+        if not np.isfinite([k,b]).all() or min(k,b) <= 0:
+            raise ValueError('Positive finite contact scales required')
+        # Positive solref: effective k ~ 1/(tau*zeta)^2, b ~ 1/tau.
+        # These are solver-effective ratios, NOT calibrated material N/m, Ns/m.
+        for g in self.world.connector_geoms:
+            self.world.model.geom_solref[g,0] /= b
+            self.world.model.geom_solref[g,1] *= b/np.sqrt(k)
+        mujoco.mj_setConst(self.world.model,self.world.data)
 
     def run_scenario(self,duration=7.,dock_cmd_time=1.2,undock_cmd_time=4.2,
                      approach_offset=0.,q1_init_y=-.6,q2_init_y=.6,preconnected=False,
                      connected_trajectory=False,step_callback=None,research_options=None,
                      controller_policy=None):
         """Log at physics rate. Control ticks quantize onto physics ticks (4/6ms at 500/200Hz)."""
+        options = dict(research_options or {})
+        self._apply_trial_parameters(options)
         if preconnected:
             q1_init_y,q2_init_y = -.22,.22
         self._reset(q1_init_y,q2_init_y,preconnected)
         self.research_options = dict(research_options or {})
         options = self.research_options
         self.controller_policy = controller_policy
-        if options.get('q2_initial_offset') or options.get('q2_yaw_rad'):
+        if options.get('q2_initial_offset') is not None or options.get('q2_yaw_rad'):
             adr = self.world.q2_qpos_adr
             self.world.data.qpos[adr:adr+3] += np.array(options.get('q2_initial_offset',[0,0,0]))
             yaw = float(options.get('q2_yaw_rad',0.))
             self.world.data.qpos[adr+3:adr+7] = [np.cos(yaw/2),0,0,np.sin(yaw/2)]
             self.world.forward()
+        for i in (1,2):
+            initial = options.get(f'q{i}_initial_state',{})
+            a,v = getattr(self.world,f'q{i}_qpos_adr'),getattr(self.world,f'q{i}_qvel_adr')
+            if 'rpy_rad' in initial:
+                from scipy.spatial.transform import Rotation
+                q = Rotation.from_euler('xyz',initial['rpy_rad']).as_quat()
+                self.world.data.qpos[a+3:a+7] = q[[3,0,1,2]]
+            if 'velocity_world_mps' in initial:
+                self.world.data.qvel[v:v+3] = initial['velocity_world_mps']
+            if 'omega_body_radps' in initial:
+                self.world.data.qvel[v+3:v+6] = initial['omega_body_radps']
+        self.world.forward()
         self.sp_q2.yaw = float(options.get('q2_yaw_rad',0.))
         self.world.motor_tau = float(options.get('motor_tau_s',self.config['quadrotor']['motor']['time_constant']))
         self.latch.preload_deflection = float(options.get('preload_deflection_m',
             self.config['docking']['release']['elastic_preload']['preload_deflection_m']))
+        if preconnected:
+            self.latch.initialize_connected()
+            self._capture_geometry()
+            self.fsm.initialize_connected(0.)
+            self.dock_event_time = 0.
         if controller_policy is not None:
             controller_policy.reset(self)
         start = [np.array([0.,q1_init_y,1.]),np.array([0.,q2_init_y,1.])]
@@ -215,15 +271,21 @@ class SimulationRunner:
         if preconnected:
             s = self.aggregate_state()
             conn_start = (vec(s.pos),vec(s.vel),np.zeros(3))
+        delivered_events = 0
         for _ in range(int(round(duration/self.dt_sim))):
             t = self.world.time
-            if self.first_contact_time is None and self.latch.contact_details():
-                self.first_contact_time = t
-                state = self.latch.snapshot()
-                self.latch.events.append(dict(event='CONTACT',time=t,pre=state,post=state,
-                                              normal_force_N=self.latch.check_contacts()))
-                if controller_policy is not None:
-                    controller_policy.on_event(self,'CONTACT',t,motor.copy())
+            self.latch.update_capture_state()
+            if self.first_contact_time is None:
+                contact_events = [e for e in self.latch.events if e['event'] == 'CONTACT']
+                if contact_events:
+                    self.first_contact_time = contact_events[0]['time']
+            if not self.latch.capture_eligible():
+                self.fsm.invalidate_capture_dwell()
+            if controller_policy is not None:
+                for event in self.latch.events[delivered_events:]:
+                    if event['event'] == 'CONTACT':
+                        controller_policy.on_event(self,'CONTACT',event['time'],motor.copy())
+            delivered_events = len(self.latch.events)
             control_updated = t+1e-10 >= next_control
             elapsed = self.control_dt if last_control is None else t-last_control
             if control_updated:
@@ -240,17 +302,31 @@ class SimulationRunner:
                     self.fsm.command_undock()
                     release_commanded = True
                 previous = self.fsm.current_mode()
+                mode_pre = self.latch.snapshot()
                 self.fsm.set_capture_contact(self.latch.is_contact_confirmed())
                 mode = self.fsm.update(s1,s2,t,elapsed)
-                if previous != mode and mode == dcp.FlightMode.CAPTURE_PENDING:
-                    state = self.latch.snapshot()
-                    self.latch.events.append(dict(event='CAPTURE_READY',time=t,pre=state,post=state))
+                if previous != mode:
+                    self.latch.emit('FSM_TRANSITION', mode_pre,
+                        from_mode=str(previous).split('.')[-1], to_mode=str(mode).split('.')[-1])
+                    if mode == dcp.FlightMode.CAPTURE_PENDING:
+                        self.latch.emit('CAPTURE_READY', mode_pre)
+                    if previous == dcp.FlightMode.CAPTURE_PENDING and mode == dcp.FlightMode.ALIGN:
+                        self.latch.emit('CAPTURE_DWELL_RESET', mode_pre)
+                    if mode == dcp.FlightMode.RELEASE_PREP:
+                        self.latch.emit('RELEASE_PREP', mode_pre)
+                    if mode == dcp.FlightMode.ABORT:
+                        self.latch.abort()
                 if previous != mode and mode == dcp.FlightMode.CONNECTED:
-                    if controller_policy is not None:
-                        controller_policy.on_event(self,'DOCK',t,motor.copy())
+                    pre_packet = (controller_policy.prepare_event(self,'DOCK',t,motor.copy())
+                                  if hasattr(controller_policy,'prepare_event') else None)
                     if not self.latch.engage_weld():
                         raise RuntimeError('FSM requested capture without physical latch conditions')
                     self.dock_event_time = t
+                    if controller_policy is not None:
+                        if pre_packet is None:
+                            controller_policy.on_event(self,'DOCK',t,motor.copy())
+                        else:
+                            controller_policy.on_event(self,'DOCK',t,motor.copy(),pre_packet=pre_packet)
                     self._capture_geometry()
                     self.ctrl_conn.reset()
                     self.alloc_conn.set_previous_thrusts(motor.tolist())
@@ -261,21 +337,27 @@ class SimulationRunner:
                     if self.compensator_type != dcp.CompensatorType.NONE:
                         raise RuntimeError('Learning is gated pending stage 3-5 feature/metric repairs')
                 if previous != mode and mode == dcp.FlightMode.SEPARATING:
+                    pre_packet = (controller_policy.prepare_event(self,'UNDOCK',t,motor.copy())
+                                  if hasattr(controller_policy,'prepare_event') and options.get('release_constraint',True) else None)
                     integration = np.empty(mujoco.mj_stateSize(self.world.model,mujoco.mjtState.mjSTATE_INTEGRATION))
                     mujoco.mj_getState(self.world.model,self.world.data,integration,mujoco.mjtState.mjSTATE_INTEGRATION)
                     self.research_release_checkpoint = dict(time=t,integration_state=integration.tolist(),
                         eq_data=self.world.model.eq_data.tolist(),motor_actual=self.world.applied_thrusts.tolist(),
                         motor_target=self.world.target_thrusts.tolist(),motor_command=motor.tolist(),
                         pre=self.latch.snapshot())
-                    if controller_policy is not None:
-                        controller_policy.on_event(self,'UNDOCK',t,motor.copy())
                     if options.get('release_constraint',True):
                         self.latch.disengage_weld()
                     else:
                         state = self.latch.snapshot()
                         self.latch.events.append(dict(event='INTERVENTION',time=t,pre=state,post=state,
                                                        physical_weld_kept=True))
-                    self.release_event_time = t
+                    self.release_transition_time = t
+                    self.release_event_time = t if options.get('release_constraint',True) else None
+                    if controller_policy is not None and self.release_event_time is not None:
+                        if pre_packet is None:
+                            controller_policy.on_event(self,'UNDOCK',t,motor.copy())
+                        else:
+                            controller_policy.on_event(self,'UNDOCK',t,motor.copy(),pre_packet=pre_packet)
                     release_start = [(vec(s.pos),vec(s.vel),vec(self.sp_conn.acc)) for s in (s1,s2)]
                     if options.get('reset_integrators',True):
                         self.ctrl_q1.reset()
@@ -290,7 +372,7 @@ class SimulationRunner:
                         self.world.motor_tau = float(options['release_motor_tau_s'])
                     if options.get('freeze_motor_commands',False):
                         frozen_motor = motor.copy()
-                self.aggregate_control_active = (self.world.is_weld_active() if self.release_event_time is None
+                self.aggregate_control_active = (self.world.is_weld_active() if self.release_transition_time is None
                                                   else not options.get('switch_controller',True))
                 if controller_policy is not None:
                     controller_policy.begin_control(self,t,elapsed)
@@ -310,11 +392,11 @@ class SimulationRunner:
                     else:
                         set_reference(self.sp_conn,*quintic(*conn_start,np.array([0.,0.,1.]),t-self.dock_event_time,
                                                            self.config['experiments']['simulation']['connected_reference_transition_s']))
-                elif self.release_event_time is not None:
+                elif self.release_transition_time is not None:
                     hold = options.get('release_reference','separate') == 'hold'
                     targets = [initial[0] for initial in release_start] if hold else release_targets
                     for sp,initial,target in zip((self.sp_q1,self.sp_q2),release_start,targets):
-                        set_reference(sp,*quintic(*initial,target,t-self.release_event_time,
+                        set_reference(sp,*quintic(*initial,target,t-self.release_transition_time,
                                                   options.get('separation_duration_s',self.config['experiments']['simulation']['separation_duration_s'])))
                 else:
                     for sp,p in zip((self.sp_q1,self.sp_q2),start):
@@ -333,7 +415,7 @@ class SimulationRunner:
                     if controller_policy is not None:
                         ws = [controller_policy.correct_wrench(self,name,w,t,elapsed) for name,w in zip(('q1','q2'),ws)]
                     self.last_wrenches['q1'],self.last_wrenches['q2'] = ws
-                    if not (self.release_event_time is not None and t == self.release_event_time and options.get('allocator_state')=='hover_reset'):
+                    if not (self.release_transition_time is not None and t == self.release_transition_time and options.get('allocator_state')=='hover_reset'):
                         self.alloc_q1.set_previous_thrusts(motor[:4].tolist())
                         self.alloc_q2.set_previous_thrusts(motor[4:].tolist())
                     nominal = np.r_[self.alloc_q1.allocate(ws[0],elapsed),self.alloc_q2.allocate(ws[1],elapsed)]
@@ -348,6 +430,10 @@ class SimulationRunner:
             delayed_commands.append(motor.copy())
             self.last_delayed_motor_command = delayed_commands.popleft()
             self.world.step(self.last_delayed_motor_command)
+            if self.first_contact_time is None:
+                contacts = [e for e in self.latch.events if e['event'] == 'CONTACT']
+                if contacts:
+                    self.first_contact_time = contacts[0]['time']
             if controller_policy is not None:
                 controller_policy.after_step(self)
             row = record_state(self,motor,nominal,comp,control_updated,elapsed)
