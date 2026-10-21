@@ -15,6 +15,17 @@ docking:
     relative_angular_velocity_radps: 0.20 # 0.20 rad/s
     dwell_time_s: 0.03               # must stay within tolerance for 30 ms
 
+  capture_mechanism:
+    enabled: true
+    capture_distance_m: 0.006          # 6 mm capture distance envelope (cleanly rejects 30mm missed capture)
+    capture_angle_rad: 0.15            # ~8.6 deg capture attitude envelope
+    max_attraction_force_N: 6.0        # Max magnetic / latch attraction force
+    stiffness_N_per_m: 140.0           # Capture attraction stiffness
+    damping_Ns_per_m: 10.0             # Linear axial damping (Ns/m) for energy dissipation
+    angular_damping_Nms_per_rad: 0.08  # Rotational damping (Nms/rad)
+    filter_contact_on_lock: true       # Filter connector contact during weld to prevent constraint fighting
+    contact_hold_duration_s: 0.040     # Contact confirmation hold window (40 ms)
+
   release:
     zero_preload_mode: true
     elastic_preload:

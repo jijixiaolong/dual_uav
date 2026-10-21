@@ -62,7 +62,8 @@ RotorThrusts<N> bounded_allocate(const std::array<std::array<double, N>, 6>& B,
                                 const std::array<double, N>& minimum,
                                 const std::array<double, N>& maximum,
                                 const std::array<double, N>& slew,
-                                const RotorThrusts<N>& previous, double dt) {
+                                const RotorThrusts<N>& previous, double dt,
+                                const std::array<double, N>& nominal) {
     if (!std::isfinite(dt) || dt < 0.0 || !std::isfinite(command.thrust) || !finite_vec(command.torque))
         throw std::invalid_argument("Allocation requires a finite wrench and nonnegative dt");
     if (dt == 0.0) return previous;
@@ -93,7 +94,7 @@ RotorThrusts<N> bounded_allocate(const std::array<std::array<double, N>, 6>& B,
         low[i] = std::max(minimum[i], previous[i] - slew[i] * dt);
         high[i] = std::min(maximum[i], previous[i] + slew[i] * dt);
         x[i] = std::clamp(previous[i], low[i], high[i]);
-        rhs[i] = regularization * previous[i];
+        rhs[i] = regularization * nominal[i];
         for (size_t row = 0; row < 6; ++row) rhs[i] += C[row][i] * target[row];
         for (size_t j = 0; j < N; ++j) {
             for (size_t row = 0; row < 6; ++row) H[i][j] += C[row][i] * C[row][j];
@@ -214,9 +215,10 @@ void SingleQuadAllocator::set_previous_thrusts(const RotorThrusts4& t) {
 }
 
 RotorThrusts4 SingleQuadAllocator::allocate(const WrenchCommand& wrench, double dt) {
-    std::array<double, 4> minimum{}, maximum{}, slew{};
+    std::array<double, 4> minimum{}, maximum{}, slew{}, nominal{};
     minimum.fill(params_.min_thrust); maximum.fill(params_.max_thrust); slew.fill(params_.slew_rate_limit);
-    prev_thrusts_ = bounded_allocate(allocation_, wrench, minimum, maximum, slew, prev_thrusts_, dt);
+    nominal.fill(params_.mass * params_.gravity / 4.0);
+    prev_thrusts_ = bounded_allocate(allocation_, wrench, minimum, maximum, slew, prev_thrusts_, dt, nominal);
     return prev_thrusts_;
 }
 
@@ -274,12 +276,13 @@ void ConnectedQuadAllocator::set_previous_thrusts(const RotorThrusts8& t) {
 }
 
 RotorThrusts8 ConnectedQuadAllocator::allocate(const WrenchCommand& wrench, double dt) {
-    std::array<double, 8> minimum{}, maximum{}, slew{};
+    std::array<double, 8> minimum{}, maximum{}, slew{}, nominal{};
     for (size_t i = 0; i < 8; ++i) {
         const auto& p = i < 4 ? q1_params_ : q2_params_;
         minimum[i] = p.min_thrust; maximum[i] = p.max_thrust; slew[i] = p.slew_rate_limit;
+        nominal[i] = p.mass * p.gravity / 4.0;
     }
-    prev_thrusts_ = bounded_allocate(allocation_, wrench, minimum, maximum, slew, prev_thrusts_, dt);
+    prev_thrusts_ = bounded_allocate(allocation_, wrench, minimum, maximum, slew, prev_thrusts_, dt, nominal);
     return prev_thrusts_;
 }
 

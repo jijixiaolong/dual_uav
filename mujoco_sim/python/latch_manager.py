@@ -8,6 +8,16 @@ class LatchManager:
         self.world, self.model, self.data = world, world.model, world.data
         self.params = world.config['docking']['latch_criteria']
         spring = world.config['docking']['release']['elastic_preload']
+        capture_cfg = world.config['docking'].get('capture_mechanism', {})
+        self.capture_enabled = bool(capture_cfg.get('enabled', True))
+        self.capture_distance = float(capture_cfg.get('capture_distance_m', 0.040))
+        self.capture_angle = float(capture_cfg.get('capture_angle_rad', 0.15))
+        self.max_capture_force = float(capture_cfg.get('max_attraction_force_N', 6.0))
+        self.capture_stiffness = float(capture_cfg.get('stiffness_N_per_m', 140.0))
+        self.capture_damping = float(capture_cfg.get('damping_Ns_per_m', 10.0))
+        self.capture_ang_damping = float(capture_cfg.get('angular_damping_Nms_per_rad', 0.04))
+        self.filter_contact_on_lock = bool(capture_cfg.get('filter_contact_on_lock', True))
+        self.contact_hold_duration = float(capture_cfg.get('contact_hold_duration_s', 0.040))
         self.zero_preload = zero_preload
         self.spring_stiffness = float(spring['spring_stiffness_N_per_m'])
         self.preload_deflection = float(spring['preload_deflection_m'])
@@ -18,16 +28,28 @@ class LatchManager:
         self.q2_conn_geom = mujoco.mj_name2id(self.model, mujoco.mjtObj.mjOBJ_GEOM, 'q2_conn_probe')
         self.sites = [mujoco.mj_name2id(self.model, mujoco.mjtObj.mjOBJ_SITE, f'q{i}_conn_site') for i in (1,2)]
         self.world.force_providers.append(self.spring_force_generalized)
+        self.world.force_providers.append(self.capture_force_generalized)
         self.reset()
 
     def reset(self):
         self.latched = False
         self.last_contact_force = 0.
+        self.last_capture_force = 0.
+        self.is_captured = False
+        self.has_contacted = False
+        self.last_contact_time = -1.0
+        self.disengaged = False
         self.spring_armed = False
         self.spring_rest_length = 0.
         self.preload_force = 0.
         self.events = []
+        self.set_connector_collision_active(True)
         self.world.set_weld_active(False)
+
+    def set_connector_collision_active(self, active: bool):
+        val = 1 if active else 0
+        self.model.geom_contype[self.q2_conn_geom] = val
+        self.model.geom_conaffinity[self.q2_conn_geom] = val
 
     def contact_details(self):
         contacts = []
@@ -44,7 +66,10 @@ class LatchManager:
         return contacts
 
     def check_contacts(self):
-        self.last_contact_force = sum(c['normal_force_N'] for c in self.contact_details())
+        details = self.contact_details()
+        self.last_contact_force = sum(c['normal_force_N'] for c in details)
+        if len(details) > 0:
+            self.last_contact_time = float(self.world.time)
         return self.last_contact_force
 
     def relative_state(self):
@@ -64,13 +89,19 @@ class LatchManager:
                     angle_rad=float(np.arccos(np.clip((np.trace(Rrel)-1)/2,-1,1))),
                     angular_velocity_world=R2@w2-R1@w1)
 
-    def capture_eligible(self):
+    def is_contact_confirmed(self):
+        details = self.contact_details()
+        if len(details) > 0:
+            self.last_contact_time = float(self.world.time)
+        return len(details) > 0 or (self.is_captured and (float(self.world.time) - self.last_contact_time) < self.contact_hold_duration)
+
+    def capture_eligible(self, tolerance_scale=1.0):
         r, p = self.relative_state(), self.params
-        return (len(self.contact_details()) > 0 and
-                np.linalg.norm(r['position']) <= p['position_tolerance_m'] and
-                np.linalg.norm(r['velocity']) <= p['relative_linear_velocity_mps'] and
-                r['angle_rad'] <= p['orientation_tolerance_rad'] and
-                np.linalg.norm(r['angular_velocity_world']) <= p['relative_angular_velocity_radps'])
+        return (self.is_contact_confirmed() and
+                np.linalg.norm(r['position']) <= p['position_tolerance_m'] * tolerance_scale and
+                np.linalg.norm(r['velocity']) <= p['relative_linear_velocity_mps'] * tolerance_scale and
+                r['angle_rad'] <= p['orientation_tolerance_rad'] * tolerance_scale and
+                np.linalg.norm(r['angular_velocity_world']) <= p['relative_angular_velocity_radps'] * tolerance_scale)
 
     def initialize_connected(self):
         """Explicit preconnected initial-condition fixture; never a flight capture shortcut."""
@@ -78,10 +109,10 @@ class LatchManager:
             raise ValueError('Preconnection is only allowed at t=0')
         return self._engage(initialization=True)
 
-    def engage_weld(self):
+    def engage_weld(self, tolerance_scale=1.5):
         if self.latched:
             return True
-        if not self.capture_eligible():
+        if not self.capture_eligible(tolerance_scale=tolerance_scale):
             return False
         return self._engage()
 
@@ -102,6 +133,10 @@ class LatchManager:
         self.model.eq_data[self.world.weld_eq_id, 6:10] = self.captured_quaternion
         self.world.set_weld_active(True)
         self.latched = True
+        self.is_captured = False
+        self.last_capture_force = 0.
+        if self.filter_contact_on_lock:
+            self.set_connector_collision_active(False)
         anchors = self.spring_anchors()
         self.spring_rest_length = np.linalg.norm(anchors[1]-anchors[0])+self.preload_deflection
         self.spring_armed = not self.zero_preload
@@ -116,10 +151,71 @@ class LatchManager:
         before = self.snapshot()
         self.world.set_weld_active(False)
         self.latched = False
+        self.disengaged = True
+        self.set_connector_collision_active(True)
         self.world.forward()
         self.events.append(dict(event='UNDOCK',time=self.world.time,pre=before,post=self.snapshot(),
                                 spring_energy_J=self.spring_energy()))
         return True
+
+    def capture_force_generalized(self):
+        result = np.zeros(self.model.nv)
+        if not self.capture_enabled or self.latched or self.disengaged:
+            self.last_capture_force = 0.
+            return result
+
+        # Capture mechanism is physically inactive until first physical contact occurs
+        if not self.has_contacted:
+            if len(self.contact_details()) > 0:
+                self.has_contacted = True
+            else:
+                self.last_capture_force = 0.
+                return result
+
+        r = self.relative_state()
+        dist = float(np.linalg.norm(r['position']))
+        angle = float(r['angle_rad'])
+
+        # Hysteresis on capture envelope
+        h_factor = 1.25 if self.is_captured else 1.0
+        if dist > self.capture_distance * h_factor or angle > self.capture_angle * h_factor:
+            self.is_captured = False
+            self.last_capture_force = 0.
+            return result
+
+        self.is_captured = True
+        p1 = self.data.site_xpos[self.sites[0]].copy()
+        p2 = self.data.site_xpos[self.sites[1]].copy()
+        delta = p2 - p1
+        d_sites = float(np.linalg.norm(delta))
+        axis = delta / max(d_sites, 1e-9)
+
+        # 1. Finite attractive force: pulling together along connector axis
+        f_attract = min(self.max_capture_force, self.capture_stiffness * max(0.0, self.capture_distance - d_sites))
+
+        # 2. Viscous axial damping to dissipate kinetic impact energy
+        v_rel = r['velocity']
+        v_axial = float(np.dot(v_rel, axis))
+        if v_axial > 0:
+            # Separating: damping adds to attraction to dissipate kinetic energy and arrest rebound
+            f_pull = min(self.max_capture_force, f_attract + self.capture_damping * v_axial)
+        else:
+            # Closing: damping cushions arrival, smoothly zeroing at rest
+            f_pull = max(0.0, f_attract + 0.5 * self.capture_damping * v_axial)
+
+        force_on_q1 = f_pull * axis
+        force_on_q2 = -force_on_q1 # Newton's third law: strictly equal and opposite
+
+        # 3. Rotational damping to align relative attitude smoothly
+        w_rel = r['angular_velocity_world']
+        torque_on_q1 = np.clip(self.capture_ang_damping * w_rel, -0.2, 0.2)
+        torque_on_q2 = -torque_on_q1
+
+        self.last_capture_force = float(abs(f_pull))
+
+        mujoco.mj_applyFT(self.model, self.data, force_on_q1, torque_on_q1, p1, self.world.q1_body_id, result)
+        mujoco.mj_applyFT(self.model, self.data, force_on_q2, torque_on_q2, p2, self.world.q2_body_id, result)
+        return result
 
     def spring_compression(self):
         if not self.spring_armed:

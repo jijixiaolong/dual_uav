@@ -119,6 +119,8 @@ def record_state(runner, motor_cmd, nominal, compensation, control_updated, cont
         add_xyz(row,f'weld_q{i}_couple_at_anchor_world_Nm',torque-np.cross(anchor-world.data.xipos[b],qforce[a:a+3]))
     row['spring_force_N'] = latch.preload_force
     row['spring_energy_J'] = latch.spring_energy()
+    row['capture_force_N'] = getattr(latch, 'last_capture_force', 0.0)
+    row['capture_active'] = int(getattr(latch, 'is_captured', False))
     for k in range(8):
         row[f'motor{k}_nominal_N'] = float(nominal[k])
         row[f'motor{k}_compensation_N'] = float(compensation[k])

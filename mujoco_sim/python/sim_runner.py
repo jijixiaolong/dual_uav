@@ -240,7 +240,7 @@ class SimulationRunner:
                     self.fsm.command_undock()
                     release_commanded = True
                 previous = self.fsm.current_mode()
-                self.fsm.set_capture_contact(self.latch.capture_eligible())
+                self.fsm.set_capture_contact(self.latch.is_contact_confirmed())
                 mode = self.fsm.update(s1,s2,t,elapsed)
                 if previous != mode and mode == dcp.FlightMode.CAPTURE_PENDING:
                     state = self.latch.snapshot()
@@ -294,7 +294,10 @@ class SimulationRunner:
                                                   else not options.get('switch_controller',True))
                 if controller_policy is not None:
                     controller_policy.begin_control(self,t,elapsed)
-                if mode in (dcp.FlightMode.APPROACH,dcp.FlightMode.ALIGN,dcp.FlightMode.CAPTURE_PENDING):
+                if mode == dcp.FlightMode.CAPTURE_PENDING or (mode == dcp.FlightMode.ALIGN and self.latch.is_captured):
+                    for sp,target in zip((self.sp_q1,self.sp_q2),end):
+                        set_reference(sp,target,np.zeros(3),np.zeros(3))
+                elif mode in (dcp.FlightMode.APPROACH,dcp.FlightMode.ALIGN):
                     for sp,p,target in zip((self.sp_q1,self.sp_q2),start,end):
                         set_reference(sp,*quintic(p,np.zeros(3),np.zeros(3),target,t-dock_cmd_time,
                                                   options.get('approach_duration_s',self.config['experiments']['simulation']['approach_duration_s'])))
