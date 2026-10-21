@@ -206,11 +206,17 @@ class LatchManager:
                     else 'ENGAGED')
         return 'DETACHED' if self.attempt_id else 'NO_CONTACT'
 
+    def is_lock_contact_confirmed(self):
+        confirmed = self.is_contact_confirmed()
+        # Face contact inside a broad kinematic tolerance is not proof that
+        # the finite-stroke mechanism has actually engaged (e.g. edge contact).
+        return confirmed and (not self.capture_enabled or self.is_captured)
+
     def capture_eligible(self, tolerance_scale=1.0):
         if self.disengaged:
             return False
         r, p = self.relative_state(), self.params
-        return (self.is_contact_confirmed() and
+        return (self.is_lock_contact_confirmed() and
                 np.linalg.norm(r['position']) <= p['position_tolerance_m'] * tolerance_scale and
                 np.linalg.norm(r['velocity']) <= p['relative_linear_velocity_mps'] * tolerance_scale and
                 r['angle_rad'] <= p['orientation_tolerance_rad'] * tolerance_scale and

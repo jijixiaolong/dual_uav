@@ -99,7 +99,7 @@ def snapshot_eligible(snapshot,criteria):
     speed=v[6:9]+r2@np.cross(v[9:12],a2)-v[:3]-r1@np.cross(v[3:6],a1)
     angle=Rotation.from_matrix(r1.T@r2).magnitude()
     wrel=r2@v[9:12]-r1@v[3:6]
-    return bool(np.linalg.norm(delta)<=criteria['position_tolerance_m']+1e-10 and
+    return bool(snapshot.get('capture_engaged',False) and np.linalg.norm(delta)<=criteria['position_tolerance_m']+1e-10 and
         np.linalg.norm(speed)<=criteria['relative_linear_velocity_mps']+1e-10 and
         angle<=criteria['orientation_tolerance_rad']+1e-10 and
         np.linalg.norm(wrel)<=criteria['relative_angular_velocity_radps']+1e-10 and
@@ -108,7 +108,7 @@ def snapshot_eligible(snapshot,criteria):
 
 def row_eligible(row,criteria):
     speed=np.linalg.norm([row['connector_relative_velocity_'+a] for a in 'xyz'])
-    return bool(row['rel_dist']<=criteria['position_tolerance_m']+1e-10 and
+    return bool(row['capture_active'] and row['rel_dist']<=criteria['position_tolerance_m']+1e-10 and
         row['relative_attitude_rad']<=criteria['orientation_tolerance_rad']+1e-10 and
         speed<=criteria['relative_linear_velocity_mps']+1e-10 and
         row['relative_angular_speed_radps']<=criteria['relative_angular_velocity_radps']+1e-10 and

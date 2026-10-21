@@ -242,3 +242,18 @@ def test_contact_storage_is_transferred_from_a_finite_internal_reservoir():
     latch.update_capture_state()
     assert latch.is_captured
     assert latch.capture_reservoir_energy_J+latch.capture_potential()==pytest.approx(before)
+
+
+def test_real_face_contact_inside_20mm_tolerance_needs_6mm_mechanical_engagement():
+    world,latch=fixture(offset=(.010,0,0))
+    assert latch.contact_details()
+    assert .006<np.linalg.norm(latch.relative_state()['position'])<.020
+    assert not latch.is_captured
+    assert not latch.capture_eligible()
+    assert not latch.engage_weld()
+    runner=SimulationRunner()
+    rows=runner.run_scenario(duration=.3,dock_cmd_time=0.,undock_cmd_time=None,
+        q1_init_y=-.2199,q2_init_y=.2199,research_options=dict(q2_initial_offset=[.010,0,0]))
+    assert runner.first_contact_time is not None
+    assert runner.dock_event_time is None
+    assert not any(r['weld_active'] for r in rows)

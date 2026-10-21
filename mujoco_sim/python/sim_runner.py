@@ -303,7 +303,7 @@ class SimulationRunner:
                     release_commanded = True
                 previous = self.fsm.current_mode()
                 mode_pre = self.latch.snapshot()
-                self.fsm.set_capture_contact(self.latch.is_contact_confirmed())
+                self.fsm.set_capture_contact(self.latch.is_lock_contact_confirmed())
                 mode = self.fsm.update(s1,s2,t,elapsed)
                 if previous != mode:
                     self.latch.emit('FSM_TRANSITION', mode_pre,
